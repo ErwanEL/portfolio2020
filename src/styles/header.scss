@@ -29,3 +29,14 @@
   transition: width 0.5s ease 0s, left 0.5s ease 0s;
   width: 80%;
 }
+
+a.navbar-item.githubLink {
+  padding: 15;
+  border-radius: 100px;
+  transition-duration: 500ms;
+  transition-property: background-color, color;
+}
+
+a.navbar-item.githubLink:hover {
+  background: rgba(255, 123, 0, 0.205);
+}
