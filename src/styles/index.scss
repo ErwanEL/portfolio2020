@@ -1,0 +1,19 @@
+@charset "utf-8";
+// If need, change your variables before importing Bulma
+$title-color: #ff0000;
+$navbar-item-hover-background-color: white;
+$navbar-item-hover-color: #4a4a4a;
+
+.githubLink {
+  padding: 15;
+  border-radius: 100px;
+  transition-duration: 500ms;
+  transition-property: background-color, color;
+}
+
+.githubLink:hover {
+  background: rgba(255, 123, 0, 0.205);
+}
+
+@import "~bulma/bulma.sass";
+@import "header";
