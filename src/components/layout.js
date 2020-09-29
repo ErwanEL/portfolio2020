@@ -2,6 +2,7 @@ import React from "react"
 import { Helmet } from "react-helmet"
 import "../styles/index.scss"
 import Header from "./header"
+import Footer from "./footer"
 
 export default function Layout({ children }) {
   return (
@@ -18,6 +19,7 @@ export default function Layout({ children }) {
         </Helmet>
         <Header></Header>
         {children}
+        <Footer></Footer>
       </div>
     </section>
   )
