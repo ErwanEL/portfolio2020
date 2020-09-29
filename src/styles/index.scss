@@ -3,6 +3,8 @@
 $title-color: #ff0000;
 $navbar-item-hover-background-color: white;
 $navbar-item-hover-color: #4a4a4a;
+$footer-background-color: white;
 
 @import "~bulma/bulma.sass";
 @import "header";
+@import "footer";
