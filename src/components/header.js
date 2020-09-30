@@ -1,8 +1,10 @@
-import React from "react"
+import React, { useState } from "react"
 // import { useStaticQuery, graphql } from "gatsby"
 // import Img from "gatsby-image"
 
 const Header = () => {
+  const [menu, setMenu] = useState(false)
+  const toggleMenu = () => setMenu(!menu)
   //   const data = useStaticQuery(graphql`
   //     {
   //       logo: file(relativePath: { eq: "logo.png" }) {
@@ -14,7 +16,6 @@ const Header = () => {
   //       }
   //     }
   //   `)
-
   return (
     <nav className="navbar" role="navigation" aria-label="main navigation">
       <div className="navbar-brand">
@@ -28,7 +29,8 @@ const Header = () => {
 
         <a
           role="button"
-          className="navbar-burger burger"
+          onClick={toggleMenu}
+          className={`navbar-burger burger ${menu && "is-active"}`}
           aria-label="menu"
           aria-expanded="false"
           data-target="navbarBasicExample"
@@ -39,11 +41,26 @@ const Header = () => {
         </a>
       </div>
 
-      <div id="navbarBasicExample" className="navbar-menu">
-        <div className="navbar-start"></div>
+      <div
+        id="navbarBasicExample"
+        className={`navbar-menu ${menu && "is-active"}`}
+      >
+        <div className="navbar-start is-hidden-desktop">
+          <a className="navbar-item link link-is-active"> Home </a>
+
+          <a className="navbar-item link"> Freelance </a>
+
+          <a className="navbar-item link"> Apprentissage </a>
+          <a className="navbar-item link"> Compétences </a>
+          <a className="navbar-item link"> Projets </a>
+          <a className="navbar-item link"> Contact </a>
+          <a className="navbar-item githubLink ml-5-desktop ">
+            <i className="fab fa-2x fa-github"></i>
+          </a>
+        </div>
       </div>
 
-      <div className="navbar-end">
+      <div className="navbar-end is-hidden-touch">
         <a className="navbar-item link link-is-active"> Home </a>
 
         <a className="navbar-item link"> Freelance </a>
@@ -52,7 +69,7 @@ const Header = () => {
         <a className="navbar-item link"> Compétences </a>
         <a className="navbar-item link"> Projets </a>
         <a className="navbar-item link"> Contact </a>
-        <a className="navbar-item githubLink ml-5">
+        <a className="navbar-item githubLink ml-5-desktop ">
           <i className="fab fa-2x fa-github"></i>
         </a>
       </div>
