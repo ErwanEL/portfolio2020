@@ -17,7 +17,7 @@ export default function Layout({ children }) {
             crossorigin="anonymous"
           ></script>
         </Helmet>
-        <Header></Header>
+        <Header path={window.location.pathname}></Header>
         {children}
         <Footer></Footer>
       </div>

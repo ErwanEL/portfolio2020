@@ -1,8 +1,9 @@
 import React, { useState } from "react"
+import { Link } from "gatsby"
 // import { useStaticQuery, graphql } from "gatsby"
 // import Img from "gatsby-image"
 
-const Header = () => {
+const Header = path => {
   const [menu, setMenu] = useState(false)
   const toggleMenu = () => setMenu(!menu)
   //   const data = useStaticQuery(graphql`
@@ -16,6 +17,7 @@ const Header = () => {
   //       }
   //     }
   //   `)
+
   return (
     <nav className="navbar" role="navigation" aria-label="main navigation">
       <div className="navbar-brand">
@@ -46,9 +48,17 @@ const Header = () => {
         className={`navbar-menu ${menu && "is-active"}`}
       >
         <div className="navbar-start is-hidden-desktop">
-          <a className="navbar-item link link-is-active"> Home </a>
-
-          <a className="navbar-item link"> Freelance </a>
+          <Link className="navbar-item link link-is-active" to="/">
+            Home
+          </Link>
+          <Link
+            className={`navbar-item link ${
+              path.path == "/freelance/" && "link-is-active"
+            }`}
+            to="/freelance/"
+          >
+            Freelance
+          </Link>
 
           <a className="navbar-item link"> Apprentissage </a>
           <a className="navbar-item link"> Compétences </a>
@@ -61,9 +71,20 @@ const Header = () => {
       </div>
 
       <div className="navbar-end is-hidden-touch">
-        <a className="navbar-item link link-is-active"> Home </a>
-
-        <a className="navbar-item link"> Freelance </a>
+        <Link
+          className={`navbar-item link ${path.path == "/" && "link-is-active"}`}
+          to="/"
+        >
+          Home
+        </Link>
+        <Link
+          className={`navbar-item link ${
+            path.path == "/freelance/" && "link-is-active"
+          }`}
+          to="/freelance/"
+        >
+          Freelance
+        </Link>
 
         <a className="navbar-item link"> Apprentissage </a>
         <a className="navbar-item link"> Compétences </a>

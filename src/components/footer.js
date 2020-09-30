@@ -9,7 +9,7 @@ const Footer = () => {
         <p>home • github • contact</p>
         <img
           className="madeWith"
-          src="made-with-bulma.png"
+          src={"/made-with-bulma.png"}
           alt="Static image"
           width="128"
           height="24"
