@@ -1,8 +1,22 @@
 import React from "react"
+import { useStaticQuery, graphql } from "gatsby"
+// import Img from "gatsby-image"
+import Video from "../assets/video1.mp4"
 
 import Layout from "../components/layout"
 
 const IndexPage = () => {
+  const data = useStaticQuery(graphql`
+    {
+      file(relativePath: { eq: "gif.gif" }) {
+        childImageSharp {
+          fixed(width: 600, height: 600) {
+            ...GatsbyImageSharpFixed
+          }
+        }
+      }
+    }
+  `)
   return (
     <Layout>
       <section className="hero is-medium">
@@ -21,9 +35,16 @@ const IndexPage = () => {
                 </div>
               </div>
               <div className="column is-half">
-                <figure className="image is-256x256">
+                <video autoPlay loop>
+                  <source src={Video} type="video/mp4" />
+                </video>
+                {/* <figure className="image is-256x256">
                   <img src="gif.gif" alt="" />
-                </figure>
+                </figure> */}
+                {/* <Img
+                  fixed={data.file.childImageSharp.fixed}
+                  alt="Gatsby Docs are awesome"
+                /> */}
               </div>
             </div>
           </div>
