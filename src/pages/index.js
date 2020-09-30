@@ -4,6 +4,7 @@ import { useStaticQuery, graphql } from "gatsby"
 import Video from "../assets/video1.mp4"
 
 import Layout from "../components/layout"
+import QuoteComponent from "../components/quoteComponent"
 
 const IndexPage = () => {
   const data = useStaticQuery(graphql`
@@ -50,20 +51,13 @@ const IndexPage = () => {
           </div>
         </div>
       </section>
-      <section className="has-text-centered">
-        <div className="container has-text-centered">
-          <div className="columns">
-            <div className="column is-half" style={{ margin: "auto" }}>
-              <div className="content">
-                <p className="quote subtitle-mod">
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Nulla
-                  harum minima voluptatem veritatis exercitationem saepe
-                  incidunt. Sit quis earum ipsam!
-                </p>
+      <section className="has-text-centered hero">
+        <div className="hero-body">
+          <div className="container has-text-centered">
+            <div className="columns">
+              <div className="column is-5" style={{ margin: "auto" }}>
+                <QuoteComponent quote="A+ would work with again. Very responsive and great to work with! _ Kevin McCormick, LSI"></QuoteComponent>
               </div>
-              <button className="button is-success">
-                Voir le profil Upwork
-              </button>
             </div>
           </div>
         </div>

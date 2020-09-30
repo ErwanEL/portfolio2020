@@ -6,6 +6,7 @@ $navbar-item-hover-color: #4a4a4a;
 $footer-background-color: white;
 
 @import "~bulma/bulma.sass";
+@import "quoteComponent";
 @import "header";
 @import "home";
 @import "footer";
