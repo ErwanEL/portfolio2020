@@ -28,10 +28,10 @@ const IndexPage = () => {
                 <div className="content">
                   <h1 className="title">
                     <span className="mate">🧉</span>
-                    <p>Bienvenue sur le Portfolio de ErwanEL</p>
+                    <p>Bienvenue sur le Portfolio de ErwanEL.</p>
                   </h1>
                   <p className="subtitle-mod">
-                    Intégrateur, Développeur Front-End, Javascript, GatsbyJS
+                    Intégrateur, Développeur Front-End, Javascript, GatsbyJS.
                   </p>
                   <p className="subtitle">
                     Find me on{" "}
@@ -42,6 +42,7 @@ const IndexPage = () => {
                     >
                       Github
                     </a>
+                    .
                   </p>
                 </div>
               </div>

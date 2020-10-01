@@ -14,7 +14,7 @@ const ContactPage = () => {
                 <div className="content">
                   <h1 className="title">
                     <span className="mate">✉️</span>
-                    <p>Contact me</p>
+                    <p>Contact me.</p>
                   </h1>
                   <hr className="mini" />
                   <p className="subtitle-mod">Any project.</p>
@@ -72,14 +72,14 @@ const ContactPage = () => {
                   <div className="field">
                     <div data-netlify-recaptcha="true"></div>
                   </div> */}
-                  <div className="field">
+                  {/* <div className="field">
                     <input
                       type="file"
                       name="myfile"
                       id="myfile"
                       placeholder="Upload File"
                     />
-                  </div>
+                  </div> */}
 
                   <div className="field is-grouped">
                     <div className="control">
