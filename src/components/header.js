@@ -60,7 +60,14 @@ const Header = location => {
           </Link>
 
           <a className="navbar-item link"> Apprentissage </a>
-          <a className="navbar-item link"> Compétences </a>
+          <Link
+            className={`navbar-item link ${
+              location.path === "/skills/" && "link-is-active"
+            }`}
+            to="/skills/"
+          >
+            Compétences
+          </Link>
           <a className="navbar-item link"> Projets </a>
           <Link
             className={`navbar-item link ${
@@ -93,9 +100,15 @@ const Header = location => {
         >
           Freelance
         </Link>
-
         <a className="navbar-item link"> Apprentissage </a>
-        <a className="navbar-item link"> Compétences </a>
+        <Link
+          className={`navbar-item link ${
+            location.path === "/skills/" && "link-is-active"
+          }`}
+          to="/skills/"
+        >
+          Compétences
+        </Link>
         <a className="navbar-item link"> Projets </a>
         <Link
           className={`navbar-item link ${
