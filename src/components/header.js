@@ -62,7 +62,14 @@ const Header = location => {
           <a className="navbar-item link"> Apprentissage </a>
           <a className="navbar-item link"> Compétences </a>
           <a className="navbar-item link"> Projets </a>
-          <a className="navbar-item link"> Contact </a>
+          <Link
+            className={`navbar-item link ${
+              location.path === "/contact/" && "link-is-active"
+            }`}
+            to="/contact/"
+          >
+            Contact
+          </Link>
           <a className="navbar-item githubLink ml-5-desktop ">
             <i className="fab fa-2x fa-github"></i>
           </a>
@@ -90,7 +97,14 @@ const Header = location => {
         <a className="navbar-item link"> Apprentissage </a>
         <a className="navbar-item link"> Compétences </a>
         <a className="navbar-item link"> Projets </a>
-        <a className="navbar-item link"> Contact </a>
+        <Link
+          className={`navbar-item link ${
+            location.path === "/contact/" && "link-is-active"
+          }`}
+          to="/contact/"
+        >
+          Contact
+        </Link>
         <a className="navbar-item githubLink ml-5-desktop ">
           <i className="fab fa-2x fa-github"></i>
         </a>
