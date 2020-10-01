@@ -26,7 +26,7 @@ const ContactPage = () => {
                 <form
                   name="contact"
                   method="POST"
-                  action="POST"
+                  action="/pages/success"
                   data-netlify="true"
                   data-netlify-honeypot="bot-field"
                 >
@@ -72,6 +72,14 @@ const ContactPage = () => {
                   <div className="field">
                     <div data-netlify-recaptcha="true"></div>
                   </div> */}
+                  <div className="field">
+                    <input
+                      type="file"
+                      name="myfile"
+                      id="myfile"
+                      placeholder="Upload File"
+                    />
+                  </div>
 
                   <div className="field is-grouped">
                     <div className="control">
