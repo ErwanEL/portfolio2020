@@ -3,7 +3,8 @@ import { graphql } from "gatsby"
 import Img from "gatsby-image"
 import Layout from "../components/layout"
 
-const FreelancePage = ({ data }) => {
+const FreelancePage = ({  data }) => {
+
   return (
     <Layout>
       <section className="hero is-medium">
@@ -79,7 +80,11 @@ const FreelancePage = ({ data }) => {
                   <p className="subtitle-mod">
                     I used to work on the Upwork plateform. Here are some gigs
                     that I completed. See more at{" "}
-                    <a className="upwork-link" href="http://etmg-world.com" target="_blank">
+                    <a
+                      className="upwork-link"
+                      href="http://etmg-world.com"
+                      target="_blank"
+                    >
                       My Upwork profile.
                     </a>
                   </p>

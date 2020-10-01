@@ -3,7 +3,7 @@ import { Link } from "gatsby"
 // import { useStaticQuery, graphql } from "gatsby"
 // import Img from "gatsby-image"
 
-const Header = path => {
+const Header = location => {
   const [menu, setMenu] = useState(false)
   const toggleMenu = () => setMenu(!menu)
   //   const data = useStaticQuery(graphql`
@@ -17,7 +17,6 @@ const Header = path => {
   //       }
   //     }
   //   `)
-
   return (
     <nav className="navbar" role="navigation" aria-label="main navigation">
       <div className="navbar-brand">
@@ -53,7 +52,7 @@ const Header = path => {
           </Link>
           <Link
             className={`navbar-item link ${
-              path.path == "/freelance/" && "link-is-active"
+              location.path === "/freelance/" && "link-is-active"
             }`}
             to="/freelance/"
           >
@@ -72,14 +71,16 @@ const Header = path => {
 
       <div className="navbar-end is-hidden-touch">
         <Link
-          className={`navbar-item link ${path.path == "/" && "link-is-active"}`}
+          className={`navbar-item link ${
+            location.path === "/" && "link-is-active"
+          }`}
           to="/"
         >
           Home
         </Link>
         <Link
           className={`navbar-item link ${
-            path.path == "/freelance/" && "link-is-active"
+            location.path === "/freelance/" && "link-is-active"
           }`}
           to="/freelance/"
         >
