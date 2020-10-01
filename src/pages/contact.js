@@ -31,47 +31,51 @@ const ContactPage = () => {
                   data-netlify-honeypot="bot-field"
                 >
                   <input type="hidden" name="form-name" value="contact" />
-                  <div class="field">
-                    <label class="label">Name</label>
-                    <div class="control">
+                  <div className="field">
+                    <label className="label">Name</label>
+                    <div className="control">
                       <input
                         name="name"
-                        class="input"
+                        className="input"
                         type="text"
                         placeholder="Text input"
                       />
                     </div>
                   </div>
 
-                  <div class="field">
-                    <label class="label">Email</label>
-                    <div class="control has-icons-left has-icons-right">
+                  <div className="field">
+                    <label className="label">Email</label>
+                    <div className="control has-icons-left has-icons-right">
                       <input
                         name="email"
-                        class="input "
+                        className="input "
                         type="email"
                         placeholder="Email input"
                       />
-                      <span class="icon is-small is-left">
-                        <i class="fas fa-envelope"></i>
+                      <span className="icon is-small is-left">
+                        <i className="fas fa-envelope"></i>
                       </span>
                     </div>
                   </div>
 
-                  <div class="field">
-                    <label class="label">Message</label>
-                    <div class="control">
+                  <div className="field">
+                    <label className="label">Message</label>
+                    <div className="control">
                       <textarea
                         name="message"
-                        class="textarea"
+                        className="textarea"
                         placeholder="Textarea"
                       ></textarea>
                     </div>
                   </div>
 
-                  <div class="field is-grouped">
-                    <div class="control">
-                      <button type="submit" class="button is-link submit">
+                  <div className="field">
+                    <div data-netlify-recaptcha="true"></div>
+                  </div>
+
+                  <div className="field is-grouped">
+                    <div className="control">
+                      <button type="submit" className="button is-link submit">
                         Submit
                       </button>
                     </div>
