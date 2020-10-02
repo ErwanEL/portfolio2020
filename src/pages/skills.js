@@ -184,14 +184,14 @@ const SkillsPage = ({ data }) => {
                     <Img
                       className="free image"
                       fluid={data.trello.childImageSharp.fluid}
-                      alt="Vscode"
+                      alt="Trello"
                     />
                   </div>
                   <div className="child1 child2">
                     <Img
                       className="free image"
                       fluid={data.bitbucket.childImageSharp.fluid}
-                      alt="Vscode"
+                      alt="Bitbucket"
                     />
                   </div>
                 </div>
