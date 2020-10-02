@@ -1,5 +1,7 @@
 import React, { useState } from "react"
 import { Link } from "gatsby"
+import MaltSvg from "../components/svg/maltsvg"
+
 // import { useStaticQuery, graphql } from "gatsby"
 // import Img from "gatsby-image"
 
@@ -77,8 +79,11 @@ const Header = location => {
           >
             Contact
           </Link>
-          <a className="navbar-item githubLink ml-5-desktop ">
+          <a className="navbar-item githubLink ">
             <i className="fab fa-2x fa-github"></i>
+          </a>
+          <a className="navbar-item githubLink ">
+            <MaltSvg></MaltSvg>
           </a>
         </div>
       </div>
@@ -120,6 +125,10 @@ const Header = location => {
         </Link>
         <a className="navbar-item githubLink ml-5-desktop ">
           <i className="fab fa-2x fa-github"></i>
+        </a>
+
+        <a className="navbar-item githubLink ml-5-desktop ">
+          <MaltSvg></MaltSvg>
         </a>
       </div>
     </nav>
