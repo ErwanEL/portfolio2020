@@ -1,5 +1,7 @@
 import React, { useState } from "react"
 import { Link } from "gatsby"
+import MaltSvg from "../components/svg/maltsvg"
+
 // import { useStaticQuery, graphql } from "gatsby"
 // import Img from "gatsby-image"
 
@@ -59,7 +61,14 @@ const Header = location => {
             Freelance
           </Link>
 
-          <a className="navbar-item link"> Apprentissage </a>
+          <Link
+            className={`navbar-item link ${
+              location.path === "/learning/" && "link-is-active"
+            }`}
+            to="/learning/"
+          >
+            Apprentissage
+          </Link>
           <Link
             className={`navbar-item link ${
               location.path === "/skills/" && "link-is-active"
@@ -68,7 +77,14 @@ const Header = location => {
           >
             Compétences
           </Link>
-          <a className="navbar-item link"> Projets </a>
+          <Link
+            className={`navbar-item link ${
+              location.path === "/projects/" && "link-is-active"
+            }`}
+            to="/projects/"
+          >
+            Projets
+          </Link>
           <Link
             className={`navbar-item link ${
               location.path === "/contact/" && "link-is-active"
@@ -77,8 +93,11 @@ const Header = location => {
           >
             Contact
           </Link>
-          <a className="navbar-item githubLink ml-5-desktop ">
+          <a className="navbar-item githubLink ">
             <i className="fab fa-2x fa-github"></i>
+          </a>
+          <a className="navbar-item githubLink ">
+            <MaltSvg></MaltSvg>
           </a>
         </div>
       </div>
@@ -100,7 +119,14 @@ const Header = location => {
         >
           Freelance
         </Link>
-        <a className="navbar-item link"> Apprentissage </a>
+        <Link
+          className={`navbar-item link ${
+            location.path === "/learning/" && "link-is-active"
+          }`}
+          to="/learning/"
+        >
+          Apprentissage
+        </Link>
         <Link
           className={`navbar-item link ${
             location.path === "/skills/" && "link-is-active"
@@ -109,7 +135,14 @@ const Header = location => {
         >
           Compétences
         </Link>
-        <a className="navbar-item link"> Projets </a>
+        <Link
+          className={`navbar-item link ${
+            location.path === "/projects/" && "link-is-active"
+          }`}
+          to="/projects/"
+        >
+          Projets
+        </Link>
         <Link
           className={`navbar-item link ${
             location.path === "/contact/" && "link-is-active"
@@ -120,6 +153,10 @@ const Header = location => {
         </Link>
         <a className="navbar-item githubLink ml-5-desktop ">
           <i className="fab fa-2x fa-github"></i>
+        </a>
+
+        <a className="navbar-item githubLink ml-5-desktop ">
+          <MaltSvg></MaltSvg>
         </a>
       </div>
     </nav>
