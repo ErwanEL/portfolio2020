@@ -23,11 +23,11 @@ const SkillsPage = ({ data }) => {
                     <span className="mate">🔧</span>
                     <p>My skills</p>
                   </h1>
-                  <hr className="mini" />
+                  <hr style={{ background: "#4eb236" }} className="mini" />
                   <p className="subtitle-mod">The technologies I use.</p>
                 </div>
                 <nav
-                  className="breadcrumb is-medium has-bullet-separator"
+                  className="skills-breadcrumb breadcrumb is-medium has-bullet-separator"
                   aria-label="breadcrumbs"
                 >
                   <ul>
@@ -99,7 +99,7 @@ const SkillsPage = ({ data }) => {
                   <h1 className="title">
                     <p>Javascript</p>
                   </h1>
-                  <hr className="mini" />
+                  <hr style={{ background: "#F7DF1E" }} className="mini" />
                   <div className="svg">
                     <JsSvg className="skillsSvg"></JsSvg>
                     <p className="subtitle-mod">
@@ -129,7 +129,7 @@ const SkillsPage = ({ data }) => {
                   <h1 className="title">
                     <p>GatsbyJs</p>
                   </h1>
-                  <hr className="mini" />
+                  <hr style={{ background: "#663399" }} className="mini" />
                   <div className="svg">
                     {/* <GatsbySvg className="skillsSvmr-2g"></GatsbySvg> */}
                     <ReactSvg className="skillsSvg mr-2"></ReactSvg>
@@ -202,11 +202,11 @@ const SkillsPage = ({ data }) => {
                 /> */}
               </div>
               <div className="column is-half">
-                <div className="content">
+                <div className="content has-text-right">
                   <h1 className="title">
                     <p>Workflow</p>
                   </h1>
-                  <hr className="mini" />
+                  {/* <hr className="mini" /> */}
                   <div className="svg">
                     <AtlassianSvg className="skillsSvg"></AtlassianSvg>
                     <p className="subtitle-mod">

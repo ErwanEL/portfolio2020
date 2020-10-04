@@ -30,6 +30,7 @@ const IndexPage = () => {
                     <span className="mate">🧉</span>
                     <p>Bienvenue sur le Portfolio de ErwanEL.</p>
                   </h1>
+                  <hr className="mini" />
                   <p className="subtitle-mod">
                     Intégrateur, Développeur Front-End, Javascript, GatsbyJS.
                   </p>
@@ -66,14 +67,15 @@ const IndexPage = () => {
         <div className="container has-text-centered">
           <div className="columns">
             <div className="column is-5" style={{ margin: "auto" }}>
-              <div className="box">
-                <p className="quote subtitle-mod">
-                  <i>
-                    A+ would work with again. Very responsive and great to work
-                    with!
-                  </i>
+              <div className="box ">
+                <p className="quote subtitle-mod is-italic has-text-weight-normal">
+                  A+ would work with again. Very responsive and great to work
+                  with!
                 </p>{" "}
-                <p className="mt-2"> Kevin McCormick, LSI</p>
+                <p className="mt-2 has-text-weight-semibold">
+                  {" "}
+                  Kevin McCormick, LSI
+                </p>
               </div>
               <UpworkSvg height={30}></UpworkSvg>
             </div>

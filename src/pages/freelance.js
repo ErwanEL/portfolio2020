@@ -17,6 +17,7 @@ const FreelancePage = ({ data }) => {
                     <span className="mate">♾️</span>
                     <p>My Freelance Experience</p>
                   </h1>
+                  <hr style={{ background: "#3d1ca6" }} className="mini" />
                   <p className="subtitle-mod">
                     Here is a wordpress project I worked on. See more at{" "}
                     <a

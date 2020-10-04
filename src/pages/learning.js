@@ -20,6 +20,7 @@ const LearningPage = ({ data }) => {
                     <span className="mate">📘</span>
                     <p>My learning journey.</p>
                   </h1>
+                  <hr style={{ background: "#5FCF80" }} className="mini" />
                   <div className="svg">
                     <TreehouseSvg className="skillsSvg"></TreehouseSvg>
                   </div>
@@ -32,7 +33,7 @@ const LearningPage = ({ data }) => {
                       I started my introduction into web development with
                       Treehouse. See more at{" "}
                       <a
-                        className="etmg-link"
+                        className="treehouse-link"
                         href="http://etmg-world.com"
                         target="_blank"
                       >
@@ -86,7 +87,6 @@ const LearningPage = ({ data }) => {
                   <h1 className="title">
                     <p>Other ressources.</p>
                   </h1>
-                  {/* <hr className="mini" /> */}
                   <div className="svg">
                     <CodecademySvg className="skillsSvg mr-2"></CodecademySvg>
                     <FccSvg className="skillsSvg"></FccSvg>

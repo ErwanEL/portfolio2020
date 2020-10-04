@@ -8,7 +8,6 @@ import MaltSvg from "../components/svg/maltsvg"
 
 const Header = () => {
   const path = globalHistory.location.pathname
-  console.log(path)
 
   const [menu, setMenu] = useState(false)
   const toggleMenu = () => setMenu(!menu)
