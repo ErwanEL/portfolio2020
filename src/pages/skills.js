@@ -69,8 +69,8 @@ const SkillsPage = ({ data }) => {
                   </h1>
                   <hr className="mini" />
                   <div className="svg">
-                    <HtmlSvg className="skillsSvg"></HtmlSvg>
-                    <CssSvg className="skillsSvg"></CssSvg>
+                    <HtmlSvg className="skillsSvg mr-2"></HtmlSvg>
+                    <CssSvg className="skillsSvg mr-2"></CssSvg>
                     <SassSvg className="skillsSvg"></SassSvg>
                     <p className="subtitle-mod">
                       To work on the integration process.
@@ -131,8 +131,8 @@ const SkillsPage = ({ data }) => {
                   </h1>
                   <hr className="mini" />
                   <div className="svg">
-                    {/* <GatsbySvg className="skillsSvg"></GatsbySvg> */}
-                    <ReactSvg className="skillsSvg"></ReactSvg>
+                    {/* <GatsbySvg className="skillsSvmr-2g"></GatsbySvg> */}
+                    <ReactSvg className="skillsSvg mr-2"></ReactSvg>
                     <GatsbySvg className="skillsSvg"></GatsbySvg>
 
                     <p className="subtitle-mod">

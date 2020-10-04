@@ -75,7 +75,7 @@ const IndexPage = () => {
                 </p>{" "}
                 <p className="mt-2"> Kevin McCormick, LSI</p>
               </div>
-              <UpworkSvg></UpworkSvg>
+              <UpworkSvg height={30}></UpworkSvg>
             </div>
           </div>
         </div>

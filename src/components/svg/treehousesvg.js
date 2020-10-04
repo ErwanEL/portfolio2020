@@ -5,6 +5,8 @@ function TreehouseSvg(props) {
     <svg
       className="logo-icon header-nav-item-logo-icon"
       preserveAspectRatio="xMinYMin meet"
+      height={64}
+      width={64}
       viewBox="0 0 30 32"
       {...props}
     >

@@ -2,7 +2,7 @@ import * as React from "react"
 
 function CssSvg(props) {
   return (
-    <svg width="298px" height="420px" viewBox="0 0 298 420" {...props}>
+    <svg height={64} viewBox="0 0 298 420" {...props}>
       <g fillRule="nonzero" fill="none">
         <path
           fill="#1572B6"

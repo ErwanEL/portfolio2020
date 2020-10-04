@@ -20,7 +20,7 @@ const LearningPage = ({ data }) => {
                     <span className="mate">📘</span>
                     <p>My learning journey.</p>
                   </h1>
-                  <div className="">
+                  <div className="svg">
                     <TreehouseSvg className="skillsSvg"></TreehouseSvg>
                   </div>
                   <p className="subtitle-mod">
@@ -90,7 +90,6 @@ const LearningPage = ({ data }) => {
                   <div className="svg">
                     <CodecademySvg className="skillsSvg mr-2"></CodecademySvg>
                     <FccSvg className="skillsSvg"></FccSvg>
-
                     <p className="subtitle-mod">
                       {" "}
                       See more about CodeCademy and FreeCodeCamp{" "}

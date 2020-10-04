@@ -15,7 +15,7 @@ const Footer = () => {
           width="128"
           height="24"
         />
-        <GatsbySvg></GatsbySvg>
+        <GatsbySvg width="106px" height="28px"></GatsbySvg>
       </div>
     </footer>
   )
