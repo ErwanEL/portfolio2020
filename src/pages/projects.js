@@ -224,7 +224,7 @@ const ProjectsPage = ({ data }) => {
                 </div>
               </div>
               <div className="column is-half has-text-right">
-                <div className="content">
+                <div className="content has-text-centered">
                   <h1 className="title">
                     <p>🖿 Older works. </p>
                   </h1>

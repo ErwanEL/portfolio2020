@@ -5,8 +5,8 @@ function ReactSvg(props) {
     <svg
       data-name="Layer 1"
       viewBox="0 0 23 20.46348"
-      width="230px"
-      height="230px"
+      height={64}
+      width={64}
       {...props}
     >
       <path

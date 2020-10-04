@@ -4,8 +4,8 @@ function UpworkSvg(props) {
   return (
     <svg
       viewBox="0 0 102.4 30"
-      width={106}
-      height={30}
+      // width={106}
+      height={64}
       aria-hidden="true"
       {...props}
     >

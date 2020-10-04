@@ -3,8 +3,9 @@ import * as React from "react"
 function FccSvg(props) {
   return (
     <svg
-      width="197.57936mm"
-      height="136.28296mm"
+      width="150px"
+      height={64}
+      width={64}
       viewBox="0 0 700.08435 482.89237"
       {...props}
     >

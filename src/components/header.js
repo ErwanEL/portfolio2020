@@ -1,11 +1,14 @@
 import React, { useState } from "react"
 import { Link } from "gatsby"
+import { globalHistory } from "@reach/router"
 import MaltSvg from "../components/svg/maltsvg"
 
 // import { useStaticQuery, graphql } from "gatsby"
 // import Img from "gatsby-image"
 
-const Header = location => {
+const Header = () => {
+  const path = globalHistory.location.pathname
+
   const [menu, setMenu] = useState(false)
   const toggleMenu = () => setMenu(!menu)
   //   const data = useStaticQuery(graphql`
@@ -54,7 +57,7 @@ const Header = location => {
           </Link>
           <Link
             className={`navbar-item link ${
-              location.path === "/freelance/" && "link-is-active"
+              path === "/freelance/" && "link-is-active"
             }`}
             to="/freelance/"
           >
@@ -63,7 +66,7 @@ const Header = location => {
 
           <Link
             className={`navbar-item link ${
-              location.path === "/learning/" && "link-is-active"
+              path === "/learning/" && "link-is-active"
             }`}
             to="/learning/"
           >
@@ -71,7 +74,7 @@ const Header = location => {
           </Link>
           <Link
             className={`navbar-item link ${
-              location.path === "/skills/" && "link-is-active"
+              path === "/skills/" && "link-is-active"
             }`}
             to="/skills/"
           >
@@ -79,7 +82,7 @@ const Header = location => {
           </Link>
           <Link
             className={`navbar-item link ${
-              location.path === "/projects/" && "link-is-active"
+              path === "/projects/" && "link-is-active"
             }`}
             to="/projects/"
           >
@@ -87,7 +90,7 @@ const Header = location => {
           </Link>
           <Link
             className={`navbar-item link ${
-              location.path === "/contact/" && "link-is-active"
+              path === "/contact/" && "link-is-active"
             }`}
             to="/contact/"
           >
@@ -104,16 +107,14 @@ const Header = location => {
 
       <div className="navbar-end is-hidden-touch">
         <Link
-          className={`navbar-item link ${
-            location.path === "/" && "link-is-active"
-          }`}
+          className={`navbar-item link ${path === "/" && "link-is-active"}`}
           to="/"
         >
           Home
         </Link>
         <Link
           className={`navbar-item link ${
-            location.path === "/freelance/" && "link-is-active"
+            path === "/freelance/" && "link-is-active"
           }`}
           to="/freelance/"
         >
@@ -121,7 +122,7 @@ const Header = location => {
         </Link>
         <Link
           className={`navbar-item link ${
-            location.path === "/learning/" && "link-is-active"
+            path === "/learning/" && "link-is-active"
           }`}
           to="/learning/"
         >
@@ -129,7 +130,7 @@ const Header = location => {
         </Link>
         <Link
           className={`navbar-item link ${
-            location.path === "/skills/" && "link-is-active"
+            path === "/skills/" && "link-is-active"
           }`}
           to="/skills/"
         >
@@ -137,7 +138,7 @@ const Header = location => {
         </Link>
         <Link
           className={`navbar-item link ${
-            location.path === "/projects/" && "link-is-active"
+            path === "/projects/" && "link-is-active"
           }`}
           to="/projects/"
         >
@@ -145,7 +146,7 @@ const Header = location => {
         </Link>
         <Link
           className={`navbar-item link ${
-            location.path === "/contact/" && "link-is-active"
+            path === "/contact/" && "link-is-active"
           }`}
           to="/contact/"
         >

@@ -2,7 +2,7 @@ import * as React from "react"
 
 function AtlassianSvg(props) {
   return (
-    <svg viewBox="0 0 532.119 66.025" {...props}>
+    <svg height={64} width={300} viewBox="0 0 532.119 66.025" {...props}>
       <defs>
         <style>{".cls-3{fill:#0052cc}"}</style>
         <linearGradient
