@@ -43,7 +43,12 @@ const FreelancePage = ({ data }) => {
       </section>
       <hr />
       <section className="hero is-medium">
-        <div className="hero-body">
+        <div
+          className="hero-body"
+          data-sal="slide-up"
+          data-sal-delay="300"
+          data-sal-easing="ease"
+        >
           <div className="container">
             <div className="columns is-vcentered">
               <div className="column is-half">

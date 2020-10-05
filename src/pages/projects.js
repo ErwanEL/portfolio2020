@@ -91,7 +91,13 @@ const ProjectsPage = ({ data }) => {
         </div>
       </section>
       <hr />
-      <section id="gatsbyjs" className="hero is-medium">
+      <section
+        id="gatsbyjs"
+        className="hero is-medium"
+        data-sal="slide-up"
+        data-sal-delay="300"
+        data-sal-easing="ease"
+      >
         <div className="hero-body">
           <div className="container">
             <div className="columns is-vcentered">
@@ -119,7 +125,13 @@ const ProjectsPage = ({ data }) => {
         </div>
       </section>
       <hr />
-      <section id="lemot" className="hero is-medium">
+      <section
+        id="lemot"
+        className="hero is-medium"
+        data-sal="slide-up"
+        data-sal-delay="300"
+        data-sal-easing="ease"
+      >
         <div className="hero-body">
           <div className="container">
             <div className="columns is-vcentered">
@@ -149,7 +161,13 @@ const ProjectsPage = ({ data }) => {
         </div>
       </section>
       <hr />
-      <section id="etna" className="hero is-medium">
+      <section
+        id="etna"
+        className="hero is-medium"
+        data-sal="slide-up"
+        data-sal-delay="300"
+        data-sal-easing="ease"
+      >
         <div className="hero-body">
           <div className="container">
             <div className="columns is-vcentered">
@@ -183,7 +201,12 @@ const ProjectsPage = ({ data }) => {
         <div className="hero-body">
           <div className="container">
             <div className="columns is-vcentered">
-              <div className="column is-half">
+              <div
+                className="column is-half"
+                data-sal="slide-right"
+                data-sal-delay="500"
+                data-sal-easing="ease"
+              >
                 <div className="cascade">
                   <div className="cascade-child child1">
                     <div className="sub">
@@ -223,7 +246,12 @@ const ProjectsPage = ({ data }) => {
                   </div>
                 </div>
               </div>
-              <div className="column is-half has-text-right">
+              <div
+                className="column is-half has-text-right"
+                data-sal="slide-left"
+                data-sal-delay="500"
+                data-sal-easing="ease"
+              >
                 <div className="content has-text-centered">
                   <h1 className="title">
                     <p>🖿 Older works. </p>

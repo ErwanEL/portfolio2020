@@ -58,7 +58,13 @@ const SkillsPage = ({ data }) => {
         </div>
       </section>
       <hr />
-      <section id="htmlcss" className="hero is-medium">
+      <section
+        id="htmlcss"
+        className="hero is-medium"
+        data-sal="slide-up"
+        data-sal-delay="300"
+        data-sal-easing="ease"
+      >
         <div className="hero-body">
           <div className="container">
             <div className="columns is-vcentered">
@@ -90,7 +96,13 @@ const SkillsPage = ({ data }) => {
         </div>
       </section>
       <hr />
-      <section id="javascript" className="hero is-medium">
+      <section
+        id="javascript"
+        className="hero is-medium"
+        data-sal="slide-up"
+        data-sal-delay="300"
+        data-sal-easing="ease"
+      >
         <div className="hero-body">
           <div className="container">
             <div className="columns is-vcentered">
@@ -120,7 +132,13 @@ const SkillsPage = ({ data }) => {
         </div>
       </section>
       <hr />
-      <section id="gatsbyjs" className="hero is-medium">
+      <section
+        id="gatsbyjs"
+        className="hero is-medium"
+        data-sal="slide-up"
+        data-sal-delay="300"
+        data-sal-easing="ease"
+      >
         <div className="hero-body">
           <div className="container">
             <div className="columns is-vcentered">
@@ -178,7 +196,12 @@ const SkillsPage = ({ data }) => {
         <div className="hero-body">
           <div className="container">
             <div className="columns is-vcentered">
-              <div className="column is-half">
+              <div
+                className="column is-half"
+                data-sal="slide-right"
+                data-sal-delay="500"
+                data-sal-easing="ease"
+              >
                 <div className="parent">
                   <div className="child1">
                     <Img
@@ -201,7 +224,12 @@ const SkillsPage = ({ data }) => {
                   alt="Vscode"
                 /> */}
               </div>
-              <div className="column is-half">
+              <div
+                className="column is-half"
+                data-sal="slide-left"
+                data-sal-delay="500"
+                data-sal-easing="ease"
+              >
                 <div className="content has-text-right">
                   <h1 className="title">
                     <p>Workflow</p>
