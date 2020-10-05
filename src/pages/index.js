@@ -1,7 +1,8 @@
 import React from "react"
 import { useStaticQuery, graphql } from "gatsby"
 // import Img from "gatsby-image"
-import Video from "../assets/video1.mp4"
+import Video from "../assets/comp_3.mp4"
+
 
 import Layout from "../components/layout"
 import UpworkSvg from "../components/svg/upworksvg"
