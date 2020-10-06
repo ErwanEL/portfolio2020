@@ -38,7 +38,7 @@ const ContactPage = () => {
                         name="name"
                         className="input"
                         type="text"
-                        placeholder="Text input"
+                        placeholder="Your Name"
                       />
                     </div>
                   </div>
@@ -50,7 +50,7 @@ const ContactPage = () => {
                         name="email"
                         className="input "
                         type="email"
-                        placeholder="Email input"
+                        placeholder="Your Email"
                       />
                       <span className="icon is-small is-left">
                         <i className="fas fa-envelope"></i>
@@ -64,7 +64,7 @@ const ContactPage = () => {
                       <textarea
                         name="message"
                         className="textarea"
-                        placeholder="Textarea"
+                        placeholder="Your Message"
                       ></textarea>
                     </div>
                   </div>
@@ -84,7 +84,7 @@ const ContactPage = () => {
                   <div className="field is-grouped">
                     <div className="control">
                       <button type="submit" className="button is-link submit">
-                        Submit
+                        Send
                       </button>
                     </div>
                   </div>
