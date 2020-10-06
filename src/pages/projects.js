@@ -6,7 +6,7 @@ import Layout from "../components/layout"
 const ProjectsPage = ({ data }) => {
   return (
     <Layout>
-      <section className="hero is-medium">
+      <section id="projects" className="hero is-medium">
         <div className="hero-body">
           <div className="container">
             <div className="columns is-vcentered">
@@ -33,19 +33,21 @@ const ProjectsPage = ({ data }) => {
                       <a href="#olderworks">Older works</a>
                     </li>
                     <li>
-                      <a href="#">Github</a>
+                      <a href="https://github.com/ErwanEL/" target="_blank">
+                        Github
+                      </a>
                     </li>
                   </ul>
                 </nav>
               </div>
               <div className="column is-half">
-                <div className="cascade">
+                <div className="cascade is-hidden-mobile is-hidden-touch ">
                   <div className="cascade-child child1">
                     <div className="sub">
                       <a href="#olderworks">
                         <Img
                           className="project-img image"
-                          fixed={data.cv.childImageSharp.fixed}
+                          fluid={data.cv.childImageSharp.fluid}
                           alt="Cv"
                         />
                       </a>
@@ -56,7 +58,7 @@ const ProjectsPage = ({ data }) => {
                       <a href="#etna">
                         <Img
                           className="project-img image"
-                          fixed={data.etna.childImageSharp.fixed}
+                          fluid={data.etna.childImageSharp.fluid}
                           alt="Etna joyas"
                         />
                       </a>
@@ -67,7 +69,7 @@ const ProjectsPage = ({ data }) => {
                       <a href="#gatsbyjs">
                         <Img
                           className="project-img image"
-                          fixed={data.hc.childImageSharp.fixed}
+                          fluid={data.hc.childImageSharp.fluid}
                           alt="Haute Culture"
                         />
                       </a>
@@ -78,7 +80,7 @@ const ProjectsPage = ({ data }) => {
                       <a href="#lemot">
                         <Img
                           className="project-img image"
-                          fixed={data.lemot.childImageSharp.fixed}
+                          fluid={data.lemot.childImageSharp.fluid}
                           alt="Lemot"
                         />
                       </a>
@@ -106,11 +108,22 @@ const ProjectsPage = ({ data }) => {
                   <h1 className="title">
                     <p>HauteCulture</p>
                   </h1>
-                  <hr className="mini" />
+                  <hr style={{ background: "#7a1014" }} className="mini" />
                   <p className="subtitle-mod">
-                    A Gatsby project I'v colaborated on. Include the Strapi CMS.
+                    A GatsbyJs project I've collaborated on. Include the{" "}
+                    <a className="strapi-link" href="https://strapi.io/">
+                      Strapi CMS.
+                    </a>
                   </p>
-                  <p className="subtitle">See more about HauteCulture.</p>
+                  <p className="subtitle">
+                    <a
+                      className="hc-link"
+                      href="https://www.hauteculture.com/"
+                      target="_blank"
+                    >
+                      See more about HauteCulture.
+                    </a>
+                  </p>
                 </div>
               </div>
               <div className="column is-half">
@@ -140,13 +153,21 @@ const ProjectsPage = ({ data }) => {
                   <h1 className="title">
                     <p>Lemot</p>
                   </h1>
-                  <hr className="mini" />
+                  <hr style={{ background: "#2a4f7f" }} className="mini" />
                   <p className="subtitle-mod">
                     A GatsbyJs service to practice French for Spanish speaking
                     public. Use Mailgun. Netlify backend. MJML for mail
                     templating.
                   </p>
-                  <p className="subtitle">See more about Lemot.</p>
+                  <p className="subtitle">
+                    <a
+                      className="lemot-link"
+                      href="https://lemot.app/"
+                      target="_blank"
+                    >
+                      See more about Lemot.
+                    </a>
+                  </p>
                 </div>
               </div>
               <div className="column is-half">
@@ -176,12 +197,20 @@ const ProjectsPage = ({ data }) => {
                   <h1 className="title">
                     <p>Etna-Joyas</p>
                   </h1>
-                  <hr className="mini" />
+                  <hr style={{ background: "#A87868" }} className="mini" />
                   <p className="subtitle-mod">
                     A GatsbyJs prototype for a jewelry showcase. Include DATO
                     Cms.
                   </p>
-                  <p className="subtitle">See more about Etna-Joyas.</p>
+                  <p className="subtitle">
+                    <a
+                      className="etna-link"
+                      href="https://etnajoyas.netlify.app/"
+                      target="_blank"
+                    >
+                      See more about Etna-Joyas.
+                    </a>
+                  </p>
                 </div>
               </div>
               <div className="column is-half">
@@ -202,61 +231,123 @@ const ProjectsPage = ({ data }) => {
           <div className="container">
             <div className="columns is-vcentered">
               <div
-                className="column is-half"
+                className="column is-half is-hidden-desktop "
                 data-sal="slide-right"
                 data-sal-delay="500"
                 data-sal-easing="ease"
               >
-                <div className="cascade">
-                  <div className="cascade-child child1">
-                    <div className="sub">
+                <div>
+                  <div className="parent">
+                    <div className="child1">
                       <Img
                         className="project-img image"
-                        fixed={data.cv.childImageSharp.fixed}
+                        fluid={data.cv.childImageSharp.fluid}
                         alt="Cv"
                       />
                     </div>
-                  </div>
-                  <div className="cascade-child child2">
-                    <div className="sub">
+                    <div className="child1 child2">
                       <Img
                         className="project-img image"
-                        fixed={data.oldportfolio.childImageSharp.fixed}
+                        fluid={data.oldportfolio.childImageSharp.fluid}
                         alt="Old Portfolio"
-                      />
-                    </div>
-                  </div>
-                  <div className="cascade-child child3">
-                    <div className="sub">
-                      <Img
-                        className="project-img image"
-                        fixed={data.vgcharts.childImageSharp.fixed}
-                        alt="Vgcharts"
-                      />
-                    </div>
-                  </div>
-                  <div className="cascade-child child4">
-                    <div className="sub">
-                      <Img
-                        className="project-img image"
-                        fixed={data.flickr.childImageSharp.fixed}
-                        alt="Flickr Project"
                       />
                     </div>
                   </div>
                 </div>
               </div>
               <div
-                className="column is-half has-text-right"
+                className="column is-half has-text-right is-hidden-desktop  "
+                // data-sal="slide-left"
+                // data-sal-delay="500"
+                // data-sal-easing="ease"
+              >
+                <div className="content has-text-centered mt-3">
+                  <h1 className="title">
+                    <p>🖿 Older works. </p>
+                  </h1>
+                  <p className="subtitle-mod">Some older projects.</p>
+                </div>
+              </div>
+              <div
+                className="column is-half"
+                data-sal="slide-right"
+                data-sal-delay="500"
+                data-sal-easing="ease"
+              >
+                <div className="cascade is-hidden-mobile is-hidden-touch">
+                  <div className="cascade-child child1">
+                    <div className="sub">
+                      <span className="tooltip is-hidden-touch">
+                        Interactive Cv
+                      </span>
+                      <a href="https://erwanel-cv.netlify.app/" target="_blank">
+                        <Img
+                          className="project-img image"
+                          fluid={data.cv.childImageSharp.fluid}
+                          alt="Cv"
+                        />
+                      </a>
+                    </div>
+                  </div>
+                  <div className="cascade-child child2">
+                    <div className="sub">
+                      <span className="tooltip is-hidden-touch">
+                        Old Portfolio
+                      </span>
+                      <a href="https://erwanel.github.io/" target="_blank">
+                        <Img
+                          className="project-img image"
+                          fluid={data.oldportfolio.childImageSharp.fluid}
+                          alt="Old Portfolio"
+                        />
+                      </a>
+                    </div>
+                  </div>
+                  <div className="cascade-child child3">
+                    <div className="sub">
+                      <span className="tooltip is-hidden-touch">Vg Charts</span>
+                      <a
+                        href="https://erwanel.github.io/vgCharts/"
+                        target="_blank"
+                      >
+                        <Img
+                          className="project-img image"
+                          fluid={data.vgcharts.childImageSharp.fluid}
+                          alt="Vgcharts"
+                        />
+                      </a>
+                    </div>
+                  </div>
+                  <div className="cascade-child child4">
+                    <div className="sub">
+                      <span className="tooltip is-hidden-touch">
+                        Flickr Viewer
+                      </span>
+                      <a
+                        href="https://erwanel.github.io/flickrSearch-th/"
+                        target="_blank"
+                      >
+                        <Img
+                          className="project-img image"
+                          fluid={data.flickr.childImageSharp.fluid}
+                          alt="Flickr Project"
+                        />
+                      </a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div
+                className="column is-half has-text-right is-hidden-mobile is-hidden-touch"
                 data-sal="slide-left"
                 data-sal-delay="500"
                 data-sal-easing="ease"
               >
-                <div className="content has-text-centered">
+                <div className="content">
                   <h1 className="title">
                     <p>🖿 Older works. </p>
                   </h1>
-                  <p className="subtitle-mod">Some older projects..</p>
+                  <p className="subtitle-mod">Some older projects.</p>
                 </div>
               </div>
             </div>
@@ -316,6 +407,9 @@ export const query = graphql`
         fixed {
           ...GatsbyImageSharpFixed
         }
+        fluid {
+          ...GatsbyImageSharpFluid
+        }
       }
     }
     oldportfolio: file(
@@ -325,12 +419,18 @@ export const query = graphql`
         fixed {
           ...GatsbyImageSharpFixed
         }
+        fluid {
+          ...GatsbyImageSharpFluid
+        }
       }
     }
     flickr: file(relativePath: { eq: "images/projects/older/flickr.PNG" }) {
       childImageSharp {
         fixed {
           ...GatsbyImageSharpFixed
+        }
+        fluid {
+          ...GatsbyImageSharpFluid
         }
       }
     }

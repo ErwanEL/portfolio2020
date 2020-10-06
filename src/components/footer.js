@@ -1,4 +1,5 @@
 import React from "react"
+import { Link } from "gatsby"
 // import { useStaticQuery, graphql } from "gatsby"
 // import Img from "gatsby-image"
 import GatsbySvg from "../components/svg/gatsbysvg"
@@ -14,13 +15,15 @@ const Footer = () => {
       >
         <ul>
           <li>
-            <a href="#">Home</a>
+            <Link to="/">Home</Link>
           </li>
           <li>
-            <a href="#">Github</a>
+            <a href="https://github.com/ErwanEL/" target="_blank">
+              Github
+            </a>
           </li>
           <li>
-            <a href="#">Contact</a>
+            <Link to="/contact/">Contact</Link>
           </li>
         </ul>
       </nav>

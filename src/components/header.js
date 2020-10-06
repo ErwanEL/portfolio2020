@@ -96,7 +96,11 @@ const Header = () => {
           >
             Contact
           </Link>
-          <a className="navbar-item githubLink ">
+          <a
+            href="https://github.com/ErwanEL/"
+            target="_blank"
+            className="navbar-item githubLink "
+          >
             <i className="fab fa-2x fa-github"></i>
           </a>
           <a className="navbar-item githubLink ">
@@ -152,7 +156,11 @@ const Header = () => {
         >
           Contact
         </Link>
-        <a className="navbar-item githubLink ml-5-desktop ">
+        <a
+          href="https://github.com/ErwanEL/"
+          target="_blank"
+          className="navbar-item githubLink ml-5-desktop "
+        >
           <i className="fab fa-2x fa-github"></i>
         </a>
 

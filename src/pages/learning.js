@@ -34,7 +34,7 @@ const LearningPage = ({ data }) => {
                       Treehouse. See more at{" "}
                       <a
                         className="treehouse-link"
-                        href="http://etmg-world.com"
+                        href="https://teamtreehouse.com/erwanel"
                         target="_blank"
                       >
                         TreeHouse
