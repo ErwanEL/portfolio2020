@@ -11,7 +11,7 @@ export default function Layout({ children }) {
         <Helmet>
           <meta charSet="utf-8" />
           <title>ErwanEL</title>
-          <link rel="canonical" href="http://mysite.com/example" />
+          <link rel="canonical" href="https://erwanel.com" />
           <link
             href="https://fonts.googleapis.com/css2?family=Voces&display=swap"
             rel="stylesheet"
