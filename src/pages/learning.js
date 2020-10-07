@@ -52,7 +52,13 @@ const LearningPage = ({ data }) => {
         </div>
       </section>
       <hr />
-      <section id="workflow" className="hero is-medium">
+      <section
+        id="workflow"
+        className="hero is-medium"
+        data-sal="slide-up"
+        data-sal-delay="300"
+        data-sal-easing="ease"
+      >
         <div className="hero-body">
           <div className="container">
             <div className="columns is-vcentered">
