@@ -55,7 +55,7 @@ const Header = () => {
             }`}
             to="/learning/"
           >
-            Apprentissage
+            Ressources
           </Link>
           <Link
             className={`navbar-item link ${
@@ -63,7 +63,7 @@ const Header = () => {
             }`}
             to="/skills/"
           >
-            Compétences
+            Skills
           </Link>
           <Link
             className={`navbar-item link ${
@@ -71,7 +71,7 @@ const Header = () => {
             }`}
             to="/projects/"
           >
-            Projets
+            Projects
           </Link>
           <Link
             className={`navbar-item link ${
@@ -115,7 +115,7 @@ const Header = () => {
           }`}
           to="/learning/"
         >
-          Apprentissage
+          Ressources
         </Link>
         <Link
           className={`navbar-item link ${
@@ -123,7 +123,7 @@ const Header = () => {
           }`}
           to="/skills/"
         >
-          Compétences
+          Skills
         </Link>
         <Link
           className={`navbar-item link ${
@@ -131,7 +131,7 @@ const Header = () => {
           }`}
           to="/projects/"
         >
-          Projets
+          Projects
         </Link>
         <Link
           className={`navbar-item link ${

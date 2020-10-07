@@ -4,6 +4,8 @@ import Img from "gatsby-image"
 import Layout from "../components/layout"
 
 import TreehouseSvg from "../components/svg/treehousesvg"
+import JamstackSvg from "../components/svg/jamstacksvg"
+
 import FccSvg from "../components/svg/fccsvg"
 import CodecademySvg from "../components/svg/codecademysvg"
 
@@ -18,35 +20,30 @@ const LearningPage = ({ data }) => {
                 <div className="content">
                   <h1 className="title">
                     <span className="mate">📘</span>
-                    My learning journey.
+                    The ressources I use.
                   </h1>
-                  <hr style={{ background: "#5FCF80" }} className="mini" />
+                  <hr style={{ background: "#F0047F" }} className="mini" />
                   <div className="svg">
-                    <TreehouseSvg className="skillsSvg"></TreehouseSvg>
+                    <JamstackSvg className="skillsSvg"></JamstackSvg>
                   </div>
                   <p className="subtitle-mod">
-                    I consider myself as a self-taught developer. Here are some
-                    great ressources that I used at the beginning of my
-                    learning.
-                    <p>
-                      {" "}
-                      I started my introduction into web development with
-                      Treehouse. See more at{" "}
-                      <a
-                        className="treehouse-link"
-                        href="https://teamtreehouse.com/erwanel"
-                        target="_blank"
-                      >
-                        TreeHouse
-                      </a>
-                    </p>
+                    I keep myself informed about the Jamstack.
+                  </p>
+                  <p className="subtitle">
+                    <a
+                      className="jamstack-link"
+                      href="https://www.hauteculture.com/"
+                      target="_blank"
+                    >
+                      See more about the Jamstack.
+                    </a>
                   </p>
                 </div>
               </div>
               <div className="column is-half">
                 <Img
                   className="free image"
-                  fluid={data.treehouse.childImageSharp.fluid}
+                  fluid={data.jamstack.childImageSharp.fluid}
                   alt="Treehouse"
                 />
               </div>
@@ -64,23 +61,18 @@ const LearningPage = ({ data }) => {
                   <div className="child1">
                     <Img
                       className="free image"
-                      fluid={data.codecademy.childImageSharp.fluid}
+                      fluid={data.fcc.childImageSharp.fluid}
                       alt="Codecademy"
                     />
                   </div>
                   <div className="child1 child2">
                     <Img
                       className="free image"
-                      fluid={data.fcc.childImageSharp.fluid}
+                      fluid={data.treehouse.childImageSharp.fluid}
                       alt="Freecodecamp"
                     />
                   </div>
                 </div>
-                {/* <Img
-                  className="free image"
-                  fluid={data.vscode.childImageSharp.fluid}
-                  alt="Vscode"
-                /> */}
               </div>
               <div className="column is-half has-text-right">
                 <div className="content">
@@ -88,11 +80,19 @@ const LearningPage = ({ data }) => {
                     <p>Other ressources.</p>
                   </h1>
                   <div className="svg">
-                    <CodecademySvg className="skillsSvg mr-2"></CodecademySvg>
+                    <TreehouseSvg className="skillsSvg mr-2"></TreehouseSvg>
                     <FccSvg className="skillsSvg"></FccSvg>
                     <p className="subtitle-mod">
                       {" "}
-                      See more about CodeCademy and FreeCodeCamp{" "}
+                      I started my introduction into web development with
+                      Treehouse. See more at{" "}
+                      <a
+                        className="treehouse-link"
+                        href="https://teamtreehouse.com/erwanel"
+                        target="_blank"
+                      >
+                        TreeHouse
+                      </a>
                     </p>
                   </div>
                 </div>
@@ -108,6 +108,13 @@ const LearningPage = ({ data }) => {
 export const query = graphql`
   {
     fcc: file(relativePath: { eq: "images/learning/fcc.PNG" }) {
+      childImageSharp {
+        fluid {
+          ...GatsbyImageSharpFluid
+        }
+      }
+    }
+    jamstack: file(relativePath: { eq: "images/learning/jamstack.PNG" }) {
       childImageSharp {
         fluid {
           ...GatsbyImageSharpFluid

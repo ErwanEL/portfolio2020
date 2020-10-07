@@ -19,7 +19,7 @@ const IndexPage = () => {
                   </h1>
                   <hr style={{ background: "#023859" }} className="mini" />
                   <p className="subtitle-mod">
-                    Intégrateur, Développeur Front-End, Javascript, GatsbyJS.
+                    Front-End developer, Javascript, GatsbyJS.
                   </p>
                   <p className="subtitle">
                     Find me on{" "}
