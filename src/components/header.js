@@ -3,34 +3,19 @@ import { Link } from "gatsby"
 import { globalHistory } from "@reach/router"
 import MaltSvg from "../components/svg/maltsvg"
 
-// import { useStaticQuery, graphql } from "gatsby"
-// import Img from "gatsby-image"
-
 const Header = () => {
   const path = globalHistory.location.pathname
-
   const [menu, setMenu] = useState(false)
   const toggleMenu = () => setMenu(!menu)
-  //   const data = useStaticQuery(graphql`
-  //     {
-  //       logo: file(relativePath: { eq: "logo.png" }) {
-  //         childImageSharp {
-  //           fixed(width: 90) {
-  //             ...GatsbyImageSharpFixed
-  //           }
-  //         }
-  //       }
-  //     }
-  //   `)
+
   return (
     <nav className="navbar" role="navigation" aria-label="main navigation">
       <div className="navbar-brand">
-        <a className="navbar-item" href="https://bulma.io">
-          <img
-            src="https://bulma.io/images/bulma-logo.png"
-            width="112"
-            height="28"
-          />
+        <a
+          className="navbar-item logo has-text-weight-bold"
+          href="https://bulma.io"
+        >
+          EL.
         </a>
 
         <a

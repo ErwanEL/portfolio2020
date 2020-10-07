@@ -15,7 +15,7 @@ const FreelancePage = ({ data }) => {
                 <div className="content">
                   <h1 className="title">
                     <span className="mate">♾️</span>
-                    <p>My Freelance Experience</p>
+                    My Freelance Experience
                   </h1>
                   <hr style={{ background: "#3d1ca6" }} className="mini" />
                   <p className="subtitle-mod">

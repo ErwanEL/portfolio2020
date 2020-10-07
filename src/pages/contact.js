@@ -14,7 +14,7 @@ const ContactPage = () => {
                 <div className="content">
                   <h1 className="title">
                     <span className="mate">✉️</span>
-                    <p>Contact me.</p>
+                    Contact me. 
                   </h1>
                   <hr className="mini" />
                   <p className="subtitle-mod">Any project.</p>

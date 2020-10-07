@@ -21,7 +21,7 @@ const SkillsPage = ({ data }) => {
                 <div className="content">
                   <h1 className="title">
                     <span className="mate">🔧</span>
-                    <p>My skills</p>
+                    My skills
                   </h1>
                   <hr style={{ background: "#4eb236" }} className="mini" />
                   <p className="subtitle-mod">The technologies I use.</p>
@@ -215,7 +215,10 @@ const SkillsPage = ({ data }) => {
         </div>
       </section>
       <hr />
-      <section id="workflow" className="hero is-medium is-hidden-mobile">
+      <section
+        id="workflow"
+        className="hero is-medium is-hidden-mobile is-hidden-touch"
+      >
         <div className="hero-body">
           <div className="container">
             <div className="columns is-vcentered">
@@ -274,10 +277,7 @@ const SkillsPage = ({ data }) => {
           </div>
         </div>
       </section>
-      <section
-        id="workflow"
-        className="hero is-medium is-hidden-desktop is-hidden-touch"
-      >
+      <section id="workflow" className="hero is-medium is-hidden-desktop">
         <div className="hero-body">
           <div className="container">
             <div className="columns is-vcentered">

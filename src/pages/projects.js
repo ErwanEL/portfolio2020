@@ -14,7 +14,7 @@ const ProjectsPage = ({ data }) => {
                 <div className="content">
                   <h1 className="title">
                     <span className="mate">🗀</span>
-                    <p>My projects</p>
+                    My projects
                   </h1>
                   <hr className="mini" />
                   <p className="subtitle-mod">
