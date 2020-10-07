@@ -1,42 +1,54 @@
-.link:after {
-  background: none repeat scroll 0 0 transparent;
-  bottom: 0;
-  content: "";
-  display: block;
-  height: 2px;
-  left: 10%;
-  right: 10%;
-  position: absolute;
-  background: rgb(255, 123, 0);
-  transition: width 0.5s ease 0s, left 0.5s ease 0s;
-  width: 0;
+@media only screen and (min-width: 1224px) {
+  .link:after {
+    background: none repeat scroll 0 0 transparent;
+    bottom: 0;
+    content: "";
+    display: block;
+    height: 2px;
+    left: 10%;
+    right: 10%;
+    position: absolute;
+    background: rgb(255, 123, 0);
+    transition: width 0.5s ease 0s, left 0.5s ease 0s;
+    width: 0;
+  }
+
+  .link:hover:after {
+    width: 80%;
+  }
+
+  .link-is-active:after {
+    background: none repeat scroll 0 0 transparent;
+    bottom: 0;
+    content: "";
+    display: block;
+    height: 2px;
+    left: 10%;
+    right: 10%;
+    position: absolute;
+    background: rgb(255, 123, 0);
+    transition: width 0.5s ease 0s, left 0.5s ease 0s;
+    width: 80%;
+  }
+
+  a.navbar-item.githubLink {
+    padding: 15;
+    border-radius: 100px;
+    transition-duration: 500ms;
+    transition-property: background-color, color;
+  }
+
+  a.navbar-item.githubLink:hover {
+    background: rgba(255, 123, 0, 0.205);
+  }
 }
 
-.link:hover:after {
-  width: 80%;
-}
-
-.link-is-active:after {
-  background: none repeat scroll 0 0 transparent;
-  bottom: 0;
-  content: "";
-  display: block;
-  height: 2px;
-  left: 10%;
-  right: 10%;
-  position: absolute;
-  background: rgb(255, 123, 0);
-  transition: width 0.5s ease 0s, left 0.5s ease 0s;
-  width: 80%;
-}
-
-a.navbar-item.githubLink {
-  padding: 15;
-  border-radius: 100px;
-  transition-duration: 500ms;
-  transition-property: background-color, color;
-}
-
-a.navbar-item.githubLink:hover {
-  background: rgba(255, 123, 0, 0.205);
+.logo {
+  font-size: 24px;
+  letter-spacing: 2px;
+  color: #023859;
+  border-radius: 10px;
+  text-align: center;
+  border-left: 2px solid #023859;
+  font-family: "Voces", cursive;
 }

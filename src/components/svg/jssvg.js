@@ -2,7 +2,7 @@ import * as React from "react"
 
 function JsSvg(props) {
   return (
-    <svg width="630px" height="630px" viewBox="0 0 630 630" {...props}>
+    <svg height={64} viewBox="0 0 630 630" {...props}>
       <g fillRule="nonzero" fill="none">
         <path fill="#F7DF1E" d="M0 0H630V630H0z" />
         <path

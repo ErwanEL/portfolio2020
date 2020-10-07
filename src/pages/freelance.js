@@ -15,7 +15,7 @@ const FreelancePage = ({ data }) => {
                 <div className="content">
                   <h1 className="title">
                     <span className="mate">♾️</span>
-                    <p>My Freelance Experience</p>
+                    My Freelance Experience
                   </h1>
                   <hr style={{ background: "#3d1ca6" }} className="mini" />
                   <p className="subtitle-mod">
@@ -71,7 +71,7 @@ const FreelancePage = ({ data }) => {
                     that I completed. See more at{" "}
                     <a
                       className="upwork-link"
-                      href="http://etmg-world.com"
+                      href="https://www.upwork.com/o/profiles/users/_~01b8a43c80d62b95bb"
                       target="_blank"
                     >
                       My Upwork profile.

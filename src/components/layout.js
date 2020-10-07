@@ -4,7 +4,6 @@ import "../styles/index.scss"
 import Header from "./header"
 import Footer from "./footer"
 
-
 export default function Layout({ children }) {
   return (
     <section className="section">
@@ -13,6 +12,10 @@ export default function Layout({ children }) {
           <meta charSet="utf-8" />
           <title>ErwanEL</title>
           <link rel="canonical" href="http://mysite.com/example" />
+          <link
+            href="https://fonts.googleapis.com/css2?family=Voces&display=swap"
+            rel="stylesheet"
+          />
           <script
             src="https://kit.fontawesome.com/3ca10bedb4.js"
             crossorigin="anonymous"

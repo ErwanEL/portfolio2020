@@ -21,7 +21,7 @@ const SkillsPage = ({ data }) => {
                 <div className="content">
                   <h1 className="title">
                     <span className="mate">🔧</span>
-                    <p>My skills</p>
+                    My skills
                   </h1>
                   <hr style={{ background: "#4eb236" }} className="mini" />
                   <p className="subtitle-mod">The technologies I use.</p>
@@ -155,11 +155,34 @@ const SkillsPage = ({ data }) => {
 
                     <p className="subtitle-mod">
                       To work on building static websites. GatsbyJs is powered
-                      by the ReactJs framework. See more about GatsbyJs.
+                      by the{" "}
+                      <a
+                        className="react-link"
+                        href="https://en.reactjs.org/"
+                        target="_blank"
+                      >
+                        {" "}
+                        ReactJs
+                      </a>{" "}
+                      framework.{" "}
+                      <a
+                        className="gatsby-link"
+                        href="https://www.gatsbyjs.com/"
+                        target="_blank"
+                      >
+                        See more about GatsbyJs.
+                      </a>
                     </p>
                     <p className="subtitle-mod">
                       I like to use the netlify service to host my GatsbyJs
-                      projects. See more about netlify.
+                      projects.{" "}
+                      <a
+                        className="netlify-link"
+                        href="https://www.netlify.com/"
+                        target="_blank"
+                      >
+                        See more about netlify.
+                      </a>
                     </p>
                   </div>
                 </div>
@@ -192,7 +215,10 @@ const SkillsPage = ({ data }) => {
         </div>
       </section>
       <hr />
-      <section id="workflow" className="hero is-medium">
+      <section
+        id="workflow"
+        className="hero is-medium is-hidden-mobile is-hidden-touch"
+      >
         <div className="hero-body">
           <div className="container">
             <div className="columns is-vcentered">
@@ -218,11 +244,6 @@ const SkillsPage = ({ data }) => {
                     />
                   </div>
                 </div>
-                {/* <Img
-                  className="free image"
-                  fluid={data.vscode.childImageSharp.fluid}
-                  alt="Vscode"
-                /> */}
               </div>
               <div
                 className="column is-half"
@@ -239,8 +260,74 @@ const SkillsPage = ({ data }) => {
                     <AtlassianSvg className="skillsSvg"></AtlassianSvg>
                     <p className="subtitle-mod">
                       {" "}
-                      I like to use the Atlassian services like Bitubucket and
-                      trello to work on my projects.{" "}
+                      I like to use the{" "}
+                      <a
+                        className="atlassian-link"
+                        href="https://www.atlassian.com/"
+                        target="_blank"
+                      >
+                        Atlassian services
+                      </a>{" "}
+                      like Bitubucket and trello to work on my projects.{" "}
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section id="workflow" className="hero is-medium is-hidden-desktop">
+        <div className="hero-body">
+          <div className="container">
+            <div className="columns is-vcentered">
+              <div
+                className="column is-half"
+                data-sal="slide-right"
+                data-sal-delay="500"
+                data-sal-easing="ease"
+              >
+                <div className="parent">
+                  <div className="child1">
+                    <Img
+                      className="free image"
+                      fluid={data.trello.childImageSharp.fluid}
+                      alt="Trello"
+                    />
+                  </div>
+                  <div className="child1 child2">
+                    <Img
+                      className="free image"
+                      fluid={data.bitbucket.childImageSharp.fluid}
+                      alt="Bitbucket"
+                    />
+                  </div>
+                </div>
+              </div>
+              <div
+                className="column is-half"
+                // data-sal="slide-left"
+                // data-sal-delay="500"
+                // data-sal-easing="ease"
+              >
+                <div className="content has-text-right">
+                  <h1 className="title">
+                    <p>Workflow</p>
+                  </h1>
+                  {/* <hr className="mini" /> */}
+                  <div className="svg">
+                    <AtlassianSvg className="skillsSvg"></AtlassianSvg>
+                    <p className="subtitle-mod">
+                      {" "}
+                      I like to use the{" "}
+                      <a
+                        className="atlassian-link"
+                        href="https://www.atlassian.com/"
+                        target="_blank"
+                      >
+                        Atlassian services
+                      </a>{" "}
+                      like Bitubucket and trello to work on my projects.{" "}
                     </p>
                   </div>
                 </div>

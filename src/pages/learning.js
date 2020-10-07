@@ -18,7 +18,7 @@ const LearningPage = ({ data }) => {
                 <div className="content">
                   <h1 className="title">
                     <span className="mate">📘</span>
-                    <p>My learning journey.</p>
+                    My learning journey.
                   </h1>
                   <hr style={{ background: "#5FCF80" }} className="mini" />
                   <div className="svg">
@@ -34,7 +34,7 @@ const LearningPage = ({ data }) => {
                       Treehouse. See more at{" "}
                       <a
                         className="treehouse-link"
-                        href="http://etmg-world.com"
+                        href="https://teamtreehouse.com/erwanel"
                         target="_blank"
                       >
                         TreeHouse

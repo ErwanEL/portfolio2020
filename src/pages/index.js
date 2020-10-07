@@ -1,24 +1,10 @@
 import React from "react"
-import { useStaticQuery, graphql } from "gatsby"
-// import Img from "gatsby-image"
 import Video from "../assets/comp_3.mp4"
-
 
 import Layout from "../components/layout"
 import UpworkSvg from "../components/svg/upworksvg"
 
 const IndexPage = () => {
-  const data = useStaticQuery(graphql`
-    {
-      file(relativePath: { eq: "gif.gif" }) {
-        childImageSharp {
-          fixed(width: 600, height: 600) {
-            ...GatsbyImageSharpFixed
-          }
-        }
-      }
-    }
-  `)
   return (
     <Layout>
       <section className="hero is-medium">
@@ -28,10 +14,10 @@ const IndexPage = () => {
               <div className="column is-half">
                 <div className="content">
                   <h1 className="title">
-                    <span className="mate">🧉</span>
-                    <p>Bienvenue sur le Portfolio de ErwanEL.</p>
+                    {/* <span className="mate">🧉</span>  */}
+                    Hi my name is Erwan, welcome on my portfolio.
                   </h1>
-                  <hr className="mini" />
+                  <hr style={{ background: "#023859" }} className="mini" />
                   <p className="subtitle-mod">
                     Intégrateur, Développeur Front-End, Javascript, GatsbyJS.
                   </p>
@@ -52,33 +38,29 @@ const IndexPage = () => {
                 <video autoPlay loop>
                   <source src={Video} type="video/mp4" />
                 </video>
-                {/* <figure className="image is-256x256">
-                  <img src="gif.gif" alt="" />
-                </figure> */}
-                {/* <Img
-                  fixed={data.file.childImageSharp.fixed}
-                  alt="Gatsby Docs are awesome"
-                /> */}
               </div>
             </div>
           </div>
         </div>
       </section>
-      <section className="has-text-centered">
-        <div className="container has-text-centered">
-          <div className="columns">
-            <div className="column is-5" style={{ margin: "auto" }}>
-              <div className="box ">
-                <p className="quote subtitle-mod is-italic has-text-weight-normal">
-                  A+ would work with again. Very responsive and great to work
-                  with!
-                </p>{" "}
-                <p className="mt-2 has-text-weight-semibold">
-                  {" "}
-                  Kevin McCormick, LSI
-                </p>
+      <section className="hero is-small">
+        <div className="hero-body">
+          <div className="container has-text-centered">
+            <div className="columns">
+              <div className="column is-7" style={{ margin: "auto" }}>
+                <div className="box is-white ">
+                  <i className="fas fa-2x fa-quote-left"></i>
+                  <p className="is-size-4 mt-4  is-italic has-text-weight-normal">
+                    A+ would work with again. Very responsive and great to work
+                    with!
+                  </p>{" "}
+                  <p className="mt-3 has-text-weight-semibold">
+                    {" "}
+                    Kevin McCormick, LSI
+                  </p>
+                </div>
+                <UpworkSvg height={30}></UpworkSvg>
               </div>
-              <UpworkSvg height={30}></UpworkSvg>
             </div>
           </div>
         </div>
