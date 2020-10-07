@@ -10,7 +10,7 @@ const ProjectsPage = ({ data }) => {
         <div className="hero-body">
           <div className="container">
             <div className="columns is-vcentered">
-              <div style={{ marginTop: "-90px" }} className="column is-half">
+              <div className="column is-half">
                 <div className="content">
                   <h1 className="title">
                     <span className="mate">🗀</span>

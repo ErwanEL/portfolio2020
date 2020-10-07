@@ -5,9 +5,9 @@
 }
 
 @media only screen and (max-width: 767px) {
-  section #projects.hero {
-    margin-top: 4rem;
-  }
+  // section #projects.hero {
+  //   margin-top: 4rem;
+  // }
   .mate {
     margin-right: 0.5em;
   }
@@ -15,6 +15,9 @@
 
 @media only screen and (min-width: 1224px) {
   /* Styles pour cette Media Queries */
+  section #projects.hero {
+    margin-top: -4rem;
+  }
   span.mate {
     position: absolute;
     right: calc(100% + 0.5em);
