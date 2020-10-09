@@ -39,16 +39,17 @@
   }
 
   a.navbar-item.githubLink:hover {
-    background: rgba(255, 123, 0, 0.205);
+    background: #ff7b0034;
   }
 }
 
 .logo {
-  font-size: 24px;
-  letter-spacing: 2px;
-  color: #023859;
-  border-radius: 10px;
-  text-align: center;
-  border-left: 2px solid #023859;
-  font-family: "Voces", cursive;
+  // font-size: 24px;
+  // letter-spacing: 2px;
+  // color: #023859;
+  // border-radius: 10px;
+  // text-align: center;
+  // border-left: 2px solid #023859;
+  // font-family: "Voces", cursive;
+  position: absolute;
 }

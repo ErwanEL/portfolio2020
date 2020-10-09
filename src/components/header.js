@@ -2,6 +2,7 @@ import React, { useState } from "react"
 import { Link } from "gatsby"
 import { globalHistory } from "@reach/router"
 import MaltSvg from "../components/svg/maltsvg"
+import LogoSvg from "../components/svg/logosvg"
 
 const Header = () => {
   const path = globalHistory.location.pathname
@@ -9,15 +10,12 @@ const Header = () => {
   const toggleMenu = () => setMenu(!menu)
 
   return (
-    <nav className="navbar" role="navigation" aria-label="main navigation">
+    <nav className="navbar " role="navigation" aria-label="main navigation">
       <div className="navbar-brand">
-        <a
-          className="navbar-item logo has-text-weight-bold"
-          href="https://bulma.io"
-        >
+        {/* <Link className="navbar-item logo has-text-weight-bold" to="/">
           EL.
-        </a>
-
+        </Link> */}
+        <LogoSvg className="logo"></LogoSvg>
         <a
           role="button"
           onClick={toggleMenu}
