@@ -15,7 +15,9 @@ const Header = () => {
         {/* <Link className="navbar-item logo has-text-weight-bold" to="/">
           EL.
         </Link> */}
-        <LogoSvg className="logo"></LogoSvg>
+        <Link to="/">
+          <LogoSvg className="logo"></LogoSvg>
+        </Link>
         <a
           role="button"
           onClick={toggleMenu}
