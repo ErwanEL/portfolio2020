@@ -1,0 +1,31 @@
+title: YAML content used at build time with Gatsby
+home:
+    title: Hi my name is Erwan, welcome on my portfolio.
+    stacks: Front-End developer, Javascript
+    quote:
+        quote: A+ would work with again. Very responsive and great to work with!
+        author: Kevin McCormick, LSI
+
+freelance:
+    title: My Freelance Experience.
+    upworkSection:
+        upworkContent: I am available on the Upwork platform. Here are some gigs that I have completed. See more at
+        upworkProfileLink: My Upwork profile.
+    etmgSection: 
+        etmgContent: Here is a wordpress project that I worked on. See more at
+
+learning:
+    title: The ressources I use.
+    jamstackSection:
+        jamstackContent:  I keep myself informed about the Jamstack to work on building static websites.
+        jamstackLink: See more about the Jamstack.
+    otherRessourcesSection:
+        otherRessourcesContent: I started my introduction into web development with Treehouse. See more at
+
+skills:
+    title: My skills.
+    skillsSection: The technologies I use.
+    htmlCssSection:
+        htmlCssSectionContent: To work on the integration process.
+    javascriptSection: 
+        javascriptSectionContent: To work on the automatisation process.
