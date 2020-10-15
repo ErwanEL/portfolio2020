@@ -8,6 +8,7 @@ import JamstackSvg from "../components/svg/jamstacksvg"
 
 import FccSvg from "../components/svg/fccsvg"
 import CodecademySvg from "../components/svg/codecademysvg"
+import YAMLDataEn from "../content/en-content.yaml"
 
 const LearningPage = ({ data }) => {
   return (
@@ -19,15 +20,18 @@ const LearningPage = ({ data }) => {
               <div className="column is-half">
                 <div className="content">
                   <h1 className="title">
-                    <span className="mate">📘</span>
-                    The ressources I use.
+                    <span className="mate">🔖</span>
+                    {YAMLDataEn.learning.title}
                   </h1>
                   <hr style={{ background: "#F0047F" }} className="mini" />
                   <div className="svg">
-                    <JamstackSvg className="skillsSvg"></JamstackSvg>
+                    <JamstackSvg
+                      height={45}
+                      className="skillsSvg"
+                    ></JamstackSvg>
                   </div>
                   <p className="subtitle-mod">
-                    I keep myself informed about the Jamstack.
+                    {YAMLDataEn.learning.jamstackSection.jamstackContent}
                   </p>
                   <p className="subtitle">
                     <a
@@ -35,7 +39,7 @@ const LearningPage = ({ data }) => {
                       href="https://www.hauteculture.com/"
                       target="_blank"
                     >
-                      See more about the Jamstack.
+                      {YAMLDataEn.learning.jamstackSection.jamstackLink}
                     </a>
                   </p>
                 </div>
@@ -90,8 +94,10 @@ const LearningPage = ({ data }) => {
                     <FccSvg className="skillsSvg"></FccSvg>
                     <p className="subtitle-mod">
                       {" "}
-                      I started my introduction into web development with
-                      Treehouse. See more at{" "}
+                      {
+                        YAMLDataEn.learning.otherRessourcesSection
+                          .otherRessourcesContent
+                      }{" "}
                       <a
                         className="treehouse-link"
                         href="https://teamtreehouse.com/erwanel"
