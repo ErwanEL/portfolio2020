@@ -15,17 +15,13 @@
 
 video {
   box-shadow: 10px 5px 5px #8080807d;
+  height: 100%;
+  width: 100%;
 }
 
 i.fa-quote-left {
   color: #ff7b00;
 }
-
-.dynamic-content {
-  height: 100%;
-  width: 100%;
-}
-
 // .quote:before {
 //   align-self: flex-start;
 //   content: "\201C";

@@ -9,7 +9,6 @@ import JsSvg from "../components/svg/jssvg"
 import GatsbySvg from "../components/svg/gatsbysvg"
 import ReactSvg from "../components/svg/reactsvg"
 import AtlassianSvg from "../components/svg/atlassiansvg"
-import YAMLDataEn from "../content/en-content.yaml"
 
 const SkillsPage = ({ data }) => {
   return (
@@ -22,12 +21,10 @@ const SkillsPage = ({ data }) => {
                 <div className="content">
                   <h1 className="title">
                     <span className="mate">🔧</span>
-                    {YAMLDataEn.skills.title}
+                    My skills
                   </h1>
                   <hr style={{ background: "#4eb236" }} className="mini" />
-                  <p className="subtitle-mod">
-                    {YAMLDataEn.skills.skillsSection}
-                  </p>
+                  <p className="subtitle-mod">The technologies I use.</p>
                 </div>
                 <nav
                   className="skills-breadcrumb breadcrumb is-medium has-bullet-separator"
@@ -82,7 +79,7 @@ const SkillsPage = ({ data }) => {
                     <CssSvg className="skillsSvg mr-2"></CssSvg>
                     <SassSvg className="skillsSvg"></SassSvg>
                     <p className="subtitle-mod">
-                      {YAMLDataEn.skills.htmlCssSection.htmlCssSectionContent}
+                      To work on the integration process.
                     </p>
                   </div>
                 </div>
@@ -118,10 +115,7 @@ const SkillsPage = ({ data }) => {
                   <div className="svg">
                     <JsSvg className="skillsSvg"></JsSvg>
                     <p className="subtitle-mod">
-                      {
-                        YAMLDataEn.skills.javascriptSection
-                          .javascriptSectionContent
-                      }
+                      To work on the automatisation process.
                     </p>
                   </div>
                 </div>

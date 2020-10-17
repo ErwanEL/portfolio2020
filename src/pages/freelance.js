@@ -3,7 +3,6 @@ import { graphql } from "gatsby"
 import Img from "gatsby-image"
 import Layout from "../components/layout"
 import UpworkSvg from "../components/svg/upworksvg"
-import YAMLDataEn from "../content/en-content.yaml"
 
 const FreelancePage = ({ data }) => {
   return (
@@ -15,20 +14,18 @@ const FreelancePage = ({ data }) => {
               <div className="column is-half">
                 <div className="content">
                   <h1 className="title">
-                    {/* <span className="mate">♾</span> */}
-                    <span className="mate">🥬</span>
-                    {YAMLDataEn.freelance.title}
+                    <span className="mate">♾️</span>
+                    My Freelance Experience
                   </h1>
-                  <hr style={{ background: "#6FDA44" }} className="mini" />
-                  <UpworkSvg height={40}></UpworkSvg>
+                  <hr style={{ background: "#3d1ca6" }} className="mini" />
                   <p className="subtitle-mod">
-                    {YAMLDataEn.freelance.upworkSection.upworkContent}{" "}
+                    Here is a wordpress project I worked on. See more at{" "}
                     <a
-                      className="upwork-link"
-                      href="https://www.upwork.com/o/profiles/users/_~01b8a43c80d62b95bb"
+                      className="etmg-link"
+                      href="http://etmg-world.com"
                       target="_blank"
                     >
-                      {YAMLDataEn.freelance.upworkSection.upworkProfileLink}
+                      Etmg-World
                     </a>
                   </p>
                 </div>
@@ -36,8 +33,8 @@ const FreelancePage = ({ data }) => {
               <div className="column is-half">
                 <Img
                   className="free image"
-                  fluid={data.upwork.childImageSharp.fluid}
-                  alt="Upwork contracts"
+                  fluid={data.etmg.childImageSharp.fluid}
+                  alt="Etmg World"
                 />
               </div>
             </div>
@@ -57,24 +54,27 @@ const FreelancePage = ({ data }) => {
               <div className="column is-half">
                 <Img
                   className="free image"
-                  fluid={data.etmg.childImageSharp.fluid}
-                  alt="Etmg"
+                  fluid={data.upwork.childImageSharp.fluid}
+                  alt="Upwork contracts"
                 />
               </div>
+
               <div className="column is-half">
                 <div className="content">
                   <h1 className="title">
-                    Etmg
-                    <p>{/* <UpworkSvg></UpworkSvg> */}</p>
+                    <p>
+                      <UpworkSvg></UpworkSvg>
+                    </p>
                   </h1>
                   <p className="subtitle-mod">
-                    {YAMLDataEn.freelance.etmgSection.etmgContent}{" "}
+                    I used to work on the Upwork plateform. Here are some gigs
+                    that I completed. See more at{" "}
                     <a
-                      className="etmg-link"
-                      href="http://etmg-world.com"
+                      className="upwork-link"
+                      href="https://www.upwork.com/o/profiles/users/_~01b8a43c80d62b95bb"
                       target="_blank"
                     >
-                      Etmg-World
+                      My Upwork profile.
                     </a>
                   </p>
                 </div>
