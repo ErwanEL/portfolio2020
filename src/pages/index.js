@@ -3,7 +3,6 @@ import Video from "../assets/comp_3.mp4"
 
 import Layout from "../components/layout"
 import UpworkSvg from "../components/svg/upworksvg"
-import YAMLDataEn from "../content/en-content.yaml"
 
 const IndexPage = () => {
   return (
@@ -16,11 +15,11 @@ const IndexPage = () => {
                 <div className="content">
                   <h1 className="title">
                     {/* <span className="mate">🧉</span>  */}
-                    {YAMLDataEn.home.title}
+                    Hi my name is Erwan, welcome on my portfolio.
                   </h1>
                   <hr style={{ background: "#023859" }} className="mini" />
                   <p className="subtitle-mod">
-                    {YAMLDataEn.home.stacks}, <b>GatsbyJS.</b>
+                    Front-End developer, Javascript, GatsbyJS.
                   </p>
                   <p className="subtitle">
                     Find me on{" "}
@@ -36,12 +35,8 @@ const IndexPage = () => {
                 </div>
               </div>
               <div className="column is-half">
-                <video className="dynamic-content" autoPlay loop>
-                  <source
-                    style={{ height: "194px" }}
-                    src={Video}
-                    type="video/mp4"
-                  />
+                <video autoPlay loop>
+                  <source src={Video} type="video/mp4" />
                 </video>
               </div>
             </div>
@@ -55,12 +50,13 @@ const IndexPage = () => {
               <div className="column is-7" style={{ margin: "auto" }}>
                 <div className="box is-white ">
                   <i className="fas fa-2x fa-quote-left"></i>
-                  <p className="is-size-4 mt-4 is-italic has-text-weight-normal">
-                    {YAMLDataEn.home.quote.quote}
+                  <p className="is-size-4 mt-4  is-italic has-text-weight-normal">
+                    A+ would work with again. Very responsive and great to work
+                    with!
                   </p>{" "}
                   <p className="mt-3 has-text-weight-semibold">
                     {" "}
-                    {YAMLDataEn.home.quote.author}
+                    Kevin McCormick, LSI
                   </p>
                 </div>
                 <UpworkSvg height={30}></UpworkSvg>

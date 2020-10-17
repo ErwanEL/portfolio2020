@@ -8,7 +8,6 @@ import JamstackSvg from "../components/svg/jamstacksvg"
 
 import FccSvg from "../components/svg/fccsvg"
 import CodecademySvg from "../components/svg/codecademysvg"
-import YAMLDataEn from "../content/en-content.yaml"
 
 const LearningPage = ({ data }) => {
   return (
@@ -20,18 +19,15 @@ const LearningPage = ({ data }) => {
               <div className="column is-half">
                 <div className="content">
                   <h1 className="title">
-                    <span className="mate">🔖</span>
-                    {YAMLDataEn.learning.title}
+                    <span className="mate">📘</span>
+                    The ressources I use.
                   </h1>
                   <hr style={{ background: "#F0047F" }} className="mini" />
                   <div className="svg">
-                    <JamstackSvg
-                      height={45}
-                      className="skillsSvg"
-                    ></JamstackSvg>
+                    <JamstackSvg className="skillsSvg"></JamstackSvg>
                   </div>
                   <p className="subtitle-mod">
-                    {YAMLDataEn.learning.jamstackSection.jamstackContent}
+                    I keep myself informed about the Jamstack.
                   </p>
                   <p className="subtitle">
                     <a
@@ -39,7 +35,7 @@ const LearningPage = ({ data }) => {
                       href="https://www.hauteculture.com/"
                       target="_blank"
                     >
-                      {YAMLDataEn.learning.jamstackSection.jamstackLink}
+                      See more about the Jamstack.
                     </a>
                   </p>
                 </div>
@@ -94,10 +90,8 @@ const LearningPage = ({ data }) => {
                     <FccSvg className="skillsSvg"></FccSvg>
                     <p className="subtitle-mod">
                       {" "}
-                      {
-                        YAMLDataEn.learning.otherRessourcesSection
-                          .otherRessourcesContent
-                      }{" "}
+                      I started my introduction into web development with
+                      Treehouse. See more at{" "}
                       <a
                         className="treehouse-link"
                         href="https://teamtreehouse.com/erwanel"
