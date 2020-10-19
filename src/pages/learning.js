@@ -24,7 +24,10 @@ const LearningPage = ({ data }) => {
                   </h1>
                   <hr style={{ background: "#F0047F" }} className="mini" />
                   <div className="svg">
-                    <JamstackSvg className="skillsSvg"></JamstackSvg>
+                    <JamstackSvg
+                      height={45}
+                      className="skillsSvg"
+                    ></JamstackSvg>
                   </div>
                   <p className="subtitle-mod">
                     I keep myself informed about the Jamstack.
