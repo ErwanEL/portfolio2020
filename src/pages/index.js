@@ -9,17 +9,26 @@ const IndexPage = () => {
     <Layout>
       <section className="hero is-medium">
         <div className="hero-body">
+          <span class="tag navbar-item is-success is-medium ">
+            I'm currently available for work.
+          </span>
           <div className="container">
             <div className="columns is-vcentered">
               <div className="column is-half">
                 <div className="content">
                   <h1 className="title">
                     {/* <span className="mate">🧉</span>  */}
-                    Hi my name is Erwan, welcome on my portfolio.
+                    Hi my name is Erwan, welcome on my portfolio website.
                   </h1>
                   <hr style={{ background: "#023859" }} className="mini" />
                   <p className="subtitle-mod">
-                    Front-End developer, Javascript, GatsbyJS.
+                    Front-End developer, Javascript,{" "}
+                    <span
+                      style={{ color: "#643396" }}
+                      className="has-text-weight-semibold"
+                    >
+                      GatsbyJS.
+                    </span>
                   </p>
                   <p className="subtitle">
                     Find me on{" "}
@@ -28,9 +37,8 @@ const IndexPage = () => {
                       href="https://github.com/ErwanEL/"
                       target="_blank"
                     >
-                      Github
+                      Github.
                     </a>
-                    .
                   </p>
                 </div>
               </div>
@@ -43,12 +51,13 @@ const IndexPage = () => {
           </div>
         </div>
       </section>
+
       <section className="hero is-small">
         <div className="hero-body">
           <div className="container has-text-centered">
             <div className="columns">
               <div className="column is-7" style={{ margin: "auto" }}>
-                <div className="box is-white ">
+                <div className="box">
                   <i className="fas fa-2x fa-quote-left"></i>
                   <p className="is-size-4 mt-4  is-italic has-text-weight-normal">
                     A+ would work with again. Very responsive and great to work
