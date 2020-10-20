@@ -14,18 +14,20 @@ const FreelancePage = ({ data }) => {
               <div className="column is-half">
                 <div className="content">
                   <h1 className="title">
-                    <span className="mate">♾️</span>
-                    My Freelance Experience
+                    <span className="mate">🥬</span>
+                    My Freelance Experience.
                   </h1>
-                  <hr style={{ background: "#3d1ca6" }} className="mini" />
+                  <hr style={{ background: "#6FDA44" }} className="mini" />
+                  <UpworkSvg height={40}></UpworkSvg>
                   <p className="subtitle-mod">
-                    Here is a wordpress project I worked on. See more at{" "}
+                    I am available on the Upwork platform. Here are some gigs
+                    that I have completed. See more at{" "}
                     <a
-                      className="etmg-link"
+                      className="upwork-link"
                       href="http://etmg-world.com"
                       target="_blank"
                     >
-                      Etmg-World
+                      My Upwork profile.
                     </a>
                   </p>
                 </div>
@@ -33,8 +35,8 @@ const FreelancePage = ({ data }) => {
               <div className="column is-half">
                 <Img
                   className="free image"
-                  fluid={data.etmg.childImageSharp.fluid}
-                  alt="Etmg World"
+                  fluid={data.upwork.childImageSharp.fluid}
+                  alt="Upwork contracts"
                 />
               </div>
             </div>
@@ -54,27 +56,22 @@ const FreelancePage = ({ data }) => {
               <div className="column is-half">
                 <Img
                   className="free image"
-                  fluid={data.upwork.childImageSharp.fluid}
-                  alt="Upwork contracts"
+                  fluid={data.etmg.childImageSharp.fluid}
+                  alt="Etmg"
                 />
               </div>
 
               <div className="column is-half">
                 <div className="content">
-                  <h1 className="title">
-                    <p>
-                      <UpworkSvg></UpworkSvg>
-                    </p>
-                  </h1>
+                  <h1 className="title">Etmg</h1>
                   <p className="subtitle-mod">
-                    I used to work on the Upwork plateform. Here are some gigs
-                    that I completed. See more at{" "}
+                    Here is a wordpress project I worked on. See more at{" "}
                     <a
-                      className="upwork-link"
-                      href="https://www.upwork.com/o/profiles/users/_~01b8a43c80d62b95bb"
+                      className="etmg-link"
+                      href="http://etmg-world.com"
                       target="_blank"
                     >
-                      My Upwork profile.
+                      Etmg-World
                     </a>
                   </p>
                 </div>

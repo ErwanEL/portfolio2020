@@ -10,7 +10,7 @@ const Header = () => {
   const toggleMenu = () => setMenu(!menu)
 
   return (
-    <nav className="navbar " role="navigation" aria-label="main navigation">
+    <nav className="navbar" role="navigation" aria-label="main navigation">
       <div className="navbar-brand">
         {/* <Link className="navbar-item logo has-text-weight-bold" to="/">
           EL.

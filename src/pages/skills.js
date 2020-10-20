@@ -268,7 +268,7 @@ const SkillsPage = ({ data }) => {
                       >
                         Atlassian services
                       </a>{" "}
-                      like Bitubucket and trello to work on my projects.{" "}
+                      like Bitbucket and trello to organize my projects.{" "}
                     </p>
                   </div>
                 </div>
