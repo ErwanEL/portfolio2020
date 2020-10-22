@@ -22,28 +22,7 @@ video {
 i.fa-quote-left {
   color: #ff7b00;
 }
-// .quote:before {
-//   align-self: flex-start;
-//   content: "\201C";
 
-//   color: rgb(255, 123, 0);
-//   flex-grow: 0;
-//   flex-shrink: 0;
-//   font-family: Georgia, serif;
-//   font-size: 3em;
-//   line-height: 1;
-//   width: 3rem;
-// }
-// .quote:after {
-//   align-self: flex-end;
-//   content: "\201D";
-//   text-align: right;
-
-//   color: rgb(255, 123, 0);
-//   flex-grow: 0;
-//   flex-shrink: 0;
-//   font-family: Georgia, serif;
-//   font-size: 2em;
-//   line-height: 1;
-//   width: 3rem;
-// }
+.quote {
+  outline: none;
+}
