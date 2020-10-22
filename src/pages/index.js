@@ -3,6 +3,7 @@ import Video from "../assets/comp_3.mp4"
 
 import Layout from "../components/layout"
 import UpworkSvg from "../components/svg/upworksvg"
+import QuoteSlider from "../components/quoteslider"
 
 const IndexPage = () => {
   return (
@@ -51,24 +52,14 @@ const IndexPage = () => {
           </div>
         </div>
       </section>
-
+      <hr></hr>
       <section className="hero is-small">
         <div className="hero-body">
           <div className="container has-text-centered">
             <div className="columns">
               <div className="column is-7" style={{ margin: "auto" }}>
-                <div className="box">
-                  <i className="fas fa-2x fa-quote-left"></i>
-                  <p className="is-size-4 mt-4  is-italic has-text-weight-normal">
-                    A+ would work with again. Very responsive and great to work
-                    with!
-                  </p>{" "}
-                  <p className="mt-3 has-text-weight-semibold">
-                    {" "}
-                    Kevin McCormick, LSI
-                  </p>
-                </div>
-                <UpworkSvg height={30}></UpworkSvg>
+                <QuoteSlider />
+                <UpworkSvg className="mt-5" height={30}></UpworkSvg>
               </div>
             </div>
           </div>
