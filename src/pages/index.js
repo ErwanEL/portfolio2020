@@ -3,7 +3,7 @@ import Video from "../assets/comp_3.mp4"
 
 import Layout from "../components/layout"
 import UpworkSvg from "../components/svg/upworksvg"
-import QuoteSlider from "../components/quoteslider"
+import QuoteSlider from "../components/quoteSlider"
 
 const IndexPage = () => {
   return (
