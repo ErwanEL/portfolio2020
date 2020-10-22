@@ -27,7 +27,7 @@ export default class QuoteSlider extends Component {
     return (
       <div>
         <Slider ref={slider => (this.slider = slider)} {...settings}>
-          <div className="">
+          <div className="quote">
             <i className="fas fa-2x fa-quote-left"></i>
             <p className="is-size-4 mt-4  is-italic has-text-weight-normal">
               A+ would work with again. Very responsive and great to work with!
@@ -37,7 +37,7 @@ export default class QuoteSlider extends Component {
               Kevin McCormick, LSI
             </p>
           </div>
-          <div>
+          <div className="quote">
             <i className="fas fa-2x fa-quote-left"></i>
             <p className="is-size-4 mt-4  is-italic has-text-weight-normal">
               Thank you for your help! You did a very good job.
@@ -47,7 +47,7 @@ export default class QuoteSlider extends Component {
               Ahmet Ozisik, Swiftmade
             </p>
           </div>
-          <div>
+          <div className="quote">
             <i className="fas fa-2x fa-quote-left"></i>
             <p className="is-size-4 mt-4  is-italic has-text-weight-normal">
               Provided what I needed very quickly!
