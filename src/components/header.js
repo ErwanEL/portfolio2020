@@ -88,8 +88,15 @@ const Header = () => {
           >
             <i className="fab fa-2x fa-github"></i>
           </a>
-          <a className="navbar-item githubLink ">
+          {/* <a className="navbar-item githubLink ">
             <MaltSvg></MaltSvg>
+          </a> */}
+          <a
+            className="navbar-item githubLink"
+            href="https://t.me/ErwanEL"
+            target="_blank"
+          >
+            <i style={{ color: "#1e96c8" }} class="fab fa-2x fa-telegram"></i>
           </a>
         </div>
       </div>
@@ -148,9 +155,12 @@ const Header = () => {
         >
           <i className="fab fa-2x fa-github"></i>
         </a>
-
-        <a className="navbar-item githubLink ml-5-desktop ">
-          <MaltSvg></MaltSvg>
+        <a
+          className="navbar-item githubLink"
+          href="https://t.me/ErwanEL"
+          target="_blank"
+        >
+          <i style={{ color: "#1e96c8" }} class="fab fa-2x fa-telegram"></i>
         </a>
       </div>
     </nav>
