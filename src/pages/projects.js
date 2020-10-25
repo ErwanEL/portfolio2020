@@ -2,10 +2,12 @@ import React from "react"
 import { graphql } from "gatsby"
 import Img from "gatsby-image"
 import Layout from "../components/layout"
+import SEO from "../components/seo"
 
 const ProjectsPage = ({ data }) => {
   return (
     <Layout>
+      <SEO title="Realisations and projects I've worked on" />
       <section id="projects" className="hero is-medium">
         <div className="hero-body">
           <div className="container">

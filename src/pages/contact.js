@@ -1,11 +1,11 @@
 import React from "react"
-// import { graphql } from "gatsby"
-// import Img from "gatsby-image"
 import Layout from "../components/layout"
+import SEO from "../components/seo"
 
 const ContactPage = () => {
   return (
     <Layout>
+      <SEO title="Contact me" />
       <section className="hero is-medium">
         <div className="hero-body">
           <div className="container">
@@ -14,7 +14,7 @@ const ContactPage = () => {
                 <div className="content">
                   <h1 className="title">
                     <span className="mate">✉️</span>
-                    Contact me. 
+                    Contact me.
                   </h1>
                   <hr className="mini" />
                   <p className="subtitle-mod">Any project.</p>

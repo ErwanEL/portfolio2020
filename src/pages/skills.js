@@ -2,6 +2,7 @@ import React from "react"
 import { graphql } from "gatsby"
 import Img from "gatsby-image"
 import Layout from "../components/layout"
+import SEO from "../components/seo"
 import HtmlSvg from "../components/svg/htmlsvg"
 import CssSvg from "../components/svg/csssvg"
 import SassSvg from "../components/svg/sasssvg"
@@ -13,6 +14,7 @@ import AtlassianSvg from "../components/svg/atlassiansvg"
 const SkillsPage = ({ data }) => {
   return (
     <Layout>
+      <SEO title="My skills" />
       <section className="hero is-medium">
         <div className="hero-body">
           <div className="container">
@@ -21,7 +23,7 @@ const SkillsPage = ({ data }) => {
                 <div className="content">
                   <h1 className="title">
                     <span className="mate">🔧</span>
-                    My skills
+                    My skills.
                   </h1>
                   <hr style={{ background: "#4eb236" }} className="mini" />
                   <p className="subtitle-mod">The technologies I use.</p>
