@@ -6,12 +6,22 @@
 
 module.exports = {
   /* Your site config here */
+  siteMetadata: {
+    title: "ErwanEL",
+    titleTemplate: "%s · Portfolio website of ErwanEL",
+    description:
+      "Portfolio website of ErwanEL, Front-End developer, javascript, GatsbyJs",
+    url: "https://erwanel.com", // No trailing slash allowed!
+    image: "static/logo.png", // Path to your image you placed in the 'static' folder
+    twitterUsername: "@ErwanEL2",
+  },
   plugins: [
     `gatsby-plugin-sass`,
     `gatsby-plugin-react-helmet`,
     `gatsby-transformer-sharp`,
     `gatsby-plugin-sharp`,
     `gatsby-plugin-scroll-reveal`,
+
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
