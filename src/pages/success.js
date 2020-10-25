@@ -1,9 +1,11 @@
 import React from "react"
 import Layout from "../components/layout"
+import SEO from "../components/seo"
 
 const SuccessPage = () => {
   return (
     <Layout>
+      <SEO title="Message sent" />
       <section className="hero is-medium">
         <div className="hero-body">
           <div className="container">

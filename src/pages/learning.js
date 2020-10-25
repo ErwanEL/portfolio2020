@@ -2,16 +2,15 @@ import React from "react"
 import { graphql } from "gatsby"
 import Img from "gatsby-image"
 import Layout from "../components/layout"
-
-import TreehouseSvg from "../components/svg/treehousesvg"
+import SEO from "../components/seo"
 import JamstackSvg from "../components/svg/jamstacksvg"
-
+import TreehouseSvg from "../components/svg/treehousesvg"
 import FccSvg from "../components/svg/fccsvg"
-import CodecademySvg from "../components/svg/codecademysvg"
 
 const LearningPage = ({ data }) => {
   return (
     <Layout>
+      <SEO title="The ressources I use" />
       <section className="hero is-medium">
         <div className="hero-body">
           <div className="container">

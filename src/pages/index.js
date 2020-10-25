@@ -2,12 +2,14 @@ import React from "react"
 import Video from "../assets/comp_3.mp4"
 
 import Layout from "../components/layout"
+import SEO from "../components/seo"
 import UpworkSvg from "../components/svg/upworksvg"
 import QuoteSlider from "../components/quoteSlider"
 
 const IndexPage = () => {
   return (
     <Layout>
+      <SEO title="Welcome on my portfolio website - ErwanEL" />
       <section className="hero is-medium">
         <div className="hero-body">
           <span class="tag navbar-item is-success is-medium ">
