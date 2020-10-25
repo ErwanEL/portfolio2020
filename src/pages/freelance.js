@@ -2,11 +2,13 @@ import React from "react"
 import { graphql } from "gatsby"
 import Img from "gatsby-image"
 import Layout from "../components/layout"
+import SEO from "../components/seo"
 import UpworkSvg from "../components/svg/upworksvg"
 
 const FreelancePage = ({ data }) => {
   return (
     <Layout>
+      <SEO title="My freelance experience" />
       <section className="hero is-medium">
         <div className="hero-body">
           <div className="container">

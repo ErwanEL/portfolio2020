@@ -12,7 +12,7 @@ module.exports = {
     description:
       "Portfolio website of ErwanEL, Front-End developer, javascript, GatsbyJs",
     url: "https://erwanel.com", // No trailing slash allowed!
-    image: "static/logo.png", // Path to your image you placed in the 'static' folder
+    image: "logo.png", // Path to your image you placed in the 'static' folder
     twitterUsername: "@ErwanEL2",
   },
   plugins: [
