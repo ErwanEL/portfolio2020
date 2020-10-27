@@ -29,7 +29,7 @@ const SkillsPage = ({ data }) => {
                   <p className="subtitle-mod">The technologies I use.</p>
                 </div>
                 <nav
-                  className="skills-breadcrumb breadcrumb is-medium has-bullet-separator"
+                  className="breadcrumb is-medium has-bullet-separator"
                   aria-label="breadcrumbs"
                 >
                   <ul>
