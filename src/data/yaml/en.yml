@@ -1,0 +1,82 @@
+navbar:
+    home: Home
+    freelance: Freelance
+    ressources: Ressources
+    skills: Skills
+    projects: Projects
+    contact: Contact
+
+home:
+    tag: I'm currently available for work.
+    title: Hi my name is Erwan, welcome on my portfolio website.
+    stacks: Front-End developer, Javascript
+    find: Find me on
+    quote:
+        quote: A+ would work with again. Very responsive and great to work with!
+        author: Kevin McCormick, LSI
+
+freelance:
+    title: My Freelance Experience.
+    first-section:
+        first-section-content: I am available on the Upwork platform. Here are some gigs that I have completed. See more at
+        first-section-link: My Upwork profile.
+    second-section: 
+        second-section-content: Here is a wordpress project that I worked on. See more at
+
+learning:
+    title: The ressources I use.
+    first-section:
+        first-section-content:  I keep myself informed about the Jamstack to work on building static websites.
+        first-section-link: See more about the Jamstack.
+    second-section:
+        second-section-content: I started my introduction into web development with Treehouse. See more at
+
+skills:
+    title: My skills.
+    first-section: The technologies I use.
+    html-section:
+        html-section-content: To work on the integration process.
+    javascript-section: 
+        javascript-section-content: To work on the automatisation process.
+    gatsby-section: 
+        gatsby-section-content: To work on building static websites.
+        gatsby-section-link: See more about GatsbyJs.
+        netlify: I like to use the netlify service to host my GatsbyJs projects.
+        netlify-link: See more about netlify.
+
+projects:
+    title: My projects.
+    first-section:
+        first-section-content: Realisations and projects I've worked on.
+        breadcrumb: Older works
+    haute-section:
+        haute-section-content: A GatsbyJs project I've collaborated on. Include the
+        haute-section-link: See more about HauteCulture.
+    lemot-section:
+        lemot-section-content: A GatsbyJs service to practice French for Spanish speaking public. Use Mailgun. Netlify backend. MJML for mail templating.
+        lemot-section-link: See more about Lemot.
+    etna-section:
+        etna-section-content: A GatsbyJs prototype for a jewelry showcase. Include DATO Cms.
+        etna-section-link: See more about Etna-Joyas
+    older-section: 
+        older-section-content: Some older projects.
+
+contact:
+    title: Contact me.
+    first-section:
+        p-1: Any projects.
+        p-2: Any job proposition.
+        p-3: Feel free to contact me.
+    form:
+        name-field: 
+            title: name
+            placeholder: Your Name
+        email-field:
+            title: Email
+            placeholder: Your Email
+        message-field:
+            title: Message
+            placeholder: Your Message
+        button: Send
+        success: Your message has been sent successfully!
+    

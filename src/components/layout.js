@@ -2,6 +2,7 @@ import React from "react"
 import { Helmet } from "react-helmet"
 import "../styles/index.scss"
 import Header from "./header"
+import Content from "../data/yaml/en.yml"
 import Footer from "./footer"
 
 export default function Layout({ children }) {
@@ -21,7 +22,7 @@ export default function Layout({ children }) {
             crossorigin="anonymous"
           ></script>
         </Helmet>
-        <Header></Header>
+        <Header navbar={Content.navbar}></Header>
         {children}
         <Footer></Footer>
       </div>

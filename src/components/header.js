@@ -4,11 +4,11 @@ import { globalHistory } from "@reach/router"
 import MaltSvg from "../components/svg/maltsvg"
 import LogoSvg from "../components/svg/logosvg"
 
-const Header = () => {
+const Header = ({ navbar }) => {
   const path = globalHistory.location.pathname
   const [menu, setMenu] = useState(false)
   const toggleMenu = () => setMenu(!menu)
-
+  console.log(navbar)
   return (
     <nav className="navbar" role="navigation" aria-label="main navigation">
       <div className="navbar-brand">
@@ -38,7 +38,7 @@ const Header = () => {
       >
         <div className="navbar-start is-hidden-desktop">
           <Link className="navbar-item link link-is-active" to="/">
-            Home
+            {navbar.home}
           </Link>
           <Link
             className={`navbar-item link ${
@@ -46,7 +46,7 @@ const Header = () => {
             }`}
             to="/freelance/"
           >
-            Freelance
+            {navbar.freelance}
           </Link>
 
           <Link
@@ -55,7 +55,7 @@ const Header = () => {
             }`}
             to="/learning/"
           >
-            Ressources
+            {navbar.ressources}
           </Link>
           <Link
             className={`navbar-item link ${
@@ -63,7 +63,7 @@ const Header = () => {
             }`}
             to="/skills/"
           >
-            Skills
+            {navbar.skills}
           </Link>
           <Link
             className={`navbar-item link ${
@@ -71,7 +71,7 @@ const Header = () => {
             }`}
             to="/projects/"
           >
-            Projects
+            {navbar.projects}
           </Link>
           <Link
             className={`navbar-item link ${
@@ -79,7 +79,7 @@ const Header = () => {
             }`}
             to="/contact/"
           >
-            Contact
+            {navbar.contact}
           </Link>
           <a
             href="https://github.com/ErwanEL/"
@@ -106,7 +106,7 @@ const Header = () => {
           className={`navbar-item link ${path === "/" && "link-is-active"}`}
           to="/"
         >
-          Home
+          {navbar.home}
         </Link>
         <Link
           className={`navbar-item link ${
@@ -114,7 +114,7 @@ const Header = () => {
           }`}
           to="/freelance/"
         >
-          Freelance
+          {navbar.freelance}
         </Link>
         <Link
           className={`navbar-item link ${
@@ -122,7 +122,7 @@ const Header = () => {
           }`}
           to="/learning/"
         >
-          Ressources
+          {navbar.ressources}
         </Link>
         <Link
           className={`navbar-item link ${
@@ -130,7 +130,7 @@ const Header = () => {
           }`}
           to="/skills/"
         >
-          Skills
+          {navbar.skills}
         </Link>
         <Link
           className={`navbar-item link ${
@@ -138,7 +138,7 @@ const Header = () => {
           }`}
           to="/projects/"
         >
-          Projects
+          {navbar.projects}
         </Link>
         <Link
           className={`navbar-item link ${
@@ -146,7 +146,7 @@ const Header = () => {
           }`}
           to="/contact/"
         >
-          Contact
+          {navbar.contact}
         </Link>
         <a
           href="https://github.com/ErwanEL/"
