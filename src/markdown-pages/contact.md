@@ -2,6 +2,7 @@
 slug: "/contact"
 seo: "Contact"
 title: "Contact me."
+success: "Your message has been sent successfully!"
 ---
 
 <div class="content">
