@@ -6,30 +6,31 @@ import SEO from "../components/seo"
 import UpworkSvg from "../components/svg/upworksvg"
 
 const FreelancePage = ({ data }) => {
+  const { markdownRemark } = data
+  const { frontmatter } = markdownRemark
   return (
     <Layout>
-      <SEO title="My freelance experience" />
+      <SEO title={frontmatter.seo} />
       <section className="hero is-medium">
         <div className="hero-body">
           <div className="container">
             <div className="columns is-vcentered">
               <div className="column is-half">
+                <h1 className="title">
+                  <span className="mate">🥬</span>
+                  {frontmatter.seo}.
+                </h1>
                 <div className="content">
-                  <h1 className="title">
-                    <span className="mate">🥬</span>
-                    My Freelance Experience.
-                  </h1>
                   <hr style={{ background: "#6FDA44" }} className="mini" />
                   <UpworkSvg height={40}></UpworkSvg>
                   <p className="subtitle-mod">
-                    I am available on the Upwork platform. Here are some gigs
-                    that I have completed. See more at{" "}
+                    {frontmatter.title1}{" "}
                     <a
                       className="upwork-link"
                       href="http://etmg-world.com"
                       target="_blank"
                     >
-                      My Upwork profile.
+                      {frontmatter.upwork}
                     </a>
                   </p>
                 </div>
@@ -67,7 +68,7 @@ const FreelancePage = ({ data }) => {
                 <div className="content">
                   <h1 className="title">Etmg</h1>
                   <p className="subtitle-mod">
-                    Here is a wordpress project I worked on. See more at{" "}
+                    {frontmatter.title2}{" "}
                     <a
                       className="etmg-link"
                       href="http://etmg-world.com"
@@ -88,6 +89,16 @@ const FreelancePage = ({ data }) => {
 
 export const query = graphql`
   {
+    markdownRemark(frontmatter: { slug: { eq: "/freelance" } }) {
+      html
+      frontmatter {
+        slug
+        seo
+        title1
+        upwork
+        title2
+      }
+    }
     etmg: file(relativePath: { eq: "images/freelance/etmg.png" }) {
       childImageSharp {
         fluid {
