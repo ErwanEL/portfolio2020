@@ -8,6 +8,7 @@ const Form = () => {
       action="/success"
       data-netlify="true"
       data-netlify-honeypot="bot-field"
+      data-netlify-recaptcha="true"
     >
       <input type="hidden" name="form-name" value="contact" />
       <div className="field">
@@ -47,19 +48,20 @@ const Form = () => {
           ></textarea>
         </div>
       </div>
-      {/* 
-                  <div className="field">
-                    <div data-netlify-recaptcha="true"></div>
-                  </div> */}
-      {/* <div className="field">
-                    <input
-                      type="file"
-                      name="myfile"
-                      id="myfile"
-                      placeholder="Upload File"
-                    />
-                  </div> */}
 
+      <div className="field">
+        <div data-netlify-recaptcha="true"></div>
+      </div>
+      <div className="field">
+        <input
+          type="file"
+          name="myfile"
+          id="myfile"
+          placeholder="Upload File"
+        />
+      </div>
+
+      <div data-netlify-recaptcha="true"></div>
       <div className="field is-grouped">
         <div className="control">
           <button type="submit" className="button is-link submit">
