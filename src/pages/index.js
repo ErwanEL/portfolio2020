@@ -1,49 +1,28 @@
 import React from "react"
+import { graphql } from "gatsby"
 import Video from "../assets/comp_3.mp4"
-
 import Layout from "../components/layout"
 import SEO from "../components/seo"
 import UpworkSvg from "../components/svg/upworksvg"
 import QuoteSlider from "../components/quoteSlider"
 
-const IndexPage = () => {
+const IndexPage = ({ data }) => {
+  const { markdownRemark } = data
+  const { frontmatter, html } = markdownRemark
+
   return (
     <Layout>
-      <SEO title="Welcome on my portfolio website - ErwanEL" />
+      <SEO title={frontmatter.seo} />
       <section className="hero is-medium">
         <div className="hero-body">
           <span class="tag navbar-item is-success is-medium ">
-            I'm currently available for work.
+            {frontmatter.tag}
           </span>
           <div className="container">
             <div className="columns is-vcentered">
               <div className="column is-half">
-                <div className="content">
-                  <h1 className="title">
-                    {/* <span className="mate">🧉</span>  */}
-                    Hi my name is Erwan, welcome on my portfolio website.
-                  </h1>
-                  <hr style={{ background: "#023859" }} className="mini" />
-                  <p className="subtitle-mod">
-                    Front-End developer, Javascript,{" "}
-                    <span
-                      style={{ color: "#643396" }}
-                      className="has-text-weight-semibold"
-                    >
-                      GatsbyJS.
-                    </span>
-                  </p>
-                  <p className="subtitle">
-                    Find me on{" "}
-                    <a
-                      className="github-link"
-                      href="https://github.com/ErwanEL/"
-                      target="_blank"
-                    >
-                      Github.
-                    </a>
-                  </p>
-                </div>
+                <h1 className="title">{frontmatter.title}</h1>
+                <div dangerouslySetInnerHTML={{ __html: html }} />
               </div>
               <div className="column is-half">
                 <video muted autoPlay loop>
@@ -72,3 +51,17 @@ const IndexPage = () => {
 }
 
 export default IndexPage
+
+export const query = graphql`
+  {
+    markdownRemark(frontmatter: { slug: { eq: "/home" } }) {
+      html
+      frontmatter {
+        title
+        slug
+        seo
+        tag
+      }
+    }
+  }
+`
