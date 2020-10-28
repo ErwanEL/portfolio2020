@@ -8,7 +8,7 @@ const Form = () => {
       action="/success"
       data-netlify="true"
       data-netlify-honeypot="bot-field"
-      data-netlify-recaptcha="true"
+      // data-netlify-recaptcha="true"
     >
       <input type="hidden" name="form-name" value="contact" />
       <div className="field">
@@ -61,7 +61,7 @@ const Form = () => {
         />
       </div>
 
-      <div data-netlify-recaptcha="true"></div>
+      {/* <div data-netlify-recaptcha="true"></div> */}
       <div className="field is-grouped">
         <div className="control">
           <button type="submit" className="button is-link submit">
