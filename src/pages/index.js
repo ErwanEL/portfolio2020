@@ -46,7 +46,7 @@ const IndexPage = () => {
                 </div>
               </div>
               <div className="column is-half">
-                <video autoPlay loop>
+                <video muted autoPlay loop>
                   <source src={Video} type="video/mp4" />
                 </video>
               </div>

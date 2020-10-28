@@ -5,7 +5,7 @@ import SEO from "../components/seo"
 import Form from "../components/form"
 
 const ContactPage = ({ data }) => {
-  const { markdownRemark } = data // data.markdownRemark holds your post data
+  const { markdownRemark } = data
   const { frontmatter, html } = markdownRemark
 
   return (
