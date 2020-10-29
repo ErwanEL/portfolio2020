@@ -2,7 +2,7 @@
 slug: "/home"
 seo: "Welcome on my portfolio website - ErwanEL"
 tag: "I'm currently available for work."
-title: "Hi my name is Erwan, welcome on my portfolio website."
+title: "Hola mi nombres es Erwan, welcome on my portfolio website."
 ---
 
 <div class="content">
