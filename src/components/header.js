@@ -10,13 +10,15 @@ const Header = ({ navbar }) => {
   const toggleMenu = () => setMenu(!menu)
   return (
     <nav className="navbar" role="navigation" aria-label="main navigation">
-      <div className="navbar-brand">
+      <div>
         {/* <Link className="navbar-item logo has-text-weight-bold" to="/">
           EL.
         </Link> */}
-        <Link to="/">
-          <LogoSvg className="logo"></LogoSvg>
-        </Link>
+        <div className="navbar-item">
+          <Link to="/">
+            <LogoSvg className="logo"></LogoSvg>
+          </Link>
+        </div>
         <a
           role="button"
           onClick={toggleMenu}
