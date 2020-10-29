@@ -8,6 +8,7 @@ const Header = ({ navbar }) => {
   const path = globalHistory.location.pathname
   const [menu, setMenu] = useState(false)
   const toggleMenu = () => setMenu(!menu)
+
   return (
     <nav className="navbar" role="navigation" aria-label="main navigation">
       <div>
@@ -38,48 +39,23 @@ const Header = ({ navbar }) => {
         className={`navbar-menu ${menu && "is-active"}`}
       >
         <div className="navbar-start is-hidden-desktop">
-          <Link className="navbar-item link link-is-active" to="/">
+          <Link className={`navbar-item link`} to="/">
             {navbar.home}
           </Link>
-          <Link
-            className={`navbar-item link ${
-              path === "/freelance/" && "link-is-active"
-            }`}
-            to="/freelance/"
-          >
+          <Link className={`navbar-item link`} to="/freelance/">
             {navbar.freelance}
           </Link>
 
-          <Link
-            className={`navbar-item link ${
-              path === "/learning/" && "link-is-active"
-            }`}
-            to="/learning/"
-          >
+          <Link className={`navbar-item link`} to="/learning/">
             {navbar.ressources}
           </Link>
-          <Link
-            className={`navbar-item link ${
-              path === "/skills/" && "link-is-active"
-            }`}
-            to="/skills/"
-          >
+          <Link className={`navbar-item link`} to="/skills/">
             {navbar.skills}
           </Link>
-          <Link
-            className={`navbar-item link ${
-              path === "/projects/" && "link-is-active"
-            }`}
-            to="/projects/"
-          >
+          <Link className={`navbar-item link`} to="/projects/">
             {navbar.projects}
           </Link>
-          <Link
-            className={`navbar-item link ${
-              path === "/contact/" && "link-is-active"
-            }`}
-            to="/contact/"
-          >
+          <Link className={`navbar-item link`} to="/contact/">
             {navbar.contact}
           </Link>
           <a
@@ -103,47 +79,43 @@ const Header = ({ navbar }) => {
       </div>
       <div className="navbar-end is-hidden-touch">
         <Link
-          className={`navbar-item link ${path === "/" && "link-is-active"}`}
+          className={`navbar-item link `}
+          activeClassName="link-is-active"
           to="/"
         >
           {navbar.home}
         </Link>
         <Link
-          className={`navbar-item link ${
-            path === "/freelance/" && "link-is-active"
-          }`}
+          className={`navbar-item link`}
+          activeClassName="link-is-active"
           to="/freelance/"
         >
           {navbar.freelance}
         </Link>
         <Link
-          className={`navbar-item link ${
-            path === "/learning/" && "link-is-active"
-          }`}
+          className={`navbar-item link `}
+          activeClassName="link-is-active"
           to="/learning/"
         >
           {navbar.ressources}
         </Link>
         <Link
-          className={`navbar-item link ${
-            path === "/skills/" && "link-is-active"
-          }`}
+          className={`navbar-item link`}
+          activeClassName="link-is-active"
           to="/skills/"
         >
           {navbar.skills}
         </Link>
         <Link
-          className={`navbar-item link ${
-            path === "/projects/" && "link-is-active"
-          }`}
+          className={`navbar-item link`}
+          activeClassName="link-is-active"
           to="/projects/"
         >
           {navbar.projects}
         </Link>
         <Link
-          className={`navbar-item link ${
-            path === "/contact/" && "link-is-active"
-          }`}
+          className={`navbar-item link`}
+          activeClassName="link-is-active"
           to="/contact/"
         >
           {navbar.contact}
