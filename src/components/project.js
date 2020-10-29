@@ -32,7 +32,7 @@ const Project = ({
                   {content}{" "}
                   {optionLink && (
                     <a className="strapi-link" href="https://strapi.io/">
-                      Strapi CMS.
+                      Strapi.
                     </a>
                   )}
                 </p>
