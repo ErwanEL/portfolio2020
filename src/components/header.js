@@ -4,20 +4,21 @@ import { globalHistory } from "@reach/router"
 import MaltSvg from "../components/svg/maltsvg"
 import LogoSvg from "../components/svg/logosvg"
 
-const Header = () => {
+const Header = ({ navbar }) => {
   const path = globalHistory.location.pathname
   const [menu, setMenu] = useState(false)
   const toggleMenu = () => setMenu(!menu)
-
   return (
     <nav className="navbar" role="navigation" aria-label="main navigation">
-      <div className="navbar-brand">
+      <div>
         {/* <Link className="navbar-item logo has-text-weight-bold" to="/">
           EL.
         </Link> */}
-        <Link to="/">
-          <LogoSvg className="logo"></LogoSvg>
-        </Link>
+        <div className="navbar-item">
+          <Link to="/">
+            <LogoSvg className="logo"></LogoSvg>
+          </Link>
+        </div>
         <a
           role="button"
           onClick={toggleMenu}
@@ -38,7 +39,7 @@ const Header = () => {
       >
         <div className="navbar-start is-hidden-desktop">
           <Link className="navbar-item link link-is-active" to="/">
-            Home
+            {navbar.home}
           </Link>
           <Link
             className={`navbar-item link ${
@@ -46,7 +47,7 @@ const Header = () => {
             }`}
             to="/freelance/"
           >
-            Freelance
+            {navbar.freelance}
           </Link>
 
           <Link
@@ -55,7 +56,7 @@ const Header = () => {
             }`}
             to="/learning/"
           >
-            Ressources
+            {navbar.ressources}
           </Link>
           <Link
             className={`navbar-item link ${
@@ -63,7 +64,7 @@ const Header = () => {
             }`}
             to="/skills/"
           >
-            Skills
+            {navbar.skills}
           </Link>
           <Link
             className={`navbar-item link ${
@@ -71,7 +72,7 @@ const Header = () => {
             }`}
             to="/projects/"
           >
-            Projects
+            {navbar.projects}
           </Link>
           <Link
             className={`navbar-item link ${
@@ -79,7 +80,7 @@ const Header = () => {
             }`}
             to="/contact/"
           >
-            Contact
+            {navbar.contact}
           </Link>
           <a
             href="https://github.com/ErwanEL/"
@@ -88,9 +89,9 @@ const Header = () => {
           >
             <i className="fab fa-2x fa-github"></i>
           </a>
-          {/* <a className="navbar-item githubLink ">
+          <a className="navbar-item githubLink ">
             <MaltSvg></MaltSvg>
-          </a> */}
+          </a>
           <a
             className="navbar-item githubLink"
             href="https://t.me/ErwanEL"
@@ -100,13 +101,12 @@ const Header = () => {
           </a>
         </div>
       </div>
-
       <div className="navbar-end is-hidden-touch">
         <Link
           className={`navbar-item link ${path === "/" && "link-is-active"}`}
           to="/"
         >
-          Home
+          {navbar.home}
         </Link>
         <Link
           className={`navbar-item link ${
@@ -114,7 +114,7 @@ const Header = () => {
           }`}
           to="/freelance/"
         >
-          Freelance
+          {navbar.freelance}
         </Link>
         <Link
           className={`navbar-item link ${
@@ -122,7 +122,7 @@ const Header = () => {
           }`}
           to="/learning/"
         >
-          Ressources
+          {navbar.ressources}
         </Link>
         <Link
           className={`navbar-item link ${
@@ -130,7 +130,7 @@ const Header = () => {
           }`}
           to="/skills/"
         >
-          Skills
+          {navbar.skills}
         </Link>
         <Link
           className={`navbar-item link ${
@@ -138,7 +138,7 @@ const Header = () => {
           }`}
           to="/projects/"
         >
-          Projects
+          {navbar.projects}
         </Link>
         <Link
           className={`navbar-item link ${
@@ -146,7 +146,7 @@ const Header = () => {
           }`}
           to="/contact/"
         >
-          Contact
+          {navbar.contact}
         </Link>
         <a
           href="https://github.com/ErwanEL/"
@@ -154,6 +154,9 @@ const Header = () => {
           className="navbar-item githubLink ml-5-desktop "
         >
           <i className="fab fa-2x fa-github"></i>
+        </a>
+        <a className="navbar-item githubLink ">
+          <MaltSvg></MaltSvg>
         </a>
         <a
           className="navbar-item githubLink"

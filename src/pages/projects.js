@@ -8,9 +8,11 @@ import CascadeOld from "../components/cascadeOld"
 import Project from "../components/project"
 
 const ProjectsPage = ({ data }) => {
+  const { markdownRemark } = data
+  const { frontmatter } = markdownRemark
   return (
     <Layout>
-      <SEO title="Realisations and projects I've worked on" />
+      <SEO title={frontmatter.seo} />
       <section id="projects" className="hero is-medium">
         <div className="hero-body">
           <div className="container">
@@ -19,12 +21,10 @@ const ProjectsPage = ({ data }) => {
                 <div className="content">
                   <h1 className="title">
                     <span className="mate">🗀</span>
-                    My projects
+                    {frontmatter.seo}.
                   </h1>
                   <hr className="mini" />
-                  <p className="subtitle-mod">
-                    Realisations and projects I've worked on.
-                  </p>
+                  <p className="subtitle-mod">{frontmatter.title}</p>
                 </div>
                 <nav
                   className="breadcrumb is-medium has-bullet-separator"
@@ -35,7 +35,7 @@ const ProjectsPage = ({ data }) => {
                       <a href="#hc">GatsbyJs</a>
                     </li>
                     <li>
-                      <a href="#olderworks">Older works</a>
+                      <a href="#olderworks">{frontmatter.olderWorks}</a>
                     </li>
                     <li>
                       <a href="https://github.com/ErwanEL/" target="_blank">
@@ -64,10 +64,10 @@ const ProjectsPage = ({ data }) => {
         id="hc"
         title="HauteCulture"
         color="#7a1014"
-        content=" A GatsbyJs project I've collaborated on. Include the"
+        content={frontmatter.hauteculture}
         link="https://www.hauteculture.com/"
         optionLink={true}
-        contentLink="See more about HauteCulture."
+        contentLink={frontmatter.hautecultureLink}
         img={data.hc.childImageSharp.fluid}
       ></Project>
       <hr />
@@ -75,11 +75,9 @@ const ProjectsPage = ({ data }) => {
         id="lemot"
         title="Lemot"
         color="#2a4f7f"
-        content=" A GatsbyJs service to practice French for Spanish speaking
-        public. Use Mailgun. Netlify backend. MJML for mail
-        templating."
+        content={frontmatter.lemot}
         link="https://lemot.app/"
-        contentLink="See more about Lemot."
+        contentLink={frontmatter.lemotLink}
         img={data.lemot.childImageSharp.fluid}
       ></Project>
       <hr />
@@ -87,9 +85,9 @@ const ProjectsPage = ({ data }) => {
         id="etna"
         title="Etna Joyas"
         color="#A87868"
-        content="A GatsbyJs prototype for a jewelry showcase. Include DATO Cms."
+        content={frontmatter.etna}
         link="https://etnajoyas.netlify.app/"
-        contentLink="See more about Etna-Joyas."
+        contentLink={frontmatter.etnaLink}
         img={data.etna.childImageSharp.fluid}
       ></Project>
       <hr />
@@ -130,9 +128,9 @@ const ProjectsPage = ({ data }) => {
               >
                 <div className="content has-text-centered mt-3">
                   <h1 className="title">
-                    <p>🖿 Older works. </p>
+                    <p>🖿 {frontmatter.olderWorks}. </p>
                   </h1>
-                  <p className="subtitle-mod">Some older projects.</p>
+                  <p className="subtitle-mod">{frontmatter.olderContent}</p>
                 </div>
               </div>
               <div
@@ -158,9 +156,9 @@ const ProjectsPage = ({ data }) => {
               >
                 <div className="content">
                   <h1 className="title">
-                    <p>🖿 Older works. </p>
+                    <p>🖿 {frontmatter.olderWorks}.</p>
                   </h1>
-                  <p className="subtitle-mod">Some older projects.</p>
+                  <p className="subtitle-mod">{frontmatter.olderContent}</p>
                 </div>
               </div>
             </div>
@@ -175,6 +173,22 @@ export default ProjectsPage
 
 export const query = graphql`
   {
+    markdownRemark(frontmatter: { slug: { eq: "/projects" } }) {
+      html
+      frontmatter {
+        slug
+        seo
+        title
+        olderWorks
+        hauteculture
+        hautecultureLink
+        lemot
+        lemotLink
+        etna
+        etnaLink
+        olderContent
+      }
+    }
     cv: file(relativePath: { eq: "images/projects/cv.PNG" }) {
       childImageSharp {
         fluid {

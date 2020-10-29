@@ -1,10 +1,28 @@
 import React from "react"
+import { useStaticQuery, graphql } from "gatsby"
 import { Helmet } from "react-helmet"
 import "../styles/index.scss"
 import Header from "./header"
 import Footer from "./footer"
 
 export default function Layout({ children }) {
+  const data = useStaticQuery(graphql`
+    {
+      markdownRemark(frontmatter: { component: { eq: "header" } }) {
+        frontmatter {
+          component
+          home
+          freelance
+          ressources
+          skills
+          projects
+          contact
+        }
+      }
+    }
+  `)
+  const { markdownRemark } = data
+  const { frontmatter } = markdownRemark
   return (
     <section className="section">
       <div className="container">
@@ -21,7 +39,7 @@ export default function Layout({ children }) {
             crossorigin="anonymous"
           ></script>
         </Helmet>
-        <Header></Header>
+        <Header navbar={frontmatter}></Header>
         {children}
         <Footer></Footer>
       </div>

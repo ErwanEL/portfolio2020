@@ -28,7 +28,7 @@ const Cascade = ({ arrayOfImages }) => {
       </div>
       <div className="cascade-child child3">
         <div className="sub">
-          <a href="#gatsbyjs">
+          <a href="#hc">
             <Img
               className="project-img image"
               fluid={arrayOfImages[2]}

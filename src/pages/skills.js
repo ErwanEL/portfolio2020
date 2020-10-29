@@ -12,9 +12,11 @@ import ReactSvg from "../components/svg/reactsvg"
 import AtlassianSvg from "../components/svg/atlassiansvg"
 
 const SkillsPage = ({ data }) => {
+  const { markdownRemark } = data
+  const { frontmatter, html } = markdownRemark
   return (
     <Layout>
-      <SEO title="My skills" />
+      <SEO title={frontmatter.seo} />
       <section className="hero is-medium">
         <div className="hero-body">
           <div className="container">
@@ -23,10 +25,10 @@ const SkillsPage = ({ data }) => {
                 <div className="content">
                   <h1 className="title">
                     <span className="mate">🔧</span>
-                    My skills.
+                    {frontmatter.seo}.
                   </h1>
                   <hr style={{ background: "#4eb236" }} className="mini" />
-                  <p className="subtitle-mod">The technologies I use.</p>
+                  <p className="subtitle-mod">{frontmatter.title}</p>
                 </div>
                 <nav
                   className="breadcrumb is-medium has-bullet-separator"
@@ -80,9 +82,7 @@ const SkillsPage = ({ data }) => {
                     <HtmlSvg className="skillsSvg mr-2"></HtmlSvg>
                     <CssSvg className="skillsSvg mr-2"></CssSvg>
                     <SassSvg className="skillsSvg"></SassSvg>
-                    <p className="subtitle-mod">
-                      To work on the integration process.
-                    </p>
+                    <p className="subtitle-mod">{frontmatter.html}</p>
                   </div>
                 </div>
               </div>
@@ -116,9 +116,7 @@ const SkillsPage = ({ data }) => {
                   <hr style={{ background: "#F7DF1E" }} className="mini" />
                   <div className="svg">
                     <JsSvg className="skillsSvg"></JsSvg>
-                    <p className="subtitle-mod">
-                      To work on the automatisation process.
-                    </p>
+                    <p className="subtitle-mod">{frontmatter.javascript}</p>
                   </div>
                 </div>
               </div>
@@ -156,8 +154,7 @@ const SkillsPage = ({ data }) => {
                     <GatsbySvg className="skillsSvg"></GatsbySvg>
 
                     <p className="subtitle-mod">
-                      To work on building static websites. GatsbyJs is powered
-                      by the{" "}
+                      {frontmatter.gatsbyjs}{" "}
                       <a
                         className="react-link"
                         href="https://en.reactjs.org/"
@@ -165,25 +162,24 @@ const SkillsPage = ({ data }) => {
                       >
                         {" "}
                         ReactJs
-                      </a>{" "}
-                      framework.{" "}
+                      </a>
+                      .{" "}
                       <a
                         className="gatsby-link"
                         href="https://www.gatsbyjs.com/"
                         target="_blank"
                       >
-                        See more about GatsbyJs.
+                        {frontmatter.gatsbyjsLink}
                       </a>
                     </p>
                     <p className="subtitle-mod">
-                      I like to use the netlify service to host my GatsbyJs
-                      projects.{" "}
+                      {frontmatter.netlify}{" "}
                       <a
                         className="netlify-link"
                         href="https://www.netlify.com/"
                         target="_blank"
                       >
-                        See more about netlify.
+                        {frontmatter.netlifyLink}
                       </a>
                     </p>
                   </div>
@@ -260,7 +256,9 @@ const SkillsPage = ({ data }) => {
                   {/* <hr className="mini" /> */}
                   <div className="svg">
                     <AtlassianSvg className="skillsSvg"></AtlassianSvg>
-                    <p className="subtitle-mod">
+                    <div dangerouslySetInnerHTML={{ __html: html }} />
+
+                    {/* <p className="subtitle-mod">
                       {" "}
                       I like to use the{" "}
                       <a
@@ -271,7 +269,7 @@ const SkillsPage = ({ data }) => {
                         Atlassian services
                       </a>{" "}
                       like Bitbucket and trello to organize my projects.{" "}
-                    </p>
+                    </p> */}
                   </div>
                 </div>
               </div>
@@ -346,6 +344,20 @@ export default SkillsPage
 
 export const query = graphql`
   {
+    markdownRemark(frontmatter: { slug: { eq: "/skills" } }) {
+      html
+      frontmatter {
+        slug
+        seo
+        title
+        html
+        javascript
+        gatsbyjs
+        gatsbyjsLink
+        netlify
+        netlifyLink
+      }
+    }
     vscode: file(relativePath: { eq: "images/skills/vscode.PNG" }) {
       childImageSharp {
         fluid {
