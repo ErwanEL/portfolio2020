@@ -74,7 +74,7 @@ const Navbar = ({ navbar }) => {
         </a>
 
         <div class="navbar-dropdown">
-          <a class="navbar-item pr-0" href={`https://es.erwanel.com/${path}`}>
+          <a class="navbar-item pr-0" href={`https://es.erwanel.com${path}`}>
             <EspSvg />
           </a>
         </div>
