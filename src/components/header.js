@@ -3,6 +3,8 @@ import { Link } from "gatsby"
 import { globalHistory } from "@reach/router"
 import MaltSvg from "../components/svg/maltsvg"
 import LogoSvg from "../components/svg/logosvg"
+import EspSvg from "../components/svg/espsvg"
+import UsaSvg from "../components/svg/usasvg"
 
 const Header = ({ navbar }) => {
   const path = globalHistory.location.pathname
@@ -82,6 +84,9 @@ const Header = ({ navbar }) => {
           >
             {navbar.contact}
           </Link>
+          <a class="navbar-item">
+            <UsaSvg />
+          </a>
           <a
             href="https://github.com/ErwanEL/"
             target="_blank"
@@ -148,6 +153,11 @@ const Header = ({ navbar }) => {
         >
           {navbar.contact}
         </Link>
+
+        {/* <a className="navbar-item ">
+          <EspSvg />
+        </a> */}
+
         <a
           href="https://github.com/ErwanEL/"
           target="_blank"
@@ -165,6 +175,19 @@ const Header = ({ navbar }) => {
         >
           <i style={{ color: "#1e96c8" }} class="fab fa-2x fa-telegram"></i>
         </a>
+        <div class="navbar-item has-dropdown is-hoverable">
+          <a class="navbar-link">
+            <EspSvg />
+          </a>
+
+          <div class="navbar-dropdown">
+            <a class="navbar-item">
+              <UsaSvg />
+            </a>
+            {/* <a class="navbar-item">Jobs</a>
+            <a class="navbar-item">Contact</a> */}
+          </div>
+        </div>
       </div>
     </nav>
   )
