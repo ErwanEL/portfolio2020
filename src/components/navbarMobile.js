@@ -7,26 +7,19 @@ const NavbarMobile = ({ navbar }) => {
   const [menu, setMenu] = useState(false)
   const toggleMenu = () => setMenu(!menu)
   return (
-    <>
-      <div>
-        <div className="navbar-item">
-          <Link to="/">
-            <LogoSvg className="logo"></LogoSvg>
-          </Link>
-        </div>
-        <a
-          role="button"
-          onClick={toggleMenu}
-          className={`navbar-burger burger ${menu && "is-active"}`}
-          aria-label="menu"
-          aria-expanded="false"
-          data-target="navbarBasicExample"
-        >
-          <span aria-hidden="true"></span>
-          <span aria-hidden="true"></span>
-          <span aria-hidden="true"></span>
-        </a>
-      </div>
+    <div>
+      <a
+        role="button"
+        onClick={toggleMenu}
+        className={`navbar-burger burger ${menu && "is-active"}`}
+        aria-label="menu"
+        aria-expanded="false"
+        data-target="navbarBasicExample"
+      >
+        <span aria-hidden="true"></span>
+        <span aria-hidden="true"></span>
+        <span aria-hidden="true"></span>
+      </a>
 
       <div className={`navbar-menu ${menu && "is-active"}`}>
         <div className="navbar-start is-hidden-desktop">
@@ -68,7 +61,7 @@ const NavbarMobile = ({ navbar }) => {
           </a>
         </div>
       </div>
-    </>
+    </div>
   )
 }
 
