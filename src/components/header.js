@@ -1,34 +1,29 @@
-import React from "react"
-// import { useStaticQuery, graphql } from "gatsby"
-// import Img from "gatsby-image"
+import React, { useState } from "react"
+import { Link } from "gatsby"
+import { globalHistory } from "@reach/router"
+import MaltSvg from "../components/svg/maltsvg"
+import LogoSvg from "../components/svg/logosvg"
 
-const Header = () => {
-  //   const data = useStaticQuery(graphql`
-  //     {
-  //       logo: file(relativePath: { eq: "logo.png" }) {
-  //         childImageSharp {
-  //           fixed(width: 90) {
-  //             ...GatsbyImageSharpFixed
-  //           }
-  //         }
-  //       }
-  //     }
-  //   `)
+const Header = ({ navbar }) => {
+  const path = globalHistory.location.pathname
+  const [menu, setMenu] = useState(false)
+  const toggleMenu = () => setMenu(!menu)
 
   return (
     <nav className="navbar" role="navigation" aria-label="main navigation">
-      <div className="navbar-brand">
-        <a className="navbar-item" href="https://bulma.io">
-          <img
-            src="https://bulma.io/images/bulma-logo.png"
-            width="112"
-            height="28"
-          />
-        </a>
-
+      <div>
+        {/* <Link className="navbar-item logo has-text-weight-bold" to="/">
+          EL.
+        </Link> */}
+        <div className="navbar-item">
+          <Link to="/">
+            <LogoSvg className="logo"></LogoSvg>
+          </Link>
+        </div>
         <a
           role="button"
-          className="navbar-burger burger"
+          onClick={toggleMenu}
+          className={`navbar-burger burger ${menu && "is-active"}`}
           aria-label="menu"
           aria-expanded="false"
           data-target="navbarBasicExample"
@@ -39,21 +34,108 @@ const Header = () => {
         </a>
       </div>
 
-      <div id="navbarBasicExample" className="navbar-menu">
-        <div className="navbar-start"></div>
+      <div
+        id="navbarBasicExample"
+        className={`navbar-menu ${menu && "is-active"}`}
+      >
+        <div className="navbar-start is-hidden-desktop">
+          <Link className={`navbar-item link`} to="/">
+            {navbar.home}
+          </Link>
+          <Link className={`navbar-item link`} to="/freelance/">
+            {navbar.freelance}
+          </Link>
+
+          <Link className={`navbar-item link`} to="/learning/">
+            {navbar.ressources}
+          </Link>
+          <Link className={`navbar-item link`} to="/skills/">
+            {navbar.skills}
+          </Link>
+          <Link className={`navbar-item link`} to="/projects/">
+            {navbar.projects}
+          </Link>
+          <Link className={`navbar-item link`} to="/contact/">
+            {navbar.contact}
+          </Link>
+          <a
+            href="https://github.com/ErwanEL/"
+            target="_blank"
+            className="navbar-item githubLink "
+          >
+            <i className="fab fa-2x fa-github"></i>
+          </a>
+          <a className="navbar-item githubLink ">
+            <MaltSvg></MaltSvg>
+          </a>
+          <a
+            className="navbar-item githubLink"
+            href="https://t.me/ErwanEL"
+            target="_blank"
+          >
+            <i style={{ color: "#1e96c8" }} class="fab fa-2x fa-telegram"></i>
+          </a>
+        </div>
       </div>
-
-      <div className="navbar-end">
-        <a className="navbar-item link link-is-active"> Home </a>
-
-        <a className="navbar-item link"> Freelance </a>
-
-        <a className="navbar-item link"> Apprentissage </a>
-        <a className="navbar-item link"> Compétences </a>
-        <a className="navbar-item link"> Projets </a>
-        <a className="navbar-item link"> Contact </a>
-        <a className="navbar-item githubLink ml-5">
+      <div className="navbar-end is-hidden-touch">
+        <Link
+          className={`navbar-item link `}
+          activeClassName="link-is-active"
+          to="/"
+        >
+          {navbar.home}
+        </Link>
+        <Link
+          className={`navbar-item link`}
+          activeClassName="link-is-active"
+          to="/freelance/"
+        >
+          {navbar.freelance}
+        </Link>
+        <Link
+          className={`navbar-item link `}
+          activeClassName="link-is-active"
+          to="/learning/"
+        >
+          {navbar.ressources}
+        </Link>
+        <Link
+          className={`navbar-item link`}
+          activeClassName="link-is-active"
+          to="/skills/"
+        >
+          {navbar.skills}
+        </Link>
+        <Link
+          className={`navbar-item link`}
+          activeClassName="link-is-active"
+          to="/projects/"
+        >
+          {navbar.projects}
+        </Link>
+        <Link
+          className={`navbar-item link`}
+          activeClassName="link-is-active"
+          to="/contact/"
+        >
+          {navbar.contact}
+        </Link>
+        <a
+          href="https://github.com/ErwanEL/"
+          target="_blank"
+          className="navbar-item githubLink ml-5-desktop "
+        >
           <i className="fab fa-2x fa-github"></i>
+        </a>
+        <a className="navbar-item githubLink ">
+          <MaltSvg></MaltSvg>
+        </a>
+        <a
+          className="navbar-item githubLink"
+          href="https://t.me/ErwanEL"
+          target="_blank"
+        >
+          <i style={{ color: "#1e96c8" }} class="fab fa-2x fa-telegram"></i>
         </a>
       </div>
     </nav>

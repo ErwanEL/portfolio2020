@@ -1,0 +1,34 @@
+@media only screen and (min-width: 320px) {
+  div.parent {
+    margin: 3rem 0;
+  }
+  .logo {
+    top: 0px;
+  }
+}
+
+@media only screen and (max-width: 767px) {
+  // section #projects.hero {
+  //   margin-top: 4rem;
+  // }
+  .mate {
+    margin-right: 0.5em;
+  }
+  .logo {
+    top: 10px;
+  }
+}
+
+@media only screen and (min-width: 1020px) {
+  /* Styles pour cette Media Queries */
+  section #projects.hero {
+    margin-top: -4rem;
+  }
+  span.mate {
+    position: absolute;
+    right: calc(100% + 0.5em);
+  }
+  // .logo {
+  //   top: 4px;
+  // }
+}

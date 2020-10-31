@@ -1,0 +1,22 @@
+footer nav.breadcrumb a {
+  color: rgb(255, 123, 0);
+}
+
+button.scroll-top {
+  position: fixed;
+  bottom: 20px;
+  right: 65px;
+  z-index: 99;
+  font-size: 18px;
+  border: none;
+  outline: none;
+  background-color: white;
+  color: rgb(255, 123, 0);
+  cursor: pointer;
+  padding: 10px 25px;
+  border-radius: 2px;
+  box-shadow: 10px 5px 5px #8080807d;
+  &:hover {
+    color: rgb(255, 123, 0);
+  }
+}
