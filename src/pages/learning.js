@@ -8,19 +8,21 @@ import TreehouseSvg from "../components/svg/treehousesvg"
 import FccSvg from "../components/svg/fccsvg"
 
 const LearningPage = ({ data }) => {
+  const { markdownRemark } = data
+  const { frontmatter } = markdownRemark
   return (
     <Layout>
-      <SEO title="The ressources I use" />
+      <SEO title={frontmatter.seo} />
       <section className="hero is-medium">
         <div className="hero-body">
           <div className="container">
             <div className="columns is-vcentered">
               <div className="column is-half">
+                <h1 className="title">
+                  <span className="mate">📘</span>
+                  {frontmatter.seo}.
+                </h1>
                 <div className="content">
-                  <h1 className="title">
-                    <span className="mate">📘</span>
-                    The ressources I use.
-                  </h1>
                   <hr style={{ background: "#F0047F" }} className="mini" />
                   <div className="svg">
                     <JamstackSvg
@@ -28,16 +30,14 @@ const LearningPage = ({ data }) => {
                       className="skillsSvg"
                     ></JamstackSvg>
                   </div>
-                  <p className="subtitle-mod">
-                    I keep myself informed about the Jamstack.
-                  </p>
+                  <p className="subtitle-mod">{frontmatter.jamstack}</p>
                   <p className="subtitle">
                     <a
                       className="jamstack-link"
                       href="https://www.hauteculture.com/"
                       target="_blank"
                     >
-                      See more about the Jamstack.
+                      {frontmatter.jamstackLink}
                     </a>
                   </p>
                 </div>
@@ -85,21 +85,20 @@ const LearningPage = ({ data }) => {
               <div className="column is-half has-text-right">
                 <div className="content">
                   <h1 className="title">
-                    <p>Other ressources.</p>
+                    <p>{frontmatter.title2}</p>
                   </h1>
                   <div className="svg">
                     <TreehouseSvg className="skillsSvg mr-2"></TreehouseSvg>
                     <FccSvg className="skillsSvg"></FccSvg>
                     <p className="subtitle-mod">
                       {" "}
-                      I started my introduction into web development with
-                      Treehouse. See more at{" "}
+                      {frontmatter.otherRessources}{" "}
                       <a
                         className="treehouse-link"
                         href="https://teamtreehouse.com/erwanel"
                         target="_blank"
                       >
-                        TreeHouse
+                        {frontmatter.treehouseLink}
                       </a>
                     </p>
                   </div>
@@ -115,6 +114,17 @@ const LearningPage = ({ data }) => {
 
 export const query = graphql`
   {
+    markdownRemark(frontmatter: { slug: { eq: "/learning" } }) {
+      frontmatter {
+        slug
+        seo
+        jamstack
+        jamstackLink
+        title2
+        otherRessources
+        treehouseLink
+      }
+    }
     fcc: file(relativePath: { eq: "images/learning/fcc.PNG" }) {
       childImageSharp {
         fluid {

@@ -3,11 +3,16 @@ import { graphql } from "gatsby"
 import Img from "gatsby-image"
 import Layout from "../components/layout"
 import SEO from "../components/seo"
+import Cascade from "../components/cascade"
+import CascadeOld from "../components/cascadeOld"
+import Project from "../components/project"
 
 const ProjectsPage = ({ data }) => {
+  const { markdownRemark } = data
+  const { frontmatter } = markdownRemark
   return (
     <Layout>
-      <SEO title="Realisations and projects I've worked on" />
+      <SEO title={frontmatter.seo} />
       <section id="projects" className="hero is-medium">
         <div className="hero-body">
           <div className="container">
@@ -16,12 +21,10 @@ const ProjectsPage = ({ data }) => {
                 <div className="content">
                   <h1 className="title">
                     <span className="mate">🗀</span>
-                    My projects
+                    {frontmatter.seo}.
                   </h1>
                   <hr className="mini" />
-                  <p className="subtitle-mod">
-                    Realisations and projects I've worked on.
-                  </p>
+                  <p className="subtitle-mod">{frontmatter.title}</p>
                 </div>
                 <nav
                   className="breadcrumb is-medium has-bullet-separator"
@@ -29,10 +32,10 @@ const ProjectsPage = ({ data }) => {
                 >
                   <ul>
                     <li>
-                      <a href="#gatsbyjs">GatsbyJs</a>
+                      <a href="#hc">GatsbyJs</a>
                     </li>
                     <li>
-                      <a href="#olderworks">Older works</a>
+                      <a href="#olderworks">{frontmatter.olderWorks}</a>
                     </li>
                     <li>
                       <a href="https://github.com/ErwanEL/" target="_blank">
@@ -43,190 +46,50 @@ const ProjectsPage = ({ data }) => {
                 </nav>
               </div>
               <div className="column is-half">
-                <div className="cascade is-hidden-mobile is-hidden-touch ">
-                  <div className="cascade-child child1">
-                    <div className="sub">
-                      <a href="#olderworks">
-                        <Img
-                          className="project-img image"
-                          fluid={data.cv.childImageSharp.fluid}
-                          alt="Cv"
-                        />
-                      </a>
-                    </div>
-                  </div>
-                  <div className="cascade-child child2">
-                    <div className="sub">
-                      <a href="#etna">
-                        <Img
-                          className="project-img image"
-                          fluid={data.etna.childImageSharp.fluid}
-                          alt="Etna joyas"
-                        />
-                      </a>
-                    </div>
-                  </div>
-                  <div className="cascade-child child3">
-                    <div className="sub">
-                      <a href="#gatsbyjs">
-                        <Img
-                          className="project-img image"
-                          fluid={data.hc.childImageSharp.fluid}
-                          alt="Haute Culture"
-                        />
-                      </a>
-                    </div>
-                  </div>
-                  <div className="cascade-child child4">
-                    <div className="sub">
-                      <a href="#lemot">
-                        <Img
-                          className="project-img image"
-                          fluid={data.lemot.childImageSharp.fluid}
-                          alt="Lemot"
-                        />
-                      </a>
-                    </div>
-                  </div>
-                </div>
+                <Cascade
+                  arrayOfImages={[
+                    data.cv.childImageSharp.fluid,
+                    data.etna.childImageSharp.fluid,
+                    data.hc.childImageSharp.fluid,
+                    data.lemot.childImageSharp.fluid,
+                  ]}
+                ></Cascade>
               </div>
             </div>
           </div>
         </div>
       </section>
       <hr />
-      <section
-        id="gatsbyjs"
-        className="hero is-medium"
-        data-sal="slide-up"
-        data-sal-delay="300"
-        data-sal-easing="ease"
-      >
-        <div className="hero-body">
-          <div className="container">
-            <div className="columns is-vcentered">
-              <div className="column is-half">
-                <div className="content">
-                  <h1 className="title">
-                    <p>HauteCulture</p>
-                  </h1>
-                  <hr style={{ background: "#7a1014" }} className="mini" />
-                  <p className="subtitle-mod">
-                    A GatsbyJs project I've collaborated on. Include the{" "}
-                    <a className="strapi-link" href="https://strapi.io/">
-                      Strapi CMS.
-                    </a>
-                  </p>
-                  <p className="subtitle">
-                    <a
-                      className="hc-link"
-                      href="https://www.hauteculture.com/"
-                      target="_blank"
-                    >
-                      See more about HauteCulture.
-                    </a>
-                  </p>
-                </div>
-              </div>
-              <div className="column is-half">
-                <Img
-                  className="project-img image"
-                  fluid={data.hc.childImageSharp.fluid}
-                  alt="Haute Culture"
-                />
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
+      <Project
+        id="hc"
+        title="HauteCulture"
+        color="#7a1014"
+        content={frontmatter.hauteculture}
+        link="https://www.hauteculture.com/"
+        optionLink={true}
+        contentLink={frontmatter.hautecultureLink}
+        img={data.hc.childImageSharp.fluid}
+      ></Project>
       <hr />
-      <section
+      <Project
         id="lemot"
-        className="hero is-medium"
-        data-sal="slide-up"
-        data-sal-delay="300"
-        data-sal-easing="ease"
-      >
-        <div className="hero-body">
-          <div className="container">
-            <div className="columns is-vcentered">
-              <div className="column is-half">
-                <div className="content">
-                  <h1 className="title">
-                    <p>Lemot</p>
-                  </h1>
-                  <hr style={{ background: "#2a4f7f" }} className="mini" />
-                  <p className="subtitle-mod">
-                    A GatsbyJs service to practice French for Spanish speaking
-                    public. Use Mailgun. Netlify backend. MJML for mail
-                    templating.
-                  </p>
-                  <p className="subtitle">
-                    <a
-                      className="lemot-link"
-                      href="https://lemot.app/"
-                      target="_blank"
-                    >
-                      See more about Lemot.
-                    </a>
-                  </p>
-                </div>
-              </div>
-              <div className="column is-half">
-                <Img
-                  className="project-img image"
-                  fluid={data.lemot.childImageSharp.fluid}
-                  alt="Lemot"
-                />
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
+        title="Lemot"
+        color="#2a4f7f"
+        content={frontmatter.lemot}
+        link="https://lemot.app/"
+        contentLink={frontmatter.lemotLink}
+        img={data.lemot.childImageSharp.fluid}
+      ></Project>
       <hr />
-      <section
+      <Project
         id="etna"
-        className="hero is-medium"
-        data-sal="slide-up"
-        data-sal-delay="300"
-        data-sal-easing="ease"
-      >
-        <div className="hero-body">
-          <div className="container">
-            <div className="columns is-vcentered">
-              <div className="column is-half">
-                <div className="content">
-                  <h1 className="title">
-                    <p>Etna-Joyas</p>
-                  </h1>
-                  <hr style={{ background: "#A87868" }} className="mini" />
-                  <p className="subtitle-mod">
-                    A GatsbyJs prototype for a jewelry showcase. Include DATO
-                    Cms.
-                  </p>
-                  <p className="subtitle">
-                    <a
-                      className="etna-link"
-                      href="https://etnajoyas.netlify.app/"
-                      target="_blank"
-                    >
-                      See more about Etna-Joyas.
-                    </a>
-                  </p>
-                </div>
-              </div>
-              <div className="column is-half">
-                <Img
-                  className="project-img image"
-                  fluid={data.etna.childImageSharp.fluid}
-                  alt="Etna Joyas"
-                />
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
+        title="Etna Joyas"
+        color="#A87868"
+        content={frontmatter.etna}
+        link="https://etnajoyas.netlify.app/"
+        contentLink={frontmatter.etnaLink}
+        img={data.etna.childImageSharp.fluid}
+      ></Project>
       <hr />
       <section id="olderworks" className="hero is-medium">
         <div className="hero-body">
@@ -265,9 +128,9 @@ const ProjectsPage = ({ data }) => {
               >
                 <div className="content has-text-centered mt-3">
                   <h1 className="title">
-                    <p>🖿 Older works. </p>
+                    <p>🖿 {frontmatter.olderWorks}. </p>
                   </h1>
-                  <p className="subtitle-mod">Some older projects.</p>
+                  <p className="subtitle-mod">{frontmatter.olderContent}</p>
                 </div>
               </div>
               <div
@@ -276,68 +139,14 @@ const ProjectsPage = ({ data }) => {
                 data-sal-delay="500"
                 data-sal-easing="ease"
               >
-                <div className="cascade is-hidden-mobile is-hidden-touch">
-                  <div className="cascade-child child1">
-                    <div className="sub">
-                      <span className="tooltip is-hidden-touch">
-                        Interactive Cv
-                      </span>
-                      <a href="https://erwanel-cv.netlify.app/" target="_blank">
-                        <Img
-                          className="project-img image"
-                          fluid={data.cv.childImageSharp.fluid}
-                          alt="Cv"
-                        />
-                      </a>
-                    </div>
-                  </div>
-                  <div className="cascade-child child2">
-                    <div className="sub">
-                      <span className="tooltip is-hidden-touch">
-                        Old Portfolio
-                      </span>
-                      <a href="https://erwanel.github.io/" target="_blank">
-                        <Img
-                          className="project-img image"
-                          fluid={data.oldportfolio.childImageSharp.fluid}
-                          alt="Old Portfolio"
-                        />
-                      </a>
-                    </div>
-                  </div>
-                  <div className="cascade-child child3">
-                    <div className="sub">
-                      <span className="tooltip is-hidden-touch">Vg Charts</span>
-                      <a
-                        href="https://erwanel.github.io/vgCharts/"
-                        target="_blank"
-                      >
-                        <Img
-                          className="project-img image"
-                          fluid={data.vgcharts.childImageSharp.fluid}
-                          alt="Vgcharts"
-                        />
-                      </a>
-                    </div>
-                  </div>
-                  <div className="cascade-child child4">
-                    <div className="sub">
-                      <span className="tooltip is-hidden-touch">
-                        Flickr Viewer
-                      </span>
-                      <a
-                        href="https://erwanel.github.io/flickrSearch-th/"
-                        target="_blank"
-                      >
-                        <Img
-                          className="project-img image"
-                          fluid={data.flickr.childImageSharp.fluid}
-                          alt="Flickr Project"
-                        />
-                      </a>
-                    </div>
-                  </div>
-                </div>
+                <CascadeOld
+                  arrayOfImages={[
+                    data.cv.childImageSharp.fluid,
+                    data.oldportfolio.childImageSharp.fluid,
+                    data.vgcharts.childImageSharp.fluid,
+                    data.flickr.childImageSharp.fluid,
+                  ]}
+                ></CascadeOld>
               </div>
               <div
                 className="column is-half has-text-right is-hidden-mobile is-hidden-touch"
@@ -347,9 +156,9 @@ const ProjectsPage = ({ data }) => {
               >
                 <div className="content">
                   <h1 className="title">
-                    <p>🖿 Older works. </p>
+                    <p>🖿 {frontmatter.olderWorks}.</p>
                   </h1>
-                  <p className="subtitle-mod">Some older projects.</p>
+                  <p className="subtitle-mod">{frontmatter.olderContent}</p>
                 </div>
               </div>
             </div>
@@ -364,11 +173,24 @@ export default ProjectsPage
 
 export const query = graphql`
   {
+    markdownRemark(frontmatter: { slug: { eq: "/projects" } }) {
+      html
+      frontmatter {
+        slug
+        seo
+        title
+        olderWorks
+        hauteculture
+        hautecultureLink
+        lemot
+        lemotLink
+        etna
+        etnaLink
+        olderContent
+      }
+    }
     cv: file(relativePath: { eq: "images/projects/cv.PNG" }) {
       childImageSharp {
-        fixed {
-          ...GatsbyImageSharpFixed
-        }
         fluid {
           ...GatsbyImageSharpFluid
         }
@@ -376,9 +198,6 @@ export const query = graphql`
     }
     etna: file(relativePath: { eq: "images/projects/etna.PNG" }) {
       childImageSharp {
-        fixed {
-          ...GatsbyImageSharpFixed
-        }
         fluid {
           ...GatsbyImageSharpFluid
         }
@@ -386,9 +205,6 @@ export const query = graphql`
     }
     hc: file(relativePath: { eq: "images/projects/hc.PNG" }) {
       childImageSharp {
-        fixed {
-          ...GatsbyImageSharpFixed
-        }
         fluid {
           ...GatsbyImageSharpFluid
         }
@@ -396,9 +212,6 @@ export const query = graphql`
     }
     lemot: file(relativePath: { eq: "images/projects/lemot.PNG" }) {
       childImageSharp {
-        fixed {
-          ...GatsbyImageSharpFixed
-        }
         fluid {
           ...GatsbyImageSharpFluid
         }
@@ -406,9 +219,6 @@ export const query = graphql`
     }
     vgcharts: file(relativePath: { eq: "images/projects/older/vgcharts.PNG" }) {
       childImageSharp {
-        fixed {
-          ...GatsbyImageSharpFixed
-        }
         fluid {
           ...GatsbyImageSharpFluid
         }
@@ -418,9 +228,6 @@ export const query = graphql`
       relativePath: { eq: "images/projects/older/oldportfolio.PNG" }
     ) {
       childImageSharp {
-        fixed {
-          ...GatsbyImageSharpFixed
-        }
         fluid {
           ...GatsbyImageSharpFluid
         }
@@ -428,9 +235,6 @@ export const query = graphql`
     }
     flickr: file(relativePath: { eq: "images/projects/older/flickr.PNG" }) {
       childImageSharp {
-        fixed {
-          ...GatsbyImageSharpFixed
-        }
         fluid {
           ...GatsbyImageSharpFluid
         }
