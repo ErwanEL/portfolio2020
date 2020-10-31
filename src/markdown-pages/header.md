@@ -2,8 +2,8 @@
 component: "header"
 home: "Home"
 freelance: "Freelance"
-ressources: "Recursos"
-skills: "Habilidades"
-projects: "Proyectos"
-contact: "Contacto"
+ressources: "Ressources"
+skills: "Skills"
+projects: "Projects"
+contact: "Contact"
 ---

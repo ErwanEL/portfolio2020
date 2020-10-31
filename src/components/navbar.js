@@ -70,12 +70,12 @@ const Navbar = ({ navbar }) => {
       </a>
       <div class="navbar-item has-dropdown is-hoverable">
         <a class="navbar-link">
-          <EspSvg />
+          <UsaSvg />
         </a>
 
         <div class="navbar-dropdown">
-          <a class="navbar-item pr-0" href={`https://erwanel.com/${path}`}>
-            <UsaSvg />
+          <a class="navbar-item pr-0" href={`https://es.erwanel.com/${path}`}>
+            <EspSvg />
           </a>
         </div>
       </div>
