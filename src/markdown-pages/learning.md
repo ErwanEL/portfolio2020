@@ -1,9 +1,9 @@
 ---
 slug: "/learning"
-seo: "Los recursos que uso"
-jamstack: "Me mantengo informado sobre el Jamstack."
-jamstackLink: "Ver más sobre el Jamstack."
-title2: "Otros recursos."
-otherRessources: "Comencé mi introducción al desarrollo web con Treehouse."
-treehouseLink: "Ver más en TreeHouse."
+seo: "Les ressources que j'utilise"
+jamstack: "Je me tiens informé sur la Jamstack."
+jamstackLink: "En savoir plus sur la Jamstack."
+title2: "Autres ressources."
+otherRessources: "J'ai commencé mon introduction au développement web sur Treehouse."
+treehouseLink: "En savoir plus sur mon profil TreeHouse."
 ---

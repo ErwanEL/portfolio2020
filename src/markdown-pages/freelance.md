@@ -1,7 +1,7 @@
 ---
 slug: "/freelance"
-seo: "Mi experiencia freelance"
-title1: "Estoy disponible en la plataforma Upwork. Aquí hay algunos gigs que he completado. Ver más en"
-upwork: "Mi perfil Upwork."
-title2: "Aquí un proyecto de wordpress en el que trabajé. Ver más en"
+seo: "Mon experience en freelance"
+title1: "Je suis disponible sur la plataforme Upwork. En savoir plus sur"
+upwork: "Mon profil Upwork."
+title2: "Ici un projet wordpress sur lequel j'ai travaillé. En savoir plus sur"
 ---
