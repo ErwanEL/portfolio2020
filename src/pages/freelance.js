@@ -64,7 +64,7 @@ const FreelancePage = ({ data }) => {
                 />
               </div>
 
-              <div className="column is-half">
+              <div className="column is-half has-text-left">
                 <div className="content">
                   <h1 className="title">Etmg</h1>
                   <p className="subtitle-mod">
