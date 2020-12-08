@@ -38,7 +38,7 @@ const ContactPage = ({ data }) => {
         </div>
       </section>
       <hr />
-      <section className="hero is-small">
+      <section id="resume" className="hero is-small">
         <div className="hero-body">
           <div className="container has-text-centered">
             <div className="columns is-vcentered">
