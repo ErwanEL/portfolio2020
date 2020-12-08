@@ -44,20 +44,28 @@ const ContactPage = ({ data }) => {
             <div className="columns is-vcentered">
               <div className="column is-half mt-5">
                 <iframe
+                  className="is-hidden-mobile"
+                  style={{ boxShadow: "10px 5px 5px #8080807d" }}
                   src={`${Resume}#toolbar=0&navpanes=0`}
                   width="100%"
                   height="750px"
                 ></iframe>
               </div>
+              <div
+                className="p-1 is-hidden-desktop"
+                style={{ boxShadow: "10px 5px 5px #8080807d" }}
+              >
+                <img src={"/resume.jpg"} alt="" />
+              </div>
               <div className="column is-half">
-                <a target="_blank" href={Resume}>
-                  <h1 className="title">
-                    <u>
-                      {" "}
+                <h1 className="title">
+                  <u>
+                    {" "}
+                    <a className="resume-link" target="_blank" href={Resume}>
                       resume.pdf <i class="fas fa-external-link-alt"></i>
-                    </u>
-                  </h1>
-                </a>
+                    </a>
+                  </u>
+                </h1>
               </div>
             </div>
           </div>
