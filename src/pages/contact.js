@@ -44,14 +44,19 @@ const ContactPage = ({ data }) => {
             <div className="columns is-vcentered">
               <div className="column is-half mt-5">
                 <iframe
-                  src={`${Resume}#toolbar=0`}
+                  src={`${Resume}#toolbar=0&navpanes=0`}
                   width="100%"
                   height="750px"
                 ></iframe>
               </div>
               <div className="column is-half">
                 <a target="_blank" href={Resume}>
-                  <h1 className="title">resume.pdf</h1>
+                  <h1 className="title">
+                    <u>
+                      {" "}
+                      resume.pdf <i class="fas fa-external-link-alt"></i>
+                    </u>
+                  </h1>
                 </a>
               </div>
             </div>
