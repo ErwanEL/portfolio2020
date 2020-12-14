@@ -58,7 +58,11 @@ const Navbar = ({ navbar }) => {
       >
         <i className="fab fa-2x fa-github"></i>
       </a>
-      <a className="navbar-item githubLink ">
+      <a
+        className="navbar-item githubLink"
+        href="https://www.malt.fr/profile/erwanleblois"
+        target="_blank"
+      >
         <MaltSvg></MaltSvg>
       </a>
       <a
