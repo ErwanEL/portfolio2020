@@ -1,12 +1,12 @@
 import React from "react"
-// import { graphql } from "gatsby"
+import { graphql } from "gatsby"
 import Layout from "../components/layout"
 // import SEO from "../components/seo"
 // import Form from "../components/form"
 
 const BlogPage = () => {
-  //   const { markdownRemark } = data
-  //   const { frontmatter, html } = markdownRemark
+  // const { markdownRemark } = data
+  // const { frontmatter, html } = markdownRemark
 
   return (
     <Layout>
@@ -175,12 +175,11 @@ export default BlogPage
 
 // export const query = graphql`
 //   {
-//     markdownRemark(frontmatter: { slug: { eq: "/contact" } }) {
+//     markdownRemark(frontmatter: { path: { eq: "test" } }) {
 //       html
 //       frontmatter {
 //         title
-//         slug
-//         seo
+//         date
 //       }
 //     }
 //   }
