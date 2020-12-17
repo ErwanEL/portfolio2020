@@ -4,9 +4,11 @@ import Layout from "../components/layout"
 // import SEO from "../components/seo"
 // import Form from "../components/form"
 
-const BlogPage = () => {
-  // const { markdownRemark } = data
-  // const { frontmatter, html } = markdownRemark
+const BlogPage = ({ data }) => {
+  const { markdownRemark } = data
+  const { frontmatter, html } = markdownRemark
+
+  console.log(frontmatter)
 
   return (
     <Layout>
@@ -27,15 +29,9 @@ const BlogPage = () => {
               <div class="columns">
                 <div class="column is-8 is-offset-2">
                   <div class="content is-medium">
-                    <h2 class="subtitle is-4">December 25, 2018</h2>
+                    <h2 class="subtitle is-4">{frontmatter.date}</h2>
                     <h1 class="title">Getting Started</h1>
-                    <p>
-                      This is a starter template for creating a beautiful,
-                      customizable blog with minimal effort. You’ll only have to
-                      change a few settings and you’re ready to go. As with all
-                      Jigsaw sites, configuration settings can be found in
-                      config
-                    </p>
+                    <div dangerouslySetInnerHTML={{ __html: html }} />
                   </div>
                 </div>
               </div>
@@ -173,14 +169,16 @@ const BlogPage = () => {
 
 export default BlogPage
 
-// export const query = graphql`
-//   {
-//     markdownRemark(frontmatter: { path: { eq: "test" } }) {
-//       html
-//       frontmatter {
-//         title
-//         date
-//       }
-//     }
-//   }
-// `
+export const query = graphql`
+  {
+    markdownRemark(frontmatter: { path: { eq: "etst" } }) {
+      id
+      html
+      frontmatter {
+        title
+        path
+        date
+      }
+    }
+  }
+`
