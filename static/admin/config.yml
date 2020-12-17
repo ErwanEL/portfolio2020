@@ -1,6 +1,7 @@
 backend:
   name: github
   repo: ErwanEL/portfolio2020
+  branch: netlify-cms
 
 media_folder: static/assets
 public_folder: /assets
