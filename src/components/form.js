@@ -1,25 +1,7 @@
 import React from "react"
-import { useStaticQuery, graphql } from "gatsby"
+import YAMLData from "../../site/content/pages/form.yml"
 
 const Form = () => {
-  const data = useStaticQuery(graphql`
-    {
-      markdownRemark(frontmatter: { component: { eq: "form" } }) {
-        frontmatter {
-          component
-          name
-          namePlaceholder
-          email
-          emailPlaceholder
-          message
-          messagePlaceholder
-          send
-        }
-      }
-    }
-  `)
-  const { markdownRemark } = data
-  const { frontmatter } = markdownRemark
   return (
     <form
       name="contact"
@@ -31,25 +13,25 @@ const Form = () => {
     >
       <input type="hidden" name="form-name" value="contact" />
       <div className="field">
-        <label className="label">{frontmatter.name}</label>
+        <label className="label">{YAMLData.name}</label>
         <div className="control">
           <input
             name="name"
             className="input"
             type="text"
-            placeholder={frontmatter.namePlaceholder}
+            placeholder={YAMLData.namePlaceholder}
           />
         </div>
       </div>
 
       <div className="field">
-        <label className="label">{frontmatter.email}</label>
+        <label className="label">{YAMLData.email}</label>
         <div className="control has-icons-left has-icons-right">
           <input
             name="email"
             className="input "
             type="email"
-            placeholder={frontmatter.emailPlaceholder}
+            placeholder={YAMLData.emailPlaceholder}
           />
           <span className="icon is-small is-left">
             <i className="fas fa-envelope"></i>
@@ -58,12 +40,12 @@ const Form = () => {
       </div>
 
       <div className="field">
-        <label className="label">{frontmatter.message}</label>
+        <label className="label">{YAMLData.message}</label>
         <div className="control">
           <textarea
             name="message"
             className="textarea"
-            placeholder={frontmatter.messagePlaceholder}
+            placeholder={YAMLData.messagePlaceholder}
           ></textarea>
         </div>
       </div>
@@ -84,7 +66,7 @@ const Form = () => {
       <div className="field is-grouped">
         <div className="control">
           <button type="submit" className="button is-link submit">
-            {frontmatter.send}
+            {YAMLData.send}
           </button>
         </div>
       </div>
