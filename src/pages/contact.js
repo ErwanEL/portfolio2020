@@ -1,17 +1,14 @@
 import React from "react"
-import { graphql } from "gatsby"
 import Layout from "../components/layout"
 import Resume from "../assets/resume.pdf"
 import SEO from "../components/seo"
 import Form from "../components/form"
+import YAMLData from "../../site/content/pages/contact.yml"
 
-const ContactPage = ({ data }) => {
-  const { markdownRemark } = data
-  const { frontmatter, html } = markdownRemark
-
+const ContactPage = () => {
   return (
     <Layout>
-      <SEO title={frontmatter.seo} />
+      <SEO title={YAMLData.seo} />
       <section className="hero is-medium">
         <div className="hero-body">
           <div className="container">
@@ -20,9 +17,9 @@ const ContactPage = ({ data }) => {
                 {/* {html} */}
                 <h1 className="title">
                   <span className="mate">✉️</span>
-                  {frontmatter.title}
+                  {YAMLData.title}
                 </h1>
-                <div dangerouslySetInnerHTML={{ __html: html }} />
+                <div dangerouslySetInnerHTML={{ __html: YAMLData.content }} />
               </div>
 
               <div
@@ -76,16 +73,3 @@ const ContactPage = ({ data }) => {
 }
 
 export default ContactPage
-
-export const query = graphql`
-  {
-    markdownRemark(frontmatter: { slug: { eq: "/contact" } }) {
-      html
-      frontmatter {
-        title
-        slug
-        seo
-      }
-    }
-  }
-`

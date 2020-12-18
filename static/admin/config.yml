@@ -7,6 +7,31 @@ media_folder: static/assets
 public_folder: /assets
 
 collections:
+  - label: "Pages"
+    name: "pages"
+    files:
+      - label: "Contact Page"
+        name: "contact"
+        seo: "Contact"
+        file: "site/content/pages/contact.yml"
+        fields:
+          - {label: Title, name: title, widget: string}
+          - {label: Seo, name: seo, widget: string}
+          - {label: Success, name: success, widget: string}
+          - {label: Content, name: content, widget: markdown}
+
+      - label: "Locations Page"
+        name: "locations"
+        file: "site/content/locations.yml"
+        fields:
+          - {label: Title, name: title, widget: string}
+          - {label: Intro, name: intro, widget: markdown}
+          - label: Locations
+            name: locations
+            widget: list
+            fields:
+              - {label: Name, name: name, widget: string}
+              - {label: Address, name: address, widget: string}
   - name: blog
     label: Blog
     folder: content/blog
