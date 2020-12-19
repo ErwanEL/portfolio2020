@@ -3,7 +3,7 @@ import Layout from "../components/layout"
 import Resume from "../assets/resume.pdf"
 import SEO from "../components/seo"
 import Form from "../components/form"
-import YAMLData from "../../site/content/pages/contact.yml"
+import YAMLData from "../../site/content/pages/en/contact.yml"
 
 const ContactPage = () => {
   return (

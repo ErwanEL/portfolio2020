@@ -1,5 +1,5 @@
 import React from "react"
-import YAMLData from "../../site/content/pages/form.yml"
+import YAMLData from "../../site/content/pages/en/form.yml"
 
 const Form = () => {
   return (

@@ -7,13 +7,57 @@ media_folder: static/assets
 public_folder: /assets
 
 collections:
-  - label: "Pages"
-    name: "pages"
+  # - label: "Blog in English"
+  #   name: "english_posts"
+  #   folder: "_posts"
+  #   create: true
+  #   filter: {field: "language", value: "en"}
+  #   fields:
+  #     - {label: "Language", name: "language", widget: "select", options: ["en", "es"]}
+  #     - {label: "Title", name: "title", widget: "string"}
+  #     - {label: "Content", name: "body", widget: "markdown"}
+  # - label: "Blog en Español"
+  #   name: "spanish_posts"
+  #   folder: "_posts"
+  #   create: true
+  #   filter: {field: "language", value: "es"}
+  #   fields:
+  #     - {label: "Lenguaje", name: "language", widget: "select", options: ["en", "es"]}
+  #     - {label: "Titulo", name: "title", widget: "string"}
+  #     - {label: "Contenido", name: "body", widget: "markdown"}
+  #     - {label: "test", name: "test", widget: "markdown"}
+  - label: "English Pages"
+    name: "english pages"
+    media_folder: "src/data/images/"
     files:
       - label: "Contact Page"
         name: "contact"
         seo: "Contact"
-        file: "site/content/pages/contact.yml"
+        file: "site/content/pages/en/contact.yml"
+        fields:
+          - {label: Title, name: title, widget: string}
+          - {label: Seo, name: seo, widget: string}
+          - {label: Success, name: success, widget: string}
+          - {label: Content, name: content, widget: markdown}
+          - { name: image, label: Image, widget: image }
+      - label: "Form Component"
+        name: "form"
+        file: "site/content/pages/en/form.yml"
+        fields:
+          - {label: Name, name: name, widget: string}
+          - {label: NamePlaceholder, name: namePlaceholder, widget: string}
+          - {label: Email, name: email, widget: string}
+          - {label: EmailPlaceholder, name: emailPlaceholder, widget: string}
+          - {label: Message, name: message, widget: string}
+          - {label: MessagePlaceholder, name: messagePlaceholder, widget: string}
+          - {label: Send, name: send, widget: string}
+  - label: "Spanish Pages"
+    name: "spanish pages"
+    files:
+      - label: "Contact Page"
+        name: "contact"
+        seo: "Contact"
+        file: "site/content/pages/es/contact.yml"
         fields:
           - {label: Title, name: title, widget: string}
           - {label: Seo, name: seo, widget: string}
@@ -22,7 +66,7 @@ collections:
 
       - label: "Form Component"
         name: "form"
-        file: "site/content/pages/form.yml"
+        file: "site/content/pages/es/form.yml"
         fields:
           - {label: Name, name: name, widget: string}
           - {label: NamePlaceholder, name: namePlaceholder, widget: string}
