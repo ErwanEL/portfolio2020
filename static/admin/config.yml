@@ -34,7 +34,7 @@ collections:
         name: "contact"
         seo: "Contact"
         file: "site/content/pages/contact/contact-en.yml"
-        media_folder: "/images"
+        media_folder: "images"
         fields:
           - {label: Title, name: title, widget: string}
           - {label: Seo, name: seo, widget: string}
