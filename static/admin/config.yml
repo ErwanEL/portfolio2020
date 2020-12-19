@@ -28,7 +28,7 @@ collections:
   #     - {label: "test", name: "test", widget: "markdown"}
   - label: "English Pages"
     name: "english pages"
-    media_folder: "src/data/images/"
+    media_folder: "../images/"
     files:
       - label: "Contact Page"
         name: "contact"
