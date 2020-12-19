@@ -28,12 +28,13 @@ collections:
   #     - {label: "test", name: "test", widget: "markdown"}
   - label: "English Pages"
     name: "english pages"
-    media_folder: "../images/"
+    # media_folder: "../images/"
     files:
       - label: "Contact Page"
         name: "contact"
         seo: "Contact"
         file: "site/content/pages/en/contact.yml"
+        media_folder: "/images/"
         fields:
           - {label: Title, name: title, widget: string}
           - {label: Seo, name: seo, widget: string}
