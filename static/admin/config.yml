@@ -33,8 +33,8 @@ collections:
       - label: "Contact Page"
         name: "contact"
         seo: "Contact"
-        file: "site/content/pages/en/contact.yml"
-        media_folder: "/images/"
+        file: "site/content/pages/contact/contact-en.yml"
+        media_folder: "site/content/pages/contact/images"
         fields:
           - {label: Title, name: title, widget: string}
           - {label: Seo, name: seo, widget: string}
