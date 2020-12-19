@@ -21,13 +21,7 @@ const BlogPage = ({ data }) => {
               <div class="column is-8 is-offset-2">
                 <figure class="image is-16by9">
                   <img src={"/jamstack.PNG"} alt="" />
-                  height={100}
-                  src="../../static/resume.jpg"
-                  alt="T-Rex"
-                />   height={100}
-                  src="../../static/resume.jpg"
-                  alt="T-Rex"
-                />  </figure>
+                </figure>
               </div>
             </div>
 

@@ -1,12 +1,15 @@
 import React from "react"
+import { graphql } from "gatsby"
 import Layout from "../components/layout"
 import SEO from "../components/seo"
-import YAMLData from "../../site/content/pages/contact.yml"
 
-const SuccessPage = () => {
+const SuccessPage = ({ data }) => {
+  const { markdownRemark } = data
+  const { frontmatter, html } = markdownRemark
+
   return (
     <Layout>
-      <SEO title={YAMLData.seo} />
+      <SEO title={frontmatter.seo} />
       <section className="hero is-medium">
         <div className="hero-body">
           <div className="container">
@@ -15,14 +18,14 @@ const SuccessPage = () => {
                 <div className="content">
                   <h1 className="title">
                     <span className="mate">✉️</span>
-                    {YAMLData.title}
+                    {frontmatter.title}
                   </h1>
-                  <div dangerouslySetInnerHTML={{ __html: YAMLData.content }} />
+                  <div dangerouslySetInnerHTML={{ __html: html }} />
                 </div>
               </div>
               <div className="column is-half">
                 <div className="notification has-text-centered has-text-white">
-                  {YAMLData.success} <i className="fas fa-check-square"></i>
+                  {frontmatter.success} <i class="fas fa-check-square"></i>
                 </div>
               </div>
             </div>
@@ -34,3 +37,17 @@ const SuccessPage = () => {
 }
 
 export default SuccessPage
+
+export const query = graphql`
+  {
+    markdownRemark(frontmatter: { slug: { eq: "/contact" } }) {
+      html
+      frontmatter {
+        title
+        slug
+        seo
+        success
+      }
+    }
+  }
+`
