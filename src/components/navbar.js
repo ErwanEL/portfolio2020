@@ -7,6 +7,7 @@ import UsaSvg from "../components/svg/usasvg"
 
 const Navbar = ({ navbar }) => {
   const path = globalHistory.location.pathname
+  console.log(path)
   return (
     <div className="navbar-end is-hidden-touch">
       <Link
@@ -78,7 +79,7 @@ const Navbar = ({ navbar }) => {
         </a>
 
         <div class="navbar-dropdown">
-          <a class="navbar-item pr-0" href={`https://es.erwanel.com/${path}`}>
+          <a class="navbar-item pr-0" href={`https://es.erwanel.com${path}`}>
             <EspSvg />
           </a>
         </div>

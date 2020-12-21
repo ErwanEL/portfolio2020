@@ -66,7 +66,7 @@ const NavbarMobile = ({ navbar }) => {
           >
             <i style={{ color: "#1e96c8" }} class="fab fa-2x fa-telegram"></i>
           </a>
-          <a className="navbar-item" href={`https://es.erwanel.com/${path}`}>
+          <a className="navbar-item" href={`https://es.erwanel.com${path}`}>
             <EspSvg />
           </a>
         </div>
