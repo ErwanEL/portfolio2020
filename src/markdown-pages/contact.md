@@ -9,5 +9,4 @@ success: "Votre message a bien été envoyé!"
     <hr class="mini" />
     <p class="subtitle-mod">Parlons de votre projet.</p>
     <p class="subtitle-mod">Contactez moi.</p>
-
 </div>

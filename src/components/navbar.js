@@ -52,6 +52,20 @@ const Navbar = ({ navbar }) => {
       >
         {navbar.contact}
       </Link>
+
+      <div
+        style={{
+          borderLeft: "1px solid grey",
+          height: "50%",
+          margin: "auto 5px",
+        }}
+      ></div>
+      <Link className={`navbar-item`} activeClassName="is-active" to="/blog/">
+        <a class="button is-light">
+          <strong>Blog</strong>
+        </a>
+      </Link>
+
       <a
         href="https://github.com/ErwanEL/"
         target="_blank"
@@ -59,7 +73,11 @@ const Navbar = ({ navbar }) => {
       >
         <i className="fab fa-2x fa-github"></i>
       </a>
-      <a className="navbar-item githubLink ">
+      <a
+        className="navbar-item githubLink"
+        href="https://www.malt.fr/profile/erwanleblois"
+        target="_blank"
+      >
         <MaltSvg></MaltSvg>
       </a>
       <a
@@ -69,9 +87,18 @@ const Navbar = ({ navbar }) => {
       >
         <i style={{ color: "#1e96c8" }} class="fab fa-2x fa-telegram"></i>
       </a>
+
+      <div
+        style={{
+          borderLeft: "1px solid grey",
+          height: "50%",
+          margin: "auto 5px",
+        }}
+      ></div>
+
       <div class="navbar-item has-dropdown is-hoverable">
         <a class="navbar-link">
-          <EspSvg />
+          <UsaSvg width={20} height={20} />
         </a>
 
         <div class="navbar-dropdown">
