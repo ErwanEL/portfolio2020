@@ -9,7 +9,7 @@ import QuoteSlider from "../components/quoteSlider"
 const IndexPage = ({ data }) => {
   const { markdownRemark } = data
   const { frontmatter, html } = markdownRemark
-
+  console.log("hola")
   return (
     <Layout>
       <SEO title={frontmatter.seo} />
