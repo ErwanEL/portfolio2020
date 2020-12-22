@@ -110,8 +110,8 @@ collections:
           - {label: Seo, name: seo, widget: string}
           - {label: Success, name: success, widget: string}
           - {label: Content, name: content, widget: markdown}
-          - { name: First section image, label: section0Image, widget: image }
-          - { name: Second section image, label: section1Image, widget: image }
+          - { name: section0Image, label: First section image, widget: image }
+          - { name: section1Image, label: Second section image, widget: image }
 
   - name: blog
     label: Blog
