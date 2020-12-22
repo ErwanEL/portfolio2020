@@ -4,5 +4,5 @@ success: test
 content: page test
 First section image: images/eso.jpg
 Second section image: images/cat.jpg
-section0Image: images/eso.jpg
-section1Image: images/cat.jpg
+section0Image: images/cat.jpg
+section1Image: images/mail.png
