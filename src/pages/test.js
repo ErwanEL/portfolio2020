@@ -17,12 +17,12 @@ const FreelancePage = ({ data }) => {
   console.log(YAMLData)
   const section0Image = images.filter(
     image =>
-      getPath(image.node.relativePath) === getPath(YAMLData["section0-image"])
+      getPath(image.node.relativePath) === getPath(YAMLData.section0Image)
   )[0].node.childImageSharp.fluid
 
   const section1Image = images.filter(
     image =>
-      getPath(image.node.relativePath) === getPath(YAMLData["section1-image"])
+      getPath(image.node.relativePath) === getPath(YAMLData.section1Image)
   )[0].node.childImageSharp.fluid
 
   return (
