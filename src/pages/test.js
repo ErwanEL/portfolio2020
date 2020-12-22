@@ -14,7 +14,7 @@ const FreelancePage = ({ data }) => {
   const getPath = path => {
     return path.substr(path.lastIndexOf("/") + 1)
   }
-
+  console.log(YAMLData)
   const section0Image = images.filter(
     image =>
       getPath(image.node.relativePath) === getPath(YAMLData["section0-image"])
