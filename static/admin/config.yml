@@ -100,6 +100,19 @@ collections:
           - {label: Message, name: message, widget: string}
           - {label: MessagePlaceholder, name: messagePlaceholder, widget: string}
           - {label: Send, name: send, widget: string}
+      - label: "test Page"
+        name: "test"
+        seo: "test"
+        file: "site/content/pages/test/test-fr.yml"
+        media_folder: "images"
+        fields:
+          - {label: Title, name: title, widget: string}
+          - {label: Seo, name: seo, widget: string}
+          - {label: Success, name: success, widget: string}
+          - {label: Content, name: content, widget: markdown}
+          - { name: First section image, label: section0Image, widget: image }
+          - { name: Second section image, label: section1Image, widget: image }
+
   - name: blog
     label: Blog
     folder: site/content/blog
