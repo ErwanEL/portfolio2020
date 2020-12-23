@@ -4,6 +4,7 @@ import Img from "gatsby-image"
 import Layout from "../components/layout"
 import SEO from "../components/seo"
 import UpworkSvg from "../components/svg/upworksvg"
+import { cmsImageFinder } from "../components/utils"
 import YAMLData from "../../site/content/pages/test/test-fr.yml"
 
 const FreelancePage = ({ data }) => {
@@ -11,19 +12,36 @@ const FreelancePage = ({ data }) => {
   const { frontmatter } = markdownRemark
   const { folderImages } = data
   const images = folderImages.edges
-  const getPath = path => {
-    return path.substr(path.lastIndexOf("/") + 1)
-  }
-  console.log(YAMLData)
-  const section0Image = images.filter(
-    image =>
-      getPath(image.node.relativePath) === getPath(YAMLData.section0Image)
-  )[0].node.childImageSharp.fluid
 
-  const section1Image = images.filter(
-    image =>
-      getPath(image.node.relativePath) === getPath(YAMLData.section1Image)
-  )[0].node.childImageSharp.fluid
+  console.log(cmsImageFinder(images, "section0Image", YAMLData))
+
+  // const cmsImageFinder = img => {g
+  //   return images.find(
+  //     image => getPath(image.node.relativePath) === getPath(YAMLData[img])
+  //   ).node.childImageSharp.fluid  // const getPath = path => {
+  //   return path.substr(path.lastIndexOf("/") + 1)
+  // }
+  console.log(images)
+  // }
+
+  // console.log(found("section0Image"))
+  // const testFunction = (arr, img) => {
+  //   return arr.filter(
+  //     image =>
+  //       getPath(image["node"]["relativePath"]) === getPath(YAMLData["ima"])
+  //   )[0].node.childImageSharp.fluid
+  // }
+
+  // console.log(testFunction(images, section0Image))
+
+  const section0Image = cmsImageFinder(images, "section0Image", YAMLData)
+
+  const section1Image = cmsImageFinder(images, "section1Image", YAMLData)
+
+  // const section1Image = images.filter(
+  //   image =>
+  //     getPath(image.node.relativePath) === getPath(YAMLData.section1Image)
+  // )[0].node.childImageSharp.fluid
 
   return (
     <Layout>
