@@ -107,6 +107,7 @@ collections:
         media_folder: "images"
         fields:
           - {label: Seo, name: seo, widget: string}
+          - {label: Emoji, name: emoji, widget: string}
           - {label: First section title, name: section0Title, widget: string}
           - {label: Second section title, name: section1Title, widget: string}
           - {label: First section content, name: section0Content, widget: string}
