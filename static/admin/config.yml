@@ -106,10 +106,15 @@ collections:
         file: "site/content/pages/test/test-fr.yml"
         media_folder: "images"
         fields:
-          - {label: Title, name: title, widget: string}
           - {label: Seo, name: seo, widget: string}
-          - {label: Success, name: success, widget: string}
-          - {label: Content, name: content, widget: markdown}
+          - {label: section0Title, name: First section title, widget: string}
+          - {label: section1Title, name: Second section title, widget: string}
+          - {label: section0Content, name: First section content, widget: string}
+          - {label: section1Content, name: Second section content, widget: string}
+          - {label: section0Link, name: First section link, widget: string}
+          - {label: section1Link, name: Second section link, widget: string}
+          - { label: 'section0Color', name: 'First section color', widget: 'color', enableAlpha: true, allowInput: true }
+          - { label: 'section1Color', name: 'Second section color', widget: 'color', enableAlpha: true, allowInput: true }
           - { name: section0Image, label: First section image, widget: image }
           - { name: section1Image, label: Second section image, widget: image }
 
