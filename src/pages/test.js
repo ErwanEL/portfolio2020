@@ -87,7 +87,7 @@ const FreelancePage = () => {
 
               <div className="column is-half has-text-left">
                 <div className="content">
-                  <h1 className="title">Etmg</h1>
+                  <h1 className="title">{YAMLData.section1LinkTitle}</h1>
                   <p className="subtitle-mod">
                     {YAMLData.section1Title}{" "}
                     <a
