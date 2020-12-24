@@ -40,7 +40,7 @@ const FreelancePage = () => {
             <div className="columns is-vcentered">
               <div className="column is-half">
                 <h1 className="title">
-                  <span className="mate">🥬</span>
+                  <span className="mate">{YAMLData.emoji}</span>
                   {YAMLData.seo}.
                 </h1>
                 <div className="content">
