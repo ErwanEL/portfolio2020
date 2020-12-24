@@ -29,6 +29,8 @@ const FreelancePage = () => {
   const { folderImages } = data
   const images = folderImages.edges
 
+  console.log(YAMLData)
+
   return (
     <Layout>
       <SEO title={YAMLData.seo} />
@@ -42,10 +44,13 @@ const FreelancePage = () => {
                   {YAMLData.seo}.
                 </h1>
                 <div className="content">
-                  <hr style={{ background: "#6FDA44" }} className="mini" />
+                  <hr
+                    style={{ background: YAMLData.section0Color }}
+                    className="mini"
+                  />
                   <UpworkSvg height={40}></UpworkSvg>
                   <p className="subtitle-mod">
-                    {YAMLData.section0Title}{" "}
+                    {YAMLData.section0Content}{" "}
                     <a
                       className="upwork-link"
                       href={YAMLData.section0Link}
@@ -89,7 +94,7 @@ const FreelancePage = () => {
                 <div className="content">
                   <h1 className="title">{YAMLData.section1LinkTitle}</h1>
                   <p className="subtitle-mod">
-                    {YAMLData.section1Title}{" "}
+                    {YAMLData.section1Content}{" "}
                     <a
                       className="etmg-link"
                       href={YAMLData.section1Link}
