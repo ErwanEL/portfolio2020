@@ -112,7 +112,9 @@ collections:
           - {label: First section content, name: section0Content, widget: string}
           - {label: Second section content, name: section1Content, widget: string}
           - {label: First section link, name: section0Link, widget: string}
+          - {label: First section link title, name: section0LinkTitle, widget: string}
           - {label: Second section link, name: section1Link, widget: string}
+          - {label: Second section link title, name: section1LinkTitle, widget: string}
           - { label: 'First section color', name: 'section0Color', widget: 'color', enableAlpha: true, allowInput: true }
           - { label: 'Second section color', name: 'section1Color', widget: 'color', enableAlpha: true, allowInput: true }
           - { label: First section image, name: section0Image,  widget: image }
