@@ -107,16 +107,16 @@ collections:
         media_folder: "images"
         fields:
           - {label: Seo, name: seo, widget: string}
-          - {label: section0Title, name: First section title, widget: string}
-          - {label: section1Title, name: Second section title, widget: string}
-          - {label: section0Content, name: First section content, widget: string}
-          - {label: section1Content, name: Second section content, widget: string}
-          - {label: section0Link, name: First section link, widget: string}
-          - {label: section1Link, name: Second section link, widget: string}
-          - { label: 'section0Color', name: 'First section color', widget: 'color', enableAlpha: true, allowInput: true }
-          - { label: 'section1Color', name: 'Second section color', widget: 'color', enableAlpha: true, allowInput: true }
-          - { name: section0Image, label: First section image, widget: image }
-          - { name: section1Image, label: Second section image, widget: image }
+          - {label: First section title, name: section0Title, widget: string}
+          - {label: Second section title, name: section1Title, widget: string}
+          - {label: First section content, name: section0Content, widget: string}
+          - {label: Second section content, name: section1Content, widget: string}
+          - {label: First section link, name: section0Link, widget: string}
+          - {label: Second section link, name: section1Link, widget: string}
+          - { label: 'First section color', name: 'section0Color', widget: 'color', enableAlpha: true, allowInput: true }
+          - { label: 'Second section color', name: 'section1Color', widget: 'color', enableAlpha: true, allowInput: true }
+          - { label: First section image, name: section0Image,  widget: image }
+          - { label: Second section image, name: section1Image,  widget: image }
 
   - name: blog
     label: Blog
