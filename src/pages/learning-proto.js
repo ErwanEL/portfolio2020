@@ -1,18 +1,41 @@
 import React from "react"
-import { graphql } from "gatsby"
+import { useStaticQuery, graphql } from "gatsby"
 import Img from "gatsby-image"
 import Layout from "../components/layout"
 import SEO from "../components/seo"
 import JamstackSvg from "../components/svg/jamstacksvg"
 import TreehouseSvg from "../components/svg/treehousesvg"
 import FccSvg from "../components/svg/fccsvg"
+import { cmsImageFinder } from "../components/utils"
+import YAMLData from "../../site/content/pages/resources/resources-fr.yml"
 
-const LearningPage = ({ data }) => {
-  const { markdownRemark } = data
-  const { frontmatter } = markdownRemark
+const LearningPage = () => {
+  const data = useStaticQuery(graphql`
+    {
+      folderImages: allFile(
+        filter: {
+          relativeDirectory: { glob: "content/pages/resources/images" }
+        }
+      ) {
+        edges {
+          node {
+            relativePath
+            childImageSharp {
+              fluid {
+                ...GatsbyImageSharpFluid
+              }
+            }
+          }
+        }
+      }
+    }
+  `)
+  const { folderImages } = data
+  const images = folderImages.edges
+
   return (
     <Layout>
-      <SEO title={frontmatter.seo} />
+      <SEO title={YAMLData.seo} />
       <section className="hero is-medium">
         <div className="hero-body">
           <div className="container">
@@ -20,24 +43,27 @@ const LearningPage = ({ data }) => {
               <div className="column is-half">
                 <h1 className="title">
                   <span className="mate">📘</span>
-                  {frontmatter.seo}.
+                  {YAMLData.seo}.
                 </h1>
                 <div className="content">
-                  <hr style={{ background: "#F0047F" }} className="mini" />
+                  <hr
+                    style={{ background: YAMLData.section0Color }}
+                    className="mini"
+                  />
                   <div className="svg">
                     <JamstackSvg
                       height={45}
                       className="skillsSvg"
                     ></JamstackSvg>
                   </div>
-                  <p className="subtitle-mod">{frontmatter.jamstack}</p>
+                  <p className="subtitle-mod">{YAMLData.section0Title}</p>
                   <p className="subtitle">
                     <a
                       className="jamstack-link"
-                      href="https://www.hauteculture.com/"
+                      href={YAMLData.section0Link}
                       target="_blank"
                     >
-                      {frontmatter.jamstackLink}
+                      {YAMLData.section0LinkTitle}
                     </a>
                   </p>
                 </div>
@@ -45,7 +71,7 @@ const LearningPage = ({ data }) => {
               <div className="column is-half">
                 <Img
                   className="free image"
-                  fluid={data.jamstack.childImageSharp.fluid}
+                  fluid={cmsImageFinder(images, "section0Image", YAMLData)}
                   alt="Treehouse"
                 />
               </div>
@@ -69,14 +95,14 @@ const LearningPage = ({ data }) => {
                   <div className="child1">
                     <Img
                       className="free image"
-                      fluid={data.fcc.childImageSharp.fluid}
+                      fluid={cmsImageFinder(images, "section1Image0", YAMLData)}
                       alt="Codecademy"
                     />
                   </div>
                   <div className="child1 child2">
                     <Img
                       className="free image"
-                      fluid={data.treehouse.childImageSharp.fluid}
+                      fluid={cmsImageFinder(images, "section1Image1", YAMLData)}
                       alt="Freecodecamp"
                     />
                   </div>
@@ -85,20 +111,20 @@ const LearningPage = ({ data }) => {
               <div className="column is-half has-text-right">
                 <div className="content">
                   <h1 className="title">
-                    <p>{frontmatter.title2}</p>
+                    <p>{YAMLData.section1Title}</p>
                   </h1>
                   <div className="svg">
                     <TreehouseSvg className="skillsSvg mr-2"></TreehouseSvg>
                     <FccSvg className="skillsSvg"></FccSvg>
                     <p className="subtitle-mod">
                       {" "}
-                      {frontmatter.otherRessources}{" "}
+                      {YAMLData.section1Content}{" "}
                       <a
                         className="treehouse-link"
-                        href="https://teamtreehouse.com/erwanel"
+                        href={YAMLData.section1Link}
                         target="_blank"
                       >
-                        {frontmatter.treehouseLink}
+                        {YAMLData.section1LinkTitle}
                       </a>
                     </p>
                   </div>
@@ -111,49 +137,5 @@ const LearningPage = ({ data }) => {
     </Layout>
   )
 }
-
-export const query = graphql`
-  {
-    markdownRemark(frontmatter: { slug: { eq: "/learning" } }) {
-      frontmatter {
-        slug
-        seo
-        jamstack
-        jamstackLink
-        title2
-        otherRessources
-        treehouseLink
-      }
-    }
-    fcc: file(relativePath: { eq: "images/learning/fcc.PNG" }) {
-      childImageSharp {
-        fluid {
-          ...GatsbyImageSharpFluid
-        }
-      }
-    }
-    jamstack: file(relativePath: { eq: "images/learning/jamstack.PNG" }) {
-      childImageSharp {
-        fluid {
-          ...GatsbyImageSharpFluid
-        }
-      }
-    }
-    treehouse: file(relativePath: { eq: "images/learning/treehouse.PNG" }) {
-      childImageSharp {
-        fluid {
-          ...GatsbyImageSharpFluid
-        }
-      }
-    }
-    codecademy: file(relativePath: { eq: "images/learning/codecademy.PNG" }) {
-      childImageSharp {
-        fluid {
-          ...GatsbyImageSharpFluid
-        }
-      }
-    }
-  }
-`
 
 export default LearningPage
