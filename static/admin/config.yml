@@ -14,7 +14,8 @@ collections:
     media_folder: "images"
     filter: {field: "language", value: "fr"}
     fields:
-      - {label: "Language", name: "language", widget: "select", options: ["en", "es"]}
+      - {label: "Language", name: "language", widget: "select", options: ["fr", "es"]}
+      - { label: Image, name: image,  widget: image }
       - {label: "Title", name: "title", widget: "string"}
       - {label: "Content", name: "body", widget: "markdown"}
   # - label: "Blog en Español"
