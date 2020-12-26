@@ -9,7 +9,7 @@ import FccSvg from "../components/svg/fccsvg"
 import { cmsImageFinder } from "../components/utils"
 import YAMLData from "../../site/content/pages/resources/resources-fr.yml"
 
-const LearningPage = () => {
+const ResourcesProto = () => {
   const data = useStaticQuery(graphql`
     {
       folderImages: allFile(
@@ -138,4 +138,4 @@ const LearningPage = () => {
   )
 }
 
-export default LearningPage
+export default ResourcesProto

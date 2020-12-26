@@ -7,7 +7,7 @@ import UpworkSvg from "../components/svg/upworksvg"
 import { cmsImageFinder } from "../components/utils"
 import YAMLData from "../../site/content/pages/test/test-fr.yml"
 
-const FreelancePage = () => {
+const FreelanceProto = () => {
   const data = useStaticQuery(graphql`
     {
       folderImages: allFile(
@@ -113,4 +113,4 @@ const FreelancePage = () => {
   )
 }
 
-export default FreelancePage
+export default FreelanceProto
