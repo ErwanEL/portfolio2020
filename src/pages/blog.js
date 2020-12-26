@@ -32,7 +32,7 @@ const BlogPage = ({ data }) => {
                     <h2 class="subtitle is-4">{frontmatter.date}</h2>
                     <h1 class="title">Getting Started</h1>
                     <div dangerouslySetInnerHTML={{ __html: html }} />
-                    <div>{html}</div>
+                    {/* <div>{html}</div> */}
                   </div>
                 </div>
               </div>
@@ -172,14 +172,13 @@ export default BlogPage
 
 export const query = graphql`
   {
-    markdownRemark(frontmatter: { path: { eq: "test" } }) {
-      id
-      html
+    markdownRemark(frontmatter: { title: { eq: "titre test" } }) {
       frontmatter {
         title
-        path
-        date
+        image
+        language
       }
+      html
     }
   }
 `
