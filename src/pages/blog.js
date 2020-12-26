@@ -1,5 +1,6 @@
 import React from "react"
 import { graphql } from "gatsby"
+import ReactMarkdown from "react-markdown"
 import Layout from "../components/layout"
 // import SEO from "../components/seo"
 // import Form from "../components/form"
@@ -8,7 +9,7 @@ const BlogPage = ({ data }) => {
   const { markdownRemark } = data
   const { frontmatter, html } = markdownRemark
 
-  console.log(frontmatter)
+  console.log(html)
 
   return (
     <Layout>
@@ -20,7 +21,7 @@ const BlogPage = ({ data }) => {
             <div class="columns">
               <div class="column is-8 is-offset-2">
                 <figure class="image is-16by9">
-                  <img src={"/jamstack.PNG"} alt="" />
+                  <img src={"/blog.jpg"} alt="" />
                 </figure>
               </div>
             </div>
@@ -31,8 +32,21 @@ const BlogPage = ({ data }) => {
                   <div class="content is-medium">
                     <h2 class="subtitle is-4">{frontmatter.date}</h2>
                     <h1 class="title">Getting Started</h1>
-                    <div dangerouslySetInnerHTML={{ __html: html }} />
+                    {/* <div dangerouslySetInnerHTML={{ __html: html }} /> */}
                     {/* <div>{html}</div> */}
+                    <ReactMarkdown
+                      className=""
+                      source={html}
+                      escapeHtml={false}
+                      // children={html}
+                      allowDangerousHtml={false}
+                      transformImageUri={input =>
+                        /^https?:/.test(input)
+                          ? input
+                          : `https://octodex.github.com/images/${input}`
+                      }
+                    />
+                    console.log(transformImageUri)
                   </div>
                 </div>
               </div>
@@ -175,7 +189,7 @@ export const query = graphql`
     markdownRemark(frontmatter: { title: { eq: "titre test" } }) {
       frontmatter {
         title
-        image
+
         language
       }
       html

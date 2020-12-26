@@ -3,9 +3,8 @@ language: fr
 image: images/blog.jpg
 title: titre test
 ---
-# voici le titre 
 
-
+# voici le titre
 
 du code:
 
@@ -34,8 +33,7 @@ module.exports = {
 encore du code:
 
 ```javascript
-
-console.log('hola')
+console.log("hola")
 ```
 
 test contenu
