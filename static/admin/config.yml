@@ -1,21 +1,22 @@
 backend:
   name: github
   repo: ErwanEL/portfolio2020
-  branch: fr-preprod
+  branch: blog-preprod
 
 media_folder: static/assets
 public_folder: /assets
 
 collections:
-  # - label: "Blog in English"
-  #   name: "english_posts"
-  #   folder: "_posts"
-  #   create: true
-  #   filter: {field: "language", value: "en"}
-  #   fields:
-  #     - {label: "Language", name: "language", widget: "select", options: ["en", "es"]}
-  #     - {label: "Title", name: "title", widget: "string"}
-  #     - {label: "Content", name: "body", widget: "markdown"}
+  - label: "Blog in French"
+    name: "french_post"
+    folder: "site/content/blog"
+    create: true
+    media_folder: "images"
+    filter: {field: "language", value: "fr"}
+    fields:
+      - {label: "Language", name: "language", widget: "select", options: ["en", "es"]}
+      - {label: "Title", name: "title", widget: "string"}
+      - {label: "Content", name: "body", widget: "markdown"}
   # - label: "Blog en Español"
   #   name: "spanish_posts"
   #   folder: "_posts"
