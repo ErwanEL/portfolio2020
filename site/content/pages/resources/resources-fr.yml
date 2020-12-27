@@ -8,8 +8,8 @@ section0Link: https://jamstack.org/
 section0LinkTitle: En savoir plus sur la Jamstack.
 section1Link: https://teamtreehouse.com/erwanel
 section1LinkTitle: En savoir plus sur mon profil TreeHouse.
-section0Color: "#f0047f"
-section1Color: "#b5afaf"
+section0Color: "#F0047F"
+section1Color: "#5fcf80"
 section0Image: images/cat.jpg
 section1Image0: images/eso.jpg
 section1Image1: images/mail2.png
