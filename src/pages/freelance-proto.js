@@ -2,6 +2,7 @@ import React from "react"
 import { useStaticQuery, graphql } from "gatsby"
 import Img from "gatsby-image"
 import Layout from "../components/layout"
+import CustomLink from "../components/customLink"
 import SEO from "../components/seo"
 import UpworkSvg from "../components/svg/upworksvg"
 import { cmsImageFinder } from "../components/utils"
@@ -51,13 +52,11 @@ const FreelanceProto = () => {
                   <UpworkSvg height={40}></UpworkSvg>
                   <p className="subtitle-mod">
                     {YAMLData.section0Content}{" "}
-                    <a
-                      className="upwork-link"
-                      href={YAMLData.section0Link}
-                      target="_blank"
-                    >
-                      {YAMLData.section0LinkTitle}
-                    </a>
+                    <CustomLink
+                      url={YAMLData.section0Link}
+                      content={YAMLData.section0LinkTitle}
+                      color={YAMLData.section0Color}
+                    ></CustomLink>
                   </p>
                 </div>
               </div>
@@ -95,13 +94,11 @@ const FreelanceProto = () => {
                   <h1 className="title">{YAMLData.section1LinkTitle}</h1>
                   <p className="subtitle-mod">
                     {YAMLData.section1Content}{" "}
-                    <a
-                      className="etmg-link"
-                      href={YAMLData.section1Link}
-                      target="_blank"
-                    >
-                      {YAMLData.section1LinkTitle}
-                    </a>
+                    <CustomLink
+                      url={YAMLData.section1Link}
+                      content={YAMLData.section1LinkTitle}
+                      color={YAMLData.section1Color}
+                    ></CustomLink>
                   </p>
                 </div>
               </div>
