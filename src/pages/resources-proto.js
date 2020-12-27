@@ -6,6 +6,7 @@ import SEO from "../components/seo"
 import JamstackSvg from "../components/svg/jamstacksvg"
 import TreehouseSvg from "../components/svg/treehousesvg"
 import FccSvg from "../components/svg/fccsvg"
+import CustomLink from "../components/customLink"
 import { cmsImageFinder } from "../components/utils"
 import YAMLData from "../../site/content/pages/resources/resources-fr.yml"
 
@@ -58,13 +59,11 @@ const ResourcesProto = () => {
                   </div>
                   <p className="subtitle-mod">{YAMLData.section0Title}</p>
                   <p className="subtitle">
-                    <a
-                      className="jamstack-link"
-                      href={YAMLData.section0Link}
-                      target="_blank"
-                    >
-                      {YAMLData.section0LinkTitle}
-                    </a>
+                    <CustomLink
+                      url={YAMLData.section0Link}
+                      content={YAMLData.section0LinkTitle}
+                      color={YAMLData.section0Color}
+                    ></CustomLink>
                   </p>
                 </div>
               </div>
@@ -119,13 +118,11 @@ const ResourcesProto = () => {
                     <p className="subtitle-mod">
                       {" "}
                       {YAMLData.section1Content}{" "}
-                      <a
-                        className="treehouse-link"
-                        href={YAMLData.section1Link}
-                        target="_blank"
-                      >
-                        {YAMLData.section1LinkTitle}
-                      </a>
+                      <CustomLink
+                        url={YAMLData.section1Link}
+                        content={YAMLData.section1LinkTitle}
+                        color={YAMLData.section1Color}
+                      ></CustomLink>
                     </p>
                   </div>
                 </div>
