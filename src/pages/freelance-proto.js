@@ -6,7 +6,7 @@ import CustomLink from "../components/customLink"
 import SEO from "../components/seo"
 import UpworkSvg from "../components/svg/upworksvg"
 import { cmsImageFinder } from "../components/utils"
-import YAMLData from "../../site/content/pages/test/test-fr.yml"
+import YAMLData from "../../site/content/pages/freelance/freelance-fr.yml"
 
 const FreelanceProto = () => {
   const data = useStaticQuery(graphql`
