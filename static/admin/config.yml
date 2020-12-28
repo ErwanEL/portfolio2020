@@ -79,6 +79,19 @@ collections:
   - label: "French Pages"
     name: "french pages"
     files:
+      - label: "Home Page"
+        name: "home"
+        seo: "Home"
+        file: "site/content/pages/home/home-fr.yml"
+        fields:
+          - {label: Dispo tag, name: dispo, widget: string}
+          - {label: Seo, name: seo, widget: string}
+          - {label: Intro, name: intro, widget: string}
+          - {label: Content, name: content, widget: markdown}
+          # - {label: Stacks, name: stacks, widget: list, default: ["Front-End developer", "Javascript", "GatsbyJS" ]}
+          # - {label: Find me, name: findMe, widget: string}
+          # - {label: Link Title, name: linkTitle, widget: string}
+          # - {label: Link, name: link, widget: string}
       - label: "Contact Page"
         name: "contact"
         seo: "Contact"
