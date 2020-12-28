@@ -42,23 +42,16 @@ const SkillsPage = ({ data }) => {
                       YAMLData.stacks.map((stack, i) => {
                         return (
                           <li>
-                            <a href={`#${stack}`}>{stack}</a>
+                            <a
+                              href={`#${stack
+                                .replace(/\//g, "")
+                                .toLowerCase()}`}
+                            >
+                              {stack}
+                            </a>
                           </li>
                         )
                       })}
-
-                    <li>
-                      <a href="#htmlcss">Html/Css</a>
-                    </li>
-                    <li>
-                      <a href="#javascript">Javascript</a>
-                    </li>
-                    <li>
-                      <a href="#gatsbyjs">GatsbyJs</a>
-                    </li>
-                    <li>
-                      <a href="#workflow">Workflow</a>
-                    </li>
                   </ul>
                 </nav>
               </div>
