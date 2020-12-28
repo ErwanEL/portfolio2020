@@ -7,7 +7,6 @@ import UsaSvg from "../components/svg/usasvg"
 
 const Navbar = ({ navbar }) => {
   const path = globalHistory.location.pathname
-  console.log(path)
   return (
     <div className="navbar-end is-hidden-touch">
       <Link
