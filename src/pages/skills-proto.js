@@ -10,11 +10,13 @@ import JsSvg from "../components/svg/jssvg"
 import GatsbySvg from "../components/svg/gatsbysvg"
 import ReactSvg from "../components/svg/reactsvg"
 import AtlassianSvg from "../components/svg/atlassiansvg"
-// import YAMLData from "../../site/content/pages/skills/skills-fr.yml"
+import YAMLData from "../../site/content/pages/skills/skills-fr.yml"
 
 const SkillsPage = ({ data }) => {
   const { markdownRemark } = data
   const { frontmatter, html } = markdownRemark
+
+  console.log(YAMLData)
   return (
     <Layout>
       <SEO title={frontmatter.seo} />
@@ -36,6 +38,15 @@ const SkillsPage = ({ data }) => {
                   aria-label="breadcrumbs"
                 >
                   <ul>
+                    {YAMLData.stacks &&
+                      YAMLData.stacks.map((stack, i) => {
+                        return (
+                          <li>
+                            <a href={`#${stack}`}>{stack}</a>
+                          </li>
+                        )
+                      })}
+
                     <li>
                       <a href="#htmlcss">Html/Css</a>
                     </li>
