@@ -153,12 +153,16 @@ collections:
           - { label: First section image, name: section0Image,  widget: image }
           - { label: Second section image, name: section1Image0,  widget: image }
           - { label: Second section image 2, name: section1Image1,  widget: image }
-      - label: "Skills"
-        name: "Skills"
+      - label: "Skills Page"
+        name: "Skills page"
         file: "site/content/pages/skills/skills-fr.yml"
         media_folder: "images"
         fields:
+          - {label: Title, name: title, widget: string}
+          - {label: Intro, name: intro, widget: string}
           - {label: Stacks, name: stacks, widget: list, default: ["Front-End developer", "Javascript", "GatsbyJS" ]}
+          - {label: Content, name: content, widget: markdown}
+          
           # - {label: Seo, name: seo, widget: string}
           # - {label: Emoji, name: emoji, widget: string}
           # - {label: First section title, name: section0Title, widget: string}
