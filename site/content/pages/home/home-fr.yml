@@ -2,7 +2,6 @@ dispo: Je suis actuellement disponible.
 seo: Bienvenue sur mon portfolio - ErwanEL
 intro: Bonjour mon nom est Erwan, bienvenue sur mon portfolio.
 content: |-
-  
   <div class="content">
   	<hr style="background: #023859;" class="mini" />
   	<p class="subtitle-mod">
@@ -15,7 +14,7 @@ content: |-
   		</span>
   	</p>
   	<p class="subtitle">
-  		Me trouver
+  		Me trouver sur
   		<a
   			class="github-link"
   			href="https://github.com/ErwanEL/"
