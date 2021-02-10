@@ -6,7 +6,7 @@ import Navbar from "./navbar"
 
 const Header = ({ navbar }) => {
   return (
-    <nav className="navbar" role="navigation" aria-label="main navigation">
+    <nav className="navbar " role="navigation" aria-label="main navigation">
       <div className="navbar-item">
         <Link to="/">
           <LogoSvg className="logo"></LogoSvg>

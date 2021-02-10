@@ -4,10 +4,11 @@ import { globalHistory } from "@reach/router"
 import MaltSvg from "../components/svg/maltsvg"
 import EspSvg from "../components/svg/espsvg"
 import UsaSvg from "../components/svg/usasvg"
+import FrSvg from "../components/svg/frsvg"
 
 const Navbar = ({ navbar }) => {
   const path = globalHistory.location.pathname
-  console.log(path)
+
   return (
     <div className="navbar-end is-hidden-touch">
       <Link
@@ -52,6 +53,28 @@ const Navbar = ({ navbar }) => {
       >
         {navbar.contact}
       </Link>
+
+      <div
+        style={{
+          borderLeft: "1px solid grey",
+          height: "50%",
+          margin: "auto 5px",
+        }}
+      ></div>
+      <Link
+        style={{ cursor: "not-allowed" }}
+        className={`navbar-item`}
+        activeClassName="is-active"
+      >
+        <a
+          style={{ cursor: "not-allowed" }}
+          disabled
+          className="navbar-item button is-light"
+        >
+          <strong>Blog</strong>
+        </a>
+      </Link>
+
       <a
         href="https://github.com/ErwanEL/"
         target="_blank"
@@ -59,7 +82,11 @@ const Navbar = ({ navbar }) => {
       >
         <i className="fab fa-2x fa-github"></i>
       </a>
-      <a className="navbar-item githubLink ">
+      <a
+        className="navbar-item githubLink"
+        href="https://www.malt.fr/profile/erwanleblois"
+        target="_blank"
+      >
         <MaltSvg></MaltSvg>
       </a>
       <a
@@ -69,14 +96,26 @@ const Navbar = ({ navbar }) => {
       >
         <i style={{ color: "#1e96c8" }} class="fab fa-2x fa-telegram"></i>
       </a>
+
+      <div
+        style={{
+          borderLeft: "1px solid grey",
+          height: "50%",
+          margin: "auto 5px",
+        }}
+      ></div>
+
       <div class="navbar-item has-dropdown is-hoverable">
         <a class="navbar-link">
-          <EspSvg />
+          <FrSvg width={20} height={20} />
         </a>
 
         <div class="navbar-dropdown">
           <a class="navbar-item pr-0" href={`https://erwanel.com${path}`}>
-            <UsaSvg />
+            <UsaSvg width={20} height={20} />
+          </a>
+          <a class="navbar-item pr-0" href={`https://es.erwanel.com${path}`}>
+            <EspSvg width={20} height={20} />
           </a>
         </div>
       </div>
