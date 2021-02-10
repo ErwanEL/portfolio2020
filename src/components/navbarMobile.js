@@ -3,6 +3,7 @@ import { Link } from "gatsby"
 import { globalHistory } from "@reach/router"
 import MaltSvg from "../components/svg/maltsvg"
 import UsaSvg from "../components/svg/usasvg"
+import EspSvg from "../components/svg/espsvg"
 
 const NavbarMobile = ({ navbar }) => {
   const [menu, setMenu] = useState(false)
@@ -68,6 +69,9 @@ const NavbarMobile = ({ navbar }) => {
           </a>
           <a className="navbar-item" href={`https://erwanel.com${path}`}>
             <UsaSvg />
+          </a>
+          <a className="navbar-item" href={`https://es.erwanel.com${path}`}>
+            <EspSvg />
           </a>
         </div>
       </div>

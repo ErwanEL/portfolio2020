@@ -12,7 +12,7 @@ const IndexPage = () => {
       <SEO title={YAMLData.seo} />
       <section className="hero is-medium">
         <div className="hero-body">
-          <span class="tag navbar-item is-success is-medium ">
+          <span className="dispo tag navbar-item is-success is-medium ">
             {YAMLData.dispo}
           </span>
           <div className="container">
