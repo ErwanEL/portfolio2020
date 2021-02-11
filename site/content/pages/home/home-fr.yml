@@ -1,11 +1,11 @@
 dispo: Je suis actuellement disponible sur malt.fr
-seo: Bienvenue sur mon portfolio - ErwanEL
+seo: ErwanEL - Bienvenue
 intro: Bonjour mon nom est Erwan, bienvenue sur mon portfolio.
 content: |-
   <div class="content">
   	<hr style="background: #023859;" class="mini" />
   	<p class="subtitle-mod">
-  		Front-End developer, Javascript,
+  		Développeur Front-End, Javascript,
   		<span
   			style="color: #643396"
   			class="has-text-weight-semibold"

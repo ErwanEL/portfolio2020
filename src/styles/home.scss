@@ -2,6 +2,12 @@
   font-size: 1.5rem;
 }
 
+.profilePic {
+  position: absolute;
+  right: calc(100% + 2em);
+  top: 30px;
+}
+
 .github-link {
   outline: none;
   color: black;

@@ -1,7 +1,7 @@
 ---
 slug: "/home"
 seo: "Bienvenue sur mon portfolio - ErwanEL"
-tag: "Je suis actuellement disponible."
+tag: "Je suis actuellement disponible sur malt.fr"
 title: "Salut mon nom est Erwan, bienvenue sur mon portfolio"
 ---
 
