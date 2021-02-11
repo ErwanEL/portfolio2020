@@ -1,7 +1,7 @@
 backend:
   name: github
   repo: ErwanEL/portfolio2020
-  branch: fr
+  branch: fr-preprod
 
 media_folder: static/assets
 public_folder: /assets
