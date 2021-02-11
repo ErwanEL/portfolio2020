@@ -1,10 +1,10 @@
-import React from "react"
-import { Link } from "gatsby"
-import { globalHistory } from "@reach/router"
-import MaltSvg from "../components/svg/maltsvg"
 import EspSvg from "../components/svg/espsvg"
-import UsaSvg from "../components/svg/usasvg"
 import FrSvg from "../components/svg/frsvg"
+import { Link } from "gatsby"
+import MaltSvg from "../components/svg/maltsvg"
+import React from "react"
+import UsaSvg from "../components/svg/usasvg"
+import { globalHistory } from "@reach/router"
 
 const Navbar = ({ navbar }) => {
   const path = globalHistory.location.pathname
@@ -61,19 +61,19 @@ const Navbar = ({ navbar }) => {
           margin: "auto 5px",
         }}
       ></div>
-      <Link
-        style={{ cursor: "not-allowed" }}
-        className={`navbar-item`}
+      {/* <Link
+        // style={{ cursor: "not-allowed" }}
+        className={`test navbar-item`}
         activeClassName="is-active"
+      > */}
+      <a
+        style={{ cursor: "not-allowed", margin: "auto 10px" }}
+        disabled
+        className="test  navbar-item button is-light ml-5-desktop "
       >
-        <a
-          style={{ cursor: "not-allowed" }}
-          disabled
-          className="navbar-item button is-light"
-        >
-          <strong>Blog</strong>
-        </a>
-      </Link>
+        <strong>Blog</strong>
+      </a>
+      {/* </Link> */}
 
       <a
         href="https://github.com/ErwanEL/"
