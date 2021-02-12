@@ -1,8 +1,10 @@
 import React, { useState } from "react"
-import { Link } from "gatsby"
-import { globalHistory } from "@reach/router"
-import MaltSvg from "../components/svg/maltsvg"
+
 import EspSvg from "../components/svg/espsvg"
+import { Link } from "gatsby"
+import MaltSvg from "../components/svg/maltsvg"
+import UsaSvg from "../components/svg/usasvg"
+import { globalHistory } from "@reach/router"
 
 const NavbarMobile = ({ navbar }) => {
   const [menu, setMenu] = useState(false)
@@ -66,8 +68,11 @@ const NavbarMobile = ({ navbar }) => {
           >
             <i style={{ color: "#1e96c8" }} class="fab fa-2x fa-telegram"></i>
           </a>
-          <a className="navbar-item" href={`https://es.erwanel.com/${path}`}>
+          <a className="navbar-item" href={`https://es.erwanel.com${path}`}>
             <EspSvg />
+          </a>
+          <a className="navbar-item" href={`https://erwanel.com${path}`}>
+            <UsaSvg />
           </a>
         </div>
       </div>

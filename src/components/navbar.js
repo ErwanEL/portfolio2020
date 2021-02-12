@@ -1,12 +1,14 @@
-import React from "react"
-import { Link } from "gatsby"
-import { globalHistory } from "@reach/router"
-import MaltSvg from "../components/svg/maltsvg"
 import EspSvg from "../components/svg/espsvg"
+import FrSvg from "../components/svg/frsvg"
+import { Link } from "gatsby"
+import MaltSvg from "../components/svg/maltsvg"
+import React from "react"
 import UsaSvg from "../components/svg/usasvg"
+import { globalHistory } from "@reach/router"
 
 const Navbar = ({ navbar }) => {
   const path = globalHistory.location.pathname
+
   return (
     <div className="navbar-end is-hidden-touch">
       <Link
@@ -59,11 +61,19 @@ const Navbar = ({ navbar }) => {
           margin: "auto 5px",
         }}
       ></div>
-      <Link className={`navbar-item`} activeClassName="is-active" to="/blog/">
-        <a class="button is-light">
-          <strong>Blog</strong>
-        </a>
-      </Link>
+      {/* <Link
+        // style={{ cursor: "not-allowed" }}
+        className={`test navbar-item`}
+        activeClassName="is-active"
+      > */}
+      <a
+        style={{ cursor: "not-allowed", margin: "auto 10px" }}
+        disabled
+        className="test  navbar-item button is-light ml-5-desktop "
+      >
+        <strong>Blog</strong>
+      </a>
+      {/* </Link> */}
 
       <a
         href="https://github.com/ErwanEL/"
@@ -97,11 +107,14 @@ const Navbar = ({ navbar }) => {
 
       <div class="navbar-item has-dropdown is-hoverable">
         <a class="navbar-link">
-          <UsaSvg width={20} height={20} />
+          <FrSvg width={20} height={20} />
         </a>
 
         <div class="navbar-dropdown">
-          <a class="navbar-item pr-0" href={`https://es.erwanel.com/${path}`}>
+          <a class="navbar-item pr-0" href={`https://erwanel.com${path}`}>
+            <UsaSvg width={20} height={20} />
+          </a>
+          <a class="navbar-item pr-0" href={`https://es.erwanel.com${path}`}>
             <EspSvg width={20} height={20} />
           </a>
         </div>

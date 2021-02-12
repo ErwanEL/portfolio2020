@@ -186,36 +186,36 @@ export const query = graphql`
     }
     cv: file(relativePath: { eq: "images/projects/cv.PNG" }) {
       childImageSharp {
-        fluid {
-          ...GatsbyImageSharpFluid
+        fluid(quality: 100) {
+          ...GatsbyImageSharpFluid_withWebp
         }
       }
     }
     etna: file(relativePath: { eq: "images/projects/etna.PNG" }) {
       childImageSharp {
-        fluid {
-          ...GatsbyImageSharpFluid
+        fluid(quality: 100) {
+          ...GatsbyImageSharpFluid_withWebp
         }
       }
     }
     hc: file(relativePath: { eq: "images/projects/hc.PNG" }) {
       childImageSharp {
-        fluid {
-          ...GatsbyImageSharpFluid
+        fluid(quality: 100) {
+          ...GatsbyImageSharpFluid_withWebp
         }
       }
     }
     lemot: file(relativePath: { eq: "images/projects/lemot.PNG" }) {
       childImageSharp {
-        fluid {
-          ...GatsbyImageSharpFluid
+        fluid(quality: 100) {
+          ...GatsbyImageSharpFluid_withWebp
         }
       }
     }
     vgcharts: file(relativePath: { eq: "images/projects/older/vgcharts.PNG" }) {
       childImageSharp {
-        fluid {
-          ...GatsbyImageSharpFluid
+        fluid(quality: 100) {
+          ...GatsbyImageSharpFluid_withWebp
         }
       }
     }
@@ -223,15 +223,15 @@ export const query = graphql`
       relativePath: { eq: "images/projects/older/oldportfolio.PNG" }
     ) {
       childImageSharp {
-        fluid {
-          ...GatsbyImageSharpFluid
+        fluid(quality: 100) {
+          ...GatsbyImageSharpFluid_withWebp
         }
       }
     }
     flickr: file(relativePath: { eq: "images/projects/older/flickr.PNG" }) {
       childImageSharp {
-        fluid {
-          ...GatsbyImageSharpFluid
+        fluid(quality: 100) {
+          ...GatsbyImageSharpFluid_withWebp
         }
       }
     }

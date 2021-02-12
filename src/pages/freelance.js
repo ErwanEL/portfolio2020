@@ -47,7 +47,7 @@ const FreelancePage = ({ data }) => {
         </div>
       </section>
       <hr />
-      <section className="hero is-medium">
+      {/* <section className="hero is-medium">
         <div
           className="hero-body"
           data-sal="slide-up"
@@ -82,7 +82,7 @@ const FreelancePage = ({ data }) => {
             </div>
           </div>
         </div>
-      </section>
+      </section> */}
     </Layout>
   )
 }
@@ -101,15 +101,15 @@ export const query = graphql`
     }
     etmg: file(relativePath: { eq: "images/freelance/etmg.png" }) {
       childImageSharp {
-        fluid {
-          ...GatsbyImageSharpFluid
+        fluid(quality: 100) {
+          ...GatsbyImageSharpFluid_withWebp
         }
       }
     }
     upwork: file(relativePath: { eq: "images/freelance/upwork.png" }) {
       childImageSharp {
-        fluid {
-          ...GatsbyImageSharpFluid
+        fluid(quality: 100) {
+          ...GatsbyImageSharpFluid_withWebp
         }
       }
     }

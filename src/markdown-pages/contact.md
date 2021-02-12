@@ -1,13 +1,12 @@
 ---
 slug: "/contact"
 seo: "Contact"
-title: "Contact me."
-success: "Your message has been sent successfully!"
+title: "Me contacter"
+success: "Votre message a bien été envoyé!"
 ---
 
 <div class="content">
     <hr class="mini" />
-    <p class="subtitle-mod">Any project.</p>
-    <p class="subtitle-mod">Any Job proposition.</p>
-    <p class="subtitle-mod">Feel free to contact me.</p>
+    <p class="subtitle-mod">Parlons de votre projet.</p>
+    <p class="subtitle-mod">Contactez moi.</p>
 </div>

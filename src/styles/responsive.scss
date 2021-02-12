@@ -11,6 +11,7 @@
   // section #projects.hero {
   //   margin-top: 4rem;
   // }
+
   .mate {
     margin-right: 0.5em;
   }
@@ -32,3 +33,14 @@
   //   top: 4px;
   // }
 }
+
+
+
+@media only screen and (max-width: 1408px) {
+  .profilePic {
+    display: block;
+    position: static;
+    margin-bottom: 20px;
+  }
+}
+

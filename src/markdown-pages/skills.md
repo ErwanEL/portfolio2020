@@ -1,21 +1,22 @@
 ---
 slug: "/skills"
-seo: "My skills"
-title: "The technologies I use."
-html: "To work on the integration process."
-javascript: "To work on the automatisation process."
-gatsbyjs: "To work on building static websites. GatsbyJs is powered by"
-gatsbyjsLink: "See more about GatsbyJs."
-netlify: "I like to use the netlify service to host my GatsbyJs projects."
-netlifyLink: "See more about netlify."
+seo: "Mes compétences"
+title: "Les technologies que j'utilise."
+html: "Pour les travaux d'intégration.
+"
+javascript: "Pour les travaux de programmation."
+gatsbyjs: "Pour la construction de sites web statiques. GatsbyJs est fondé sur"
+gatsbyjsLink: "En savoir plus sur GatsbyJs."
+netlify: "J'utilise la plateforme Netlify pour héberger les projets fait avec GatsbyJs"
+netlifyLink: "En savoir plus sur Netlify."
 ---
 
- <p class="subtitle-mod">I like to use the
+ <p class="subtitle-mod">J'utilise
     <a
     class="atlassian-link"
     href="https://www.atlassian.com/"
     target="_blank"
-    > Atlassian services
+    > les Services d'Atlassian
     </a>
-    like Bitbucket and trello to organize my projects.
+    comme Bitbucket ou trello pour organiser mes projets.
 </p>

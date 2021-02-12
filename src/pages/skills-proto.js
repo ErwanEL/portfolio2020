@@ -10,10 +10,13 @@ import JsSvg from "../components/svg/jssvg"
 import GatsbySvg from "../components/svg/gatsbysvg"
 import ReactSvg from "../components/svg/reactsvg"
 import AtlassianSvg from "../components/svg/atlassiansvg"
+import YAMLData from "../../site/content/pages/skills/skills-fr.yml"
 
 const SkillsPage = ({ data }) => {
   const { markdownRemark } = data
   const { frontmatter, html } = markdownRemark
+
+  console.log(YAMLData)
   return (
     <Layout>
       <SEO title={frontmatter.seo} />
@@ -35,18 +38,20 @@ const SkillsPage = ({ data }) => {
                   aria-label="breadcrumbs"
                 >
                   <ul>
-                    <li>
-                      <a href="#htmlcss">Html/Css</a>
-                    </li>
-                    <li>
-                      <a href="#javascript">Javascript</a>
-                    </li>
-                    <li>
-                      <a href="#gatsbyjs">GatsbyJs</a>
-                    </li>
-                    <li>
-                      <a href="#workflow">Workflow</a>
-                    </li>
+                    {YAMLData.stacks &&
+                      YAMLData.stacks.map((stack, i) => {
+                        return (
+                          <li>
+                            <a
+                              href={`#${stack
+                                .replace(/\//g, "")
+                                .toLowerCase()}`}
+                            >
+                              {stack}
+                            </a>
+                          </li>
+                        )
+                      })}
                   </ul>
                 </nav>
               </div>
@@ -361,49 +366,49 @@ export const query = graphql`
     vscode: file(relativePath: { eq: "images/skills/vscode.PNG" }) {
       childImageSharp {
         fluid {
-          ...GatsbyImageSharpFluid_withWebp
+          ...GatsbyImageSharpFluid
         }
       }
     }
     cmd: file(relativePath: { eq: "images/skills/cmd.PNG" }) {
       childImageSharp {
-        fluid(quality: 100) {
-          ...GatsbyImageSharpFluid_withWebp
+        fluid {
+          ...GatsbyImageSharpFluid
         }
       }
     }
     htmlcss: file(relativePath: { eq: "images/skills/htmlcss.PNG" }) {
       childImageSharp {
-        fluid(quality: 100) {
-          ...GatsbyImageSharpFluid_withWebp
+        fluid {
+          ...GatsbyImageSharpFluid
         }
       }
     }
     gatsbyjs: file(relativePath: { eq: "images/skills/gatsbyjs.PNG" }) {
       childImageSharp {
-        fluid(quality: 100) {
-          ...GatsbyImageSharpFluid_withWebp
+        fluid {
+          ...GatsbyImageSharpFluid
         }
       }
     }
     react: file(relativePath: { eq: "images/skills/react.PNG" }) {
       childImageSharp {
-        fluid(quality: 100) {
-          ...GatsbyImageSharpFluid_withWebp
+        fluid {
+          ...GatsbyImageSharpFluid
         }
       }
     }
     trello: file(relativePath: { eq: "images/skills/trello.PNG" }) {
       childImageSharp {
-        fluid(quality: 100) {
-          ...GatsbyImageSharpFluid_withWebp
+        fluid {
+          ...GatsbyImageSharpFluid
         }
       }
     }
     bitbucket: file(relativePath: { eq: "images/skills/bitbucket.PNG" }) {
       childImageSharp {
-        fluid(quality: 100) {
-          ...GatsbyImageSharpFluid_withWebp
+        fluid {
+          ...GatsbyImageSharpFluid
         }
       }
     }

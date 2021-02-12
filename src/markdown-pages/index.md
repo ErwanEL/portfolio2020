@@ -1,8 +1,8 @@
 ---
 slug: "/home"
-seo: "Welcome on my portfolio website - ErwanEL"
-tag: "I'm currently available for work."
-title: "Hi my name is Erwan, welcome on my portfolio website."
+seo: "Bienvenue sur mon portfolio - ErwanEL"
+tag: "Je suis actuellement disponible sur malt.fr"
+title: "Salut mon nom est Erwan, bienvenue sur mon portfolio"
 ---
 
 <div class="content">
@@ -17,7 +17,7 @@ title: "Hi my name is Erwan, welcome on my portfolio website."
 		</span>
 	</p>
 	<p class="subtitle">
-		Find me on 
+		Me trouver
 		<a
 			class="github-link"
 			href="https://github.com/ErwanEL/"

@@ -1,10 +1,10 @@
 ---
 component: "form"
-name: "Name"
-namePlaceholder: "Your Name"
+name: "Nom"
+namePlaceholder: "Votre nom"
 email: "Email"
-emailPlaceholder: "Your Email"
+emailPlaceholder: "Votre Email"
 message: "Message"
-messagePlaceholder: "Your Message"
-send: "Send"
+messagePlaceholder: "Votre message"
+send: "Envoyer"
 ---
