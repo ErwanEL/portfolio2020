@@ -28,7 +28,7 @@ const ProfilePic = () => {
           border: "3px solid #ff7b00",
         }}
         fluid={data.profilePic.childImageSharp.fluid}
-      ></Img>
+      />
     </div>
   )
 }
