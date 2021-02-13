@@ -1,0 +1,96 @@
+.Site {
+    display: flex;
+    min-height: 100vh;
+    flex-direction: column;
+  }
+  
+  .Site-content {
+    flex: 1;
+  }
+  
+  .center {
+    display: flex;
+    justify-content: center; /*horizontal center*/
+    align-items: center; /*vertical center*/
+  }
+  
+  .is-paddingless-horizontal {
+    padding-left: 0;
+    padding-right: 0;
+  }
+
+  .grid {
+    line-height: 1.5;
+    font-size: 18px;
+
+    display: grid;
+    grid-template-columns: [xl-start] 1fr 1.5rem [md-start] minmax(0, 724px) [md-end] 1.5rem 1fr [xl-end];
+  }
+  
+  .grid * {
+    grid-column: md;
+  }
+  .grid-xl {
+    grid-column: xl;
+  }
+
+	.card-image {
+			height: 15rem;
+	}
+
+	div .progress {
+	position: fixed;
+	top: 20;
+	width: 50%;
+	z-index: 1;
+	width: 724px;
+	}
+  
+  .tag :nth-child(1) {
+    font-size: 18px;
+  }
+  
+  .pdf :nth-child(1) {
+    background-color: #cb0606;
+    color: white;
+  }
+  .pdf :nth-child(2):hover {
+    background-color: #cb0606;
+    color: white;
+  }
+  
+  .amazon :nth-child(1) {
+    background-color: #ff9900;
+    color: white;
+  }
+  .amazon :nth-child(2):hover {
+    background-color: #ff9900;
+    color: white;
+  }
+  
+  .read :nth-child(1) {
+    background-color: grey;
+    color: white;
+  }
+  .read :nth-child(2):hover {
+    background-color: grey;
+    color: white;
+  }
+  
+  .article-tags a:hover {
+    background-color: grey;
+    color: white;
+    text-decoration: none;
+  }
+  
+  @media (max-width: 672px) {
+    :root {
+      font-size: 90%;
+    }
+  }
+  
+  @media (max-width: 768px) {
+    .column-links {
+      justify-content: left;
+    }
+  }
