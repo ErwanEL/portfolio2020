@@ -13,7 +13,6 @@ const BlogPage = ({ data }) => {
   const { frontmatter, html } = markdownRemark
 
   let test = 1000
-
   function useScroll() {
     const [lastScrollTop, setLastScrollTop] = useState(0)
     const [bodyOffset, setBodyOffset] = useState(
@@ -41,7 +40,9 @@ const BlogPage = ({ data }) => {
     return (test = scrollY)
   }
 
-  useScroll()
+  if (typeof document !== `undefined`) {
+    useScroll()
+  }
 
   console.log(test)
 
