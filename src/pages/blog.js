@@ -1,4 +1,4 @@
-import { graphql, useStaticQuery } from "gatsby"
+import { Link, graphql, useStaticQuery } from "gatsby"
 
 import Img from "gatsby-image"
 import Layout from "../components/layout"
@@ -17,10 +17,12 @@ const BlogIndex = ({ data }) => {
     <Layout>
       {/* <SEO title={frontmatter.seo} /> */}
 
-      <section class="hero">
-        <div class="hero-body">
-          <div class="container is-max-desktop">
-            {/* <div class="columns">
+      <div class="section mt-6 is-paddingless-horizontal">
+        <div class="container grid">
+          {/* <section class="hero">
+            <div class="hero-body">
+              <div class="container is-max-desktop"> */}
+          {/* <div class="columns">
               <div class="column is-8 is-offset-2">
                 <figure class="image is-16by9">
                   <img src={"/blog.jpg"} alt="" />
@@ -28,79 +30,49 @@ const BlogIndex = ({ data }) => {
               </div>
             </div> */}
 
-            <section class="section">
-              <div class="columns">
-                <div style={{ margin: "auto" }} class="column is-6">
-                  <div class="content is-medium">
-                    <h1 class="title">Salut</h1>
-                    {/* <h2 class="subtitle is-4">{frontmatter.date}</h2> */}
-                    {/* <div dangerouslySetInnerHTML={{ __html: html }} /> */}
-                    <div class="content is-medium">
-                      Lorem ipsum dolor sit amet consectetur, adipisicing elit.
-                      Facere, nam maiores. Fugiat nemo incidunt dolores vitae
-                      laborum assumenda voluptatibus ad quos ut, facilis dolorum
-                      a aut laboriosam provident ex debitis aliquam quasi.
-                      Consequuntur nam aliquam, maiores itaque laboriosam
-                      aspernatur libero!
-                    </div>
-                  </div>
-                </div>
-                <div style={{ margin: "auto" }} class="column is-3">
-                  <Img
-                    objectPosition="100%"
-                    objectFit="content"
-                    style={{
-                      borderRadius: "150px",
-                      width: "180px",
-                      height: "180px",
-                      border: "3px solid #ff7b00",
-                    }}
-                    fluid={data.profilePic.childImageSharp.fluid}
-                  />
-                </div>
-              </div>
-            </section>
-          </div>
-        </div>
-      </section>
-
-      <section class="section">
-        <div class="columns">
-          <div class="column is-10 is-offset-1">
-            <div class="container has-text-centered is-fluid">
-              <div class="hero is-light">
-                <div style={{ background: "whitesmoke" }} class="hero-body box">
-                  <h1 class="title is-3 has-text-right">Me contacter</h1>
-                  <p class="has-text-right">Me contacter par email.</p>
+          {/* <section class="section"> */}
+          <div class="columns">
+            <div style={{ margin: "auto" }} class="column is-8">
+              <div class="content is-medium">
+                <h1 class="title">👋</h1>
+                {/* <h2 class="subtitle is-4">{frontmatter.date}</h2> */}
+                {/* <div dangerouslySetInnerHTML={{ __html: html }} /> */}
+                <div class="content is-medium">
+                  Ici un blog sur le développement web, plus particulièrement
+                  sur la Jamstack et GatsbyJs.
                 </div>
               </div>
             </div>
+            <div style={{ margin: "auto" }} class="column is-3">
+              {/* <Img
+                objectPosition="100%"
+                objectFit="content"
+                style={{
+                  borderRadius: "150px",
+                  width: "150px",
+                  height: "150px",
+                  border: "3px solid #ff7b00",
+                }}
+                fluid={data.profilePic.childImageSharp.fluid}
+              /> */}
+            </div>
           </div>
-        </div>
-      </section>
+          {/* </section> */}
+          {/* </div>
+            </div>
+          </section> */}
 
-      <section class="hero ">
-        <div class="hero-body">
-          <div class="container ">
-            <section class="section">
-              <div class="columns is-centered is-8">
-                <div class="column is-4 ">
-                  {/* <div class="content is-medium">
-                    <h2 class="subtitle is-5 has-text-grey">
-                      December 23, 2018
-                    </h2>
-                    <h1 class="title has-text-black is-3">Custom 404 Pages</h1>
-                    <p class="has-text-dark">
-                      This starter template includes a custom 404 Not Found
-                      error page, located at /source/404.blade.php. To preview
-                      the 404 page, you can visit /404 in your browser.
-                      Depending...
-                    </p>
-                  </div> */}
+          {/* SUGGESTIONS */}
+
+          <div className="suggestion mt-6">
+            <h1 className="title is-4">Derniers articles</h1>
+            <div className="columns is-centered">
+              <div className="column">
+                <Link to={"/blog-page"}>
                   <div class="card">
                     <div class="card-image">
-                      <figure class="image is-4by3">
-                        <img src={"/blog.jpg"} alt="" />
+                      <figure class="image">
+                        <Img fluid={data.squareGat.childImageSharp.fluid} />
                       </figure>
                     </div>
                     <div class="card-content">
@@ -113,12 +85,14 @@ const BlogIndex = ({ data }) => {
                       </div>
                     </div>
                   </div>
-                </div>
-                <div class="column is-4">
+                </Link>
+              </div>
+              <div className="column">
+                <Link to={"/blog-page"}>
                   <div class="card">
                     <div class="card-image">
-                      <figure class="image is-4by3">
-                        <img src={"/blog.jpg"} alt="" />
+                      <figure class="image">
+                        <Img fluid={data.blogImage.childImageSharp.fluid} />
                       </figure>
                     </div>
                     <div class="card-content">
@@ -129,55 +103,84 @@ const BlogIndex = ({ data }) => {
                         <br />
                         <time datetime="2016-1-1">11:09 PM - 1 Jan 2016</time>
                       </div>
+                    </div>
+                  </div>
+                </Link>
+              </div>
+            </div>
+          </div>
+
+          <div className="suggestion mt-6">
+            <div className="columns is-centered">
+              <div className="column">
+                <Link to={"/blog-page"}>
+                  <div class="card">
+                    <div class="card-image">
+                      <figure class="image">
+                        <Img fluid={data.squareGat.childImageSharp.fluid} />
+                      </figure>
+                    </div>
+                    <div class="card-content">
+                      <div class="content">
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                        Phasellus nec iaculis mauris. <a>@bulmaio</a>.
+                        <a href="#">#css</a> <a href="#">#responsive</a>
+                        <br />
+                        <time datetime="2016-1-1">11:09 PM - 1 Jan 2016</time>
+                      </div>
+                    </div>
+                  </div>
+                </Link>
+              </div>
+              <div className="column">
+                <Link to={"/blog-page"}>
+                  <div class="card">
+                    <div class="card-image">
+                      <figure class="image">
+                        <Img fluid={data.blogImage.childImageSharp.fluid} />
+                      </figure>
+                    </div>
+                    <div class="card-content">
+                      <div class="content">
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                        Phasellus nec iaculis mauris. <a>@bulmaio</a>.
+                        <a href="#">#css</a> <a href="#">#responsive</a>
+                        <br />
+                        <time datetime="2016-1-1">11:09 PM - 1 Jan 2016</time>
+                      </div>
+                    </div>
+                  </div>
+                </Link>
+              </div>
+            </div>
+          </div>
+
+          {/* PUB */}
+
+          <section class="section">
+            <div class="">
+              <div class=" is-10 is-offset-1">
+                <div class="container has-text-centered is-fluid">
+                  <div class="hero is-light">
+                    <div
+                      style={{ background: "whitesmoke" }}
+                      class="hero-body box"
+                    >
+                      <h1 class="title is-4 has-text-right">
+                        Vous travaillez sur un projet en Jamstack, besoin d'une
+                        solution statique?{" "}
+                      </h1>
+                      <p class="has-text-right">Me contacter par email. 📨</p>
                     </div>
                   </div>
                 </div>
               </div>
-            </section>
+            </div>
+          </section>
 
-            <section class="section">
-              <div class="columns is-variable is-8">
-                <div class="column is-5 is-offset-1">
-                  <div class="card">
-                    <div class="card-image">
-                      <figure class="image is-4by3">
-                        <img src={"/blog.jpg"} alt="" />
-                      </figure>
-                    </div>
-                    <div class="card-content">
-                      <div class="content">
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                        Phasellus nec iaculis mauris. <a>@bulmaio</a>.
-                        <a href="#">#css</a> <a href="#">#responsive</a>
-                        <br />
-                        <time datetime="2016-1-1">11:09 PM - 1 Jan 2016</time>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                <div class="column is-5">
-                  <div class="card">
-                    <div class="card-image">
-                      <figure class="image is-4by3">
-                        <img src={"/blog.jpg"} alt="" />
-                      </figure>
-                    </div>
-                    <div class="card-content">
-                      <div class="content">
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                        Phasellus nec iaculis mauris. <a>@bulmaio</a>.
-                        <a href="#">#css</a> <a href="#">#responsive</a>
-                        <br />
-                        <time datetime="2016-1-1">11:09 PM - 1 Jan 2016</time>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </section>
-          </div>
+          {/* END */}
         </div>
-      </section>
+      </div>
     </Layout>
   )
 }
@@ -201,6 +204,29 @@ export const query = graphql`
         title
         path
         date
+      }
+    }
+    blogImage: file(relativePath: { eq: "images/blog.jpg" }) {
+      childImageSharp {
+        fluid {
+          ...GatsbyImageSharpFluid
+        }
+      }
+    }
+
+    gat: file(relativePath: { eq: "images/gat.png" }) {
+      childImageSharp {
+        fluid {
+          ...GatsbyImageSharpFluid
+        }
+      }
+    }
+
+    squareGat: file(relativePath: { eq: "images/logo-gatsby-square.png" }) {
+      childImageSharp {
+        fluid {
+          ...GatsbyImageSharpFluid
+        }
       }
     }
   }

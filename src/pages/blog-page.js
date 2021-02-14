@@ -1,9 +1,9 @@
+import { Link, graphql } from "gatsby"
 import { useEffect, useState } from "react"
 
 import Img from "gatsby-image"
 import Layout from "../components/layout"
 import React from "react"
-import { graphql } from "gatsby"
 
 // import SEO from "../components/seo"
 // import Form from "../components/form"
@@ -33,6 +33,7 @@ const BlogPage = ({ data }) => {
     }
 
     useEffect(() => {
+      progressValue = 0
       window.addEventListener("scroll", listener)
       return () => {
         window.removeEventListener("scroll", listener)
@@ -54,7 +55,7 @@ const BlogPage = ({ data }) => {
   SetMaxProgressValue()
   // }
 
-  console.log(data)
+  console.log(progressValue)
   return (
     <Layout>
       {/* <SEO title={frontmatter.seo} /> */}
@@ -63,6 +64,7 @@ const BlogPage = ({ data }) => {
       <div class="section is-paddingless-horizontal">
         <div class="container grid">
           {/* {progressValue > 500 && ( */}
+
           <div className={`banniere ${progressValue >= 350 && "is-active"}`}>
             <article
               style={{
@@ -120,12 +122,12 @@ const BlogPage = ({ data }) => {
           <nav class="breadcrumb" aria-label="breadcrumbs">
             <ul>
               <li>
-                <a href="./index.html">
+                <Link to="/blog">
                   <span class="icon is-small">
                     <i class="fas fa-home" aria-hidden="true"></i>
                   </span>
                   <span>Index</span>
-                </a>
+                </Link>
               </li>
               <li class="is-active">
                 <a href="#" aria-current="page">

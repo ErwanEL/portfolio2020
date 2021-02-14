@@ -35,7 +35,7 @@
   }
 
 	.card-image {
-			height: 15rem;
+			height: 16rem;
 	}
 
   .banniere {
@@ -45,13 +45,14 @@
     height: 130px;
     width: 100%;
     margin: auto;
-    z-index: 1;
+    z-index: 31;
     top: 0;
     left: 0;
     right: 0;
     visibility: hidden;
     transition: all .5s cubic-bezier(.22,1,.27,1);
     transform: translateY(-141px);
+
     &.is-active {
     transform: translateY(0px);
     visibility: visible;
