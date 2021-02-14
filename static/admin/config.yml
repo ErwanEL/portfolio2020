@@ -2,9 +2,9 @@ backend:
   name: github
   repo: ErwanEL/portfolio2020
   api_root: https://api.github.com
-  site_domain: https://fr.erwanel.com
+  site_domain: https://erwanel.com
   base_url: https://api.netlify.com
-  branch: fr-preprod
+  branch: blog
 
 media_folder: static/assets
 public_folder: /assets

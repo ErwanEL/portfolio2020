@@ -1,4 +1,4 @@
-import { useEffect, useRef, useState } from "react"
+import { useEffect, useState } from "react"
 
 import Img from "gatsby-image"
 import Layout from "../components/layout"
@@ -12,7 +12,9 @@ const BlogPage = ({ data }) => {
   const { markdownRemark } = data
   const { frontmatter, html } = markdownRemark
 
-  let test = 1000
+  let progressValue = 0
+  let maxProgressValue
+
   function useScroll() {
     const [lastScrollTop, setLastScrollTop] = useState(0)
     const [bodyOffset, setBodyOffset] = useState(
@@ -37,15 +39,22 @@ const BlogPage = ({ data }) => {
       }
     })
 
-    return (test = scrollY)
+    return (progressValue = scrollY)
   }
 
-  if (typeof document !== `undefined`) {
-    useScroll()
+  // if (typeof document !== `undefined`) {
+  useScroll()
+  // }
+
+  const SetMaxProgressValue = () => {
+    return (maxProgressValue = document.body.clientHeight - 1500)
   }
 
-  console.log(test)
+  // if (typeof document !== `undefined`) {
+  SetMaxProgressValue()
+  // }
 
+  console.log(data)
   return (
     <Layout>
       {/* <SEO title={frontmatter.seo} /> */}
@@ -53,11 +62,61 @@ const BlogPage = ({ data }) => {
       {/* {useScroll() > 400 && <div style={{ position: "fixed" }}>hola</div>} */}
       <div class="section is-paddingless-horizontal">
         <div class="container grid">
-          <div style={{ textAlign: "center" }}>
-            <progress class="progress is-warning" value={test} max="7780">
+          {/* {progressValue > 500 && ( */}
+          <div className={`banniere ${progressValue >= 350 && "is-active"}`}>
+            <article
+              style={{
+                width: "724px",
+                margin: "auto",
+                position: "relative",
+                top: "10px",
+              }}
+              class="media center"
+            >
+              <figure class="media-left">
+                <figure class="image is-64x64">
+                  {/* <img src="assets/logo.png" /> */}
+                  <Img
+                    objectPosition="100%"
+                    objectFit="content"
+                    style={{
+                      borderRadius: "150px",
+                      width: "70px",
+                      height: "70px",
+                      border: "3px solid #ff7b00",
+                    }}
+                    fluid={data.profilePic.childImageSharp.fluid}
+                  />
+                </figure>
+              </figure>
+              <div class="media-content">
+                <div class="content">
+                  <p>
+                    <strong>ErwanEL</strong>
+                    <a>@username</a>
+                    <span class="has-text-grey">
+                      Self taught <br />
+                      <time datetime="2019-05-17">Apr 20</time> · 20min read
+                    </span>
+                  </p>
+                </div>
+              </div>
+            </article>
+            <p
+              style={{ margin: "auto", width: "724px" }}
+              className="has-text-left pt-5"
+            >
+              {frontmatter.title}
+            </p>
+            <progress
+              class="progress is-small"
+              value={progressValue}
+              max={maxProgressValue}
+            >
               {/* 75% */}
             </progress>
           </div>
+          {/* )} */}
           <nav class="breadcrumb" aria-label="breadcrumbs">
             <ul>
               <li>
@@ -65,12 +124,12 @@ const BlogPage = ({ data }) => {
                   <span class="icon is-small">
                     <i class="fas fa-home" aria-hidden="true"></i>
                   </span>
-                  <span>Home</span>
+                  <span>Index</span>
                 </a>
               </li>
               <li class="is-active">
                 <a href="#" aria-current="page">
-                  How to build a beautiful blog
+                  {frontmatter.title}
                 </a>
               </li>
             </ul>
@@ -115,7 +174,7 @@ const BlogPage = ({ data }) => {
           </article>
 
           <div class="section is-paddingless-horizontal">
-            <h1 class="title is-2">How to build a beautiful blog</h1>
+            <h1 class="title is-2">{frontmatter.title}</h1>
             <h2 class="subtitle is-3">Learn from first principles</h2>
           </div>
 
