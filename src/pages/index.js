@@ -14,7 +14,7 @@ const BlogIndex = ({ data }) => {
   const { markdownRemark } = data
   const { frontmatter, html } = markdownRemark
 
-  console.log(frontmatter)
+  console.log(data.allMds)
 
   return (
     <Layout>
@@ -28,35 +28,20 @@ const BlogIndex = ({ data }) => {
 
           <div className="suggestion mt-6">
             <h1 className="title is-4">Derniers articles</h1>
-            <div className="columns is-centered">
-              <div className="column">
-                <Link to={"/blog-page"}>
-                  <BlogCard imageData={data.squareGat.childImageSharp.fluid} />
-                </Link>
-              </div>
-              <div className="column">
-                <Link to={"/blog-page"}>
-                  <BlogCard imageData={data.blogImage.childImageSharp.fluid} />
-                </Link>
-              </div>
+            <div className="columns is-multiline">
+              {data.allMds.edges.map(({ node }) => (
+                <div className="column is-6">
+                  <Link to={`/${node.frontmatter.path}`}>
+                    <BlogCard
+                      imageData={
+                        node.frontmatter.featuredImage.childImageSharp.fluid
+                      }
+                    />
+                  </Link>
+                </div>
+              ))}
             </div>
           </div>
-
-          <div className="suggestion mt-6">
-            <div className="columns is-centered">
-              <div className="column">
-                <Link to={"/blog-page"}>
-                  <BlogCard imageData={data.squareGat.childImageSharp.fluid} />
-                </Link>
-              </div>
-              <div className="column">
-                <Link to={"/blog-page"}>
-                  <BlogCard imageData={data.blogImage.childImageSharp.fluid} />
-                </Link>
-              </div>
-            </div>
-          </div>
-
           {/* PUB */}
 
           <Annonce />
@@ -109,6 +94,26 @@ export const query = graphql`
       childImageSharp {
         fluid {
           ...GatsbyImageSharpFluid
+        }
+      }
+    }
+
+    allMds: allMarkdownRemark {
+      edges {
+        node {
+          id
+          frontmatter {
+            title
+            path
+            date
+            featuredImage {
+              childImageSharp {
+                fluid {
+                  ...GatsbyImageSharpFluid
+                }
+              }
+            }
+          }
         }
       }
     }

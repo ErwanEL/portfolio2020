@@ -1,9 +1,7 @@
 ---
 path: blog
-date: 2020-12-17T17:32:02.655Z
+date: 15-02-2021
 title: How to build a beautiful blog
-code:
-  code: console.log('hola')
 featuredImage: ../../src/data/images/blog.jpg
 ---
 

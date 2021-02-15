@@ -1,5 +1,5 @@
 ---
-path: gatsby
+path: gatsby-copy
 date: 15-02-2021
 title: Pourquoi choisir gatsbyjs
 featuredImage: ../../src/data/images/logo-gatsby-square.png

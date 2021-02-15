@@ -1,6 +1,5 @@
 import EspSvg from "../components/svg/espsvg"
 import FrSvg from "../components/svg/frsvg"
-import { Link } from "gatsby"
 import MaltSvg from "../components/svg/maltsvg"
 import React from "react"
 import UsaSvg from "../components/svg/usasvg"
@@ -8,51 +7,51 @@ import { globalHistory } from "@reach/router"
 
 const Navbar = ({ navbar }) => {
   const path = globalHistory.location.pathname
-  console.log(navbar)
+  const domain = "https://fr.erwanel.com"
   return (
     <div className="navbar-end is-hidden-touch">
-      <Link
+      <a
         className={`navbar-item link `}
         activeClassName="link-is-active"
-        to="/"
+        href={`${domain}`}
       >
         {navbar.home}
-      </Link>
-      <Link
+      </a>
+      <a
         className={`navbar-item link`}
         activeClassName="link-is-active"
-        to="/freelance/"
+        href={`${domain}/freelance/`}
       >
         {navbar.freelance}
-      </Link>
-      <Link
+      </a>
+      <a
         className={`navbar-item link `}
         activeClassName="link-is-active"
-        to="/learning/"
+        href={`${domain}/learning/`}
       >
         {navbar.ressources}
-      </Link>
-      <Link
+      </a>
+      <a
         className={`navbar-item link`}
         activeClassName="link-is-active"
-        to="/skills/"
+        href={`${domain}/skills/`}
       >
         {navbar.skills}
-      </Link>
-      <Link
+      </a>
+      <a
         className={`navbar-item link`}
         activeClassName="link-is-active"
-        to="/projects/"
+        href={`${domain}/projects/`}
       >
         {navbar.projects}
-      </Link>
-      <Link
+      </a>
+      <a
         className={`navbar-item link`}
         activeClassName="link-is-active"
-        to="/contact/"
+        href={`${domain}/contact/`}
       >
         {navbar.contact}
-      </Link>
+      </a>
 
       <div
         style={{
@@ -61,7 +60,7 @@ const Navbar = ({ navbar }) => {
           margin: "auto 5px",
         }}
       ></div>
-      {/* <Link
+      {/* <a
         // style={{ cursor: "not-allowed" }}
         className={`test navbar-item`}
         activeClassName="is-active"
@@ -73,24 +72,24 @@ const Navbar = ({ navbar }) => {
       >
         <strong>Blog</strong>
       </a>
-      {/* </Link> */}
+      {/* </a> */}
 
       <a
         href="https://github.com/ErwanEL/"
         target="_blank"
-        className="navbar-item githubLink ml-5-desktop "
+        className="navbar-item githuba ml-5-desktop "
       >
         <i className="fab fa-2x fa-github"></i>
       </a>
       <a
-        className="navbar-item githubLink"
+        className="navbar-item githuba"
         href="https://www.malt.fr/profile/erwanleblois"
         target="_blank"
       >
         <MaltSvg></MaltSvg>
       </a>
       <a
-        className="navbar-item githubLink"
+        className="navbar-item githuba"
         href="https://t.me/ErwanEL"
         target="_blank"
       >
