@@ -8,7 +8,7 @@ import { globalHistory } from "@reach/router"
 
 const Navbar = ({ navbar }) => {
   const path = globalHistory.location.pathname
-
+  console.log(navbar)
   return (
     <div className="navbar-end is-hidden-touch">
       <Link
