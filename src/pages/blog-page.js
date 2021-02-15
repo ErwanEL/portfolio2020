@@ -1,6 +1,7 @@
 import { Link, graphql } from "gatsby"
 import { useEffect, useState } from "react"
 
+import BlogCard from "../components/blogCard"
 import Img from "gatsby-image"
 import Layout from "../components/layout"
 import React from "react"
@@ -52,26 +53,97 @@ const BlogPage = ({ data }) => {
     SetMaxProgressValue()
   }
 
-  console.log(progressValue)
+  console.log(frontmatter)
   return (
     <Layout>
       {/* <SEO title={frontmatter.seo} /> */}
 
       {/* {useScroll() > 400 && <div style={{ position: "fixed" }}>hola</div>} */}
-      <div class="section is-paddingless-horizontal">
-        <div class="container grid">
-          {/* {progressValue > 500 && ( */}
+      <>
+        <div class="section is-paddingless-horizontal">
+          <div class="container grid">
+            {/* {progressValue > 500 && ( */}
 
-          <div className={`banniere ${progressValue >= 350 && "is-active"}`}>
-            <article
-              style={{
-                width: "724px",
-                margin: "auto",
-                position: "relative",
-                top: "10px",
-              }}
-              class="media center"
-            >
+            <div className={`banniere ${progressValue >= 350 && "is-active"}`}>
+              <article
+                style={{
+                  width: "724px",
+                  margin: "auto",
+                  position: "relative",
+                  top: "10px",
+                }}
+                class="media center"
+              >
+                <figure class="media-left">
+                  <figure class="image is-64x64">
+                    {/* <img src="assets/logo.png" /> */}
+                    <Img
+                      objectPosition="100%"
+                      objectFit="content"
+                      style={{
+                        borderRadius: "150px",
+                        width: "70px",
+                        height: "70px",
+                        border: "3px solid #ff7b00",
+                      }}
+                      fluid={data.profilePic.childImageSharp.fluid}
+                    />
+                  </figure>
+                </figure>
+                <div class="media-content">
+                  <div class="content">
+                    <p>
+                      <strong>ErwanEL</strong>
+                      <a>@username</a>
+                      <span class="has-text-grey">
+                        Self taught <br />
+                        <time datetime="2019-05-17">Apr 20</time> · 20min read
+                      </span>
+                    </p>
+                  </div>
+                </div>
+              </article>
+              <p
+                style={{ margin: "auto", width: "724px" }}
+                className="has-text-left pt-5"
+              >
+                {frontmatter.title}
+              </p>
+              <progress
+                class="progress is-small"
+                value={progressValue}
+                max={maxProgressValue}
+              >
+                {/* 75% */}
+              </progress>
+            </div>
+            {/* )} */}
+            <nav class="breadcrumb" aria-label="breadcrumbs">
+              <ul>
+                <li>
+                  <Link to="/">
+                    <span class="icon is-small">
+                      <i class="fas fa-home" aria-hidden="true"></i>
+                    </span>
+                    <span>Index</span>
+                  </Link>
+                </li>
+                <li class="is-active">
+                  <a href="#" aria-current="page">
+                    {frontmatter.title}
+                  </a>
+                </li>
+              </ul>
+            </nav>
+          </div>
+        </div>
+
+        <section
+          class="section is-paddingless-horizontal "
+          style={{ paddingTop: "0" }}
+        >
+          <div class="container grid">
+            <article class="media center">
               <figure class="media-left">
                 <figure class="image is-64x64">
                   {/* <img src="assets/logo.png" /> */}
@@ -101,157 +173,58 @@ const BlogPage = ({ data }) => {
                 </div>
               </div>
             </article>
-            <p
-              style={{ margin: "auto", width: "724px" }}
-              className="has-text-left pt-5"
-            >
-              {frontmatter.title}
-            </p>
-            <progress
-              class="progress is-small"
-              value={progressValue}
-              max={maxProgressValue}
-            >
-              {/* 75% */}
-            </progress>
-          </div>
-          {/* )} */}
-          <nav class="breadcrumb" aria-label="breadcrumbs">
-            <ul>
-              <li>
-                <Link to="/">
-                  <span class="icon is-small">
-                    <i class="fas fa-home" aria-hidden="true"></i>
-                  </span>
-                  <span>Index</span>
-                </Link>
-              </li>
-              <li class="is-active">
-                <a href="#" aria-current="page">
-                  {frontmatter.title}
-                </a>
-              </li>
-            </ul>
-          </nav>
-        </div>
-      </div>
 
-      <section
-        class="section is-paddingless-horizontal "
-        style={{ paddingTop: "0" }}
-      >
-        <div class="container grid">
-          <article class="media center">
-            <figure class="media-left">
-              <figure class="image is-64x64">
-                {/* <img src="assets/logo.png" /> */}
-                <Img
-                  objectPosition="100%"
-                  objectFit="content"
-                  style={{
-                    borderRadius: "150px",
-                    width: "70px",
-                    height: "70px",
-                    border: "3px solid #ff7b00",
-                  }}
-                  fluid={data.profilePic.childImageSharp.fluid}
-                />
-              </figure>
+            <div class="section is-paddingless-horizontal">
+              <h1 class="title is-2">{frontmatter.title}</h1>
+              <h2 class="subtitle is-3">Learn from first principles</h2>
+            </div>
+
+            <figure class="columns is-mobile is-variable is-marginless is-0 grid-xl">
+              <div class="column center">
+                <div class="image is-256x256 card">
+                  <a>
+                    {/* <!-- <img src="https://bulma.io/images/placeholders/128x128.png"/> --> */}
+                    {/* <img src="assets/test.jpg" /> */}
+                    {/* <img src={"/blog.jpg"} alt="" /> */}
+                  </a>
+                </div>
+              </div>
             </figure>
-            <div class="media-content">
-              <div class="content">
-                <p>
-                  <strong>ErwanEL</strong>
-                  <a>@username</a>
-                  <span class="has-text-grey">
-                    Self taught <br />
-                    <time datetime="2019-05-17">Apr 20</time> · 20min read
-                  </span>
-                </p>
+            <Img fluid={frontmatter.featuredImage.childImageSharp.fluid} />
+            <figcaption class="center level">
+              <small class="level-item has-text-grey">
+                The blog we'll build. Click to continue on scrimba
+              </small>
+            </figcaption>
+
+            <div class="content Site-content">
+              <div dangerouslySetInnerHTML={{ __html: html }} />
+            </div>
+            <a>
+              <div class="tags read has-addons">
+                <span class="tag">
+                  <i class="fas fa-book-reader"></i>
+                </span>
+                <span class="tag ">Read more articles about this book </span>
               </div>
+            </a>
+            <div>
+              <hr />
             </div>
-          </article>
-
-          <div class="section is-paddingless-horizontal">
-            <h1 class="title is-2">{frontmatter.title}</h1>
-            <h2 class="subtitle is-3">Learn from first principles</h2>
-          </div>
-
-          <figure class="columns is-mobile is-variable is-marginless is-0 grid-xl">
-            <div class="column center">
-              <div class="image is-256x256 card">
-                <a>
-                  {/* <!-- <img src="https://bulma.io/images/placeholders/128x128.png"/> --> */}
-                  {/* <img src="assets/test.jpg" /> */}
-                  {/* <img src={"/blog.jpg"} alt="" /> */}
-                </a>
-              </div>
-            </div>
-          </figure>
-          <Img fluid={data.blogImage.childImageSharp.fluid} />
-          <figcaption class="center level">
-            <small class="level-item has-text-grey">
-              The blog we'll build. Click to continue on scrimba
-            </small>
-          </figcaption>
-
-          <div class="content Site-content">
-            <div dangerouslySetInnerHTML={{ __html: html }} />
-          </div>
-          <a>
-            <div class="tags read has-addons">
-              <span class="tag">
-                <i class="fas fa-book-reader"></i>
-              </span>
-              <span class="tag ">Read more articles about this book </span>
-            </div>
-          </a>
-          <div>
-            <hr />
-          </div>
-          <div className="suggestion mt-6">
-            <h1 className="title is-4">Derniers articles</h1>
-            <div className="columns is-centered">
-              <div className="column">
-                <div class="card">
-                  <div class="card-image">
-                    <figure class="image">
-                      <Img fluid={data.squareGat.childImageSharp.fluid} />
-                    </figure>
-                  </div>
-                  <div class="card-content">
-                    <div class="content">
-                      Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                      Phasellus nec iaculis mauris. <a>@bulmaio</a>.
-                      <a href="#">#css</a> <a href="#">#responsive</a>
-                      <br />
-                      <time datetime="2016-1-1">11:09 PM - 1 Jan 2016</time>
-                    </div>
-                  </div>
+            <div className="suggestion mt-6">
+              <h1 className="title is-4">Derniers articles</h1>
+              <div className="columns is-centered">
+                <div className="column">
+                  <BlogCard imageData={data.squareGat.childImageSharp.fluid} />
                 </div>
-              </div>
-              <div className="column">
-                <div class="card">
-                  <div class="card-image">
-                    <figure class="image">
-                      <Img fluid={data.blogImage.childImageSharp.fluid} />
-                    </figure>
-                  </div>
-                  <div class="card-content">
-                    <div class="content">
-                      Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                      Phasellus nec iaculis mauris. <a>@bulmaio</a>.
-                      <a href="#">#css</a> <a href="#">#responsive</a>
-                      <br />
-                      <time datetime="2016-1-1">11:09 PM - 1 Jan 2016</time>
-                    </div>
-                  </div>
+                <div className="column">
+                  <BlogCard imageData={data.blogImage.childImageSharp.fluid} />
                 </div>
               </div>
             </div>
           </div>
-        </div>
-      </section>
+        </section>
+      </>
     </Layout>
   )
 }
@@ -268,13 +241,20 @@ export const query = graphql`
         }
       }
     }
-    markdownRemark(frontmatter: { path: { eq: "test" } }) {
+    markdownRemark(frontmatter: { path: { eq: "gatsby" } }) {
       id
       html
       frontmatter {
         title
         path
         date
+        featuredImage {
+          childImageSharp {
+            fluid {
+              ...GatsbyImageSharpFluid
+            }
+          }
+        }
       }
     }
     blogImage: file(relativePath: { eq: "images/blog.jpg" }) {
