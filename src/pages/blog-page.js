@@ -43,17 +43,14 @@ const BlogPage = ({ data }) => {
     return (progressValue = scrollY)
   }
 
-  // if (typeof document !== `undefined`) {
-  useScroll()
-  // }
-
   const SetMaxProgressValue = () => {
     return (maxProgressValue = document.body.clientHeight - 1500)
   }
 
-  // if (typeof document !== `undefined`) {
-  SetMaxProgressValue()
-  // }
+  if (typeof document !== `undefined`) {
+    useScroll()
+    SetMaxProgressValue()
+  }
 
   console.log(progressValue)
   return (
@@ -122,7 +119,7 @@ const BlogPage = ({ data }) => {
           <nav class="breadcrumb" aria-label="breadcrumbs">
             <ul>
               <li>
-                <Link to="/blog">
+                <Link to="/">
                   <span class="icon is-small">
                     <i class="fas fa-home" aria-hidden="true"></i>
                   </span>
