@@ -20,8 +20,8 @@ const BlogIndex = ({ data }) => {
     <Layout>
       {/* <SEO title={frontmatter.seo} /> */}
 
-      <div class="section mt-6 is-paddingless-horizontal">
-        <div class="container grid">
+      <div className="section mt-6 is-paddingless-horizontal">
+        <div className="container grid">
           <BlogIntro />
 
           {/* SUGGESTIONS */}
@@ -33,9 +33,12 @@ const BlogIndex = ({ data }) => {
                 <div className="column is-6">
                   <Link to={`/${node.frontmatter.path}`}>
                     <BlogCard
+                      html={node.html}
+                      title={node.frontmatter.title}
                       imageData={
                         node.frontmatter.featuredImage.childImageSharp.fluid
                       }
+                      date={node.frontmatter.date}
                     />
                   </Link>
                 </div>
@@ -102,6 +105,7 @@ export const query = graphql`
       edges {
         node {
           id
+          html
           frontmatter {
             title
             path

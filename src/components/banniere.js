@@ -26,19 +26,17 @@ const Banniere = ({ title }) => {
       document.body.getBoundingClientRect()
     )
     const [scrollY, setScrollY] = useState(bodyOffset.top)
-    const [scrollX, setScrollX] = useState(bodyOffset.left)
-    const [scrollDirection, setScrollDirection] = useState()
 
     const listener = e => {
       setBodyOffset(document.body.getBoundingClientRect())
+      if (window.scrollY === 0) {
+        return setScrollY(0)
+      }
       setScrollY(-bodyOffset.top)
-      //   setScrollX(bodyOffset.left)
-      //   setScrollDirection(lastScrollTop > -bodyOffset.top ? "down" : "up")
       setLastScrollTop(-bodyOffset.top)
     }
 
     useEffect(() => {
-      progressValue = 0
       window.addEventListener("scroll", listener)
       return () => {
         window.removeEventListener("scroll", listener)
@@ -57,6 +55,8 @@ const Banniere = ({ title }) => {
     SetMaxProgressValue()
   }
 
+  console.log(progressValue)
+
   const profilePic = picture.file.childImageSharp.fluid
   return (
     <div className={`banniere ${progressValue >= 350 && "is-active"}`}>
@@ -67,10 +67,10 @@ const Banniere = ({ title }) => {
           position: "relative",
           top: "10px",
         }}
-        class="media center"
+        className="media center"
       >
-        <figure class="media-left">
-          <figure class="image is-64x64">
+        <figure className="media-left">
+          <figure className="image is-64x64">
             {/* <img src="assets/logo.png" /> */}
             <Img
               objectPosition="100%"
@@ -85,14 +85,14 @@ const Banniere = ({ title }) => {
             />
           </figure>
         </figure>
-        <div class="media-content">
-          <div class="content">
+        <div className="media-content">
+          <div className="content">
             <p>
               <strong>ErwanEL</strong>
               <a>@username</a>
-              <span class="has-text-grey">
+              <span className="has-text-grey">
                 Self taught <br />
-                <time datetime="2019-05-17">Apr 20</time> · 20min read
+                <time dateTime="2019-05-17">Apr 20</time> · 20min read
               </span>
             </p>
           </div>
@@ -105,7 +105,7 @@ const Banniere = ({ title }) => {
         {title}
       </p>
       <progress
-        class="progress is-small"
+        className="progress is-small"
         value={progressValue}
         max={maxProgressValue}
       >

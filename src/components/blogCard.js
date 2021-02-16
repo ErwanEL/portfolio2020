@@ -1,21 +1,22 @@
 import Img from "gatsby-image"
 import React from "react"
-
-const BlogCard = ({ imageData }) => {
+import { clearHtmlAndshrink } from "./utils"
+const BlogCard = ({ imageData, title, html, date }) => {
   return (
-    <div class="card">
-      <div class="card-image">
-        <figure class="image">
+    <div className="card">
+      <div className="card-image">
+        <figure className="image">
           <Img fluid={imageData} />
         </figure>
       </div>
-      <div class="card-content">
-        <div class="content">
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus nec
-          iaculis mauris. <a>@bulmaio</a>.<a href="#">#css</a>{" "}
-          <a href="#">#responsive</a>
+      <div className="card-content">
+        <h1 className="title is-5">{title}</h1>
+        <div className="content">
+          {clearHtmlAndshrink(html)} 
+          {/* <a>@bulmaio</a>.<a href="#">#css</a>{" "}
+          <a href="#">#responsive</a> */}
           <br />
-          <time datetime="2016-1-1">11:09 PM - 1 Jan 2016</time>
+          <time datetime="2016-1-1">{date}</time>
         </div>
       </div>
     </div>

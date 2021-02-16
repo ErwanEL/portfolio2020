@@ -80,12 +80,14 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
                 featuredImage {
                   childImageSharp {
                     fluid {
+                      aspectRatio
                       base64
-                      tracedSVG
-                      srcWebp
-                      srcSetWebp
                       originalImg
                       originalName
+                      presentationHeight
+                      presentationWidth
+                      sizes
+                      src
                     }
                   }
                 }

@@ -24,28 +24,28 @@ const BlogPageTemplate = ({ pageContext }) => {
     <Layout>
       {/* <SEO title={frontmatter.seo} /> */}
       <>
-        <div class="section is-paddingless-horizontal">
-          <div class="container grid">
+        <div className="section is-paddingless-horizontal">
+          <div className="container grid">
             <Banniere title={frontmatter.title} />
             <Breadcrumb title={frontmatter.title} />
           </div>
         </div>
 
         <section
-          class="section is-paddingless-horizontal "
+          className="section is-paddingless-horizontal "
           style={{ paddingTop: "0" }}
         >
-          <div class="container grid">
+          <div className="container grid">
             <MediaObject />
 
-            <div class="section is-paddingless-horizontal">
-              <h1 class="title is-2">{frontmatter.title}</h1>
-              <h2 class="subtitle is-3">Learn from first principles</h2>
+            <div className="section is-paddingless-horizontal">
+              <h1 className="title is-2">{frontmatter.title}</h1>
+              <h2 className="subtitle is-3">Learn from first principles</h2>
             </div>
 
-            <figure class="columns is-mobile is-variable is-marginless is-0 grid-xl">
-              <div class="column center">
-                <div class="image is-256x256 card">
+            <figure className="columns is-mobile is-variable is-marginless is-0 grid-xl">
+              <div className="column center">
+                <div className="image is-256x256 card">
                   <a>
                     {/* <!-- <img src="https://bulma.io/images/placeholders/128x128.png"/> --> */}
                     {/* <img src="assets/test.jpg" /> */}
@@ -55,21 +55,21 @@ const BlogPageTemplate = ({ pageContext }) => {
               </div>
             </figure>
             <Img fluid={frontmatter.featuredImage.childImageSharp.fluid} />
-            <figcaption class="center level">
-              <small class="level-item has-text-grey">
+            <figcaption className="center level">
+              <small className="level-item has-text-grey">
                 The blog we'll build. Click to continue on scrimba
               </small>
             </figcaption>
 
-            <div class="content Site-content">
+            <div className="content Site-content">
               <div dangerouslySetInnerHTML={{ __html: html }} />
             </div>
             {/* <a>
-                <div class="tags read has-addons">
-                  <span class="tag">
-                    <i class="fas fa-book-reader"></i>
+                <div className="tags read has-addons">
+                  <span className="tag">
+                    <i className="fas fa-book-reader"></i>
                   </span>
-                  <span class="tag ">Read more articles about this book </span>
+                  <span className="tag ">Read more articles about this book </span>
                 </div>
               </a> */}
             <div>
@@ -80,12 +80,18 @@ const BlogPageTemplate = ({ pageContext }) => {
               <div className="columns is-centered">
                 <div className="column">
                   <BlogCard
+                    title={frontmatter.title}
+                    html={html}
                     imageData={frontmatter.featuredImage.childImageSharp.fluid}
+                    date={frontmatter.date}
                   />
                 </div>
                 <div className="column">
                   <BlogCard
+                    title={frontmatter.title}
+                    html={html}
                     imageData={frontmatter.featuredImage.childImageSharp.fluid}
+                    date={frontmatter.date}
                   />
                 </div>
               </div>
