@@ -1,14 +1,14 @@
 ---
 path: gatsby
 date: 15-02-2021
-title: Pourquoi choisir gatsbyjs
+title: Pourquoi choisir GatsbyJs
 subtitle: Un framework statique qui a la cote
 featuredImage: ../../src/data/images/logo-gatsby-square.png
 ---
 
-Gatsby js est un framework open-source fondé sur **react**, permettant la création de site statiques.
+GatsbyJs est un framework open-source fondé sur **react**, permettant la création de site statique.
 
-Les sites crées avec GatsbyJs sont réputés rapides et bénéficis de l'appui d'un [parc de plus de 2000 plugins.](https://www.gatsbyjs.com/plugins)
+Les sites créés avec GatsbyJs sont réputés rapides et bénéficient de l'appui d'un [parc de plus de 2000 plugins.](https://www.gatsbyjs.com/plugins)
 
 ###1. GatsbyJs est rapide à construire 🚀
 
@@ -30,7 +30,7 @@ Pour résumer, gatsby permet de se concentrer sur la création de contenu plutot
 ###3. Facilité de déploiement 🛡️
 
 Gatsby est rapide à déployer, peu importe la solution que vous choisissez.
-Gatsby utilise un système permettant d'éviter la redondance lors des build et déploiments.
+Gatsby utilise un système permettant d'éviter la redondance lors des build et déploiements.
 
 ---
 
@@ -43,12 +43,12 @@ Gatsby utilise un système permettant d'éviter la redondance lors des build et 
 
 - <u>Évolutivité (scalable)</u>
 
-  Pas d'opérations de déploiement compliqués. Vous avez pour votre argent, en fonction de votre usage et du traffique de votre site.
+  Pas d'opération de déploiement compliqué. Vous en avez pour votre argent, en fonction de votre usage et du trafic de votre site.
   <br></br>
 
 - <u>Sécurité</u>
 
-  Gatsby genere du html statique au moment du build. Pas de serveur et de base de données attaignable rend les requetes suspectes et les attaques peu probables.
+  Gatsby génere du html statique au moment du build. Pas de serveur et de base de donnée atteignable rend les requètes suspectes et les attaques peu probables.
   <br></br>
 
 - <u>Accessibilité</u>
