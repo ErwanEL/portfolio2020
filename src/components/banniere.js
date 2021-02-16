@@ -55,7 +55,7 @@ const Banniere = ({ title }) => {
     SetMaxProgressValue()
   }
 
-  console.log(progressValue)
+  // console.log(progressValue)
 
   const profilePic = picture.file.childImageSharp.fluid
   return (

@@ -6,13 +6,13 @@ const BlogCard = ({ imageData, title, html, date }) => {
     <div className="card">
       <div className="card-image">
         <figure className="image">
-          <Img fluid={imageData} />
+          <Img style={{ maxHeight: "232px" }} fluid={imageData} />
         </figure>
       </div>
       <div className="card-content">
         <h1 className="title is-5">{title}</h1>
         <div className="content">
-          {clearHtmlAndshrink(html)} 
+          {clearHtmlAndshrink(html)}
           {/* <a>@bulmaio</a>.<a href="#">#css</a>{" "}
           <a href="#">#responsive</a> */}
           <br />

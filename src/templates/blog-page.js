@@ -16,9 +16,14 @@ const BlogPageTemplate = ({ pageContext }) => {
 
   const { frontmatter, html } = node
 
-  // console.log(frontmatter)
+  const suggestions = pageContext.suggestions.filter(
+    el => el.node.id !== node.id
+  )
 
-  console.log(frontmatter)
+  console.log(suggestions)
+  // console.log(node)
+
+  // console.log(pageContext.suggestions.filter(el => el.node.id !== node.id))
 
   return (
     <Layout>
@@ -77,8 +82,22 @@ const BlogPageTemplate = ({ pageContext }) => {
             </div>
             <div className="suggestion mt-6">
               <h1 className="title is-4">Derniers articles</h1>
-              <div className="columns is-centered">
-                <div className="column">
+              <div className="columns is-multiline">
+                {suggestions.map(({ node }) => (
+                  <div className="column is-6">
+                    <Link to={`/${node.frontmatter.path}`}>
+                      <BlogCard
+                        title={node.frontmatter.title}
+                        html={node.html}
+                        imageData={
+                          node.frontmatter.featuredImage.childImageSharp.fluid
+                        }
+                        date={node.frontmatter.date}
+                      />
+                    </Link>
+                  </div>
+                ))}
+                {/* <div className="column">
                   <BlogCard
                     title={frontmatter.title}
                     html={html}
@@ -93,7 +112,7 @@ const BlogPageTemplate = ({ pageContext }) => {
                     imageData={frontmatter.featuredImage.childImageSharp.fluid}
                     date={frontmatter.date}
                   />
-                </div>
+                </div> */}
               </div>
             </div>
           </div>

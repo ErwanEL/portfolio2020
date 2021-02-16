@@ -100,6 +100,9 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
   )
 
   console.log(result.data.allMds)
+  const suggestions = result.data.allMds.edges.slice(0, 5)
+
+  console.log(suggestions)
 
   // Handle errors
   if (result.errors) {
@@ -115,6 +118,7 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
       component: path.resolve(`./src/templates/blog-page.js`),
       context: {
         node: md.node,
+        suggestions: suggestions,
       },
     })
   })

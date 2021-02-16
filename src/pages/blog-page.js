@@ -16,8 +16,6 @@ const BlogPage = ({ data }) => {
   const { markdownRemark } = data
   const { frontmatter, html } = markdownRemark
 
-  console.log(frontmatter)
-
   return (
     <Layout>
       {/* <SEO title={frontmatter.seo} /> */}
