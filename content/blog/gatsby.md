@@ -2,269 +2,59 @@
 path: gatsby
 date: 15-02-2021
 title: Pourquoi choisir gatsbyjs
+subtitle: Un framework statique qui a la cote
 featuredImage: ../../src/data/images/logo-gatsby-square.png
 ---
 
-**Advertisement :)**
+Gatsby js est un framework open-source fondé sur **react**, permettant la création de site statiques.
 
-- **[pica](https://nodeca.github.io/pica/demo/)** - high quality and fast image
-  resize in browser.
-- **[babelfish](https://github.com/nodeca/babelfish/)** - developer friendly
-  i18n with plurals support and easy syntax.
+Les sites crées avec GatsbyJs sont réputés rapides et bénéficis de l'appui d'un [parc de plus de 2000 plugins.](https://www.gatsbyjs.com/plugins)
 
-You will like those projects!
+###1. GatsbyJs est rapide à construire 🚀
 
----
+Permet la construction de site associés aux services les plus connus, tels que shopify, stripe, wordpress et diverses autres solutions de cms.
 
-# h1 Heading 8-)
+La ressource en plugins permet de faciliter l'intégration de ces services.
 
-## h2 Heading
+Permet également l'intégration de data depuis n'importe quelle source: API, Base de donnée, fichiers statiques...
+Le cumul de sources de données est aussi possible.
 
-### h3 Heading
+###2. Environnement et performances efficaces 🔒
 
-#### h4 Heading
+GatsbyJs charge seulement les principaux éléments de la page. De ce fait le site charge aussi vite que possible.
 
-##### h5 Heading
+Une fois lancé, gatsby précharge toutes les pages ce qui permet une haute rapidité de navigation.
 
-###### h6 Heading
+Pour résumer, gatsby permet de se concentrer sur la création de contenu plutot que de se soucier des performances.
 
-## Horizontal Rules
+###3. Facilité de déploiement 🛡️
 
----
-
----
+Gatsby est rapide à déployer, peu importe la solution que vous choisissez.
+Gatsby utilise un système permettant d'éviter la redondance lors des build et déploiments.
 
 ---
 
-## Typographic replacements
+####<u>En résumé, les points sur lesquels gatsby se démarque sont:</u>
 
-Enable typographer option to see result.
+- <u>Les performances intégrés</u>
 
-(c) (C) (r) (R) (tm) (TM) (p) (P) +-
+  L'optimisation des images, lazy load, préchargements des ressources. Génération d'un site optimisé en tout point.
+  <br></br>
 
-test.. test... test..... test?..... test!....
+- <u>Évolutivité (scalable)</u>
 
-!!!!!! ???? ,, -- ---
+  Pas d'opérations de déploiement compliqués. Vous avez pour votre argent, en fonction de votre usage et du traffique de votre site.
+  <br></br>
 
-"Smartypants, double quotes" and 'single quotes'
+- <u>Sécurité</u>
 
-## Emphasis
+  Gatsby genere du html statique au moment du build. Pas de serveur et de base de données attaignable rend les requetes suspectes et les attaques peu probables.
+  <br></br>
 
-**This is bold text**
+- <u>Accessibilité</u>
 
-**This is bold text**
+  Framework accessible, l'environnement dispose de nombreux outils pour faciliter la détection d'erreurs syntaxique et autres.
 
-_This is italic text_
+---
 
-_This is italic text_
-
-~~Strikethrough~~
-
-## Blockquotes
-
-> Blockquotes can also be nested...
->
-> > ...by using additional greater-than signs right next to each other...
-> >
-> > > ...or with spaces between arrows.
-
-## Lists
-
-Unordered
-
-- Create a list by starting a line with `+`, `-`, or `*`
-- Sub-lists are made by indenting 2 spaces:
-  - Marker character change forces new list start:
-    - Ac tristique libero volutpat at
-    * Facilisis in pretium nisl aliquet
-    - Nulla volutpat aliquam velit
-- Very easy!
-
-Ordered
-
-1. Lorem ipsum dolor sit amet
-2. Consectetur adipiscing elit
-3. Integer molestie lorem at massa
-
-4. You can use sequential numbers...
-5. ...or keep all the numbers as `1.`
-
-Start numbering with offset:
-
-57. foo
-1. bar
-
-## Code
-
-Inline `code`
-
-Indented code
-
-    // Some comments
-    line 1 of code
-    line 2 of code
-    line 3 of code
-
-Block code "fences"
-
-```
-Sample text here...
-```
-
-Syntax highlighting
-
-```js
-var foo = function (bar) {
-  return bar++
-}
-
-console.log(foo(5))
-```
-
-## Tables
-
-| Option | Description                                                               |
-| ------ | ------------------------------------------------------------------------- |
-| data   | path to data files to supply the data that will be passed into templates. |
-| engine | engine to be used for processing templates. Handlebars is the default.    |
-| ext    | extension to be used for dest files.                                      |
-
-Right aligned columns
-
-| Option |                                                               Description |
-| -----: | ------------------------------------------------------------------------: |
-|   data | path to data files to supply the data that will be passed into templates. |
-| engine |    engine to be used for processing templates. Handlebars is the default. |
-|    ext |                                      extension to be used for dest files. |
-
-## Links
-
-[link text](http://dev.nodeca.com)
-
-[link with title](http://nodeca.github.io/pica/demo/ "title text!")
-
-Autoconverted link https://github.com/nodeca/pica (enable linkify to see)
-
-## Images
-
-![Minion](https://octodex.github.com/images/minion.png)
-![Stormtroopocat](https://octodex.github.com/images/stormtroopocat.jpg "The Stormtroopocat")
-
-Like links, Images also have a footnote style syntax
-
-![Alt text][id]
-
-With a reference later in the document defining the URL location:
-
-[id]: https://octodex.github.com/images/dojocat.jpg "The Dojocat"
-
-## Plugins
-
-The killer feature of `markdown-it` is very effective support of
-[syntax plugins](https://www.npmjs.org/browse/keyword/markdown-it-plugin).
-
-### [Emojies](https://github.com/markdown-it/markdown-it-emoji)
-
-> Classic markup: :wink: :crush: :cry: :tear: :laughing: :yum:
->
-> Shortcuts (emoticons): :-) :-( 8-) ;)
-
-see [how to change output](https://github.com/markdown-it/markdown-it-emoji#change-output) with twemoji.
-
-### [Subscript](https://github.com/markdown-it/markdown-it-sub) / [Superscript](https://github.com/markdown-it/markdown-it-sup)
-
-- 19^th^
-- H~2~O
-
-### [\<ins>](https://github.com/markdown-it/markdown-it-ins)
-
-++Inserted text++
-
-### [\<mark>](https://github.com/markdown-it/markdown-it-mark)
-
-==Marked text==
-
-### [Footnotes](https://github.com/markdown-it/markdown-it-footnote)
-
-Footnote 1 link[^first].
-
-Footnote 2 link[^second].
-
-Inline footnote^[Text of inline footnote] definition.
-
-Duplicated footnote reference[^second].
-
-[^first]: Footnote **can have markup**
-
-    and multiple paragraphs.
-
-[^second]: Footnote text.
-
-### [Definition lists](https://github.com/markdown-it/markdown-it-deflist)
-
-Term 1
-
-: Definition 1
-with lazy continuation.
-
-Term 2 with _inline markup_
-
-: Definition 2
-
-        { some code, part of Definition 2 }
-
-    Third paragraph of definition 2.
-
-_Compact style:_
-
-Term 1
-~ Definition 1
-
-Term 2
-~ Definition 2a
-~ Definition 2b
-
-### [Abbreviations](https://github.com/markdown-it/markdown-it-abbr)
-
-This is HTML abbreviation example.
-
-It converts "HTML", but keep intact partial entries like "xxxHTMLyyy" and so on.
-
-\*[HTML]: Hyper Text Markup Language
-
-### [Custom containers](https://github.com/markdown-it/markdown-it-container)
-
-::: warning
-_here be dragons_
-:::
-
-<!--
-Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-Voluptatibus tempora beatae perspiciatis sapiente obcaecati? Est qui
-autem odit? Illum soluta corrupti aliquid cumque, error tempora
-dignissimos aperiam nostrum ut? Optio facere exercitationem
-molestias, assumenda numquam veritatis aliquid omnis, maiores
-voluptatem facilis vitae minus soluta. Recusandae non doloremque hic
-vero corrupti dicta officia, excepturi dolorum illo numquam! Ea
-delectus, autem odio soluta dolor, tempore eaque perferendis, rem
-voluptas esse cupiditate fugit aliquam quas sunt. Ea culpa
-laboriosam autem molestias dolorem modi optio voluptate, architecto
-obcaecati, iste fuga nobis inventore delectus fugiat molestiae
-eveniet minus doloremque neque nulla sed quia atque enim veniam.
-Quae distinctio sapiente illum facilis adipisci eos animi,
-provident, est eligendi ipsam quam, minima at! Odio aspernatur totam
-temporibus inventore ipsum possimus. Minima, aliquam, voluptatibus
-ipsam esse dignissimos cupiditate doloribus ad facere voluptatem
-consequatur expedita iure! Consequuntur voluptates inventore
-quibusdam natus, soluta, suscipit in eveniet, cupiditate consectetur
-consequatur asperiores? Fugit eveniet molestiae magnam. Tempora,
-numquam id. Labore nemo tempora ea laboriosam obcaecati
-necessitatibus veniam sapiente voluptatum nam, dignissimos placeat
-nobis dolorum consequatur alias dicta, modi odit corrupti reiciendis
-soluta iusto, amet aspernatur id vel! Fugit neque illo praesentium
-doloremque deleniti soluta? Deserunt assumenda id magni quidem sint,
-consequatur temporibus.
-
-```javascript
-console.log("hola")
-``` -->
+####[Découvrir GatsbyJs](https://www.gatsbyjs.com/)

@@ -75,6 +75,7 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
               frontmatter {
                 path
                 title
+                subtitle
                 path
                 date
                 featuredImage {
@@ -100,7 +101,7 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
   )
 
   console.log(result.data.allMds)
-  const suggestions = result.data.allMds.edges.slice(0, 5)
+  const suggestions = result.data.allMds.edges.slice(0, 4)
 
   console.log(suggestions)
 

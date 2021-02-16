@@ -47,7 +47,7 @@ const Banniere = ({ title }) => {
   }
 
   const SetMaxProgressValue = () => {
-    return (maxProgressValue = document.body.clientHeight - 1500)
+    return (maxProgressValue = document.body.clientHeight - 1800)
   }
 
   if (typeof document !== `undefined`) {

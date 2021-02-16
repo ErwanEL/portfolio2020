@@ -20,6 +20,8 @@ const BlogPageTemplate = ({ pageContext }) => {
     el => el.node.id !== node.id
   )
 
+  console.log(frontmatter)
+
   console.log(suggestions)
   // console.log(node)
 
@@ -45,7 +47,7 @@ const BlogPageTemplate = ({ pageContext }) => {
 
             <div className="section is-paddingless-horizontal">
               <h1 className="title is-2">{frontmatter.title}</h1>
-              <h2 className="subtitle is-3">Learn from first principles</h2>
+              <h2 className="subtitle is-3">{frontmatter.subtitle}</h2>
             </div>
 
             <figure className="columns is-mobile is-variable is-marginless is-0 grid-xl">
@@ -59,10 +61,13 @@ const BlogPageTemplate = ({ pageContext }) => {
                 </div>
               </div>
             </figure>
-            <Img fluid={frontmatter.featuredImage.childImageSharp.fluid} />
+            <Img
+              style={{ maxHeight: "500px" }}
+              fluid={frontmatter.featuredImage.childImageSharp.fluid}
+            />
             <figcaption className="center level">
               <small className="level-item has-text-grey">
-                The blog we'll build. Click to continue on scrimba
+                {frontmatter.title}
               </small>
             </figcaption>
 
