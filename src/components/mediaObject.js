@@ -3,7 +3,7 @@ import Img from "gatsby-image"
 import React from "react"
 import { useStaticQuery } from "gatsby"
 
-const MediaObject = ({ title }) => {
+const MediaObject = ({ date }) => {
   const picture = useStaticQuery(graphql`
     {
       file(relativePath: { eq: "images/mini-Juan.JPG" }) {
@@ -39,11 +39,14 @@ const MediaObject = ({ title }) => {
       <div class="media-content">
         <div class="content">
           <p>
-            <strong>ErwanEL</strong>
-            <a>@username</a>
+            {/* <strong>ErwanEL </strong> */}
+            <a href="https://t.me/ErwanEL">@ErwanEL</a>
             <span class="has-text-grey">
-              Self taught <br />
-              <time datetime="2019-05-17">Apr 20</time> · 20min read
+              {" "}
+              Web Dev
+              <br />
+              <time datetime="2019-05-17">{date}</time>
+              {/* · 20min read */}
             </span>
           </p>
         </div>

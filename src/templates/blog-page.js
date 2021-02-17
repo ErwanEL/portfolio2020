@@ -1,17 +1,14 @@
-import { Link, graphql } from "gatsby"
-import { useEffect, useState } from "react"
-
 import Banniere from "../components/banniere"
 import BlogCard from "../components/blogCard"
 import Breadcrumb from "../components/breadCrumb"
 import Img from "gatsby-image"
 import Layout from "../components/layout"
+import { Link } from "gatsby"
 import MediaObject from "../components/mediaObject"
 import React from "react"
+import SEO from "../components/seo"
 
 const BlogPageTemplate = ({ pageContext }) => {
-  // const { markdownRemark } = data
-  // const { frontmatter, html } = pageContext
   const { node } = pageContext
 
   const { frontmatter, html } = node
@@ -20,20 +17,21 @@ const BlogPageTemplate = ({ pageContext }) => {
     el => el.node.id !== node.id
   )
 
-  console.log(frontmatter)
-
-  console.log(suggestions)
-  // console.log(node)
-
-  // console.log(pageContext.suggestions.filter(el => el.node.id !== node.id))
+  console.log(`https://blog.erwanel/${frontmatter.path}/`)
 
   return (
     <Layout>
-      {/* <SEO title={frontmatter.seo} /> */}
+      <SEO
+        title={frontmatter.title}
+        description={html}
+        image={frontmatter.featuredImage.childImageSharp.fluid.originalImg}
+        url={`https://blog.erwanel/${frontmatter.path}/`}
+      />
+
       <>
         <div className="section is-paddingless-horizontal">
           <div className="container grid">
-            <Banniere title={frontmatter.title} />
+            <Banniere title={frontmatter.title} date={frontmatter.date} />
             <Breadcrumb title={frontmatter.title} />
           </div>
         </div>
@@ -43,7 +41,7 @@ const BlogPageTemplate = ({ pageContext }) => {
           style={{ paddingTop: "0" }}
         >
           <div className="container grid">
-            <MediaObject />
+            <MediaObject date={frontmatter.date} />
 
             <div className="section is-paddingless-horizontal">
               <h1 className="title is-2">{frontmatter.title}</h1>
@@ -102,22 +100,6 @@ const BlogPageTemplate = ({ pageContext }) => {
                     </Link>
                   </div>
                 ))}
-                {/* <div className="column">
-                  <BlogCard
-                    title={frontmatter.title}
-                    html={html}
-                    imageData={frontmatter.featuredImage.childImageSharp.fluid}
-                    date={frontmatter.date}
-                  />
-                </div>
-                <div className="column">
-                  <BlogCard
-                    title={frontmatter.title}
-                    html={html}
-                    imageData={frontmatter.featuredImage.childImageSharp.fluid}
-                    date={frontmatter.date}
-                  />
-                </div> */}
               </div>
             </div>
           </div>
@@ -128,17 +110,3 @@ const BlogPageTemplate = ({ pageContext }) => {
 }
 
 export default BlogPageTemplate
-
-// export const query = graphql`
-//   {
-//     markdownRemark(frontmatter: { path: { eq: "test" } }) {
-//       id
-//       html
-//       frontmatter {
-//         title
-//         path
-//         date
-//       }
-//     }
-//   }
-// `

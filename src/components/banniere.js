@@ -4,7 +4,7 @@ import Img from "gatsby-image"
 import React from "react"
 import { useStaticQuery } from "gatsby"
 
-const Banniere = ({ title }) => {
+const Banniere = ({ title, date }) => {
   const picture = useStaticQuery(graphql`
     {
       file(relativePath: { eq: "images/mini-Juan.JPG" }) {
@@ -88,11 +88,14 @@ const Banniere = ({ title }) => {
         <div className="media-content">
           <div className="content">
             <p>
-              <strong>ErwanEL</strong>
-              <a>@username</a>
-              <span className="has-text-grey">
+              {/* <strong>ErwanEL </strong> */}
+              <a href="https://t.me/ErwanEL">@ErwanEL</a>
+              <span class="has-text-grey">
+                {" "}
+                Web Dev
                 <br />
-                <time dateTime="2019-05-17">Apr 20</time> · 20min read
+                <time datetime="2019-05-17">{date}</time>
+                {/* · 20min read */}
               </span>
             </p>
           </div>
