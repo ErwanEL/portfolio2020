@@ -91,7 +91,7 @@ const Banniere = ({ title }) => {
               <strong>ErwanEL</strong>
               <a>@username</a>
               <span className="has-text-grey">
-                Self taught <br />
+                <br />
                 <time dateTime="2019-05-17">Apr 20</time> · 20min read
               </span>
             </p>

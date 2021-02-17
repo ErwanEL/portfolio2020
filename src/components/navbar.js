@@ -1,5 +1,6 @@
 import EspSvg from "../components/svg/espsvg"
 import FrSvg from "../components/svg/frsvg"
+import { Link } from "gatsby"
 import MaltSvg from "../components/svg/maltsvg"
 import React from "react"
 import UsaSvg from "../components/svg/usasvg"
@@ -60,20 +61,17 @@ const Navbar = ({ navbar }) => {
           margin: "auto 5px",
         }}
       ></div>
-      {/* <a
-        // style={{ cursor: "not-allowed" }}
-        className={`test navbar-item`}
-        activeClassName="is-active"
-      > */}
-      <a
-        style={{ cursor: "not-allowed", margin: "auto 10px" }}
-        disabled
-        className="test  navbar-item button is-light ml-5-desktop "
+      <Link
+        style={{
+          margin: "auto 10px",
+          background: "#ff7b00",
+          color: "white",
+        }}
+        className="navbar-item button is-light ml-5-desktop"
+        to="/"
       >
         <strong>Blog</strong>
-      </a>
-      {/* </a> */}
-
+      </Link>
       <a
         href="https://github.com/ErwanEL/"
         target="_blank"
@@ -110,10 +108,10 @@ const Navbar = ({ navbar }) => {
         </a>
 
         <div class="navbar-dropdown">
-          <a class="navbar-item pr-0" href={`https://erwanel.com${path}`}>
+          <a class="navbar-item pr-0" href={`https://erwanel.com`}>
             <UsaSvg width={20} height={20} />
           </a>
-          <a class="navbar-item pr-0" href={`https://es.erwanel.com${path}`}>
+          <a class="navbar-item pr-0" href={`https://es.erwanel.com`}>
             <EspSvg width={20} height={20} />
           </a>
         </div>

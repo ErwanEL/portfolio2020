@@ -10,8 +10,8 @@ const BlogIntro = () => {
           {/* <h2 class="subtitle is-4">{frontmatter.date}</h2> */}
           {/* <div dangerouslySetInnerHTML={{ __html: html }} /> */}
           <div class="content is-medium">
-            Ici un blog sur le développement web, plus particulièrement sur la
-            Jamstack et GatsbyJs.
+            Ici un blog sur le développement web,
+            <br /> plus particulièrement sur la Jamstack et GatsbyJs.
           </div>
         </div>
       </div>

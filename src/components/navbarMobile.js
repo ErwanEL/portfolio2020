@@ -1,6 +1,7 @@
 import React, { useState } from "react"
 
 import EspSvg from "../components/svg/espsvg"
+import { Link } from "gatsby"
 // import { a } from "gatsby"
 import MaltSvg from "../components/svg/maltsvg"
 import UsaSvg from "../components/svg/usasvg"
@@ -49,6 +50,16 @@ const NavbarMobile = ({ navbar }) => {
           <a className={`navbar-item link`} href={`${domain}/contact/`}>
             {navbar.contact}
           </a>
+          <Link
+            style={{
+              background: "#ff7b00",
+              color: "white",
+            }}
+            className="navbar-item is-light ml-5-desktop"
+            to="/"
+          >
+            <strong>Blog</strong>
+          </Link>
           <a
             href="https://github.com/ErwanEL/"
             target="_blank"
@@ -70,10 +81,10 @@ const NavbarMobile = ({ navbar }) => {
           >
             <i style={{ color: "#1e96c8" }} class="fab fa-2x fa-telegram"></i>
           </a>
-          <a className="navbar-item" href={`https://es.erwanel.com${path}`}>
+          <a className="navbar-item" href={`https://es.erwanel.com`}>
             <EspSvg />
           </a>
-          <a className="navbar-item" href={`https://erwanel.com${path}`}>
+          <a className="navbar-item" href={`https://erwanel.com`}>
             <UsaSvg />
           </a>
         </div>

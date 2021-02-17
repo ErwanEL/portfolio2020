@@ -112,7 +112,19 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
   }
 
   result.data.allMds.edges.forEach(md => {
-    console.log(md)
+    // create slug
+
+    // const slug = `${md.node.frontmatter.date}/${md.node.frontmatter.title
+    // .replace(/[àãäâ]/g, "a")
+    // .replace(/[òöõô]/g, "o")
+    // .replace(/[ñ]/g, "n")
+    // .replace(/[-_]/g, "")
+    // .replace(/\s\s+/g, " ") // double spaces
+    // .replace(/\W/g, "-")
+    // .toLowerCase()}`
+
+    // console.log(slug)
+
     // Create pages
     createPage({
       path: md.node.frontmatter.path,

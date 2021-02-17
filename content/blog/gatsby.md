@@ -10,7 +10,7 @@ GatsbyJs est un framework open-source fondé sur **react**, permettant la créat
 
 Les sites créés avec GatsbyJs sont réputés rapides et bénéficient de l'appui d'un [parc de plus de 2000 plugins.](https://www.gatsbyjs.com/plugins)
 
-###1. GatsbyJs est rapide à construire 🚀
+###1. GatsbyJs est rapide 🚀
 
 Permet la construction de site associés aux services les plus connus, tels que shopify, stripe, wordpress et diverses autres solutions de cms.
 
