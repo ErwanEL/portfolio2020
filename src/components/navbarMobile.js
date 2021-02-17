@@ -48,6 +48,12 @@ const NavbarMobile = ({ navbar }) => {
             {navbar.contact}
           </Link>
           <a
+            href="https://blog.erwanel.com"
+            className="navbar-item is-light ml-5-desktop "
+          >
+            <strong>Blog</strong>
+          </a>
+          <a
             href="https://github.com/ErwanEL/"
             target="_blank"
             className="navbar-item githubLink "
