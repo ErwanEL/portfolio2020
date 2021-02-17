@@ -67,8 +67,8 @@ const Navbar = ({ navbar }) => {
         activeClassName="is-active"
       > */}
       <a
-        style={{ cursor: "not-allowed", margin: "auto 10px" }}
-        disabled
+        href="https://blog.erwanel.com"
+        style={{ margin: "auto 10px" }}
         className="test  navbar-item button is-light ml-5-desktop "
       >
         <strong>Blog</strong>
