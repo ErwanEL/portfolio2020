@@ -17,13 +17,11 @@ const BlogPageTemplate = ({ pageContext }) => {
     el => el.node.id !== node.id
   )
 
-  console.log(`https://blog.erwanel/${frontmatter.path}/`)
-
   return (
     <Layout>
       <SEO
         title={frontmatter.title}
-        description={html}
+        description={pageContext.excerpt}
         image={frontmatter.featuredImage.childImageSharp.fluid.originalImg}
         url={`https://blog.erwanel/${frontmatter.path}/`}
       />

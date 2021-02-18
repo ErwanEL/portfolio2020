@@ -103,7 +103,7 @@ const Banniere = ({ title, date }) => {
       </article>
       <p
         style={{ margin: "auto", width: "724px" }}
-        className="has-text-left pt-5"
+        className="has-text-left pt-4"
       >
         {title}
       </p>

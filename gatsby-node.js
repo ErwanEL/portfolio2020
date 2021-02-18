@@ -72,6 +72,7 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
             node {
               id
               html
+              excerpt(pruneLength: 280)
               frontmatter {
                 path
                 title
@@ -132,6 +133,7 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
       context: {
         node: md.node,
         suggestions: suggestions,
+        excerpt: md.node.excerpt,
       },
     })
   })
