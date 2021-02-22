@@ -26,7 +26,7 @@
     left: 10%;
     right: 10%;
     position: absolute;
-    background: rgb(255, 123, 0);
+    background: #ff7b00;
     transition: width 0.5s ease 0s, left 0.5s ease 0s;
     width: 80%;
   }
@@ -42,13 +42,29 @@
   }
 }
 
+// .logo {
+//   // font-size: 24px;
+//   // letter-spacing: 2px;
+//   // color: #023859;
+//   // border-radius: 10px;
+//   // text-align: center;
+//   // border-left: 2px solid #023859;
+//   // font-family: "Voces", cursive;
+//   position: absolute;
+// }
+
 .logo {
-  // font-size: 24px;
-  // letter-spacing: 2px;
-  // color: #023859;
-  // border-radius: 10px;
-  // text-align: center;
-  // border-left: 2px solid #023859;
-  // font-family: "Voces", cursive;
+  color:#023859;
+  font-size: 21px;
+  font-weight: 600;
+
+  outline: none;
   position: absolute;
+  margin: auto;
+  text-decoration: none;
+
+  letter-spacing: .5px;
+
 }
+
+
