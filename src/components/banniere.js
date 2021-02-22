@@ -50,10 +50,10 @@ const Banniere = ({ title, date }) => {
     return (maxProgressValue = document.body.clientHeight - 1800)
   }
 
-  // if (typeof document !== `undefined`) {
+  if (typeof document !== `undefined`) {
     useScroll()
     SetMaxProgressValue()
-  // }
+  }
 
   // console.log(progressValue)
 

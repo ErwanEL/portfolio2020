@@ -8,8 +8,12 @@ $footer-background-color: white;
 $progress-value-background-color: #ff7b00bb;
 $progress-bar-background-color: #b3b3b336;
 
+
+
+
 @import "~bulma/bulma.sass";
 @import "header";
 @import "footer";
 @import "responsive";
 @import "blog-page";
+@import "project-card";

@@ -4,6 +4,7 @@ import Annonce from "../components/annonce"
 import BlogCard from "../components/blogCard"
 import BlogIntro from "../components/blogIntro"
 import Layout from "../components/layout"
+import ProjectCard from "../components/projectCard"
 import React from "react"
 import SEO from "../components/seo"
 
@@ -22,7 +23,7 @@ const BlogIndex = ({ data }) => {
           <div className="suggestion mt-6">
             <h1 className="title is-4">Derniers articles</h1>
             <div className="columns is-multiline">
-              {data.allMds.edges.map(({ node }) => (
+              {data.allArticles.edges.map(({ node }) => (
                 <div className="column is-6">
                   <Link to={`/${node.frontmatter.path}`}>
                     <BlogCard
@@ -42,6 +43,25 @@ const BlogIndex = ({ data }) => {
 
           <Annonce />
 
+          <div className="suggestion mt-6">
+            <h1 className="title is-4">Derniers projets</h1>
+            <div className="columns is-multiline">
+              {data.allProjects.edges.map(({ node }) => (
+                <div className="column is-4">
+                  <Link to={`/${node.frontmatter.path}`}>
+                    <ProjectCard
+                      html={node.html}
+                      title={node.frontmatter.title}
+                      imageData={
+                        node.frontmatter.featuredImage.childImageSharp.fluid
+                      }
+                      date={node.frontmatter.date}
+                    />
+                  </Link>
+                </div>
+              ))}
+            </div>
+          </div>
           {/* END */}
         </div>
       </div>
@@ -53,7 +73,32 @@ export default BlogIndex
 
 export const query = graphql`
   {
-    allMds: allMarkdownRemark {
+    allArticles: allMarkdownRemark(
+      filter: { frontmatter: { type: { eq: "article" } } }
+    ) {
+      edges {
+        node {
+          id
+          html
+          frontmatter {
+            title
+            path
+            date
+            featuredImage {
+              childImageSharp {
+                fluid {
+                  ...GatsbyImageSharpFluid
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+
+    allProjects: allMarkdownRemark(
+      filter: { frontmatter: { type: { eq: "project" } } }
+    ) {
       edges {
         node {
           id

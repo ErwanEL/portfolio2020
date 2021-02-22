@@ -1,4 +1,5 @@
 ---
+type: article
 path: gatsby
 date: 15-02-2021
 title: Pourquoi choisir GatsbyJs

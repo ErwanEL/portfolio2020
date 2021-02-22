@@ -1,4 +1,5 @@
 ---
+type: article
 path: jamstack
 date: 16-02-2021
 title: Qu'est ce que la Jamstack
