@@ -1,11 +1,11 @@
-import React from "react"
-import { graphql } from "gatsby"
-import Img from "gatsby-image"
-import Layout from "../components/layout"
-import SEO from "../components/seo"
 import Cascade from "../components/cascade"
 import CascadeOld from "../components/cascadeOld"
+import Img from "gatsby-image"
+import Layout from "../components/layout"
 import Project from "../components/project"
+import React from "react"
+import SEO from "../components/seo"
+import { graphql } from "gatsby"
 
 const ProjectsPage = ({ data }) => {
   const { markdownRemark } = data
@@ -76,7 +76,7 @@ const ProjectsPage = ({ data }) => {
         title="Lemot"
         color="#2a4f7f"
         content={frontmatter.lemot}
-        link="https://lemot.app/"
+        link="https://blog.erwanel.com/lemot"
         contentLink={frontmatter.lemotLink}
         img={data.lemot.childImageSharp.fluid}
       ></Project>
