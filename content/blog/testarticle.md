@@ -7,3 +7,7 @@ subtitle: testarticle
 featuredImage: ../../src/data/images/cat.jpg
 ---
 testarticle
+
+
+
+![test](../../src/data/images/eso.jpg "test")
