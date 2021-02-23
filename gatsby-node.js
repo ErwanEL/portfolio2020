@@ -45,11 +45,10 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
     `
   )
 
-  console.log(articles.data.allArticlesMds)
+
 
   const articlesSuggestions = articles.data.allArticlesMds.edges.slice(0, 4)
 
-  console.log(articlesSuggestions)
 
   // Handle errors
   if (articles.errors) {
@@ -124,11 +123,11 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
     `
   )
 
-  console.log(projects.data.allProjectsMds)
+  // console.log(projects.data.allProjectsMds)
 
   const projectsSuggestions = projects.data.allProjectsMds.edges.slice(0, 4)
 
-  console.log(projectsSuggestions)
+  // console.log(projectsSuggestions)
 
   // Handle errors
   if (projects.errors) {
