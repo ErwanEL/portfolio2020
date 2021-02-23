@@ -7,7 +7,7 @@ backend:
   branch: blog-dev
 
 media_folder: src/data/images
-public_folder: /uploads
+public_folder: ../../src/data/images/
 
 collections:
   # - label: "Blog in English"
