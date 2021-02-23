@@ -7,3 +7,9 @@ subtitle: test
 featuredImage: images/blog.jpg
 ---
 test
+
+
+
+
+
+![test](images/eso.jpg "test")
