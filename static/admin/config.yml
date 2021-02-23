@@ -6,8 +6,8 @@ backend:
   base_url: https://api.netlify.com
   branch: blog-dev
 
-media_folder: static/assets
-public_folder: /assets
+media_folder: src/data/images
+public_folder: /uploads
 
 collections:
   # - label: "Blog in English"
@@ -39,5 +39,5 @@ collections:
       - { name: date, label: Date, widget: date }
       - { name: title, label: Title }
       - { name: subtitle, label: Subtitle }
-      - { name: image, label: Image, widget: image }
+      - { name: featuredImage, label: Image, widget: image }
       - { name: body, label: Body, widget: markdown }
