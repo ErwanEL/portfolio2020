@@ -7,7 +7,7 @@ backend:
   branch: blog-dev
 
 media_folder: src/data/images
-public_folder: ../../src/data/images/
+public_folder: /uploads
 
 collections:
   # - label: "Blog in English"
@@ -32,6 +32,7 @@ collections:
   - name: blog
     label: Blog
     folder: content/blog
+    media_folder: "images"
     create: true
     fields:
       - { name: type, label: Type }
