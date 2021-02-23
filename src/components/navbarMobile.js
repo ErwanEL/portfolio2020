@@ -1,13 +1,18 @@
 import React, { useState } from "react"
+
+import EspSvg from "../components/svg/espsvg"
 import { Link } from "gatsby"
-import { globalHistory } from "@reach/router"
+// import { a } from "gatsby"
 import MaltSvg from "../components/svg/maltsvg"
 import UsaSvg from "../components/svg/usasvg"
+import { globalHistory } from "@reach/router"
 
 const NavbarMobile = ({ navbar }) => {
   const [menu, setMenu] = useState(false)
   const toggleMenu = () => setMenu(!menu)
   const path = globalHistory.location.pathname
+
+  const domain = "https://fr.erwanel.com"
 
   return (
     <div>
@@ -26,24 +31,34 @@ const NavbarMobile = ({ navbar }) => {
 
       <div className={`navbar-menu ${menu && "is-active"}`}>
         <div className="navbar-start is-hidden-desktop">
-          <Link className={`navbar-item link`} to="/">
+          <a className={`navbar-item link`} href={`${domain}`}>
             {navbar.home}
-          </Link>
-          <Link className={`navbar-item link`} to="/freelance/">
+          </a>
+          <a className={`navbar-item link`} href={`${domain}/freelance/`}>
             {navbar.freelance}
-          </Link>
+          </a>
 
-          <Link className={`navbar-item link`} to="/learning/">
+          <a className={`navbar-item link`} href={`${domain}/learning/`}>
             {navbar.ressources}
-          </Link>
-          <Link className={`navbar-item link`} to="/skills/">
+          </a>
+          <a className={`navbar-item link`} href={`${domain}/skills/`}>
             {navbar.skills}
-          </Link>
-          <Link className={`navbar-item link`} to="/projects/">
+          </a>
+          <a className={`navbar-item link`} href={`${domain}/projects/`}>
             {navbar.projects}
-          </Link>
-          <Link className={`navbar-item link`} to="/contact/">
+          </a>
+          <a className={`navbar-item link`} href={`${domain}/contact/`}>
             {navbar.contact}
+          </a>
+          <Link
+            style={{
+              background: "#ff7b00",
+              color: "white",
+            }}
+            className="navbar-item is-light ml-5-desktop"
+            to="/"
+          >
+            <strong>Blog</strong>
           </Link>
           <a
             href="https://github.com/ErwanEL/"
@@ -66,7 +81,10 @@ const NavbarMobile = ({ navbar }) => {
           >
             <i style={{ color: "#1e96c8" }} class="fab fa-2x fa-telegram"></i>
           </a>
-          <a className="navbar-item" href={`https://erwanel.com${path}`}>
+          <a className="navbar-item" href={`https://es.erwanel.com`}>
+            <EspSvg />
+          </a>
+          <a className="navbar-item" href={`https://erwanel.com`}>
             <UsaSvg />
           </a>
         </div>

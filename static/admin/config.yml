@@ -2,6 +2,10 @@ backend:
   name: github
   repo: ErwanEL/portfolio2020
   branch: blog-preprod
+  api_root: https://api.github.com
+  site_domain: https://erwanel.com
+  base_url: https://api.netlify.com
+
 
 media_folder: static/assets
 public_folder: /assets
@@ -81,6 +85,19 @@ collections:
   - label: "French Pages"
     name: "french pages"
     files:
+      - label: "Home Page"
+        name: "home"
+        seo: "Home"
+        file: "site/content/pages/home/home-fr.yml"
+        fields:
+          - {label: Dispo tag, name: dispo, widget: string}
+          - {label: Seo, name: seo, widget: string}
+          - {label: Intro, name: intro, widget: string}
+          - {label: Content, name: content, widget: markdown}
+          # - {label: Stacks, name: stacks, widget: list, default: ["Front-End developer", "Javascript", "GatsbyJS" ]}
+          # - {label: Find me, name: findMe, widget: string}
+          # - {label: Link Title, name: linkTitle, widget: string}
+          # - {label: Link, name: link, widget: string}
       - label: "Contact Page"
         name: "contact"
         seo: "Contact"
@@ -102,10 +119,10 @@ collections:
           - {label: Message, name: message, widget: string}
           - {label: MessagePlaceholder, name: messagePlaceholder, widget: string}
           - {label: Send, name: send, widget: string}
-      - label: "test Page"
-        name: "test"
-        seo: "test"
-        file: "site/content/pages/test/test-fr.yml"
+      - label: "Freelance Page"
+        name: "freelance"
+        seo: "Freelance"
+        file: "site/content/pages/freelance/freelance-fr.yml"
         media_folder: "images"
         fields:
           - {label: Seo, name: seo, widget: string}
@@ -142,6 +159,31 @@ collections:
           - { label: First section image, name: section0Image,  widget: image }
           - { label: Second section image, name: section1Image0,  widget: image }
           - { label: Second section image 2, name: section1Image1,  widget: image }
+      - label: "Skills Page"
+        name: "Skills page"
+        file: "site/content/pages/skills/skills-fr.yml"
+        media_folder: "images"
+        fields:
+          - {label: Title, name: title, widget: string}
+          - {label: Intro, name: intro, widget: string}
+          - {label: Stacks, name: stacks, widget: list, default: ["Front-End developer", "Javascript", "GatsbyJS" ]}
+          - {label: Content, name: content, widget: markdown}
+          
+          # - {label: Seo, name: seo, widget: string}
+          # - {label: Emoji, name: emoji, widget: string}
+          # - {label: First section title, name: section0Title, widget: string}
+          # - {label: Second section title, name: section1Title, widget: string}
+          # - {label: First section content, name: section0Content, widget: string}
+          # - {label: Second section content, name: section1Content, widget: string}
+          # - {label: First section link, name: section0Link, widget: string}
+          # - {label: First section link title, name: section0LinkTitle, widget: string}
+          # - {label: Second section link, name: section1Link, widget: string}
+          # - {label: Second section link title, name: section1LinkTitle, widget: string}
+          # - { label: 'First section color', name: 'section0Color', widget: 'color', enableAlpha: true, allowInput: true }
+          # - { label: 'Second section color', name: 'section1Color', widget: 'color', enableAlpha: true, allowInput: true }
+          # - { label: First section image, name: section0Image,  widget: image }
+          # - { label: Second section image, name: section1Image0,  widget: image }
+          # - { label: Second section image 2, name: section1Image1,  widget: image }
 
   - name: blog
     label: Blog

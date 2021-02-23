@@ -7,11 +7,10 @@
 module.exports = {
   /* Your site config here */
   siteMetadata: {
-    title: "ErwanEL",
-    titleTemplate: "%s · Portfolio website of ErwanEL",
-    description:
-      "Portfolio website of ErwanEL, Front-End developer, javascript, GatsbyJs",
-    url: "https://erwanel.com", // No trailing slash allowed!
+    title: "Blog - ErwanEL",
+    titleTemplate: "%s · Blog of ErwanEL",
+    description: "Blog of ErwanEL, Front-End developer, javascript, GatsbyJs",
+    url: "https://blog.erwanel.com", // No trailing slash allowed!
     image: "/logo.png", // Path to your image you placed in the 'static' folder
     twitterUsername: "@ErwanEL2",
   },
@@ -23,6 +22,7 @@ module.exports = {
     `gatsby-plugin-sharp`,
     `gatsby-plugin-scroll-reveal`,
     `gatsby-transformer-remark`,
+    `gatsby-plugin-emotion`,
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
@@ -73,13 +73,6 @@ module.exports = {
       resolve: `gatsby-source-filesystem`,
       options: {
         path: `${__dirname}/site/`,
-      },
-    },
-    {
-      resolve: `gatsby-source-filesystem`,
-      options: {
-        name: `markdown-pages`,
-        path: `${__dirname}/src/markdown-pages`,
       },
     },
     {

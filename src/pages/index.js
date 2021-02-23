@@ -1,66 +1,132 @@
-import React from "react"
-import { graphql } from "gatsby"
-import Video from "../assets/comp_3.mp4"
+import { Link, graphql } from "gatsby"
+
+import Annonce from "../components/annonce"
+import BlogCard from "../components/blogCard"
+import BlogIntro from "../components/blogIntro"
 import Layout from "../components/layout"
+import ProjectCard from "../components/projectCard"
+import React from "react"
 import SEO from "../components/seo"
-import UpworkSvg from "../components/svg/upworksvg"
-import QuoteSlider from "../components/quoteSlider"
 
-const IndexPage = ({ data }) => {
-  const { markdownRemark } = data
-  const { frontmatter, html } = markdownRemark
-
+const BlogIndex = ({ data }) => {
   return (
     <Layout>
-      <SEO title={frontmatter.seo} />
-      <section className="hero is-medium">
-        <div className="hero-body">
-          <span class="tag navbar-item is-success is-medium ">
-            {frontmatter.tag}
-          </span>
-          <div className="container">
-            <div className="columns is-vcentered">
-              <div className="column is-half">
-                <h1 className="title">{frontmatter.title}</h1>
-                <div dangerouslySetInnerHTML={{ __html: html }} />
-              </div>
-              <div className="column is-half">
-                <video muted autoPlay loop>
-                  <source src={Video} type="video/mp4" />
-                </video>
-              </div>
+      <SEO
+        title={data.site.siteMetadata.title}
+        description={data.site.siteMetadata.description}
+        url={data.site.siteMetadata.url}
+      />
+      <div className="section mt-6 is-paddingless-horizontal">
+        <div className="container grid">
+          <BlogIntro />
+          {/* SUGGESTIONS */}
+          <div className="suggestion mt-6">
+            <h1 className="title is-4">Derniers articles</h1>
+            <div className="columns is-multiline">
+              {data.allArticles.edges.map(({ node }) => (
+                <div className="column is-6">
+                  <Link to={`/${node.frontmatter.path}`}>
+                    <BlogCard
+                      html={node.html}
+                      title={node.frontmatter.title}
+                      imageData={
+                        node.frontmatter.featuredImage.childImageSharp.fluid
+                      }
+                      date={node.frontmatter.date}
+                    />
+                  </Link>
+                </div>
+              ))}
             </div>
           </div>
-        </div>
-      </section>
-      <hr></hr>
-      <section className="hero is-small">
-        <div className="hero-body">
-          <div className="container has-text-centered">
-            <div className="columns">
-              <div className="column is-7" style={{ margin: "auto" }}>
-                <QuoteSlider />
-                <UpworkSvg className="mt-5" height={30}></UpworkSvg>
-              </div>
+          {/* PUB */}
+
+          <Annonce />
+
+          <div className="suggestion mt-6">
+            <h1 className="title is-4">Derniers projets</h1>
+            <div className="columns is-multiline">
+              {data.allProjects.edges.map(({ node }) => (
+                <div className="column is-4">
+                  <Link to={`/${node.frontmatter.path}`}>
+                    <ProjectCard
+                      html={node.html}
+                      title={node.frontmatter.title}
+                      imageData={
+                        node.frontmatter.featuredImage.childImageSharp.fluid
+                      }
+                      date={node.frontmatter.date}
+                    />
+                  </Link>
+                </div>
+              ))}
             </div>
           </div>
+          {/* END */}
         </div>
-      </section>
+      </div>
     </Layout>
   )
 }
 
-export default IndexPage
+export default BlogIndex
 
 export const query = graphql`
   {
-    markdownRemark(frontmatter: { slug: { eq: "/home" } }) {
-      html
-      frontmatter {
+    allArticles: allMarkdownRemark(
+      filter: { frontmatter: { type: { eq: "article" } } }
+    ) {
+      edges {
+        node {
+          id
+          html
+          frontmatter {
+            title
+            path
+            date
+            featuredImage {
+              childImageSharp {
+                fluid {
+                  ...GatsbyImageSharpFluid
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+
+    allProjects: allMarkdownRemark(
+      filter: { frontmatter: { type: { eq: "project" } } }
+    ) {
+      edges {
+        node {
+          id
+          html
+          frontmatter {
+            title
+            path
+            date
+            featuredImage {
+              childImageSharp {
+                fluid {
+                  ...GatsbyImageSharpFluid
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+    site {
+      id
+      siteMetadata {
         title
-        slug
-        seo
-        tag
+        description
+        titleTemplate
+        url
+        image
+        twitterUsername
       }
     }
   }

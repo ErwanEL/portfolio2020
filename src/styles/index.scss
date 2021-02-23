@@ -5,13 +5,15 @@ $navbar-item-hover-background-color: white;
 $navbar-item-hover-color: #4a4a4a;
 $footer-background-color: white;
 
+$progress-value-background-color: #ff7b00bb;
+$progress-bar-background-color: #b3b3b336;
+
+
+
+
 @import "~bulma/bulma.sass";
 @import "header";
-@import "home";
-@import "freelance";
-@import "learning";
-@import "skills";
-@import "projects";
-@import "contact";
 @import "footer";
 @import "responsive";
+@import "blog-page";
+@import "project-card";

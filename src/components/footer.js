@@ -37,6 +37,13 @@ const Footer = () => {
           height="24"
         />
         <GatsbySvg className="mr-3" width="106px" height="28px"></GatsbySvg>
+        {/* <img
+          className="mr-5"
+          src={"/netlifycms.png"}
+          alt="Static image"
+          width="120"
+          height="24"
+        /> */}
       </div>
     </footer>
   )
