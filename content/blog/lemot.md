@@ -3,21 +3,21 @@ type: project
 path: lemot
 # date: 16-02-2021
 title: Lemot
-subtitle: La palabra del dia en frances
+subtitle: La palabra del día en Francés
 featuredImage: ../../src/data/images/lemot.png
 ---
 
-Lemot est un projet visant a suggerer à un public hispanophone un mot en Français chaque jours.
-
-Vient avec le mot sa traduction, ainsi qu'un exemple d'usage traduit également, puis la prononciation du mot en Français.
+Lemot est un projet visant a suggérer à un public hispanophone un mot en Français chaque jours.
 
 ##Caractéristiques
 
-L'utilisateur à la possibilité d'inscrire son adresse mail et pouvoir recevoir chaque jour un email avec le mot generé par l'application.
+Un mot, sa traduction, un exemple d'usage traduit, puis la prononciation en Français.
 
-Il a aussi la possibilité de partager le mot du jour à travers certains réseaux sociaux et par mail.
+L'utilisateur a la possibilité d'inscrire son adresse mail et pouvoir recevoir chaque jour un email avec le mot géneré par l'application.
 
-###<u>Les services et technologies utilisés pour le projet</u>:
+Il a aussi la possibilité de partager le mot du jour à travers certains réseaux sociaux et par courrier électronique.
+
+###<u>Les services et technologies utilisées pour le projet</u>:
 
 ```
 
@@ -38,7 +38,7 @@ Il a aussi la possibilité de partager le mot du jour à travers certains résea
 
 ####[GatsbyJs](https://www.gatsbyjs.com/)
 
-GatsbyJs est utilisé pour générer la page. A partir d'une liste de mots, gatsby choisi un mot à chaque build puis créer la page avec ce mot.
+GatsbyJs est utilisé pour générer la page. A partir d'une liste de mots, gatsby choisi un mot à chaque build puis crée la page avec ce mot.
 
 ####[Bulma](https://bulma.io/)
 
@@ -50,8 +50,8 @@ Pour construire et déployer le gatsby.
 
 ####[Netlify functions](https://www.netlify.com/products/functions/)
 
-Pour gerer les parties qui nécessite un backend.
-L'inscription au formulaire ainsi que l'envoie de mail à la liste d'utilisateur inscrits.
+Pour gérer les parties qui nécessitent un backend.
+L'inscription au formulaire ainsi que l'envoie de mail à la liste d'utilisateurs inscrits.
 
 ####[Bitbucket](https://bitbucket.org/)
 
@@ -59,7 +59,7 @@ Pour l'organisation du projet ainsi que pour le build automatique chaque jour vi
 
 ####[Mailgun](https://www.mailgun.com/)
 
-Permet la création et gestion et envoi des email et liste d'utilisateur.
+Permet la création, gestion et envoi des email ainsi que la liste d'utilisateur.
 
 ####[Mjml](https://mjml.io/)
 
@@ -74,7 +74,7 @@ Permet la prononciation du mot et de son exemple sur la page.
 
 ####Google recaptcha v3
 
-Pour tracker les requètes suspecte via la formulaire sans embeter l'utilisateur.
+Pour tracker les requêtes suspectes du formulaire sans embêter l'utilisateur.
 
 ---
 
