@@ -1,12 +1,14 @@
+import { FormattedMessage, Link, injectIntl } from "gatsby-plugin-intl"
+
 import EspSvg from "../components/svg/espsvg"
 import FrSvg from "../components/svg/frsvg"
-import { Link } from "gatsby"
+// import { Link } from "gatsby"
 import MaltSvg from "../components/svg/maltsvg"
 import React from "react"
 import UsaSvg from "../components/svg/usasvg"
 import { globalHistory } from "@reach/router"
 
-const Navbar = ({ navbar }) => {
+const Navbar = ({ navbar, intl }) => {
   const path = globalHistory.location.pathname
 
   return (
@@ -16,42 +18,42 @@ const Navbar = ({ navbar }) => {
         activeClassName="link-is-active"
         to="/"
       >
-        {navbar.home}
+        <FormattedMessage id="header.home" />
       </Link>
       <Link
         className={`navbar-item link`}
         activeClassName="link-is-active"
         to="/freelance/"
       >
-        {navbar.freelance}
+        <FormattedMessage id="header.freelance" />
       </Link>
       <Link
         className={`navbar-item link `}
         activeClassName="link-is-active"
         to="/learning/"
       >
-        {navbar.ressources}
+        <FormattedMessage id="header.ressources" />
       </Link>
       <Link
         className={`navbar-item link`}
         activeClassName="link-is-active"
         to="/skills/"
       >
-        {navbar.skills}
+        <FormattedMessage id="header.skills" />
       </Link>
       <Link
         className={`navbar-item link`}
         activeClassName="link-is-active"
         to="/projects/"
       >
-        {navbar.projects}
+        <FormattedMessage id="header.projects" />
       </Link>
       <Link
         className={`navbar-item link`}
         activeClassName="link-is-active"
         to="/contact/"
       >
-        {navbar.contact}
+        <FormattedMessage id="header.contact" />
       </Link>
 
       <div
@@ -123,4 +125,4 @@ const Navbar = ({ navbar }) => {
   )
 }
 
-export default Navbar
+export default injectIntl(Navbar)

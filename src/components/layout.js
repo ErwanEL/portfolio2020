@@ -1,9 +1,11 @@
-import React from "react"
-import { useStaticQuery, graphql } from "gatsby"
-import { Helmet } from "react-helmet"
 import "../styles/index.scss"
-import Header from "./header"
+
+import { graphql, useStaticQuery } from "gatsby"
+
 import Footer from "./footer"
+import Header from "./header"
+import { Helmet } from "react-helmet"
+import React from "react"
 
 export default function Layout({ children }) {
   const data = useStaticQuery(graphql`
@@ -26,7 +28,7 @@ export default function Layout({ children }) {
   return (
     <>
       <div className="is-hidden-desktop">
-        <Header navbar={frontmatter}></Header>
+        {/* <Header navbar={frontmatter}></Header> */}
       </div>
       <section className="section">
         <div className="container">
