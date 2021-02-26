@@ -1,4 +1,5 @@
 import { FormattedMessage, Link, injectIntl } from "gatsby-plugin-intl"
+import { IntlContextConsumer, changeLocale } from "gatsby-plugin-intl"
 
 import EspSvg from "../components/svg/espsvg"
 import FrSvg from "../components/svg/frsvg"
@@ -10,6 +11,12 @@ import { globalHistory } from "@reach/router"
 
 const Navbar = ({ navbar, intl }) => {
   const path = globalHistory.location.pathname
+
+  const languageName = {
+    en: "English",
+    ko: "한국어",
+    de: "Deutsch",
+  }
 
   return (
     <div className="navbar-end is-hidden-touch">
@@ -30,7 +37,7 @@ const Navbar = ({ navbar, intl }) => {
       <Link
         className={`navbar-item link `}
         activeClassName="link-is-active"
-        to="/learning/"
+        to="/resources/"
       >
         <FormattedMessage id="header.ressources" />
       </Link>
@@ -106,6 +113,25 @@ const Navbar = ({ navbar, intl }) => {
           margin: "auto 5px",
         }}
       ></div>
+      {/* <IntlContextConsumer>
+        {({ languages, language: currentLocale }) =>
+          languages.map(language => (
+            <a
+              key={language}
+              onClick={() => changeLocale(language)}
+              style={{
+                color: currentLocale === language ? `yellow` : `white`,
+                margin: 10,
+                textDecoration: `underline`,
+                cursor: `pointer`,
+              }}
+            >
+              {languageName[language]}
+              {console.log(currentLocale)}
+            </a>
+          ))
+        }
+      </IntlContextConsumer> */}
 
       <div class="navbar-item has-dropdown is-hoverable">
         <a class="navbar-link">
@@ -113,10 +139,18 @@ const Navbar = ({ navbar, intl }) => {
         </a>
 
         <div class="navbar-dropdown">
-          <a class="navbar-item pr-0" href={`https://erwanel.com${path}`}>
+          <a
+            class="navbar-item pr-0"
+            onClick={() => changeLocale("en")}
+            // href={`https://erwanel.com${path}`}
+          >
             <UsaSvg width={20} height={20} />
           </a>
-          <a class="navbar-item pr-0" href={`https://es.erwanel.com${path}`}>
+          <a
+            onClick={() => changeLocale("es")}
+            class="navbar-item pr-0"
+            // href={`https://es.erwanel.com${path}`}
+          >
             <EspSvg width={20} height={20} />
           </a>
         </div>

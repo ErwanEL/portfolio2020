@@ -1,4 +1,12 @@
 {
+  "header": {
+    "home": "Home",
+    "freelance": "Freelance",
+    "ressources": "Recursos",
+    "skills": "Habilidades",
+    "projects": "Proyectos",
+    "contact": "Contacto"
+  },
     "title": "Gatsby Deutsch",
     "description": "Starten Sie Ihr nächstes, tolles Gatsby-Projekt mit diesem default-starter-intl. Dieser Barebones-Starter wird mit den wichtigsten Gatsby-Konfigurationsdateien geliefert, die Sie möglicherweise benötigen.",
     "author": "@wiziple",

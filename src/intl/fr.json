@@ -1,0 +1,54 @@
+
+{   
+  "header": {
+    "home": "Home",
+    "freelance": "Freelance",
+    "ressources": "Ressources",
+    "skills": "Compétences",
+    "projects": "Projets",
+    "contact": "Contact"
+  },
+
+  "home": {
+    "seo": "ErwanEL - Bienvenue",
+    "intro": "Bonjour mon nom est Erwan, bienvenue sur mon portfolio",
+    "stacks": "Développeur Front-End, Javascript,",
+    "github": "Me trouver sur",
+    "dispo": "Je suis actuellement disponible sur malt.fr"
+  },
+  "freelance": {
+    "title": "Mon experience en freelance.",
+    "upwork": "Je suis disponible sur la plateforme Upwork. En savoir plus sur",
+    "link": " Mon profil Upwork."
+  },
+  "resources": {
+    "section": {
+      "title" : "Les ressources que j'utilise.",
+      "description": "Je me tiens informé sur la Jamstack.",
+      "link": "En savoir plus sur la Jamstack."
+    },
+    "section_1": {
+      "title" : "Autres ressources.",
+      "description": "J'ai commencé mon introduction au développement web sur Treehouse.",
+      "link": "En savoir plus sur mon profil TreeHouse."
+    }
+  },
+
+
+  
+    "title": "Gatsby English",
+    "description": "Kick off your next, great Gatsby project with this default-starter-intl. This barebones starter ships with the main Gatsby configuration files you might need.",
+    "author": "@wiziple",
+    "hello": "Hi people",
+    "welcome": "Welcome to your new Gatsby site.",
+    "title_page2": "Page two",
+    "hello_page2": "Hi from the second page filho",
+    "go_page2": "Go to page 2",
+    "build": "Now go build something great.",
+    "welcome_page2": "Welcome to page 2",
+    "go_back": "Go back to the homepage",
+    "notfound": {
+      "header": "NOT FOUND",
+      "description": "You just hit a route that doesn't exist... the sadness."
+    }
+  }
