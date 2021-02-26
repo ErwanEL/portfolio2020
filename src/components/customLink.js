@@ -9,7 +9,6 @@ const CustomLink = ({ url, content, color }) => {
         "&:hover": { color },
       }}
       href={url}
-      target="_blank"
     >
       {content}
     </a>

@@ -33,6 +33,33 @@
       "link": "En savoir plus sur mon profil TreeHouse."
     }
   },
+  "skills": {
+    "section": {
+      "title" : "Mes compétences.",
+      "description": "Les technologies que j'utilise."
+    },
+    "section_1": {
+      "title" : "HTML & CSS",
+      "description": "Pour les travaux d'intégration. "
+   
+    },
+    "section_2": {
+      "title" : "Javascript",
+      "description": "Pour les travaux de programmation."
+
+    },
+    "section_3": {
+      "title" : "GatsbyJs",
+      "description": "Pour la construction de sites web statiques. GatsbyJs est fondé sur",
+      "description_1": "J'utilise la plateforme Netlify pour héberger les projets fait avec GatsbyJs",
+      "link": "En savoir plus sur"
+    },
+    "section_4": {
+      "title" : "Workflow",
+      "description": "J'utilise les services",
+      "description_1": "comme Bitbucket ou trello pour organiser mes projets."
+    }
+  },
 
 
   
