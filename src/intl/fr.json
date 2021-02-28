@@ -1,4 +1,3 @@
-
 {   
   "header": {
     "home": "Home",
@@ -58,6 +57,32 @@
       "title" : "Workflow",
       "description": "J'utilise les services",
       "description_1": "comme Bitbucket ou trello pour organiser mes projets."
+    }
+  },
+  "projects": {
+    "section": {
+      "title": "Mes projets.",
+      "description": "Réalisations et projets sur lesquels j'ai travaillé.",
+      "menu": "Anciens travaux"
+    },
+    "project_1" : {
+      "title": "Haute Culture",
+      "description": "Un projet GatsbyJs sur lequel j'ai collaboré. Inclus le CMS",
+      "link": "En savoir plus sur Haute Culture"
+    },
+    "project_2" : {
+      "title": "Lemot",
+      "description": "Un service fait en GatsbyJs qui propose chaque jour un mot en français pour un public hispanophone.",
+      "link": "En savoir plus sur Lemot"
+    },
+    "project_3" : {
+      "title": "Etna Joyas",
+      "description": "Un prototype GatsbyJs pour une vitrine de bijoux. Inclus DATO Cms.",
+      "link": "En savoir plus sur Etna Joyas"
+    },
+    "section_1": {
+      "title": "Anciens travaux.",
+      "description": "Autres projets."
     }
   },
 
