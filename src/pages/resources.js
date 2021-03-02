@@ -1,18 +1,23 @@
-import React from "react"
-import { graphql } from "gatsby"
-import Img from "gatsby-image"
-import Layout from "../components/layout"
-import SEO from "../components/seo"
-import JamstackSvg from "../components/svg/jamstacksvg"
-import TreehouseSvg from "../components/svg/treehousesvg"
-import FccSvg from "../components/svg/fccsvg"
+import { FormattedMessage, injectIntl } from "gatsby-plugin-intl"
 
-const LearningPage = ({ data }) => {
-  const { markdownRemark } = data
-  const { frontmatter } = markdownRemark
+import FccSvg from "../components/svg/fccsvg"
+import Img from "gatsby-image"
+import JamstackSvg from "../components/svg/jamstacksvg"
+import Layout from "../components/layout"
+import React from "react"
+import SEO from "../components/seo"
+import TreehouseSvg from "../components/svg/treehousesvg"
+import { graphql } from "gatsby"
+
+const ResourcesPage = ({ data, intl }) => {
+  // const { markdownRemark } = data
+  // const { frontmatter } = markdownRemark
   return (
     <Layout>
-      <SEO title={frontmatter.seo} />
+      <SEO
+        lang={intl.locale}
+        title={intl.formatMessage({ id: "resources.section.title" })}
+      />
       <section className="hero is-medium">
         <div className="hero-body">
           <div className="container">
@@ -20,7 +25,7 @@ const LearningPage = ({ data }) => {
               <div className="column is-half">
                 <h1 className="title">
                   <span className="mate">📘</span>
-                  {frontmatter.seo}.
+                  <FormattedMessage id="resources.section.title" />
                 </h1>
                 <div className="content">
                   <hr style={{ background: "#F0047F" }} className="mini" />
@@ -30,14 +35,17 @@ const LearningPage = ({ data }) => {
                       className="skillsSvg"
                     ></JamstackSvg>
                   </div>
-                  <p className="subtitle-mod">{frontmatter.jamstack}</p>
+                  <p className="subtitle-mod">
+                    {" "}
+                    <FormattedMessage id="resources.section.description" />
+                  </p>
                   <p className="subtitle">
                     <a
                       className="jamstack-link"
                       href="https://www.hauteculture.com/"
                       target="_blank"
                     >
-                      {frontmatter.jamstackLink}
+                      <FormattedMessage id="resources.section.link" />
                     </a>
                   </p>
                 </div>
@@ -85,20 +93,22 @@ const LearningPage = ({ data }) => {
               <div className="column is-half has-text-right">
                 <div className="content">
                   <h1 className="title">
-                    <p>{frontmatter.title2}</p>
+                    <p>
+                      <FormattedMessage id="resources.section_1.title" />
+                    </p>
                   </h1>
                   <div className="svg">
                     <TreehouseSvg className="skillsSvg mr-2"></TreehouseSvg>
                     <FccSvg className="skillsSvg"></FccSvg>
                     <p className="subtitle-mod">
                       {" "}
-                      {frontmatter.otherRessources}{" "}
+                      <FormattedMessage id="resources.section_1.description" />{" "}
                       <a
                         className="treehouse-link"
                         href="https://teamtreehouse.com/erwanel"
                         target="_blank"
                       >
-                        {frontmatter.treehouseLink}
+                        <FormattedMessage id="resources.section_1.link" />
                       </a>
                     </p>
                   </div>
@@ -112,48 +122,37 @@ const LearningPage = ({ data }) => {
   )
 }
 
+export default injectIntl(ResourcesPage)
+
 export const query = graphql`
   {
-    markdownRemark(frontmatter: { slug: { eq: "/learning" } }) {
-      frontmatter {
-        slug
-        seo
-        jamstack
-        jamstackLink
-        title2
-        otherRessources
-        treehouseLink
-      }
-    }
     fcc: file(relativePath: { eq: "images/learning/fcc.PNG" }) {
       childImageSharp {
-        fluid {
-          ...GatsbyImageSharpFluid
+        fluid(quality: 100) {
+          ...GatsbyImageSharpFluid_withWebp
         }
       }
     }
     jamstack: file(relativePath: { eq: "images/learning/jamstack.PNG" }) {
       childImageSharp {
-        fluid {
-          ...GatsbyImageSharpFluid
+        fluid(quality: 100) {
+          ...GatsbyImageSharpFluid_withWebp
         }
       }
     }
     treehouse: file(relativePath: { eq: "images/learning/treehouse.PNG" }) {
       childImageSharp {
-        fluid {
-          ...GatsbyImageSharpFluid
+        fluid(quality: 100) {
+          ...GatsbyImageSharpFluid_withWebp
         }
       }
     }
     codecademy: file(relativePath: { eq: "images/learning/codecademy.PNG" }) {
       childImageSharp {
-        fluid {
-          ...GatsbyImageSharpFluid
+        fluid(quality: 100) {
+          ...GatsbyImageSharpFluid_withWebp
         }
       }
     }
   }
 `
-
-export default LearningPage

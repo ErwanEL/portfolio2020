@@ -1,5 +1,5 @@
-import React from "react"
 import Img from "gatsby-image"
+import React from "react"
 
 const Project = ({
   id,
@@ -37,7 +37,7 @@ const Project = ({
                   )}
                 </p>
                 <p className="subtitle">
-                  <a className={`${id}-link`} href={link} target="_blank">
+                  <a className={`${id}-link`} href={link}>
                     {contentLink}
                   </a>
                 </p>

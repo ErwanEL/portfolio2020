@@ -16,12 +16,14 @@ module.exports = {
     twitterUsername: "@ErwanEL2",
   },
   plugins: [
+    `gatsby-plugin-netlify-cms`,
     `gatsby-plugin-sass`,
     `gatsby-plugin-react-helmet`,
     `gatsby-transformer-sharp`,
     `gatsby-plugin-sharp`,
     `gatsby-plugin-scroll-reveal`,
     `gatsby-transformer-remark`,
+    `gatsby-plugin-emotion`,
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
@@ -63,16 +65,22 @@ module.exports = {
       },
     },
     {
-      resolve: `gatsby-source-filesystem`,
+      resolve: `gatsby-plugin-intl`,
       options: {
-        path: `${__dirname}/src/data/`,
+        // language JSON resource path
+        path: `${__dirname}/src/intl`,
+        // supported language
+        languages: [`fr`, `en`, `es`],
+        // language file path
+        defaultLanguage: `fr`,
+        // option to redirect to `/en` when connecting `/`
+        redirect: false,
       },
     },
     {
       resolve: `gatsby-source-filesystem`,
       options: {
-        name: `markdown-pages`,
-        path: `${__dirname}/src/markdown-pages`,
+        path: `${__dirname}/src/data/`,
       },
     },
   ],

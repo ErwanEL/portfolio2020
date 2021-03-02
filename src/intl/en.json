@@ -1,0 +1,109 @@
+
+{   
+  "header": {
+    "home": "Home",
+    "freelance": "Freelance",
+    "ressources": "Ressources",
+    "skills": "Skills",
+    "projects": "Projects",
+    "contact": "Contact"
+  },
+  "home": {
+    "seo": "ErwanEL - Welcome",
+    "intro": "Hi my name is Erwan, welcome on my portfolio website.",
+    "stacks": "Front-End developer, Javascript,",
+    "github": "Find me on",
+    "dispo": "I'm currently available on malt.fr"
+  },
+
+  "freelance": {
+    "title": "My freelance experience.",
+    "upwork": "I am available on the Upwork platform. Here are some gigs that I have completed. See more at",
+    "link": "My Upwork profile."
+  },
+
+  "resources": {
+    "section": {
+      "title": "The ressources I use.",
+      "description": "I keep myself informed about the Jamstack.",
+      "link": "See more about the Jamstack."
+    },
+    "section_1": {
+      "title": "Other ressources.",
+      "description": "I started my introduction into web development with Treehouse.",
+      "link": "See more at TreeHouse."
+    }
+  },
+
+  "skills": {
+    "section": {
+      "title": "My skills.",
+      "description": "The technologies I use."
+    },
+    "section_1": {
+      "title": "HTML & CSS",
+      "description": "To work on the integration process."
+
+    },
+    "section_2": {
+      "title": "Javascript",
+      "description": "To work on the automatisation process."
+
+    },
+    "section_3": {
+      "title": "GatsbyJs",
+      "description": "To work on building static websites. GatsbyJs is powered by",
+      "description_1": "I like to use the netlify service to host my GatsbyJs projects.",
+      "link": "See more about"
+    },
+    "section_4": {
+      "title": "Workflow",
+      "description": "I like to use",
+      "description_1": "like Bitbucket and trello to organize the projects I work on."
+    }
+  },
+
+  "projects": {
+    "section": {
+      "title": "My projects",
+      "description": "Realisations and projects I've worked on.",
+      "menu": "Older works"
+    },
+    "project_1": {
+      "title": "Haute Culture",
+      "description": "A GatsbyJs project I've collaborated on. Include the CMS",
+      "link": "See more about Haute Culture."
+    },
+    "project_2": {
+      "title": "Lemot",
+      "description": "A GatsbyJs service to practice French for Spanish speaking public.",
+      "link": "See more about Lemot."
+    },
+    "project_3": {
+      "title": "Etna Joyas",
+      "description": "A GatsbyJs prototype for a jewelry showcase. Include DATO Cms.",
+      "link": "See more about Etna-Joyas."
+    },
+    "section_1": {
+      "title": "Older works.",
+      "description": "Some older projects."
+    }
+  },
+  
+  "contact": {
+    "section": {
+      "title": "Contact me.",
+      "description": "Any project."
+    },
+    "form": {
+      "name": "Name",
+      "namePlaceholder": "Your name",
+      "email": "Email",
+      "emailPlaceholder": "Your Email",
+      "message": "Message",
+      "messagePlaceholder": "Your message",
+      "send": "Send"
+    },
+    "success": "Your message has been sent successfully!"
+  }
+}

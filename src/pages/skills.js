@@ -1,22 +1,26 @@
-import React from "react"
-import { graphql } from "gatsby"
-import Img from "gatsby-image"
-import Layout from "../components/layout"
-import SEO from "../components/seo"
-import HtmlSvg from "../components/svg/htmlsvg"
-import CssSvg from "../components/svg/csssvg"
-import SassSvg from "../components/svg/sasssvg"
-import JsSvg from "../components/svg/jssvg"
-import GatsbySvg from "../components/svg/gatsbysvg"
-import ReactSvg from "../components/svg/reactsvg"
-import AtlassianSvg from "../components/svg/atlassiansvg"
+import { FormattedMessage, injectIntl } from "gatsby-plugin-intl"
 
-const SkillsPage = ({ data }) => {
-  const { markdownRemark } = data
-  const { frontmatter, html } = markdownRemark
+import AtlassianSvg from "../components/svg/atlassiansvg"
+import CssSvg from "../components/svg/csssvg"
+import CustomLink from "../components/customLink"
+import GatsbySvg from "../components/svg/gatsbysvg"
+import HtmlSvg from "../components/svg/htmlsvg"
+import Img from "gatsby-image"
+import JsSvg from "../components/svg/jssvg"
+import Layout from "../components/layout"
+import React from "react"
+import ReactSvg from "../components/svg/reactsvg"
+import SEO from "../components/seo"
+import SassSvg from "../components/svg/sasssvg"
+import { graphql } from "gatsby"
+
+const SkillsPage = ({ data, intl }) => {
   return (
     <Layout>
-      <SEO title={frontmatter.seo} />
+      <SEO
+        lang={intl.locale}
+        title={intl.formatMessage({ id: "skills.section.title" })}
+      />
       <section className="hero is-medium">
         <div className="hero-body">
           <div className="container">
@@ -25,10 +29,12 @@ const SkillsPage = ({ data }) => {
                 <div className="content">
                   <h1 className="title">
                     <span className="mate">🔧</span>
-                    {frontmatter.seo}.
+                    <FormattedMessage id="skills.section.title" />
                   </h1>
                   <hr style={{ background: "#4eb236" }} className="mini" />
-                  <p className="subtitle-mod">{frontmatter.title}</p>
+                  <p className="subtitle-mod">
+                    <FormattedMessage id="skills.section.description" />
+                  </p>
                 </div>
                 <nav
                   className="breadcrumb is-medium has-bullet-separator"
@@ -75,14 +81,18 @@ const SkillsPage = ({ data }) => {
               <div className="column is-half">
                 <div className="content">
                   <h1 className="title">
-                    <p>HTML & CSS</p>
+                    <p>
+                      <FormattedMessage id="skills.section_1.title" />
+                    </p>
                   </h1>
                   <hr className="mini" />
                   <div className="svg">
                     <HtmlSvg className="skillsSvg mr-2"></HtmlSvg>
                     <CssSvg className="skillsSvg mr-2"></CssSvg>
                     <SassSvg className="skillsSvg"></SassSvg>
-                    <p className="subtitle-mod">{frontmatter.html}</p>
+                    <p className="subtitle-mod">
+                      <FormattedMessage id="skills.section_1.description" />
+                    </p>
                   </div>
                 </div>
               </div>
@@ -111,12 +121,16 @@ const SkillsPage = ({ data }) => {
               <div className="column is-half">
                 <div className="content">
                   <h1 className="title">
-                    <p>Javascript</p>
+                    <p>
+                      <FormattedMessage id="skills.section_2.title" />
+                    </p>
                   </h1>
                   <hr style={{ background: "#F7DF1E" }} className="mini" />
                   <div className="svg">
                     <JsSvg className="skillsSvg"></JsSvg>
-                    <p className="subtitle-mod">{frontmatter.javascript}</p>
+                    <p className="subtitle-mod">
+                      <FormattedMessage id="skills.section_2.description" />
+                    </p>
                   </div>
                 </div>
               </div>
@@ -145,7 +159,10 @@ const SkillsPage = ({ data }) => {
               <div className="column is-half">
                 <div className="content">
                   <h1 className="title">
-                    <p>GatsbyJs</p>
+                    <p>
+                      {" "}
+                      <FormattedMessage id="skills.section_3.title" />
+                    </p>
                   </h1>
                   <hr style={{ background: "#663399" }} className="mini" />
                   <div className="svg">
@@ -154,33 +171,28 @@ const SkillsPage = ({ data }) => {
                     <GatsbySvg className="skillsSvg"></GatsbySvg>
 
                     <p className="subtitle-mod">
-                      {frontmatter.gatsbyjs}{" "}
-                      <a
-                        className="react-link"
-                        href="https://en.reactjs.org/"
-                        target="_blank"
-                      >
-                        {" "}
-                        ReactJs
-                      </a>
-                      .{" "}
-                      <a
-                        className="gatsby-link"
-                        href="https://www.gatsbyjs.com/"
-                        target="_blank"
-                      >
-                        {frontmatter.gatsbyjsLink}
-                      </a>
+                      <FormattedMessage id="skills.section_3.description" />{" "}
+                      <CustomLink
+                        content="ReactJs"
+                        color="#61dafb"
+                        url="https://en.reactjs.org/"
+                      />
+                      . <FormattedMessage id="skills.section_3.link" />{" "}
+                      <CustomLink
+                        content="GatsbyJs"
+                        color="#663399"
+                        url="https://www.gatsbyjs.com/"
+                      />
                     </p>
+
                     <p className="subtitle-mod">
-                      {frontmatter.netlify}{" "}
-                      <a
-                        className="netlify-link"
-                        href="https://www.netlify.com/"
-                        target="_blank"
-                      >
-                        {frontmatter.netlifyLink}
-                      </a>
+                      <FormattedMessage id="skills.section_3.description_1" />.{" "}
+                      <FormattedMessage id="skills.section_3.link" />{" "}
+                      <CustomLink
+                        content="Netlify"
+                        color="#30928b"
+                        url="https://www.gatsbyjs.com/"
+                      />
                     </p>
                   </div>
                 </div>
@@ -251,12 +263,23 @@ const SkillsPage = ({ data }) => {
               >
                 <div className="content has-text-right">
                   <h1 className="title">
-                    <p>Workflow</p>
+                    <p>
+                      <FormattedMessage id="skills.section_4.title" />
+                    </p>
                   </h1>
                   {/* <hr className="mini" /> */}
                   <div className="svg">
                     <AtlassianSvg className="skillsSvg"></AtlassianSvg>
-                    <div dangerouslySetInnerHTML={{ __html: html }} />
+                    <p className="subtitle-mod">
+                      <FormattedMessage id="skills.section_4.description" />{" "}
+                      <CustomLink
+                        className="atlassian-link"
+                        content="Atlassian"
+                        color="#0052cc"
+                        url="https://www.atlassian.com/"
+                      />{" "}
+                      <FormattedMessage id="skills.section_4.description_1" />{" "}
+                    </p>
 
                     {/* <p className="subtitle-mod">
                       {" "}
@@ -340,70 +363,56 @@ const SkillsPage = ({ data }) => {
   )
 }
 
-export default SkillsPage
+export default injectIntl(SkillsPage)
 
 export const query = graphql`
   {
-    markdownRemark(frontmatter: { slug: { eq: "/skills" } }) {
-      html
-      frontmatter {
-        slug
-        seo
-        title
-        html
-        javascript
-        gatsbyjs
-        gatsbyjsLink
-        netlify
-        netlifyLink
-      }
-    }
     vscode: file(relativePath: { eq: "images/skills/vscode.PNG" }) {
       childImageSharp {
         fluid {
-          ...GatsbyImageSharpFluid
+          ...GatsbyImageSharpFluid_withWebp
         }
       }
     }
     cmd: file(relativePath: { eq: "images/skills/cmd.PNG" }) {
       childImageSharp {
-        fluid {
-          ...GatsbyImageSharpFluid
+        fluid(quality: 100) {
+          ...GatsbyImageSharpFluid_withWebp
         }
       }
     }
     htmlcss: file(relativePath: { eq: "images/skills/htmlcss.PNG" }) {
       childImageSharp {
-        fluid {
-          ...GatsbyImageSharpFluid
+        fluid(quality: 100) {
+          ...GatsbyImageSharpFluid_withWebp
         }
       }
     }
     gatsbyjs: file(relativePath: { eq: "images/skills/gatsbyjs.PNG" }) {
       childImageSharp {
-        fluid {
-          ...GatsbyImageSharpFluid
+        fluid(quality: 100) {
+          ...GatsbyImageSharpFluid_withWebp
         }
       }
     }
     react: file(relativePath: { eq: "images/skills/react.PNG" }) {
       childImageSharp {
-        fluid {
-          ...GatsbyImageSharpFluid
+        fluid(quality: 100) {
+          ...GatsbyImageSharpFluid_withWebp
         }
       }
     }
     trello: file(relativePath: { eq: "images/skills/trello.PNG" }) {
       childImageSharp {
-        fluid {
-          ...GatsbyImageSharpFluid
+        fluid(quality: 100) {
+          ...GatsbyImageSharpFluid_withWebp
         }
       }
     }
     bitbucket: file(relativePath: { eq: "images/skills/bitbucket.PNG" }) {
       childImageSharp {
-        fluid {
-          ...GatsbyImageSharpFluid
+        fluid(quality: 100) {
+          ...GatsbyImageSharpFluid_withWebp
         }
       }
     }

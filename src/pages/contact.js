@@ -1,17 +1,18 @@
-import React from "react"
-import { graphql } from "gatsby"
+import { FormattedMessage, injectIntl } from "gatsby-plugin-intl"
+
+import Form from "../components/form"
 import Layout from "../components/layout"
+import React from "react"
 import Resume from "../assets/resume.pdf"
 import SEO from "../components/seo"
-import Form from "../components/form"
 
-const ContactPage = ({ data }) => {
-  const { markdownRemark } = data
-  const { frontmatter, html } = markdownRemark
-
+const ContactPage = ({ intl }) => {
   return (
     <Layout>
-      <SEO title={frontmatter.seo} />
+      <SEO
+        lang={intl.locale}
+        title={intl.formatMessage({ id: "contact.section.title" })}
+      />
       <section className="hero is-medium">
         <div className="hero-body">
           <div className="container">
@@ -20,9 +21,14 @@ const ContactPage = ({ data }) => {
                 {/* {html} */}
                 <h1 className="title">
                   <span className="mate">✉️</span>
-                  {frontmatter.title}
+                  <FormattedMessage id="contact.section.title" />
                 </h1>
-                <div dangerouslySetInnerHTML={{ __html: html }} />
+                <div className="content">
+                  <hr className="mini" />
+                  <p className="subtitle-mod">
+                    <FormattedMessage id="contact.section.description" />
+                  </p>
+                </div>
               </div>
 
               <div
@@ -30,7 +36,21 @@ const ContactPage = ({ data }) => {
                 style={{ boxShadow: "10px 5px 5px #8080807d" }}
               >
                 <div className="column">
-                  <Form></Form>
+                  <Form
+                    name={intl.formatMessage({ id: "contact.form.name" })}
+                    namePlaceholder={intl.formatMessage({
+                      id: "contact.form.namePlaceholder",
+                    })}
+                    email={intl.formatMessage({ id: "contact.form.email" })}
+                    emailPlaceholder={intl.formatMessage({
+                      id: "contact.form.emailPlaceholder",
+                    })}
+                    message={intl.formatMessage({ id: "contact.form.message" })}
+                    messagePlaceholder={intl.formatMessage({
+                      id: "contact.form.messagePlaceholder",
+                    })}
+                    send={intl.formatMessage({ id: "contact.form.send" })}
+                  ></Form>
                 </div>
               </div>
             </div>
@@ -62,7 +82,7 @@ const ContactPage = ({ data }) => {
                   <u>
                     {" "}
                     <a className="resume-link" target="_blank" href={Resume}>
-                      resume.pdf <i class="fas fa-external-link-alt"></i>
+                      resume.pdf <i className="fas fa-external-link-alt"></i>
                     </a>
                   </u>
                 </h1>
@@ -75,17 +95,4 @@ const ContactPage = ({ data }) => {
   )
 }
 
-export default ContactPage
-
-export const query = graphql`
-  {
-    markdownRemark(frontmatter: { slug: { eq: "/contact" } }) {
-      html
-      frontmatter {
-        title
-        slug
-        seo
-      }
-    }
-  }
-`
+export default injectIntl(ContactPage)

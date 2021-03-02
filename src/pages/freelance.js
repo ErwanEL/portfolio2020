@@ -1,16 +1,19 @@
-import React from "react"
-import { graphql } from "gatsby"
+import { FormattedMessage, injectIntl } from "gatsby-plugin-intl"
+
 import Img from "gatsby-image"
 import Layout from "../components/layout"
+import React from "react"
 import SEO from "../components/seo"
 import UpworkSvg from "../components/svg/upworksvg"
+import { graphql } from "gatsby"
 
-const FreelancePage = ({ data }) => {
-  const { markdownRemark } = data
-  const { frontmatter } = markdownRemark
+const FreelancePage = ({ data, intl }) => {
   return (
     <Layout>
-      <SEO title={frontmatter.seo} />
+      <SEO
+        lang={intl.locale}
+        title={intl.formatMessage({ id: "freelance.title" })}
+      />
       <section className="hero is-medium">
         <div className="hero-body">
           <div className="container">
@@ -18,19 +21,20 @@ const FreelancePage = ({ data }) => {
               <div className="column is-half">
                 <h1 className="title">
                   <span className="mate">🥬</span>
-                  {frontmatter.seo}.
+                  <FormattedMessage id="freelance.title" />
                 </h1>
                 <div className="content">
                   <hr style={{ background: "#6FDA44" }} className="mini" />
                   <UpworkSvg height={40}></UpworkSvg>
                   <p className="subtitle-mod">
-                    {frontmatter.title1}{" "}
+                    <FormattedMessage id="freelance.upwork" />
+
                     <a
                       className="upwork-link"
                       href="http://etmg-world.com"
                       target="_blank"
                     >
-                      {frontmatter.upwork}
+                      <FormattedMessage id="freelance.link" />
                     </a>
                   </p>
                 </div>
@@ -47,7 +51,7 @@ const FreelancePage = ({ data }) => {
         </div>
       </section>
       <hr />
-      <section className="hero is-medium">
+      {/* <section className="hero is-medium">
         <div
           className="hero-body"
           data-sal="slide-up"
@@ -82,38 +86,28 @@ const FreelancePage = ({ data }) => {
             </div>
           </div>
         </div>
-      </section>
+      </section> */}
     </Layout>
   )
 }
 
 export const query = graphql`
   {
-    markdownRemark(frontmatter: { slug: { eq: "/freelance" } }) {
-      html
-      frontmatter {
-        slug
-        seo
-        title1
-        upwork
-        title2
-      }
-    }
     etmg: file(relativePath: { eq: "images/freelance/etmg.png" }) {
       childImageSharp {
-        fluid {
-          ...GatsbyImageSharpFluid
+        fluid(quality: 100) {
+          ...GatsbyImageSharpFluid_withWebp
         }
       }
     }
     upwork: file(relativePath: { eq: "images/freelance/upwork.png" }) {
       childImageSharp {
-        fluid {
-          ...GatsbyImageSharpFluid
+        fluid(quality: 100) {
+          ...GatsbyImageSharpFluid_withWebp
         }
       }
     }
   }
 `
 
-export default FreelancePage
+export default injectIntl(FreelancePage)

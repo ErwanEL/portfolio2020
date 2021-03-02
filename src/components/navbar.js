@@ -1,13 +1,10 @@
-import React from "react"
-import { Link } from "gatsby"
-import { globalHistory } from "@reach/router"
-import MaltSvg from "../components/svg/maltsvg"
-import EspSvg from "../components/svg/espsvg"
-import UsaSvg from "../components/svg/usasvg"
+import { FormattedMessage, Link, injectIntl } from "gatsby-plugin-intl"
 
-const Navbar = ({ navbar }) => {
-  const path = globalHistory.location.pathname
-  console.log(path)
+import LocaleToggle from "../components/localeToggle"
+import MaltSvg from "../components/svg/maltsvg"
+import React from "react"
+
+const Navbar = () => {
   return (
     <div className="navbar-end is-hidden-touch">
       <Link
@@ -15,43 +12,60 @@ const Navbar = ({ navbar }) => {
         activeClassName="link-is-active"
         to="/"
       >
-        {navbar.home}
+        <FormattedMessage id="header.home" />
       </Link>
       <Link
         className={`navbar-item link`}
         activeClassName="link-is-active"
         to="/freelance/"
       >
-        {navbar.freelance}
+        <FormattedMessage id="header.freelance" />
       </Link>
       <Link
         className={`navbar-item link `}
         activeClassName="link-is-active"
-        to="/learning/"
+        to="/resources/"
       >
-        {navbar.ressources}
+        <FormattedMessage id="header.ressources" />
       </Link>
       <Link
         className={`navbar-item link`}
         activeClassName="link-is-active"
         to="/skills/"
       >
-        {navbar.skills}
+        <FormattedMessage id="header.skills" />
       </Link>
       <Link
         className={`navbar-item link`}
         activeClassName="link-is-active"
         to="/projects/"
       >
-        {navbar.projects}
+        <FormattedMessage id="header.projects" />
       </Link>
       <Link
         className={`navbar-item link`}
         activeClassName="link-is-active"
         to="/contact/"
       >
-        {navbar.contact}
+        <FormattedMessage id="header.contact" />
       </Link>
+
+      <div
+        style={{
+          borderLeft: "1px solid grey",
+          height: "50%",
+          margin: "auto 5px",
+        }}
+      ></div>
+
+      <a
+        href="https://blog.erwanel.com"
+        style={{ margin: "auto 10px" }}
+        className="test  navbar-item button is-light ml-5-desktop "
+      >
+        <strong>Blog</strong>
+      </a>
+
       <a
         href="https://github.com/ErwanEL/"
         target="_blank"
@@ -64,28 +78,26 @@ const Navbar = ({ navbar }) => {
         href="https://www.malt.fr/profile/erwanleblois"
         target="_blank"
       >
-        <MaltSvg></MaltSvg>
+        <MaltSvg />
       </a>
       <a
         className="navbar-item githubLink"
         href="https://t.me/ErwanEL"
         target="_blank"
       >
-        <i style={{ color: "#1e96c8" }} class="fab fa-2x fa-telegram"></i>
+        <i style={{ color: "#1e96c8" }} className="fab fa-2x fa-telegram"></i>
       </a>
-      <div class="navbar-item has-dropdown is-hoverable">
-        <a class="navbar-link">
-          <UsaSvg />
-        </a>
 
-        <div class="navbar-dropdown">
-          <a class="navbar-item pr-0" href={`https://es.erwanel.com${path}`}>
-            <EspSvg />
-          </a>
-        </div>
-      </div>
+      <div
+        style={{
+          borderLeft: "1px solid grey",
+          height: "50%",
+          margin: "auto 5px",
+        }}
+      ></div>
+      <LocaleToggle />
     </div>
   )
 }
 
-export default Navbar
+export default injectIntl(Navbar)

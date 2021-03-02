@@ -1,8 +1,8 @@
-import React from "react"
-import { Link } from "gatsby"
 // import { useStaticQuery, graphql } from "gatsby"
 // import Img from "gatsby-image"
 import GatsbySvg from "../components/svg/gatsbysvg"
+import { Link } from "gatsby"
+import React from "react"
 import ScrollTop from "../components/scrollTopButton"
 
 const Footer = () => {
@@ -10,7 +10,7 @@ const Footer = () => {
     <footer className="footer has-text-centered">
       <ScrollTop></ScrollTop>
       <nav
-        class="breadcrumb has-bullet-separator is-centered has-text-weight-semibold"
+        className="breadcrumb has-bullet-separator is-centered has-text-weight-semibold"
         aria-label="breadcrumbs"
       >
         <ul>
@@ -37,6 +37,13 @@ const Footer = () => {
           height="24"
         />
         <GatsbySvg className="mr-3" width="106px" height="28px"></GatsbySvg>
+        {/* <img
+          className="mr-5"
+          src={"/netlifycms.png"}
+          alt="Static image"
+          width="120"
+          height="24"
+        /> */}
       </div>
     </footer>
   )
