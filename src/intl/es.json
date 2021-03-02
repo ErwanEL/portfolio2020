@@ -9,100 +9,101 @@
   },
   
   "home": {
-    "seo": "ErwanEL - Bienvenue",
-    "intro": "Bonjour mon nom est Erwan, bienvenue sur mon portfolio",
-    "stacks": "Développeur Front-End, Javascript,",
-    "github": "Me trouver sur",
-    "dispo": "Je suis actuellement disponible sur malt.fr"
+    "seo": "ErwanEL - Bienvenido",
+    "intro": "Hola mi nombre es Erwan, bienvenido en mi portafolio.",
+    "stacks": "Desarrollador Front-End, Javascript,",
+    "github": "Encontrarme en",
+    "dispo": "Estoy actualmente disponible en malt.com"
   },
 
   "freelance": {
-    "title": "Mon experience en freelance.",
-    "upwork": "Je suis disponible sur la plateforme Upwork. En savoir plus sur",
-    "link": " Mon profil Upwork."
+    "title": "Mi experiencia como freelance.",
+    "upwork": "Estoy disponible en la plataforma Upwork. Ver más en",
+    "link": " Mi perfil Upwork."
   },
 
   "resources": {
     "section": {
-      "title": "Les ressources que j'utilise.",
-      "description": "Je me tiens informé sur la Jamstack.",
-      "link": "En savoir plus sur la Jamstack."
+      "title": "Los recursos que uso.",
+      "description": "Me mantengo informado sobre el Jamstack.",
+      "link": "Saber más sobre el Jamstack."
     },
     "section_1": {
-      "title": "Autres ressources.",
-      "description": "J'ai commencé mon introduction au développement web sur Treehouse.",
-      "link": "En savoir plus sur mon profil TreeHouse."
+      "title": "Otros recursos.",
+      "description": "Empecé mi introducción al desarrollo web con Treehouse.",
+      "link": "Saber más sobre mi perfil en TreeHouse."
     }
   },
 
   "skills": {
     "section": {
-      "title": "Mes compétences.",
-      "description": "Les technologies que j'utilise."
+      "title": "Mis habilidades.",
+      "description": "Las tecnologías que uso."
     },
     "section_1": {
       "title": "HTML & CSS",
-      "description": "Pour les travaux d'intégration. "
+      "description": "Para trabajar en el proceso de integración."
 
     },
     "section_2": {
       "title": "Javascript",
-      "description": "Pour les travaux de programmation."
+      "description": "Para trabajar en el proceso de programación."
 
     },
     "section_3": {
       "title": "GatsbyJs",
-      "description": "Pour la construction de sites web statiques. GatsbyJs est fondé sur",
-      "description_1": "J'utilise la plateforme Netlify pour héberger les projets fait avec GatsbyJs",
-      "link": "En savoir plus sur"
+      "description": "Para la construcción de sitios web estáticos. GatsbyJs es basado en",
+      "description_1": "Uso los servicios de netlify para albergar mis proyectos GatsbyJs",
+      "link": "Saber más sobre"
     },
     "section_4": {
       "title": "Workflow",
-      "description": "J'utilise les services",
-      "description_1": "comme Bitbucket ou trello pour organiser mes projets."
+      "description": "Uso los servicios de",
+      "description_1": "como Bitbucket y trello para organizar mis proyectos."
     }
   },
 
   "projects": {
     "section": {
-      "title": "Mes projets.",
-      "description": "Réalisations et projets sur lesquels j'ai travaillé.",
-      "menu": "Anciens travaux"
+      "title": "Mis proyectos.",
+      "description": "Realizaciones y proyectos en los que he trabajado.",
+      "menu": "Obras antiguas"
     },
     "project_1": {
       "title": "Haute Culture",
-      "description": "Un projet GatsbyJs sur lequel j'ai collaboré. Inclus le CMS",
-      "link": "En savoir plus sur Haute Culture"
+      "description": "Un proyecto GatsbyJs en el que he colaborado. Incluye el CMS",
+      "link": "Saber más sobre Haute Culture"
     },
     "project_2": {
       "title": "Lemot",
-      "description": "Un service fait en GatsbyJs qui propose chaque jour un mot en français pour un public hispanophone.",
-      "link": "En savoir plus sur Lemot"
+      "description": "Un servicio hecho con GatsbyJs que genera cada día una palabra en francés.",
+      "link": "Saber más sobre Lemot"
     },
     "project_3": {
       "title": "Etna Joyas",
-      "description": "Un prototype GatsbyJs pour une vitrine de bijoux. Inclus DATO Cms.",
-      "link": "En savoir plus sur Etna Joyas"
+      "description": "Un prototipo GatsbyJs para una vitrina de joyas. Incluido DATO Cms.",
+      "link": "Saber más sobre Etna Joyas"
     },
     "section_1": {
-      "title": "Anciens travaux.",
-      "description": "Autres projets."
+      "title": "Proyectos antiguos.",
+      "description": "Otros proyectos."
     }
   },
-  
+
   "contact": {
     "section": {
-      "title": "Me contacter.",
-      "description": "Parlons de votre projet."
+      "title": "Contactarme.",
+      "description": "Algún proyecto."
     },
     "form": {
-      "name": "Nom",
-      "namePlaceholder": "Votre nom",
+      "name": "Nombre",
+      "namePlaceholder": "Su nombre",
       "email": "Email",
-      "emailPlaceholder": "Votre Email",
-      "message": "Message",
-      "messagePlaceholder": "Votre message",
-      "send": "Envoyer"
-    }
+      "emailPlaceholder": "Su Email",
+      "message": "Mensaje",
+      "messagePlaceholder": "Su Mensaje",
+      "send": "Enviar"
+    },
+    "success": "Su mensaje ha sido enviado con éxito!"
   }
 }
