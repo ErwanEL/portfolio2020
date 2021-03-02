@@ -1,23 +1,10 @@
 import { FormattedMessage, Link, injectIntl } from "gatsby-plugin-intl"
-import { IntlContextConsumer, changeLocale } from "gatsby-plugin-intl"
 
-import EspSvg from "../components/svg/espsvg"
-import FrSvg from "../components/svg/frsvg"
-// import { Link } from "gatsby"
+import LocaleToggle from "../components/localeToggle"
 import MaltSvg from "../components/svg/maltsvg"
 import React from "react"
-import UsaSvg from "../components/svg/usasvg"
-import { globalHistory } from "@reach/router"
 
-const Navbar = ({ navbar, intl }) => {
-  const path = globalHistory.location.pathname
-
-  const languageName = {
-    en: "English",
-    ko: "한국어",
-    de: "Deutsch",
-  }
-
+const Navbar = () => {
   return (
     <div className="navbar-end is-hidden-touch">
       <Link
@@ -70,11 +57,7 @@ const Navbar = ({ navbar, intl }) => {
           margin: "auto 5px",
         }}
       ></div>
-      {/* <Link
-        // style={{ cursor: "not-allowed" }}
-        className={`test navbar-item`}
-        activeClassName="is-active"
-      > */}
+
       <a
         href="https://blog.erwanel.com"
         style={{ margin: "auto 10px" }}
@@ -82,7 +65,6 @@ const Navbar = ({ navbar, intl }) => {
       >
         <strong>Blog</strong>
       </a>
-      {/* </Link> */}
 
       <a
         href="https://github.com/ErwanEL/"
@@ -113,48 +95,7 @@ const Navbar = ({ navbar, intl }) => {
           margin: "auto 5px",
         }}
       ></div>
-      {/* <IntlContextConsumer>
-        {({ languages, language: currentLocale }) =>
-          languages.map(language => (
-            <a
-              key={language}
-              onClick={() => changeLocale(language)}
-              style={{
-                color: currentLocale === language ? `yellow` : `white`,
-                margin: 10,
-                textDecoration: `underline`,
-                cursor: `pointer`,
-              }}
-            >
-              {languageName[language]}
-              {console.log(currentLocale)}
-            </a>
-          ))
-        }
-      </IntlContextConsumer> */}
-
-      <div class="navbar-item has-dropdown is-hoverable">
-        <a class="navbar-link">
-          <FrSvg width={20} height={20} />
-        </a>
-
-        <div class="navbar-dropdown">
-          <a
-            class="navbar-item pr-0"
-            onClick={() => changeLocale("en")}
-            // href={`https://erwanel.com${path}`}
-          >
-            <UsaSvg width={20} height={20} />
-          </a>
-          <a
-            onClick={() => changeLocale("es")}
-            class="navbar-item pr-0"
-            // href={`https://es.erwanel.com${path}`}
-          >
-            <EspSvg width={20} height={20} />
-          </a>
-        </div>
-      </div>
+      <LocaleToggle />
     </div>
   )
 }
