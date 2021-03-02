@@ -1,4 +1,4 @@
-import { FormattedMessage, Link, injectIntl } from "gatsby-plugin-intl"
+import { FormattedMessage, injectIntl } from "gatsby-plugin-intl"
 
 import Cascade from "../components/cascade"
 import CascadeOld from "../components/cascadeOld"

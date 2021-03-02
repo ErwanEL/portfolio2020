@@ -3,7 +3,6 @@ import { FormattedMessage, injectIntl } from "gatsby-plugin-intl"
 import Layout from "../components/layout"
 import React from "react"
 import SEO from "../components/seo"
-import { graphql } from "gatsby"
 
 const SuccessPage = ({ intl }) => {
   return (

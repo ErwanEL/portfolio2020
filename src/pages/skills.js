@@ -1,4 +1,4 @@
-import { FormattedMessage, Link, injectIntl } from "gatsby-plugin-intl"
+import { FormattedMessage, injectIntl } from "gatsby-plugin-intl"
 
 import AtlassianSvg from "../components/svg/atlassiansvg"
 import CssSvg from "../components/svg/csssvg"
@@ -15,8 +15,6 @@ import SassSvg from "../components/svg/sasssvg"
 import { graphql } from "gatsby"
 
 const SkillsPage = ({ data, intl }) => {
-  const { markdownRemark } = data
-  const { frontmatter, html } = markdownRemark
   return (
     <Layout>
       <SEO
@@ -369,20 +367,6 @@ export default injectIntl(SkillsPage)
 
 export const query = graphql`
   {
-    markdownRemark(frontmatter: { slug: { eq: "/skills" } }) {
-      html
-      frontmatter {
-        slug
-        seo
-        title
-        html
-        javascript
-        gatsbyjs
-        gatsbyjsLink
-        netlify
-        netlifyLink
-      }
-    }
     vscode: file(relativePath: { eq: "images/skills/vscode.PNG" }) {
       childImageSharp {
         fluid {

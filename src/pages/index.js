@@ -1,4 +1,4 @@
-import { FormattedMessage, Link, injectIntl } from "gatsby-plugin-intl"
+import { FormattedMessage, injectIntl } from "gatsby-plugin-intl"
 
 import Layout from "../components/layout"
 import ProfilePic from "../components/profilePic"
@@ -7,7 +7,6 @@ import React from "react"
 import SEO from "../components/seo"
 import UpworkSvg from "../components/svg/upworksvg"
 import Video from "../assets/comp_3.mp4"
-import YAMLData from "../../site/content/pages/home/home-fr.yml"
 
 const IndexPage = ({ intl }) => {
   return (

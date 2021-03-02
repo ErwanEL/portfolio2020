@@ -1,4 +1,4 @@
-import { FormattedMessage, Link, injectIntl } from "gatsby-plugin-intl"
+import { FormattedMessage, injectIntl } from "gatsby-plugin-intl"
 
 import Img from "gatsby-image"
 import Layout from "../components/layout"
