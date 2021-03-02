@@ -272,7 +272,7 @@ const SkillsPage = ({ data, intl }) => {
                   {/* <hr className="mini" /> */}
                   <div className="svg">
                     <AtlassianSvg className="skillsSvg"></AtlassianSvg>
-                    <p class="subtitle-mod">
+                    <p className="subtitle-mod">
                       <FormattedMessage id="skills.section_4.description" />{" "}
                       <CustomLink
                         className="atlassian-link"

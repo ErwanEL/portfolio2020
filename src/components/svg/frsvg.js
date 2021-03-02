@@ -2,7 +2,7 @@ import * as React from "react"
 
 function FrSvg(props) {
   return (
-    <svg width={64} height={64} viewBox="0 0 256 256" {...props}>
+    <svg width="31px" height="32px" viewBox="0 0 256 256" {...props}>
       <defs>
         <linearGradient
           x1={87.397}

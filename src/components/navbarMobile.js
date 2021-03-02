@@ -1,15 +1,25 @@
+import {
+  FormattedMessage,
+  Link,
+  changeLocale,
+  injectIntl,
+} from "gatsby-plugin-intl"
 import React, { useState } from "react"
 
 import EspSvg from "../components/svg/espsvg"
-import { Link } from "gatsby"
+import FrSvg from "../components/svg/frsvg"
 import MaltSvg from "../components/svg/maltsvg"
 import UsaSvg from "../components/svg/usasvg"
-import { globalHistory } from "@reach/router"
 
-const NavbarMobile = ({ navbar }) => {
+const NavbarMobile = ({ intl }) => {
   const [menu, setMenu] = useState(false)
   const toggleMenu = () => setMenu(!menu)
-  const path = globalHistory.location.pathname
+
+  const languages = [
+    { language: "es", flag: <EspSvg /> },
+    { language: "en", flag: <UsaSvg /> },
+    { language: "fr", flag: <FrSvg /> },
+  ]
 
   return (
     <div>
@@ -29,23 +39,23 @@ const NavbarMobile = ({ navbar }) => {
       <div className={`navbar-menu ${menu && "is-active"}`}>
         <div className="navbar-start is-hidden-desktop">
           <Link className={`navbar-item link`} to="/">
-            {navbar.home}
+            <FormattedMessage id="header.home" />
           </Link>
           <Link className={`navbar-item link`} to="/freelance/">
-            {navbar.freelance}
+            <FormattedMessage id="header.freelance" />
           </Link>
 
           <Link className={`navbar-item link`} to="/learning/">
-            {navbar.ressources}
+            <FormattedMessage id="header.ressources" />
           </Link>
           <Link className={`navbar-item link`} to="/skills/">
-            {navbar.skills}
+            <FormattedMessage id="header.skills" />
           </Link>
           <Link className={`navbar-item link`} to="/projects/">
-            {navbar.projects}
+            <FormattedMessage id="header.projects" />
           </Link>
           <Link className={`navbar-item link`} to="/contact/">
-            {navbar.contact}
+            <FormattedMessage id="header.contact" />
           </Link>
           <a
             href="https://blog.erwanel.com"
@@ -65,25 +75,35 @@ const NavbarMobile = ({ navbar }) => {
             href="https://www.malt.fr/profile/erwanleblois"
             target="_blank"
           >
-            <MaltSvg></MaltSvg>
+            <MaltSvg />
           </a>
           <a
             className="navbar-item githubLink"
             href="https://t.me/ErwanEL"
             target="_blank"
           >
-            <i style={{ color: "#1e96c8" }} class="fab fa-2x fa-telegram"></i>
+            <i
+              style={{ color: "#1e96c8" }}
+              className="fab fa-2x fa-telegram"
+            ></i>
           </a>
-          <a className="navbar-item" href={`https://es.erwanel.com${path}`}>
-            <EspSvg />
-          </a>
-          <a className="navbar-item" href={`https://erwanel.com${path}`}>
-            <UsaSvg />
-          </a>
+          {languages
+            .filter(loc => loc.language !== intl.locale)
+            .map((e, i) => {
+              return (
+                <a
+                  key={i}
+                  className="navbar-item"
+                  onClick={() => changeLocale(e.language)}
+                >
+                  {e.flag}
+                </a>
+              )
+            })}
         </div>
       </div>
     </div>
   )
 }
 
-export default NavbarMobile
+export default injectIntl(NavbarMobile)

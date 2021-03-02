@@ -82,7 +82,7 @@ const ContactPage = ({ intl }) => {
                   <u>
                     {" "}
                     <a className="resume-link" target="_blank" href={Resume}>
-                      resume.pdf <i class="fas fa-external-link-alt"></i>
+                      resume.pdf <i className="fas fa-external-link-alt"></i>
                     </a>
                   </u>
                 </h1>

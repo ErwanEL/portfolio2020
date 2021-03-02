@@ -78,14 +78,14 @@ const Navbar = () => {
         href="https://www.malt.fr/profile/erwanleblois"
         target="_blank"
       >
-        <MaltSvg></MaltSvg>
+        <MaltSvg />
       </a>
       <a
         className="navbar-item githubLink"
         href="https://t.me/ErwanEL"
         target="_blank"
       >
-        <i style={{ color: "#1e96c8" }} class="fab fa-2x fa-telegram"></i>
+        <i style={{ color: "#1e96c8" }} className="fab fa-2x fa-telegram"></i>
       </a>
 
       <div

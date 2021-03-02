@@ -23,22 +23,22 @@ const IndexPage = ({ intl }) => {
                   <FormattedMessage id="home.intro" />
                 </h1>
                 {/* <div dangerouslySetInnerHTML={{ __html: YAMLData.content }} /> */}
-                <div class="content">
-                  <hr style={{ background: "#023859" }} class="mini" />
-                  <p class="subtitle-mod">
+                <div className="content">
+                  <hr style={{ background: "#023859" }} className="mini" />
+                  <p className="subtitle-mod">
                     <FormattedMessage id="home.stacks" />
                     <span
                       style={{ color: "#643396" }}
-                      class="has-text-weight-semibold"
+                      className="has-text-weight-semibold"
                     >
                       {" "}
                       GatsbyJS.
                     </span>
                   </p>
-                  <p class="subtitle">
+                  <p className="subtitle">
                     <FormattedMessage id="home.github" />{" "}
                     <a
-                      class="github-link"
+                      className="github-link"
                       href="https://github.com/ErwanEL/"
                       target="_blank"
                     >

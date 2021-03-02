@@ -32,7 +32,7 @@ const SuccessPage = ({ intl }) => {
               <div className="column is-half">
                 <div className="notification has-text-centered has-text-white">
                   <FormattedMessage id="contact.success" />{" "}
-                  <i class="fas fa-check-square"></i>
+                  <i className="fas fa-check-square"></i>
                 </div>
               </div>
             </div>

@@ -1,34 +1,15 @@
 import "../styles/index.scss"
 
-import { graphql, useStaticQuery } from "gatsby"
-
 import Footer from "./footer"
 import Header from "./header"
 import { Helmet } from "react-helmet"
 import React from "react"
 
 export default function Layout({ children }) {
-  const data = useStaticQuery(graphql`
-    {
-      markdownRemark(frontmatter: { component: { eq: "header" } }) {
-        frontmatter {
-          component
-          home
-          freelance
-          ressources
-          skills
-          projects
-          contact
-        }
-      }
-    }
-  `)
-  const { markdownRemark } = data
-  const { frontmatter } = markdownRemark
   return (
     <>
       <div className="is-hidden-desktop">
-        {/* <Header navbar={frontmatter}></Header> */}
+        <Header />
       </div>
       <section className="section">
         <div className="container">
@@ -46,10 +27,10 @@ export default function Layout({ children }) {
             ></script>
           </Helmet>
           <div className="is-hidden-mobile is-hidden-touch">
-            <Header navbar={frontmatter}></Header>
+            <Header />
           </div>
           {children}
-          <Footer></Footer>
+          <Footer />
         </div>
       </section>
     </>
