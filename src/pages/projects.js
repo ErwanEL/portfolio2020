@@ -69,16 +69,27 @@ const ProjectsPage = ({ data, intl }) => {
       <hr />
       <Project
         id="hc"
+        title={intl.formatMessage({ id: "projects.project_4.title" })}
+        color="#0D1528"
+        content={intl.formatMessage({ id: "projects.project_4.description" })}
+        link="https://blog.erwanel.com/focus-data-science"
+        contentLink={intl.formatMessage({
+          id: "projects.project_4.link",
+        })}
+        img={data.fds.childImageSharp.fluid}
+      />
+      <Project
+        id="hc"
         title={intl.formatMessage({ id: "projects.project_1.title" })}
         color="#7a1014"
         content={intl.formatMessage({ id: "projects.project_1.description" })}
-        link="https://www.hauteculture.com/"
+        link="https://blog.erwanel.com/hauteculture"
         optionLink={true}
         contentLink={intl.formatMessage({
           id: "projects.project_1.link",
         })}
         img={data.hc.childImageSharp.fluid}
-      ></Project>
+      />
       <hr />
       <Project
         id="lemot"
@@ -88,7 +99,7 @@ const ProjectsPage = ({ data, intl }) => {
         link="https://blog.erwanel.com/lemot"
         contentLink={intl.formatMessage({ id: "projects.project_2.link" })}
         img={data.lemot.childImageSharp.fluid}
-      ></Project>
+      />
       <hr />
       <Project
         id="etna"
@@ -98,7 +109,7 @@ const ProjectsPage = ({ data, intl }) => {
         link="https://etnajoyas.netlify.app/"
         contentLink={intl.formatMessage({ id: "projects.project_3.link" })}
         img={data.etna.childImageSharp.fluid}
-      ></Project>
+      />
       <hr />
       <section id="olderworks" className="hero is-medium">
         <div className="hero-body">
@@ -211,6 +222,13 @@ export const query = graphql`
       }
     }
     lemot: file(relativePath: { eq: "images/projects/lemot.PNG" }) {
+      childImageSharp {
+        fluid(quality: 100) {
+          ...GatsbyImageSharpFluid_withWebp
+        }
+      }
+    }
+    fds: file(relativePath: { eq: "images/projects/fds.png" }) {
       childImageSharp {
         fluid(quality: 100) {
           ...GatsbyImageSharpFluid_withWebp

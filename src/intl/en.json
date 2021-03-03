@@ -84,6 +84,11 @@
       "description": "A GatsbyJs prototype for a jewelry showcase. Include DATO Cms.",
       "link": "See more about Etna-Joyas."
     },
+    "project_4": {
+      "title": "Focus Data Science",
+      "description": "Conversion of a html/css/js website into GatsbyJs",
+      "link": "See more about Focus Data Science"
+    },
     "section_1": {
       "title": "Older works.",
       "description": "Some older projects."

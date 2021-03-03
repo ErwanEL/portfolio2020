@@ -84,12 +84,16 @@
       "description": "Un prototype GatsbyJs pour une vitrine de bijoux. Inclus DATO Cms.",
       "link": "En savoir plus sur Etna Joyas"
     },
+    "project_4": {
+      "title": "Focus Data Science",
+      "description": "Conversion d'un site html/css/js en GatsbyJs",
+      "link": "En savoir plus sur Focus Data Science"
+    },
     "section_1": {
       "title": "Anciens travaux.",
       "description": "Autres projets."
     }
   },
-  
   "contact": {
     "section": {
       "title": "Me contacter.",
