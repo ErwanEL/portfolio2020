@@ -39,7 +39,8 @@ const ProjectPageTemplate = ({ pageContext }) => {
           style={{ paddingTop: "0" }}
         >
           <div className="container grid">
-            <MediaObject date={frontmatter.date} />
+            {/* ajouter date prop pour afficher la date */}
+            <MediaObject />
 
             <div className="section is-paddingless-horizontal">
               <h1 className="title is-2">{frontmatter.title}</h1>

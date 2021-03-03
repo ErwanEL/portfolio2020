@@ -1,7 +1,7 @@
 ---
 type: project
 path: lemot
-# date: 16-02-2021
+date: 2020-04-16
 title: Lemot
 subtitle: La palabra del día en Francés
 featuredImage: ../../src/data/images/lemot.png
@@ -66,7 +66,7 @@ Permet la création, gestion et envoi des email ainsi que la liste d'utilisateur
 Langage de templating pour les mails
 basé sur un système de composant.
 
-![Minion](/uploads/mail.png)
+![mail](/uploads/mail.png)
 
 ####[Responsive voice](https://responsivevoice.org/)
 
