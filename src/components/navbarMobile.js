@@ -38,7 +38,7 @@ const NavbarMobile = ({ navbar }) => {
             {navbar.freelance}
           </a>
 
-          <a className={`navbar-item link`} href={`${domain}/learning/`}>
+          <a className={`navbar-item link`} href={`${domain}/resources/`}>
             {navbar.ressources}
           </a>
           <a className={`navbar-item link`} href={`${domain}/skills/`}>
