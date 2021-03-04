@@ -45,7 +45,7 @@ const NavbarMobile = ({ intl }) => {
             <FormattedMessage id="header.freelance" />
           </Link>
 
-          <Link className={`navbar-item link`} to="/learning/">
+          <Link className={`navbar-item link`} to="/resources/">
             <FormattedMessage id="header.ressources" />
           </Link>
           <Link className={`navbar-item link`} to="/skills/">
