@@ -12,7 +12,7 @@ const NavbarMobile = ({ navbar }) => {
   const toggleMenu = () => setMenu(!menu)
   const path = globalHistory.location.pathname
 
-  const domain = "https://fr.erwanel.com"
+  const domain = "https://erwanel.com"
 
   return (
     <div>
@@ -38,7 +38,7 @@ const NavbarMobile = ({ navbar }) => {
             {navbar.freelance}
           </a>
 
-          <a className={`navbar-item link`} href={`${domain}/learning/`}>
+          <a className={`navbar-item link`} href={`${domain}/resources/`}>
             {navbar.ressources}
           </a>
           <a className={`navbar-item link`} href={`${domain}/skills/`}>
@@ -81,10 +81,10 @@ const NavbarMobile = ({ navbar }) => {
           >
             <i style={{ color: "#1e96c8" }} class="fab fa-2x fa-telegram"></i>
           </a>
-          <a className="navbar-item" href={`https://es.erwanel.com`}>
+          <a className="navbar-item" href={`${domain}/es/`}>
             <EspSvg />
           </a>
-          <a className="navbar-item" href={`https://erwanel.com`}>
+          <a className="navbar-item" href={`${domain}/en/`}>
             <UsaSvg />
           </a>
         </div>

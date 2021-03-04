@@ -9,6 +9,7 @@ import React from "react"
 import SEO from "../components/seo"
 
 const BlogIndex = ({ data }) => {
+  console.log(data.allProjects)
   return (
     <Layout>
       <SEO
@@ -40,7 +41,6 @@ const BlogIndex = ({ data }) => {
             </div>
           </div>
           {/* PUB */}
-
           <Annonce />
 
           <div className="suggestion mt-6">
@@ -98,6 +98,7 @@ export const query = graphql`
 
     allProjects: allMarkdownRemark(
       filter: { frontmatter: { type: { eq: "project" } } }
+      sort: { fields: frontmatter___date, order: DESC }
     ) {
       edges {
         node {

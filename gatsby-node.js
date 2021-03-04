@@ -25,7 +25,7 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
                 date
                 featuredImage {
                   childImageSharp {
-                    fluid {
+                    fluid(quality: 100) {
                       aspectRatio
                       base64
                       originalImg
@@ -45,11 +45,7 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
     `
   )
 
-  console.log(articles.data.allArticlesMds)
-
   const articlesSuggestions = articles.data.allArticlesMds.edges.slice(0, 4)
-
-  console.log(articlesSuggestions)
 
   // Handle errors
   if (articles.errors) {
@@ -89,6 +85,7 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
       {
         allProjectsMds: allMarkdownRemark(
           filter: { frontmatter: { type: { eq: "project" } } }
+          sort: { fields: frontmatter___date, order: DESC }
         ) {
           edges {
             node {
@@ -104,7 +101,7 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
                 date
                 featuredImage {
                   childImageSharp {
-                    fluid {
+                    fluid(quality: 100) {
                       aspectRatio
                       base64
                       originalImg
@@ -124,11 +121,7 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
     `
   )
 
-  console.log(projects.data.allProjectsMds)
-
   const projectsSuggestions = projects.data.allProjectsMds.edges.slice(0, 4)
-
-  console.log(projectsSuggestions)
 
   // Handle errors
   if (projects.errors) {

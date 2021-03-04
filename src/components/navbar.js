@@ -8,7 +8,7 @@ import { globalHistory } from "@reach/router"
 
 const Navbar = ({ navbar }) => {
   const path = globalHistory.location.pathname
-  const domain = "https://fr.erwanel.com"
+  const domain = "https://erwanel.com"
   return (
     <div className="navbar-end is-hidden-touch">
       <a
@@ -108,10 +108,10 @@ const Navbar = ({ navbar }) => {
         </a>
 
         <div class="navbar-dropdown">
-          <a class="navbar-item pr-0" href={`https://erwanel.com`}>
+          <a class="navbar-item pr-0" href={`${domain}/en/`}>
             <UsaSvg width={20} height={20} />
           </a>
-          <a class="navbar-item pr-0" href={`https://es.erwanel.com`}>
+          <a class="navbar-item pr-0" href={`${domain}/es/`}>
             <EspSvg width={20} height={20} />
           </a>
         </div>
