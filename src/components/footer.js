@@ -1,29 +1,25 @@
-import React from "react"
-import { Link } from "gatsby"
-// import { useStaticQuery, graphql } from "gatsby"
-// import Img from "gatsby-image"
 import GatsbySvg from "../components/svg/gatsbysvg"
+import { Link } from "gatsby"
+import React from "react"
 import ScrollTop from "../components/scrollTopButton"
 
 const Footer = () => {
   return (
     <footer className="footer has-text-centered">
-      <ScrollTop></ScrollTop>
+      <ScrollTop />
       <nav
         class="breadcrumb has-bullet-separator is-centered has-text-weight-semibold"
         aria-label="breadcrumbs"
       >
         <ul>
           <li>
-            <Link to="/">Home</Link>
+            <Link to="https://erwanel.com">Home</Link>
           </li>
           <li>
-            <a href="https://github.com/ErwanEL/" target="_blank">
-              Github
-            </a>
+            <a href="https://github.com/ErwanEL/">Github</a>
           </li>
           <li>
-            <Link to="/contact/">Contact</Link>
+            <Link to="https://erwanel.com/contact/">Contact</Link>
           </li>
         </ul>
       </nav>
@@ -36,7 +32,7 @@ const Footer = () => {
           width="128"
           height="24"
         />
-        <GatsbySvg className="mr-3" width="106px" height="28px"></GatsbySvg>
+        <GatsbySvg className="mr-3" width="106px" height="28px" />
         {/* <img
           className="mr-5"
           src={"/netlifycms.png"}
