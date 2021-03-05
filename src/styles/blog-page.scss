@@ -59,6 +59,20 @@
   }
 }
 
+.deckgo-highlight-code-container {
+  font-size: 50px !important;
+}
+
+div.carbon {
+  display: none !important;
+}
+
+// custom code blocks, plugin gatsby-remark-highlight-code, https://docs.deckdeckgo.com/components/code/
+deckgo-highlight-code {
+  --deckgo-highlight-code-carbon-toolbar-display: none;
+  --deckgo-highlight-code-font-size: 16px;
+}
+
 div .progress {
 position: relative;
 top: 7px;

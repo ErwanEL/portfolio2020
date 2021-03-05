@@ -7,8 +7,10 @@ import { Link } from "gatsby"
 import MediaObject from "../components/mediaObject"
 import React from "react"
 import SEO from "../components/seo"
+import { defineCustomElements as deckDeckGoHighlightElement } from "@deckdeckgo/highlight-code/dist/loader"
 
 const BlogPageTemplate = ({ pageContext }) => {
+  deckDeckGoHighlightElement()
   const { node } = pageContext
 
   const { frontmatter, html } = node
