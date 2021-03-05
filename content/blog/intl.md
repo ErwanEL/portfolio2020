@@ -103,6 +103,16 @@ import { injectIntl, Link } from "gatsby-plugin-intl"
 
 Pour intégrer votre contenu, vous pouvez procéder de 2 manières:
 
+```javascript
+<FormattedMessage id="go_page2" />
+```
+
+ou
+
+```
+{intl.formatMessage({ id: "go_page2" })}
+```
+
 ```
 import { injectIntl, Link, FormattedMessage } from "gatsby-plugin-intl"
 
