@@ -29,7 +29,7 @@ const ProjectPageTemplate = ({ pageContext }) => {
       <>
         <div className="section is-paddingless-horizontal">
           <div className="container grid">
-            <Banniere title={frontmatter.title} date={frontmatter.date} />
+            <Banniere title={frontmatter.title} />
             <Breadcrumb title={frontmatter.title} />
           </div>
         </div>

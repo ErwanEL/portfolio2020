@@ -22,7 +22,7 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
                 title
                 subtitle
                 path
-                date
+                date(formatString: "DD MMMM YYYY", locale: "fr")
                 featuredImage {
                   childImageSharp {
                     fluid(quality: 100) {
@@ -98,7 +98,7 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
                 title
                 subtitle
                 path
-                date
+                date(formatString: "DD MMMM YYYY", locale: "fr")
                 featuredImage {
                   childImageSharp {
                     fluid(quality: 100) {
