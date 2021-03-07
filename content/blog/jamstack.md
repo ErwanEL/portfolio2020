@@ -1,7 +1,7 @@
 ---
 type: article
 path: jamstack
-date: 16-02-2021
+date: 2021-02-16
 title: Qu'est ce que la Jamstack
 subtitle: Javascript Api Markup
 featuredImage: ../../src/data/images/jam.jpg

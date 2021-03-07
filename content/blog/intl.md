@@ -1,7 +1,7 @@
 ---
 type: article
 path: gatsby-plugin-intl
-date: 05-03-2021
+date: 2021-03-05
 title: Support multilangue avec GatsbyJs
 subtitle: gatsby-plugin-intl
 featuredImage: ../../src/data/images/languages.jpg

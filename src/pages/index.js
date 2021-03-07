@@ -75,6 +75,7 @@ export const query = graphql`
   {
     allArticles: allMarkdownRemark(
       filter: { frontmatter: { type: { eq: "article" } } }
+      sort: { fields: frontmatter___date, order: DESC }
     ) {
       edges {
         node {
@@ -83,7 +84,7 @@ export const query = graphql`
           frontmatter {
             title
             path
-            date
+            date(formatString: "DD MMMM YYYY", locale: "fr")
             featuredImage {
               childImageSharp {
                 fluid {

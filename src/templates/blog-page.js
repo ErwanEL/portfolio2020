@@ -19,6 +19,8 @@ const BlogPageTemplate = ({ pageContext }) => {
     el => el.node.id !== node.id
   )
 
+
+
   return (
     <Layout>
       <SEO

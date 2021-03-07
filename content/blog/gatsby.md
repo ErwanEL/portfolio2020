@@ -1,7 +1,7 @@
 ---
 type: article
 path: gatsby
-date: 15-02-2021
+date: 2021-02-15
 title: Pourquoi choisir GatsbyJs
 subtitle: Un framework statique qui a la cote
 featuredImage: ../../src/data/images/logo-gatsby-square.png
