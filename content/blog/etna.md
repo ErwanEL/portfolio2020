@@ -7,11 +7,11 @@ subtitle: Tienda de joyas
 featuredImage: ../../src/data/images/etna.png
 ---
 
-Simple prototype de vitrine pour bijoux.
+Prototype de vitrine pour bijoux.
 
 ##Caractéristiques
 
-Le contenu de la page est geré avec [dato cms](https://www.datocms.com/)
+Le contenu de la page est géré avec [dato cms](https://www.datocms.com/)
 
 ###<u>Les technologies utilisées pour le projet</u>:
 
@@ -22,4 +22,4 @@ Le contenu de la page est geré avec [dato cms](https://www.datocms.com/)
 
 ---
 
-#####[Visiter etna-joyas](https://lemot.app/) 🔗
+#####[Visiter etna-joyas](https://etnajoyas.netlify.app/) 🔗

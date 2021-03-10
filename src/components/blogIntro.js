@@ -1,4 +1,4 @@
-import Img from "gatsby-image"
+import CustomLink from "../components/customLink"
 import React from "react"
 
 const BlogIntro = () => {
@@ -12,7 +12,13 @@ const BlogIntro = () => {
           <div class="content is-medium">
             Bienvenue. <br />
             Ici un blog sur le développement web,
-            <br /> plus particulièrement sur la Jamstack et GatsbyJs.
+            <br /> plus particulièrement sur la{" "}
+            <CustomLink
+              content="Jamstack"
+              color="#E50D6A"
+              url="/jamstack"
+            /> et{" "}
+            <CustomLink content="GatsbyJs" color="#6C4593" url="/gatsby" />.
           </div>
         </div>
       </div>
