@@ -21,14 +21,16 @@ L'approche pour vous se découpe en 4 étapes:
 
 Pour commencer, installez le plugin dans votre projet gatsby:
 
-```
+```js
 > npm install gatsby-plugin-intl
 
 ```
 
+<br/>
+
 Puis ajoutez le plugin dans le fichier **gatsby-config.js**:
 
-```
+```js
 {
   resolve: `gatsby-plugin-intl`,
   options: {
@@ -43,6 +45,8 @@ Puis ajoutez le plugin dans le fichier **gatsby-config.js**:
   },
 },
 ```
+
+<br/>
 
 Il vous faut par la suite ajouter les fichiers JSON dans un dossier **intl**.
 
@@ -61,6 +65,8 @@ Il vous faut par la suite ajouter les fichiers JSON dans un dossier **intl**.
 └── README.md
 ```
 
+<br/>
+
 fr.json:
 
 ```json
@@ -72,6 +78,8 @@ fr.json:
   }
 }
 ```
+
+<br/>
 
 ##Stucturation des pages et composants
 
@@ -89,6 +97,8 @@ const IndexPage = ({ intl }) => {
 export default injectIntl(IndexPage)
 ```
 
+<br/>
+
 ####Utilisation du hook:
 
 ```javascript
@@ -101,11 +111,15 @@ const IndexPage = () => {
 export default IndexPage
 ```
 
+<br/>
+
 _A noter que si vous utilisez l'api Link de gatsby, l'objet Link doit être importé depuis gatsby-plugin-intl_
 
 ```
 import { injectIntl, Link } from "gatsby-plugin-intl"
 ```
+
+<br/>
 
 ##Intégration du contenu
 
@@ -120,6 +134,8 @@ ou
 ```
 {intl.formatMessage({ id: "title" })}
 ```
+
+<br/>
 
 ```javascript
 import { injectIntl, Link, FormattedMessage } from "gatsby-plugin-intl"
@@ -142,6 +158,8 @@ const IndexPage = ({ intl }) => {
 export default injectIntl(IndexPage)
 ```
 
+<br/>
+
 _Une suppression du cache est nécessaire entre chaques édits des JSON._
 
 GatsbyJs propose une commande pour cela:
@@ -149,6 +167,8 @@ GatsbyJs propose une commande pour cela:
 ```
 > gatsby clean
 ```
+
+<br/>
 
 ##Configurer la navigation
 
@@ -197,4 +217,4 @@ Pour du multilangue avec une gestion de contenu plus complète, peut-être alors
 
 ---
 
-####[Découvrir gatsby-plugin-intl](https://www.gatsbyjs.com/plugins/gatsby-plugin-intl/)
+####[Découvrir gatsby-plugin-intl](https://www.gatsbyjs.com/plugins/gatsby-plugin-intl/) 🔗

@@ -10,7 +10,7 @@ export function cmsImageFinder(arr, img, yaml) {
   ).node.childImageSharp.fluid
 }
 
-export function clearHtmlAndshrink(content = "", shrink = 80) {
+export function clearHtmlAndshrink(content = "", shrink = 90) {
   return (
     content
       .replace(/(<([^>]+)>)/gi, "")

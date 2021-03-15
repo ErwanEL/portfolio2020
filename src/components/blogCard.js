@@ -16,7 +16,7 @@ const BlogCard = ({ imageData, title, html, date }) => {
           {/* <a>@bulmaio</a>.<a href="#">#css</a>{" "}
           <a href="#">#responsive</a> */}
           <br />
-          <time datetime="2016-1-1">{date}</time>
+          <time className="tag" dateTime="2016-1-1">{date}</time>
         </div>
       </div>
     </div>
