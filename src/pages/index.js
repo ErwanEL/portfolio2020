@@ -27,11 +27,13 @@ const IndexPage = ({ intl }) => {
                   <p className="subtitle-mod">
                     <FormattedMessage id="home.stacks" />
                     <span
-                      style={{ color: "#643396" }}
+                      // style={{ color: "#643396" }}
                       className="has-text-weight-semibold"
                     >
                       {" "}
-                      GatsbyJS.
+                      <a className="gatsby" href="https://www.gatsbyjs.com/">
+                        GatsbyJS.
+                      </a>
                     </span>
                   </p>
                   <p className="subtitle">
@@ -46,7 +48,9 @@ const IndexPage = ({ intl }) => {
                   </p>
                 </div>
                 <span className="dispo tag navbar-item is-success is-medium mt-5">
-                  <FormattedMessage id="home.dispo" />
+                  <a href="https://www.malt.com/profile/erwanleblois">
+                    <FormattedMessage id="home.dispo" />
+                  </a>
                 </span>
               </div>
               <div className="column is-half">

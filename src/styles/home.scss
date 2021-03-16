@@ -8,6 +8,13 @@
   top: 30px;
 }
 
+.gatsby {
+  color: #643396;
+  &:hover {
+    color: #643396;
+  }
+}
+
 .github-link {
   outline: none;
   color: black;
@@ -17,6 +24,14 @@
 
 .github-link:hover {
   color: black;
+}
+
+.dispo {
+  a {
+    text-decoration: none;
+    outline: none;
+    color: white;
+  }
 }
 
 video {
