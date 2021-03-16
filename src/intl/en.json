@@ -17,9 +17,16 @@
   },
 
   "freelance": {
-    "title": "My freelance experience.",
-    "upwork": "I am available on the Upwork platform. Here are some gigs that I have completed. See more at",
-    "link": "My Upwork profile."
+    "section": {
+      "title": "My freelance experience.",
+      "description": "I am available on the Malt platform. See more at",
+      "link": " My Malt profile."
+    },
+    "section_1": {
+      "title": "Upwork",
+      "description": "Also on the Upwork platform. Here are some gigs that I have completed. See more at",
+      "link": "My Upwork profile."
+    }
   },
 
   "resources": {

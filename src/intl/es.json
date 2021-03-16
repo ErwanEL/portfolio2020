@@ -17,9 +17,16 @@
   },
 
   "freelance": {
-    "title": "Mi experiencia como freelance.",
-    "upwork": "Estoy disponible en la plataforma Upwork. Ver más en",
-    "link": " Mi perfil Upwork."
+    "section": {
+      "title": "Mi experiencia como freelance.",
+      "description": "Estoy disponible en la plataforma Malt. Ver más en",
+      "link": " Mi perfil Malt."
+    },
+    "section_1": {
+      "title": "Upwork",
+      "description": "También en la plataforma Upwork. Ver más en",
+      "link": " Mi perfil Upwork."
+    }
   },
 
   "resources": {

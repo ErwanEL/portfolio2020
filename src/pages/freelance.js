@@ -2,6 +2,7 @@ import { FormattedMessage, injectIntl } from "gatsby-plugin-intl"
 
 import Img from "gatsby-image"
 import Layout from "../components/layout"
+import Malt from "../components/svg/malt"
 import React from "react"
 import SEO from "../components/seo"
 import UpworkSvg from "../components/svg/upworksvg"
@@ -20,21 +21,19 @@ const FreelancePage = ({ data, intl }) => {
             <div className="columns is-vcentered">
               <div className="column is-half">
                 <h1 className="title">
-                  <span className="mate">🥬</span>
-                  <FormattedMessage id="freelance.title" />
+                  <span className="mate">📛</span>
+                  <FormattedMessage id="freelance.section.title" />
                 </h1>
                 <div className="content">
-                  <hr style={{ background: "#6FDA44" }} className="mini" />
-                  <UpworkSvg height={40}></UpworkSvg>
+                  <hr style={{ background: "#FC5656" }} className="mini" />
+                  <Malt height={40}></Malt>
                   <p className="subtitle-mod">
-                    <FormattedMessage id="freelance.upwork" />
-
+                    <FormattedMessage id="freelance.section.description" />{" "}
                     <a
-                      className="upwork-link"
-                      href="http://etmg-world.com"
-                      target="_blank"
+                      className="malt-link"
+                      href="https://www.malt.com/profile/erwanleblois"
                     >
-                      <FormattedMessage id="freelance.link" />
+                      <FormattedMessage id="freelance.section.link" />
                     </a>
                   </p>
                 </div>
@@ -42,7 +41,7 @@ const FreelancePage = ({ data, intl }) => {
               <div className="column is-half">
                 <Img
                   className="free image"
-                  fluid={data.upwork.childImageSharp.fluid}
+                  fluid={data.malt.childImageSharp.fluid}
                   alt="Upwork contracts"
                 />
               </div>
@@ -51,7 +50,7 @@ const FreelancePage = ({ data, intl }) => {
         </div>
       </section>
       <hr />
-      {/* <section className="hero is-medium">
+      <section className="hero is-medium">
         <div
           className="hero-body"
           data-sal="slide-up"
@@ -63,22 +62,26 @@ const FreelancePage = ({ data, intl }) => {
               <div className="column is-half">
                 <Img
                   className="free image"
-                  fluid={data.etmg.childImageSharp.fluid}
+                  fluid={data.upwork.childImageSharp.fluid}
                   alt="Etmg"
                 />
               </div>
 
               <div className="column is-half has-text-left">
                 <div className="content">
-                  <h1 className="title">Etmg</h1>
+                  <h1 className="title">
+                    {" "}
+                    <FormattedMessage id="freelance.section_1.title" />
+                  </h1>
+                  <hr style={{ background: "#6FDA44" }} className="mini" />
                   <p className="subtitle-mod">
-                    {frontmatter.title2}{" "}
+                    <FormattedMessage id="freelance.section_1.description" />{" "}
                     <a
-                      className="etmg-link"
+                      className="upwork-link"
                       href="http://etmg-world.com"
                       target="_blank"
                     >
-                      Etmg-World
+                      <FormattedMessage id="freelance.section_1.link" />
                     </a>
                   </p>
                 </div>
@@ -86,14 +89,14 @@ const FreelancePage = ({ data, intl }) => {
             </div>
           </div>
         </div>
-      </section> */}
+      </section>
     </Layout>
   )
 }
 
 export const query = graphql`
   {
-    etmg: file(relativePath: { eq: "images/freelance/etmg.png" }) {
+    malt: file(relativePath: { eq: "images/freelance/malt.png" }) {
       childImageSharp {
         fluid(quality: 100) {
           ...GatsbyImageSharpFluid_withWebp
