@@ -5,7 +5,6 @@ import ProfilePic from "../components/profilePic"
 import QuoteSlider from "../components/quoteSlider"
 import React from "react"
 import SEO from "../components/seo"
-import UpworkSvg from "../components/svg/upworksvg"
 import Video from "../assets/comp_3.mp4"
 
 const IndexPage = ({ intl }) => {
@@ -69,7 +68,7 @@ const IndexPage = ({ intl }) => {
             <div className="columns">
               <div className="column is-7" style={{ margin: "auto" }}>
                 <QuoteSlider />
-                <UpworkSvg className="mt-5" height={30}></UpworkSvg>
+                {/* <UpworkSvg className="mt-5" height={30}></UpworkSvg> */}
               </div>
             </div>
           </div>

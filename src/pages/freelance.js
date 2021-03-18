@@ -21,12 +21,12 @@ const FreelancePage = ({ data, intl }) => {
             <div className="columns is-vcentered">
               <div className="column is-half">
                 <h1 className="title">
-                  <span className="mate">📛</span>
-                  <FormattedMessage id="freelance.section.title" />
+                  {/* <span className="mate">📛</span> */}
+                  {/* <FormattedMessage id="freelance.section.title" /> */}
+                  <Malt height={40} />
                 </h1>
                 <div className="content">
                   <hr style={{ background: "#FC5656" }} className="mini" />
-                  <Malt height={40}></Malt>
                   <p className="subtitle-mod">
                     <FormattedMessage id="freelance.section.description" />{" "}
                     <a
@@ -61,9 +61,9 @@ const FreelancePage = ({ data, intl }) => {
             <div className="columns is-vcentered">
               <div className="column is-half">
                 <Img
-                  className="free image"
+                  className="Upwork"
                   fluid={data.upwork.childImageSharp.fluid}
-                  alt="Etmg"
+                  alt="upwork"
                 />
               </div>
 
@@ -71,9 +71,11 @@ const FreelancePage = ({ data, intl }) => {
                 <div className="content">
                   <h1 className="title">
                     {" "}
-                    <FormattedMessage id="freelance.section_1.title" />
+                    {/* <FormattedMessage id="freelance.section_1.title" /> */}
+                    <UpworkSvg height={40} />
                   </h1>
                   <hr style={{ background: "#6FDA44" }} className="mini" />
+
                   <p className="subtitle-mod">
                     <FormattedMessage id="freelance.section_1.description" />{" "}
                     <a

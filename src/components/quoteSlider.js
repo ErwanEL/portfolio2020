@@ -1,7 +1,11 @@
-import React, { Component } from "react"
-import Slider from "react-slick"
 import "slick-carousel/slick/slick.css"
 import "slick-carousel/slick/slick-theme.css"
+
+import React, { Component } from "react"
+
+import Malt from "../components/svg/malt"
+import Slider from "react-slick"
+import UpworkSvg from "../components/svg/upworksvg"
 
 export default class QuoteSlider extends Component {
   constructor(props) {
@@ -36,6 +40,19 @@ export default class QuoteSlider extends Component {
               {" "}
               Kevin McCormick, LSI
             </p>
+            <UpworkSvg className="mt-5" height={30} />
+          </div>
+          <div className="quote">
+            <i className="fas fa-2x fa-quote-left"></i>
+            <p className="is-size-4 mt-4  is-italic has-text-weight-normal">
+              Encore une nouvelle mission parfaitement exécutée, merci et bravo
+              !
+            </p>{" "}
+            <p className="mt-3 has-text-weight-semibold">
+              {" "}
+              Johnny Petiot, Focus Data Science
+            </p>
+            <Malt className="mt-5" height={30} />
           </div>
           <div className="quote">
             <i className="fas fa-2x fa-quote-left"></i>
@@ -46,6 +63,7 @@ export default class QuoteSlider extends Component {
               {" "}
               Ahmet Ozisik, Swiftmade
             </p>
+            <UpworkSvg className="mt-5" height={30} />
           </div>
           <div className="quote">
             <i className="fas fa-2x fa-quote-left"></i>
@@ -56,6 +74,7 @@ export default class QuoteSlider extends Component {
               {" "}
               Dan Burgess, Jackpot Music Game
             </p>
+            <UpworkSvg className="mt-5" height={30} />
           </div>
         </Slider>
       </div>
