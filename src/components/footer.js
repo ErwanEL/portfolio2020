@@ -23,7 +23,7 @@ const Footer = () => {
             </a>
           </li>
           <li>
-            <Link to="/contact/">Contact</Link>
+            <a href="mailto:leblois.erwan@hotmail.fr">Contact</a>
           </li>
         </ul>
       </nav>
@@ -36,7 +36,7 @@ const Footer = () => {
           width="128"
           height="24"
         />
-        <GatsbySvg className="mr-3" width="106px" height="28px"></GatsbySvg>
+        <GatsbySvg className="mr-3" width="106px" height="28px" />
         {/* <img
           className="mr-5"
           src={"/netlifycms.png"}

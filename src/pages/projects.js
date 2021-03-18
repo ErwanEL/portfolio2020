@@ -106,7 +106,7 @@ const ProjectsPage = ({ data, intl }) => {
         title={intl.formatMessage({ id: "projects.project_3.title" })}
         color="#A87868"
         content={intl.formatMessage({ id: "projects.project_3.description" })}
-        link="https://etnajoyas.netlify.app/"
+        link="https://blog.erwanel.com/etna-joyas"
         contentLink={intl.formatMessage({ id: "projects.project_3.link" })}
         img={data.etna.childImageSharp.fluid}
       />
