@@ -55,12 +55,12 @@ const ProjectsPage = ({ data, intl }) => {
               <div className="column is-half">
                 <Cascade
                   arrayOfImages={[
-                    data.cv.childImageSharp.fluid,
-                    data.etna.childImageSharp.fluid,
                     data.hc.childImageSharp.fluid,
+                    data.etna.childImageSharp.fluid,
+                    data.fds.childImageSharp.fluid,
                     data.lemot.childImageSharp.fluid,
                   ]}
-                ></Cascade>
+                />
               </div>
             </div>
           </div>
@@ -68,7 +68,7 @@ const ProjectsPage = ({ data, intl }) => {
       </section>
       <hr />
       <Project
-        id="hc"
+        id="fds"
         title={intl.formatMessage({ id: "projects.project_4.title" })}
         color="#0D1528"
         content={intl.formatMessage({ id: "projects.project_4.description" })}
@@ -78,6 +78,8 @@ const ProjectsPage = ({ data, intl }) => {
         })}
         img={data.fds.childImageSharp.fluid}
       />
+      <hr />
+
       <Project
         id="hc"
         title={intl.formatMessage({ id: "projects.project_1.title" })}
@@ -200,7 +202,7 @@ export default injectIntl(ProjectsPage)
 
 export const query = graphql`
   {
-    cv: file(relativePath: { eq: "images/projects/cv.PNG" }) {
+    cv: file(relativePath: { eq: "images/projects/older/cv.PNG" }) {
       childImageSharp {
         fluid(quality: 100) {
           ...GatsbyImageSharpFluid_withWebp

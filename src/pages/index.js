@@ -2,12 +2,14 @@ import { FormattedMessage, injectIntl } from "gatsby-plugin-intl"
 
 import Layout from "../components/layout"
 import ProfilePic from "../components/profilePic"
+import ProjectCard from "../components/projectCard"
 import QuoteSlider from "../components/quoteSlider"
 import React from "react"
 import SEO from "../components/seo"
 import Video from "../assets/comp_3.mp4"
+import { graphql } from "gatsby"
 
-const IndexPage = ({ intl }) => {
+const IndexPage = ({ intl, data }) => {
   return (
     <Layout>
       <SEO lang={intl.locale} title={intl.formatMessage({ id: "home.seo" })} />
@@ -61,21 +63,95 @@ const IndexPage = ({ intl }) => {
           </div>
         </div>
       </section>
-      <hr></hr>
+      {/* <hr></hr> */}
       <section className="hero is-small">
         <div className="hero-body">
           <div className="container has-text-centered">
             <div className="columns">
               <div className="column is-7" style={{ margin: "auto" }}>
                 <QuoteSlider />
-                {/* <UpworkSvg className="mt-5" height={30}></UpworkSvg> */}
               </div>
             </div>
           </div>
         </div>
       </section>
+      {/* <hr /> */}
+      <section className="hero ">
+        <div className="hero-body">
+          <div className="mt-6">
+            <h1 className="title is-4">
+              {" "}
+              <FormattedMessage id="home.projects" />:
+            </h1>
+            <div className="columns is-multiline">
+              <div className="column is-4">
+                <ProjectCard
+                  imageData={data.fds.childImageSharp.fluid}
+                  title="Focus Data Science"
+                  link="https://blog.erwanel.com/focus-data-science"
+                />
+              </div>
+              <div className="column is-4">
+                <ProjectCard
+                  imageData={data.lemot.childImageSharp.fluid}
+                  title="Lemot"
+                  link="https://blog.erwanel.com/lemot"
+                />
+              </div>
+              <div className="column is-4">
+                <ProjectCard
+                  imageData={data.etna.childImageSharp.fluid}
+                  title="Etna Joyas"
+                  link="https://blog.erwanel.com/etna-joyas"
+                />
+              </div>
+              <div className="column is-4">
+                <ProjectCard
+                  imageData={data.hc.childImageSharp.fluid}
+                  title="HauteCuture"
+                  link="https://blog.erwanel.com/hauteculture"
+                />
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <hr />
     </Layout>
   )
 }
 
 export default injectIntl(IndexPage)
+
+export const query = graphql`
+  {
+    lemot: file(relativePath: { eq: "images/projects/lemot.PNG" }) {
+      childImageSharp {
+        fluid(quality: 100) {
+          ...GatsbyImageSharpFluid_withWebp
+        }
+      }
+    }
+    fds: file(relativePath: { eq: "images/projects/fds.png" }) {
+      childImageSharp {
+        fluid(quality: 100) {
+          ...GatsbyImageSharpFluid_withWebp
+        }
+      }
+    }
+    etna: file(relativePath: { eq: "images/projects/etna.PNG" }) {
+      childImageSharp {
+        fluid(quality: 100) {
+          ...GatsbyImageSharpFluid_withWebp
+        }
+      }
+    }
+    hc: file(relativePath: { eq: "images/projects/hc.PNG" }) {
+      childImageSharp {
+        fluid(quality: 100) {
+          ...GatsbyImageSharpFluid_withWebp
+        }
+      }
+    }
+  }
+`

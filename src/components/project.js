@@ -14,7 +14,7 @@ const Project = ({
   return (
     <section
       id={id}
-      className="hero is-medium"
+      className="hero is-large"
       data-sal="slide-up"
       data-sal-delay="300"
       data-sal-easing="ease"

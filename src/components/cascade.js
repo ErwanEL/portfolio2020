@@ -1,12 +1,12 @@
-import React from "react"
 import Img from "gatsby-image"
+import React from "react"
 
 const Cascade = ({ arrayOfImages }) => {
   return (
     <div className="cascade is-hidden-mobile is-hidden-touch ">
       <div className="cascade-child child1">
         <div className="sub">
-          <a href="#olderworks">
+          <a href="#hc">
             <Img
               className="project-img image"
               fluid={arrayOfImages[0]}
@@ -28,7 +28,7 @@ const Cascade = ({ arrayOfImages }) => {
       </div>
       <div className="cascade-child child3">
         <div className="sub">
-          <a href="#hc">
+          <a href="#fds">
             <Img
               className="project-img image"
               fluid={arrayOfImages[2]}
