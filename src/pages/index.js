@@ -9,7 +9,6 @@ import React from "react"
 import SEO from "../components/seo"
 
 const BlogIndex = ({ data }) => {
-  console.log(data.allProjects)
   return (
     <Layout>
       <SEO

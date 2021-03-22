@@ -10,6 +10,16 @@ module.exports = {
     title: "Index",
     titleTemplate: "%s · Blog - ErwanEL",
     description: "Blog - ErwanEL, Front-End developer, javascript, GatsbyJs",
+    keywords: [
+      "ErwanEL",
+      "jamstack",
+      "gatsbyjs",
+      "gatsby",
+      "static",
+      "react",
+      "javascript",
+      "statique",
+    ],
     url: "https://blog.erwanel.com", // No trailing slash allowed!
     image: "/logo.png", // Path to your image you placed in the 'static' folder
     twitterUsername: "@ErwanEL2",

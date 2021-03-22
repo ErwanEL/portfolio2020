@@ -5,7 +5,7 @@ import PropTypes from "prop-types"
 import React from "react"
 import { useLocation } from "@reach/router"
 
-const SEO = ({ title, description, image, article }) => {
+const SEO = ({ title, description, image, article, lang }) => {
   const { pathname } = useLocation()
   const { site } = useStaticQuery(query)
 
@@ -13,6 +13,7 @@ const SEO = ({ title, description, image, article }) => {
     defaultTitle,
     titleTemplate,
     defaultDescription,
+    defaultKeywords,
     siteUrl,
     defaultImage,
     twitterUsername,
@@ -25,9 +26,28 @@ const SEO = ({ title, description, image, article }) => {
     url: `${siteUrl}${pathname}`,
   }
 
+  const canonical = pathname ? `${siteUrl}${pathname}` : null
+
   return (
-    <Helmet title={seo.title} titleTemplate={titleTemplate}>
+    <Helmet
+      title={seo.title}
+      titleTemplate={titleTemplate}
+      htmlAttributes={{
+        lang,
+      }}
+      link={
+        canonical
+          ? [
+              {
+                rel: "canonical",
+                href: canonical,
+              },
+            ]
+          : []
+      }
+    >
       <meta name="description" content={seo.description} />
+      <meta name="keywords" content={defaultKeywords.join(",")} />
       <meta name="image" content={seo.image} />
 
       {seo.url && <meta property="og:url" content={seo.url} />}
@@ -62,6 +82,7 @@ const SEO = ({ title, description, image, article }) => {
 export default SEO
 
 SEO.propTypes = {
+  lang: PropTypes.string,
   title: PropTypes.string,
   description: PropTypes.string,
   image: PropTypes.string,
@@ -69,6 +90,7 @@ SEO.propTypes = {
 }
 
 SEO.defaultProps = {
+  lang: `fr`,
   title: null,
   description: null,
   image: null,
@@ -82,6 +104,7 @@ const query = graphql`
         defaultTitle: title
         titleTemplate
         defaultDescription: description
+        defaultKeywords: keywords
         siteUrl: url
         defaultImage: image
         twitterUsername
