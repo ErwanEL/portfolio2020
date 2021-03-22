@@ -55,8 +55,6 @@ const Banniere = ({ title, date }) => {
     SetMaxProgressValue()
   }
 
-  // console.log(progressValue)
-
   const profilePic = picture.file.childImageSharp.fluid
   return (
     <div className={`banniere ${progressValue >= 350 && "is-active"}`}>
