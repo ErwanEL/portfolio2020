@@ -7,7 +7,7 @@ subtitle: La palabra del día en Francés
 featuredImage: ../../src/data/images/lemot.png
 ---
 
-Lemot est un projet visant a suggérer à un public hispanophone un mot en Français chaque jours.
+Lemot est un projet visant a suggérer à un public hispanophone un mot en Français chaque jour.
 
 ##Caractéristiques
 
