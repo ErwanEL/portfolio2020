@@ -18,8 +18,7 @@ const BlogPageTemplate = ({ pageContext }) => {
   const suggestions = pageContext.suggestions.filter(
     el => el.node.id !== node.id
   )
-
-
+  console.log(frontmatter.date)
 
   return (
     <Layout>
@@ -27,6 +26,7 @@ const BlogPageTemplate = ({ pageContext }) => {
         title={frontmatter.title}
         description={pageContext.excerpt}
         image={frontmatter.featuredImage.childImageSharp.fluid.originalImg}
+        date={frontmatter.date}
         url={`https://blog.erwanel/${frontmatter.path}/`}
       />
 

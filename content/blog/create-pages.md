@@ -22,6 +22,7 @@ GatsbyJs vous permet de créer dynamiquement des pages à partir de template et 
 2. Créer le fichier `gatsby-node.js` à la racine du dossier.
 
 #Configuration de la création de page automatisée
+
 1. Dans `gatsby-node.js`, ajoutez l'export pour le createPages
 
 ```js
@@ -98,7 +99,7 @@ export default function DogTemplate({ pageContext: { dog } }) {
 
 <br/>
 
-5. Lancez l'environnement de développement de gatsby et vous pouvez naviguez via les chemins des pages que vous avez crées et voir les données s'affichées. (exemple: http://localhost:8000/Fido)
+5. Lancez l'environnement de développement de gatsby et vous pouvez naviguez via les chemins des pages que vous avez crées et voir les données s'afficher. (exemple: http://localhost:8000/Fido)
 
 ```javascript
 > gatsby develop

@@ -16,7 +16,7 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
             node {
               id
               html
-              excerpt(pruneLength: 280)
+              excerpt(pruneLength: 160)
               frontmatter {
                 type
                 path
@@ -92,7 +92,7 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
             node {
               id
               html
-              excerpt(pruneLength: 280)
+              excerpt(pruneLength: 160)
               frontmatter {
                 type
                 path

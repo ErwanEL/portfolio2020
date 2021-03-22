@@ -211,7 +211,7 @@ const Language = ({ intl })) => {
 export default  injectIntl(Language)
 ```
 
-Ce plugin s'avère être une solution intéressante pour des sites de petites envergure, voire pour un couplage avec une solution cms en markdowns.
+Ce plugin s'avère être une solution intéressante pour des sites de petites envergure, voir pour un couplage avec une solution cms en markdowns.
 
 Pour du multilangue avec une gestion de contenu plus complète, peut-être alors se tourner vers une solution CMS qui propose une prise en charge du multilangue intégrée.([Prismic](https://prismic.io/), [DatoCMS](https://www.datocms.com/))
 

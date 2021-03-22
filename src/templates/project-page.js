@@ -23,6 +23,7 @@ const ProjectPageTemplate = ({ pageContext }) => {
         title={frontmatter.title}
         description={pageContext.excerpt}
         image={frontmatter.featuredImage.childImageSharp.fluid.originalImg}
+        date={frontmatter.date}
         url={`https://blog.erwanel/${frontmatter.path}/`}
       />
 
