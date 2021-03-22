@@ -116,7 +116,6 @@ const IndexPage = ({ intl, data }) => {
           </div>
         </div>
       </section>
-      <hr />
     </Layout>
   )
 }
