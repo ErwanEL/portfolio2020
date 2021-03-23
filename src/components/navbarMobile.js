@@ -2,6 +2,7 @@ import React, { useState } from "react"
 
 import EspSvg from "../components/svg/espsvg"
 import { Link } from "gatsby"
+import LinkedInSvg from "../components/svg/linkedinsvg"
 // import { a } from "gatsby"
 import MaltSvg from "../components/svg/maltsvg"
 import UsaSvg from "../components/svg/usasvg"
@@ -80,6 +81,14 @@ const NavbarMobile = ({ navbar }) => {
             target="_blank"
           >
             <i style={{ color: "#1e96c8" }} class="fab fa-2x fa-telegram"></i>
+          </a>
+
+          <a
+            className="navbar-item githuba"
+            href="https://www.linkedin.com/in/erwan-leblois-9a1b80142/"
+            target="_blank"
+          >
+            <LinkedInSvg />
           </a>
           <a className="navbar-item" href={`${domain}/es/`}>
             <EspSvg />
