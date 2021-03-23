@@ -8,6 +8,7 @@ import React, { useState } from "react"
 
 import EspSvg from "../components/svg/espsvg"
 import FrSvg from "../components/svg/frsvg"
+import LinkedInSvg from "../components/svg/linkedinsvg"
 import MaltSvg from "../components/svg/maltsvg"
 import UsaSvg from "../components/svg/usasvg"
 
@@ -86,6 +87,13 @@ const NavbarMobile = ({ intl }) => {
               style={{ color: "#1e96c8" }}
               className="fab fa-2x fa-telegram"
             ></i>
+          </a>
+          <a
+            className="navbar-item githubLink"
+            href="https://www.malt.fr/profile/erwanleblois"
+            target="_blank"
+          >
+            <LinkedInSvg />
           </a>
           {languages
             .filter(loc => loc.language !== intl.locale)

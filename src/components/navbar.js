@@ -1,5 +1,6 @@
 import { FormattedMessage, Link, injectIntl } from "gatsby-plugin-intl"
 
+import LinkedInSvg from "../components/svg/linkedinsvg"
 import LocaleToggle from "../components/localeToggle"
 import MaltSvg from "../components/svg/maltsvg"
 import React from "react"
@@ -87,7 +88,13 @@ const Navbar = () => {
       >
         <i style={{ color: "#1e96c8" }} className="fab fa-2x fa-telegram"></i>
       </a>
-
+      <a
+        className="navbar-item githubLink"
+        href="https://www.malt.fr/profile/erwanleblois"
+        target="_blank"
+      >
+        <LinkedInSvg />
+      </a>
       <div
         style={{
           borderLeft: "1px solid grey",
