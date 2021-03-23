@@ -90,8 +90,7 @@ const NavbarMobile = ({ intl }) => {
           </a>
           <a
             className="navbar-item githubLink"
-            href="https://www.malt.fr/profile/erwanleblois"
-            target="_blank"
+            href="https://www.linkedin.com/in/erwan-leblois-9a1b80142/"
           >
             <LinkedInSvg />
           </a>
