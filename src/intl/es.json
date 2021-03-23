@@ -1,0 +1,122 @@
+{
+  "header": {
+    "home": "Home",
+    "freelance": "Freelance",
+    "ressources": "Recursos",
+    "skills": "Habilidades",
+    "projects": "Proyectos",
+    "contact": "Contacto"
+  },
+  
+  "home": {
+    "seo": "ErwanEL - Bienvenido",
+    "intro": "Hola mi nombre es Erwan, bienvenido en mi portafolio.",
+    "stacks": "Desarrollador Front-End, Javascript,",
+    "github": "Encontrarme en",
+    "dispo": "Estoy disponible en malt.com",
+    "projects": "Últimos proyectos"
+  },
+
+  "freelance": {
+    "section": {
+      "title": "Mi experiencia como freelance.",
+      "description": "Estoy disponible en la plataforma Malt. Ver más en",
+      "link": " Mi perfil Malt."
+    },
+    "section_1": {
+      "title": "Upwork",
+      "description": "También en la plataforma Upwork. Ver más en",
+      "link": " Mi perfil Upwork."
+    }
+  },
+
+  "resources": {
+    "section": {
+      "title": "Los recursos que uso.",
+      "description": "Me mantengo informado sobre el Jamstack.",
+      "link": "Saber más sobre el Jamstack."
+    },
+    "section_1": {
+      "title": "Otros recursos.",
+      "description": "Empecé mi introducción al desarrollo web con Treehouse.",
+      "link": "Saber más sobre mi perfil en TreeHouse."
+    }
+  },
+
+  "skills": {
+    "section": {
+      "title": "Mis habilidades.",
+      "description": "Las tecnologías que uso."
+    },
+    "section_1": {
+      "title": "HTML & CSS",
+      "description": "Para trabajar en el proceso de integración."
+
+    },
+    "section_2": {
+      "title": "Javascript",
+      "description": "Para trabajar en el proceso de programación."
+
+    },
+    "section_3": {
+      "title": "GatsbyJs",
+      "description": "Para la construcción de sitios web estáticos. GatsbyJs es basado en",
+      "description_1": "Uso los servicios de netlify para albergar mis proyectos GatsbyJs",
+      "link": "Saber más sobre"
+    },
+    "section_4": {
+      "title": "Workflow",
+      "description": "Uso los servicios de",
+      "description_1": "como Bitbucket y trello para organizar mis proyectos."
+    }
+  },
+
+  "projects": {
+    "section": {
+      "title": "Mis proyectos.",
+      "description": "Realizaciones y proyectos en los que he trabajado.",
+      "menu": "Obras antiguas"
+    },
+    "project_1": {
+      "title": "Haute Culture",
+      "description": "Un proyecto GatsbyJs en el que he colaborado. Incluye el CMS",
+      "link": "Saber más sobre Haute Culture"
+    },
+    "project_2": {
+      "title": "Lemot",
+      "description": "Un servicio hecho con GatsbyJs que genera cada día una palabra en francés.",
+      "link": "Saber más sobre Lemot"
+    },
+    "project_3": {
+      "title": "Etna Joyas",
+      "description": "Un prototipo GatsbyJs para una vitrina de joyas. Incluido DATO Cms.",
+      "link": "Saber más sobre Etna Joyas"
+    },
+    "project_4": {
+      "title": "Focus Data Science",
+      "description": "Conversión de un sitio html/css/js en GatsbyJs",
+      "link": "Saber más sobre Focus Data Science"
+    },
+    "section_1": {
+      "title": "Proyectos antiguos.",
+      "description": "Otros proyectos."
+    }
+  },
+
+  "contact": {
+    "section": {
+      "title": "Contactarme.",
+      "description": "Algún proyecto."
+    },
+    "form": {
+      "name": "Nombre",
+      "namePlaceholder": "Su nombre",
+      "email": "Email",
+      "emailPlaceholder": "Su Email",
+      "message": "Mensaje",
+      "messagePlaceholder": "Su Mensaje",
+      "send": "Enviar"
+    },
+    "success": "Su mensaje ha sido enviado con éxito!"
+  }
+}

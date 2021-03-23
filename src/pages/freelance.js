@@ -1,36 +1,39 @@
-import React from "react"
-import { graphql } from "gatsby"
+import { FormattedMessage, injectIntl } from "gatsby-plugin-intl"
+
 import Img from "gatsby-image"
 import Layout from "../components/layout"
+import Malt from "../components/svg/malt"
+import React from "react"
 import SEO from "../components/seo"
 import UpworkSvg from "../components/svg/upworksvg"
+import { graphql } from "gatsby"
 
-const FreelancePage = ({ data }) => {
-  const { markdownRemark } = data
-  const { frontmatter } = markdownRemark
+const FreelancePage = ({ data, intl }) => {
   return (
     <Layout>
-      <SEO title={frontmatter.seo} />
+      <SEO
+        lang={intl.locale}
+        title={intl.formatMessage({ id: "freelance.title" })}
+      />
       <section className="hero is-medium">
         <div className="hero-body">
           <div className="container">
             <div className="columns is-vcentered">
               <div className="column is-half">
                 <h1 className="title">
-                  <span className="mate">🥬</span>
-                  {frontmatter.seo}.
+                  {/* <span className="mate">📛</span> */}
+                  {/* <FormattedMessage id="freelance.section.title" /> */}
+                  <Malt height={40} />
                 </h1>
                 <div className="content">
-                  <hr style={{ background: "#6FDA44" }} className="mini" />
-                  <UpworkSvg height={40}></UpworkSvg>
+                  <hr style={{ background: "#FC5656" }} className="mini" />
                   <p className="subtitle-mod">
-                    {frontmatter.title1}{" "}
+                    <FormattedMessage id="freelance.section.description" />{" "}
                     <a
-                      className="upwork-link"
-                      href="http://etmg-world.com"
-                      target="_blank"
+                      className="malt-link"
+                      href="https://www.malt.com/profile/erwanleblois"
                     >
-                      {frontmatter.upwork}
+                      <FormattedMessage id="freelance.section.link" />
                     </a>
                   </p>
                 </div>
@@ -38,7 +41,7 @@ const FreelancePage = ({ data }) => {
               <div className="column is-half">
                 <Img
                   className="free image"
-                  fluid={data.upwork.childImageSharp.fluid}
+                  fluid={data.malt.childImageSharp.fluid}
                   alt="Upwork contracts"
                 />
               </div>
@@ -58,23 +61,29 @@ const FreelancePage = ({ data }) => {
             <div className="columns is-vcentered">
               <div className="column is-half">
                 <Img
-                  className="free image"
-                  fluid={data.etmg.childImageSharp.fluid}
-                  alt="Etmg"
+                  className="Upwork"
+                  fluid={data.upwork.childImageSharp.fluid}
+                  alt="upwork"
                 />
               </div>
 
               <div className="column is-half has-text-left">
                 <div className="content">
-                  <h1 className="title">Etmg</h1>
+                  <h1 className="title">
+                    {" "}
+                    {/* <FormattedMessage id="freelance.section_1.title" /> */}
+                    <UpworkSvg height={40} />
+                  </h1>
+                  <hr style={{ background: "#6FDA44" }} className="mini" />
+
                   <p className="subtitle-mod">
-                    {frontmatter.title2}{" "}
+                    <FormattedMessage id="freelance.section_1.description" />{" "}
                     <a
-                      className="etmg-link"
+                      className="upwork-link"
                       href="http://etmg-world.com"
                       target="_blank"
                     >
-                      Etmg-World
+                      <FormattedMessage id="freelance.section_1.link" />
                     </a>
                   </p>
                 </div>
@@ -89,31 +98,21 @@ const FreelancePage = ({ data }) => {
 
 export const query = graphql`
   {
-    markdownRemark(frontmatter: { slug: { eq: "/freelance" } }) {
-      html
-      frontmatter {
-        slug
-        seo
-        title1
-        upwork
-        title2
-      }
-    }
-    etmg: file(relativePath: { eq: "images/freelance/etmg.png" }) {
+    malt: file(relativePath: { eq: "images/freelance/malt.png" }) {
       childImageSharp {
-        fluid {
-          ...GatsbyImageSharpFluid
+        fluid(quality: 100) {
+          ...GatsbyImageSharpFluid_withWebp
         }
       }
     }
     upwork: file(relativePath: { eq: "images/freelance/upwork.png" }) {
       childImageSharp {
-        fluid {
-          ...GatsbyImageSharpFluid
+        fluid(quality: 100) {
+          ...GatsbyImageSharpFluid_withWebp
         }
       }
     }
   }
 `
 
-export default FreelancePage
+export default injectIntl(FreelancePage)

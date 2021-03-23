@@ -1,31 +1,37 @@
-import React from "react"
-import { graphql } from "gatsby"
+import { FormattedMessage, injectIntl } from "gatsby-plugin-intl"
+
 import Layout from "../components/layout"
+import React from "react"
 import SEO from "../components/seo"
 
-const SuccessPage = ({ data }) => {
-  const { markdownRemark } = data
-  const { frontmatter, html } = markdownRemark
-
+const SuccessPage = ({ intl }) => {
   return (
     <Layout>
-      <SEO title={frontmatter.seo} />
+      <SEO
+        lang={intl.locale}
+        title={intl.formatMessage({ id: "contact.section.title" })}
+      />
       <section className="hero is-medium">
         <div className="hero-body">
           <div className="container">
             <div className="columns is-vcentered">
               <div className="column is-half">
+                {/* {html} */}
+                <h1 className="title">
+                  <span className="mate">✉️</span>
+                  <FormattedMessage id="contact.section.title" />
+                </h1>
                 <div className="content">
-                  <h1 className="title">
-                    <span className="mate">✉️</span>
-                    {frontmatter.title}
-                  </h1>
-                  <div dangerouslySetInnerHTML={{ __html: html }} />
+                  <hr className="mini" />
+                  <p className="subtitle-mod">
+                    <FormattedMessage id="contact.section.description" />
+                  </p>
                 </div>
               </div>
               <div className="column is-half">
                 <div className="notification has-text-centered has-text-white">
-                  {frontmatter.success} <i class="fas fa-check-square"></i>
+                  <FormattedMessage id="contact.success" />{" "}
+                  <i className="fas fa-check-square"></i>
                 </div>
               </div>
             </div>
@@ -36,18 +42,4 @@ const SuccessPage = ({ data }) => {
   )
 }
 
-export default SuccessPage
-
-export const query = graphql`
-  {
-    markdownRemark(frontmatter: { slug: { eq: "/contact" } }) {
-      html
-      frontmatter {
-        title
-        slug
-        seo
-        success
-      }
-    }
-  }
-`
+export default injectIntl(SuccessPage)

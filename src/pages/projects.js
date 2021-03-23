@@ -1,18 +1,21 @@
-import React from "react"
-import { graphql } from "gatsby"
-import Img from "gatsby-image"
-import Layout from "../components/layout"
-import SEO from "../components/seo"
+import { FormattedMessage, injectIntl } from "gatsby-plugin-intl"
+
 import Cascade from "../components/cascade"
 import CascadeOld from "../components/cascadeOld"
+import Img from "gatsby-image"
+import Layout from "../components/layout"
 import Project from "../components/project"
+import React from "react"
+import SEO from "../components/seo"
+import { graphql } from "gatsby"
 
-const ProjectsPage = ({ data }) => {
-  const { markdownRemark } = data
-  const { frontmatter } = markdownRemark
+const ProjectsPage = ({ data, intl }) => {
   return (
     <Layout>
-      <SEO title={frontmatter.seo} />
+      <SEO
+        lang={intl.locale}
+        title={intl.formatMessage({ id: "projects.section.title" })}
+      />
       <section id="projects" className="hero is-medium">
         <div className="hero-body">
           <div className="container">
@@ -21,10 +24,12 @@ const ProjectsPage = ({ data }) => {
                 <div className="content">
                   <h1 className="title">
                     <span className="mate">🗀</span>
-                    {frontmatter.seo}.
+                    <FormattedMessage id="projects.section.title" />
                   </h1>
                   <hr className="mini" />
-                  <p className="subtitle-mod">{frontmatter.title}</p>
+                  <p className="subtitle-mod">
+                    <FormattedMessage id="projects.section.description" />
+                  </p>
                 </div>
                 <nav
                   className="breadcrumb is-medium has-bullet-separator"
@@ -35,7 +40,9 @@ const ProjectsPage = ({ data }) => {
                       <a href="#hc">GatsbyJs</a>
                     </li>
                     <li>
-                      <a href="#olderworks">{frontmatter.olderWorks}</a>
+                      <a href="#olderworks">
+                        <FormattedMessage id="projects.section.menu" />
+                      </a>
                     </li>
                     <li>
                       <a href="https://github.com/ErwanEL/" target="_blank">
@@ -48,12 +55,12 @@ const ProjectsPage = ({ data }) => {
               <div className="column is-half">
                 <Cascade
                   arrayOfImages={[
-                    data.cv.childImageSharp.fluid,
-                    data.etna.childImageSharp.fluid,
                     data.hc.childImageSharp.fluid,
+                    data.etna.childImageSharp.fluid,
+                    data.fds.childImageSharp.fluid,
                     data.lemot.childImageSharp.fluid,
                   ]}
-                ></Cascade>
+                />
               </div>
             </div>
           </div>
@@ -61,35 +68,50 @@ const ProjectsPage = ({ data }) => {
       </section>
       <hr />
       <Project
+        id="fds"
+        title={intl.formatMessage({ id: "projects.project_4.title" })}
+        color="#0D1528"
+        content={intl.formatMessage({ id: "projects.project_4.description" })}
+        link="https://blog.erwanel.com/focus-data-science"
+        contentLink={intl.formatMessage({
+          id: "projects.project_4.link",
+        })}
+        img={data.fds.childImageSharp.fluid}
+      />
+      <hr />
+
+      <Project
         id="hc"
-        title="HauteCulture"
+        title={intl.formatMessage({ id: "projects.project_1.title" })}
         color="#7a1014"
-        content={frontmatter.hauteculture}
-        link="https://www.hauteculture.com/"
+        content={intl.formatMessage({ id: "projects.project_1.description" })}
+        link="https://blog.erwanel.com/hauteculture"
         optionLink={true}
-        contentLink={frontmatter.hautecultureLink}
+        contentLink={intl.formatMessage({
+          id: "projects.project_1.link",
+        })}
         img={data.hc.childImageSharp.fluid}
-      ></Project>
+      />
       <hr />
       <Project
         id="lemot"
-        title="Lemot"
+        title={intl.formatMessage({ id: "projects.project_2.title" })}
         color="#2a4f7f"
-        content={frontmatter.lemot}
-        link="https://lemot.app/"
-        contentLink={frontmatter.lemotLink}
+        content={intl.formatMessage({ id: "projects.project_2.description" })}
+        link="https://blog.erwanel.com/lemot"
+        contentLink={intl.formatMessage({ id: "projects.project_2.link" })}
         img={data.lemot.childImageSharp.fluid}
-      ></Project>
+      />
       <hr />
       <Project
         id="etna"
-        title="Etna Joyas"
+        title={intl.formatMessage({ id: "projects.project_3.title" })}
         color="#A87868"
-        content={frontmatter.etna}
-        link="https://etnajoyas.netlify.app/"
-        contentLink={frontmatter.etnaLink}
+        content={intl.formatMessage({ id: "projects.project_3.description" })}
+        link="https://blog.erwanel.com/etna-joyas"
+        contentLink={intl.formatMessage({ id: "projects.project_3.link" })}
         img={data.etna.childImageSharp.fluid}
-      ></Project>
+      />
       <hr />
       <section id="olderworks" className="hero is-medium">
         <div className="hero-body">
@@ -123,9 +145,15 @@ const ProjectsPage = ({ data }) => {
               <div className="column is-half has-text-right is-hidden-desktop">
                 <div className="content has-text-centered mt-3">
                   <h1 className="title">
-                    <p>🖿 {frontmatter.olderWorks}. </p>
+                    <p>
+                      {intl.formatMessage({ id: "projects.section_1.title" })}
+                    </p>
                   </h1>
-                  <p className="subtitle-mod">{frontmatter.olderContent}</p>
+                  <p className="subtitle-mod">
+                    {intl.formatMessage({
+                      id: "projects.section_1.description",
+                    })}
+                  </p>
                 </div>
               </div>
               <div
@@ -151,9 +179,15 @@ const ProjectsPage = ({ data }) => {
               >
                 <div className="content">
                   <h1 className="title">
-                    <p>🖿 {frontmatter.olderWorks}.</p>
+                    <p>
+                      🖿 {intl.formatMessage({ id: "projects.section_1.title" })}
+                    </p>
                   </h1>
-                  <p className="subtitle-mod">{frontmatter.olderContent}</p>
+                  <p className="subtitle-mod">
+                    {intl.formatMessage({
+                      id: "projects.section_1.description",
+                    })}
+                  </p>
                 </div>
               </div>
             </div>
@@ -164,58 +198,49 @@ const ProjectsPage = ({ data }) => {
   )
 }
 
-export default ProjectsPage
+export default injectIntl(ProjectsPage)
 
 export const query = graphql`
   {
-    markdownRemark(frontmatter: { slug: { eq: "/projects" } }) {
-      html
-      frontmatter {
-        slug
-        seo
-        title
-        olderWorks
-        hauteculture
-        hautecultureLink
-        lemot
-        lemotLink
-        etna
-        etnaLink
-        olderContent
-      }
-    }
-    cv: file(relativePath: { eq: "images/projects/cv.PNG" }) {
+    cv: file(relativePath: { eq: "images/projects/older/cv.PNG" }) {
       childImageSharp {
-        fluid {
-          ...GatsbyImageSharpFluid
+        fluid(quality: 100) {
+          ...GatsbyImageSharpFluid_withWebp
         }
       }
     }
     etna: file(relativePath: { eq: "images/projects/etna.PNG" }) {
       childImageSharp {
-        fluid {
-          ...GatsbyImageSharpFluid
+        fluid(quality: 100) {
+          ...GatsbyImageSharpFluid_withWebp
         }
       }
     }
     hc: file(relativePath: { eq: "images/projects/hc.PNG" }) {
       childImageSharp {
-        fluid {
-          ...GatsbyImageSharpFluid
+        fluid(quality: 100) {
+          ...GatsbyImageSharpFluid_withWebp
         }
       }
     }
     lemot: file(relativePath: { eq: "images/projects/lemot.PNG" }) {
       childImageSharp {
-        fluid {
-          ...GatsbyImageSharpFluid
+        fluid(quality: 100) {
+          ...GatsbyImageSharpFluid_withWebp
+        }
+      }
+    }
+    fds: file(relativePath: { eq: "images/projects/fds.png" }) {
+      childImageSharp {
+        fluid(quality: 100) {
+          ...GatsbyImageSharpFluid_withWebp
         }
       }
     }
     vgcharts: file(relativePath: { eq: "images/projects/older/vgcharts.PNG" }) {
       childImageSharp {
-        fluid {
-          ...GatsbyImageSharpFluid
+        fluid(quality: 100) {
+          ...GatsbyImageSharpFluid_withWebp
         }
       }
     }
@@ -223,15 +248,15 @@ export const query = graphql`
       relativePath: { eq: "images/projects/older/oldportfolio.PNG" }
     ) {
       childImageSharp {
-        fluid {
-          ...GatsbyImageSharpFluid
+        fluid(quality: 100) {
+          ...GatsbyImageSharpFluid_withWebp
         }
       }
     }
     flickr: file(relativePath: { eq: "images/projects/older/flickr.PNG" }) {
       childImageSharp {
-        fluid {
-          ...GatsbyImageSharpFluid
+        fluid(quality: 100) {
+          ...GatsbyImageSharpFluid_withWebp
         }
       }
     }

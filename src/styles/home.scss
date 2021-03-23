@@ -2,6 +2,19 @@
   font-size: 1.5rem;
 }
 
+.profilePic {
+  position: absolute;
+  right: calc(100% + 2em);
+  top: 30px;
+}
+
+.gatsby {
+  color: #643396;
+  &:hover {
+    color: #643396;
+  }
+}
+
 .github-link {
   outline: none;
   color: black;
@@ -11,6 +24,14 @@
 
 .github-link:hover {
   color: black;
+}
+
+.dispo {
+  a {
+    text-decoration: none;
+    outline: none;
+    color: white;
+  }
 }
 
 video {
@@ -25,4 +46,10 @@ i.fa-quote-left {
 
 .quote {
   outline: none;
+}
+
+@media (max-width: 1407px) {
+  .dispo {
+    margin: 20px 0;
+  }
 }

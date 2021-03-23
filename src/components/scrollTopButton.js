@@ -26,7 +26,7 @@ const ScrollTop = () => {
         onClick={scrollTop}
         className="button scroll-top is-hidden-touch"
       >
-        <i class="fas fa-angle-up"></i>
+        <i className="fas fa-angle-up"></i>
       </button>
     </div>
   )
