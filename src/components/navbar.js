@@ -1,6 +1,7 @@
 import EspSvg from "../components/svg/espsvg"
 import FrSvg from "../components/svg/frsvg"
 import { Link } from "gatsby"
+import LinkedInSvg from "../components/svg/linkedinsvg"
 import MaltSvg from "../components/svg/maltsvg"
 import React from "react"
 import UsaSvg from "../components/svg/usasvg"
@@ -92,6 +93,14 @@ const Navbar = ({ navbar }) => {
         target="_blank"
       >
         <i style={{ color: "#1e96c8" }} class="fab fa-2x fa-telegram"></i>
+      </a>
+
+      <a
+        className="navbar-item githuba"
+        href="https://www.linkedin.com/in/erwan-leblois-9a1b80142/"
+        target="_blank"
+      >
+        <LinkedInSvg />
       </a>
 
       <div
