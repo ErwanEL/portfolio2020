@@ -29,7 +29,7 @@ const Navbar = ({ navbar }) => {
       <a
         className={`navbar-item link `}
         activeClassName="link-is-active"
-        href={`${domain}/learning/`}
+        href={`${domain}/resources/`}
       >
         {navbar.ressources}
       </a>
