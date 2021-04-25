@@ -4,7 +4,7 @@ path: jamstack
 date: 2021-02-16
 title: Qu'est ce que la Jamstack
 subtitle: Javascript Api Markup
-featuredImage: ../../src/data/images/jam.jpg
+featuredImage: ../../src/data/images/jamstack.png
 ---
 
 Jamstack est une architecture conçue pour rendre le web plus rapide, plus sécurisé et plus évolutif.

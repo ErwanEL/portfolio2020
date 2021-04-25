@@ -1,0 +1,20 @@
+.blog-card {
+    .card-image {
+        transition: all 0.3s ease-in-out;
+    }
+    .title {
+        transition: all 0.3s ease-in-out
+    }
+    &:hover {
+        .card-image {
+            transition: all 0.3s ease-in-out;
+            transition-timing-function: ease;
+            transition-delay: 0s;
+            transform: scale(1.025);
+            box-shadow: 0 0.25em .25em -0.125em rgba(10, 10, 10, 0.1), 0 0px 0 1px rgba(10, 10, 10, 0.02)
+        }
+        .title {
+            color: rgb(255, 123, 0)
+        }
+    }
+}
