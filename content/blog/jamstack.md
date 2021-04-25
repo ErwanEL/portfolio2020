@@ -39,4 +39,4 @@ Le découpage de ces services permet une meilleure portabilité, flexibilité ai
 
 ---
 
-####[Découvrir la Jamstack](https://jamstack.org/)
+####[Découvrir la Jamstack](https://jamstack.org/) 🔗

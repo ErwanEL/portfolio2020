@@ -58,4 +58,4 @@ Gatsby utilise un système permettant d'éviter la redondance lors des build et 
 
 ---
 
-####[Découvrir GatsbyJs](https://www.gatsbyjs.com/)
+####[Découvrir GatsbyJs](https://www.gatsbyjs.com/) 🔗
