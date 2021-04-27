@@ -19,7 +19,7 @@ Avec la Jamstack, le front-end est pré chargé dans des pages html statique opt
 
 Ce processus de pré chargement permet au site d'être déployé directement depuis un cdn, réduisant ainsi les coûts, la complexité et les risques d'une architecture classique. (serveur dynamique)
 
-Avec de nombreux framework de génération de site statique, **[GatsbyJs](/gatsby), Hugo, Jekyll, NextJs**, les developpeurs sont maintenant familier de la Jamstack et ont la possibilité de devenir rapidement productifs.
+Avec de nombreux framework de génération de site statique, **[Gatsby Js](/gatsby), Hugo, Jekyll, NextJs**, les developpeurs sont maintenant familier de la Jamstack et ont la possibilité de devenir rapidement productifs.
 
 ###Javascript
 
@@ -39,4 +39,4 @@ Le découpage de ces services permet une meilleure portabilité, flexibilité ai
 
 ---
 
-####[Découvrir la Jamstack](https://jamstack.org/)
+####[Découvrir la Jamstack](https://jamstack.org/) 🔗

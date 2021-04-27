@@ -9,6 +9,8 @@ import React from "react"
 import SEO from "../components/seo"
 
 const BlogIndex = ({ data }) => {
+  const featuredArticle = data.featuredArticle.edges[0]
+
   return (
     <Layout>
       <SEO
@@ -19,7 +21,24 @@ const BlogIndex = ({ data }) => {
       <div className="section mt-6 is-paddingless-horizontal">
         <div className="container grid">
           <BlogIntro />
-          {/* SUGGESTIONS */}
+          {/* FEATURED */}
+
+          <Link
+            className="mt-5"
+            to={`/${featuredArticle.node.frontmatter.path}`}
+          >
+            <BlogCard
+              html={featuredArticle.node.html}
+              title={featuredArticle.node.frontmatter.title}
+              imageData={
+                featuredArticle.node.frontmatter.featuredImage.childImageSharp
+                  .fluid
+              }
+              date={featuredArticle.node.frontmatter.date}
+            />
+          </Link>
+          {/* FEATURED */}
+
           <div className="suggestion mt-6">
             <h1 className="title is-4">Derniers articles</h1>
             <div className="columns is-multiline">
@@ -72,9 +91,35 @@ export default BlogIndex
 
 export const query = graphql`
   {
+    featuredArticle: allMarkdownRemark(
+      filter: { frontmatter: { type: { eq: "article" } } }
+      sort: { fields: frontmatter___date, order: DESC }
+      limit: 1
+    ) {
+      edges {
+        node {
+          id
+          html
+          frontmatter {
+            title
+            path
+            date(formatString: "DD MMMM YYYY", locale: "fr")
+            featuredImage {
+              childImageSharp {
+                fluid {
+                  ...GatsbyImageSharpFluid
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+
     allArticles: allMarkdownRemark(
       filter: { frontmatter: { type: { eq: "article" } } }
       sort: { fields: frontmatter___date, order: DESC }
+      skip: 1
     ) {
       edges {
         node {

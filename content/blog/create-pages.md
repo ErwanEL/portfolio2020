@@ -7,7 +7,7 @@ subtitle: Create page API
 featuredImage: ../../src/data/images/blog.jpg
 ---
 
-GatsbyJs vous permet de créer dynamiquement des pages à partir de template et de données pouvant provenir de différentes sources.
+Gatsby Js vous permet de créer dynamiquement des pages à partir de template et de données pouvant provenir de différentes sources.
 
 #Configuration
 

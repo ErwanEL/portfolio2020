@@ -7,7 +7,7 @@
 module.exports = {
   /* Your site config here */
   siteMetadata: {
-    title: "Index",
+    title: "Blog de ErwanEL",
     titleTemplate: "%s · Blog - ErwanEL",
     description: "Blog - ErwanEL, Front-End developer, javascript, GatsbyJs",
     keywords: [
@@ -15,10 +15,15 @@ module.exports = {
       "jamstack",
       "gatsbyjs",
       "gatsby",
+      "Gatsby",
+      "GatsbyJs",
+      "GatsbyJS",
       "static",
       "react",
       "javascript",
       "statique",
+      "js",
+      "framework",
     ],
     url: "https://blog.erwanel.com", // No trailing slash allowed!
     image: "/logo.png", // Path to your image you placed in the 'static' folder

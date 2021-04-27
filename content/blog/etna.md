@@ -15,7 +15,7 @@ Le contenu de la page est géré avec [dato cms](https://www.datocms.com/)
 
 ###<u>Les technologies utilisées pour le projet</u>:
 
-- [GatsbyJs](https://www.gatsbyjs.com/)
+- [Gatsby Js](https://www.gatsbyjs.com/)
 - [Bulma](https://bulma.io/)
 - [dato cms](https://www.datocms.com/)
 - [netlify](https://www.netlify.com/)

@@ -21,7 +21,7 @@ Il a aussi la possibilité de partager le mot du jour à travers certains résea
 
 ```
 
-- GatsbyJs
+- Gatsby Js
 - Bulma
 - Netlify
 - Netlify functions
