@@ -7,9 +7,9 @@ subtitle: Conversion d'un site html/css/js en GatsbyJs
 featuredImage: ../../src/data/images/fds.jpg
 ---
 
-###<u>Portage d'un site en GatsbyJs.</u>
+###<u>Portage d'un site en Gatsby Js.</u>
 
-A partir des archives du site, portage des pages, styles et scripts en GatsbyJs.
+A partir des archives du site, portage des pages, styles et scripts en Gatsby Js.
 
 - Ajout du protocole [rgpd](https://www.gatsbyjs.com/plugins/gatsby-plugin-gdpr-cookies/) avec react.
 

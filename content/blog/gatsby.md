@@ -7,11 +7,11 @@ subtitle: Un framework statique qui a la cote
 featuredImage: ../../src/data/images/logo-gatsby-square.png
 ---
 
-GatsbyJs est un framework open-source fondé sur **react**, permettant la création de site statique.
+Gatsby Js est un framework open-source fondé sur **react**, permettant la création de site statique.
 
-Les sites créés avec GatsbyJs sont réputés rapides et bénéficient de l'appui d'un [parc de plus de 2000 plugins.](https://www.gatsbyjs.com/plugins)
+Les sites créés avec Gatsby Js sont réputés rapides et bénéficient de l'appui d'un [parc de plus de 2000 plugins.](https://www.gatsbyjs.com/plugins)
 
-###1. GatsbyJs est rapide 🚀
+###1. Gatsby Js est rapide 🚀
 
 Permet la construction de site associés aux services les plus connus, tels que shopify, stripe, wordpress et diverses autres solutions de cms.
 
