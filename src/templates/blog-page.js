@@ -82,9 +82,6 @@ const BlogPageTemplate = ({ pageContext }) => {
                   <span className="tag ">Read more articles about this book </span>
                 </div>
               </a> */}
-            <div>
-              <hr />
-            </div>
             <div className="suggestion mt-6">
               <h1 className="title is-4">Derniers articles</h1>
               <div className="columns is-multiline">
