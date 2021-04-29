@@ -46,7 +46,7 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
     `
   )
 
-  const articlesSuggestions = articles.data.allArticlesMds.edges.slice(0, 4)
+  const articlesSuggestions = articles.data.allArticlesMds.edges.slice(0, 5)
 
   // Handle errors
   if (articles.errors) {
