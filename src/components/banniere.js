@@ -47,7 +47,7 @@ const Banniere = ({ title, date }) => {
   }
 
   const SetMaxProgressValue = () => {
-    return (maxProgressValue = document.body.clientHeight - 1800)
+    return (maxProgressValue = document.body.clientHeight - 2250)
   }
 
   if (typeof document !== `undefined`) {

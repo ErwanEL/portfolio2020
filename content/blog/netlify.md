@@ -41,7 +41,7 @@ Pour le déploiement, les meilleures pratiques intégrées.
 
 Le tout conçu pour fonctionner dans le cadre d'un workflow de développement basé sur git.
 
-#Ajoutez des fonctionnalités dynamiques avec des applications intégrées
+##Ajoutez des fonctionnalités dynamiques avec des applications intégrées
 
 Avec très peu de codage ou de configuration, Netlify facilite l'ajout de fonctionnalitées telles que:
 
@@ -66,15 +66,15 @@ Voici dans les grandes lignes ce que va vous proposer Netlify.
 
 ![menu](/uploads/menu.png)
 
-Pour ma part j'utilise pour l'instant surtout les **[fonctions serverless](https://docs.netlify.com/functions/overview/?_ga=2.49166501.2098966421.1619709510-1476080252.1602775007)** proposé par le service, et parfois les **[formulaires](https://docs.netlify.com/forms/setup/)** qui sont extrêmement simple et pratique à intégrer.
+Pour ma part j'utilise pour l'instant surtout les **[fonctions serverless](https://docs.netlify.com/functions/overview/?_ga=2.49166501.2098966421.1619709510-1476080252.1602775007)** proposées par le service, et parfois les **[formulaires](https://docs.netlify.com/forms/setup/)** qui sont extrêmement simple et pratique à intégrer.
 
-A noter qu'avec le compte basique vous êtes limité sur les temps de build
+A noter qu'avec le compte basique vous êtes limité sur les temps de build.
 
 ![menu](/uploads/overview.png)
 
-Netlify est avant tout très pratique pour une intégration CI/CD et le déploiement par branche qui permet notement de pouvoir avoir des aperçus du travail effectué et pouvoir partager rapidement les intégrations via les liens générés par le service.
+Netlify est avant tout très pratique pour une intégration CI/CD et le déploiement par branche qui permet notamment de pouvoir avoir des aperçus du travail effectué et pouvoir partager rapidement les intégrations via les liens générés par le service.
 
-Couplé à un générateur de site statique comme [Gatsby](/gatsby), vous pouvez bénéficier d'une expérience web moderne et efficace.
+Couplé à un générateur de site statique comme **[Gatsby Js](/gatsby)**, vous pouvez bénéficier d'une expérience web moderne et efficace.
 
 ---
 

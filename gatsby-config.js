@@ -37,6 +37,7 @@ module.exports = {
     `gatsby-plugin-sharp`,
     `gatsby-plugin-scroll-reveal`,
     `gatsby-plugin-emotion`,
+    `gatsby-plugin-catch-links`,
     {
       resolve: `gatsby-transformer-remark`,
       options: {
